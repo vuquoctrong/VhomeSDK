@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--font gotham bold-->
+    <style name="text_bold">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/semi_bold</item>
+        <item name="android:textColor">@color/text_black</item>
+    </style>
+
+    <!--font gotham italic-->
+    <style name="text_italic">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/regular_italic</item>
+        <item name="android:textColor">@color/text_black</item>
+    </style>
+
+    <!--font gotham-->
+    <style name="text_light_bold">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/semi_bold</item>
+        <item name="android:textColor">@color/text_black</item>
+    </style>
+
+    <!--font gotham book-->
+    <style name="text_normal">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/regular</item>
+        <item name="fontWeight">400</item>
+        <item name="android:textColor">@color/text_black</item>
+    </style>
+
+    <style name="text_bold_16" parent="text_bold">
+        <item name="android:textSize">@dimen/text_size_16</item>
+    </style>
+
+    <style name="text_bold_14" parent="text_bold">
+        <item name="android:textSize">@dimen/text_size_14</item>
+    </style>
+
+    <style name="text_italic_14" parent="text_italic">
+        <item name="android:textSize">@dimen/text_size_14</item>
+    </style>
+
+    <style name="text_bold_7" parent="text_bold">
+        <item name="android:textSize">@dimen/text_size_7</item>
+    </style>
+
+    <style name="text_bold_10" parent="text_bold">
+        <item name="android:textSize">@dimen/text_size_10</item>
+    </style>
+
+    <style name="text_bold_12" parent="text_bold">
+        <item name="android:textSize">@dimen/text_size_12</item>
+    </style>
+
+    <style name="text_bold_18" parent="text_bold">
+        <item name="android:textSize">@dimen/text_size_18</item>
+    </style>
+
+    <style name="text_bold_20" parent="text_bold">
+        <item name="android:textSize">@dimen/text_size_20</item>
+    </style>
+
+    <style name="text_normal_20" parent="text_normal">
+        <item name="android:textSize">@dimen/text_size_20</item>
+    </style>
+
+    <style name="text_bold_24" parent="text_bold">
+        <item name="android:textSize">@dimen/text_size_24</item>
+    </style>
+
+    <style name="text_bold_28" parent="text_bold">
+        <item name="android:textSize">@dimen/text_size_28</item>
+    </style>
+
+    <style name="text_bold_32" parent="text_bold">
+        <item name="android:textSize">@dimen/text_size_32</item>
+    </style>
+
+    <style name="text_bold_36" parent="text_bold">
+        <item name="android:textSize">@dimen/text_size_36</item>
+    </style>
+
+    <style name="text_bold_42" parent="text_bold">
+        <item name="android:textSize">@dimen/text_size_42</item>
+    </style>
+
+    <style name="text_light_bold_10" parent="text_light_bold">
+        <item name="android:textSize">@dimen/text_size_10</item>
+    </style>
+
+    <style name="text_light_bold_12" parent="text_light_bold">
+        <item name="android:textSize">@dimen/text_size_12</item>
+    </style>
+
+    <style name="text_light_bold_14" parent="text_light_bold">
+        <item name="android:textSize">@dimen/text_size_14</item>
+    </style>
+
+    <style name="text_light_bold_16" parent="text_light_bold">
+        <item name="android:textSize">@dimen/text_size_16</item>
+    </style>
+
+    <style name="text_light_bold_18" parent="text_light_bold">
+        <item name="android:textSize">@dimen/text_size_18</item>
+    </style>
+
+    <style name="text_light_bold_20" parent="text_light_bold">
+        <item name="android:textSize">@dimen/text_size_20</item>
+    </style>
+
+    <style name="text_light_bold_24" parent="text_light_bold">
+        <item name="android:textSize">@dimen/text_size_24</item>
+    </style>
+
+    <style name="text_light_bold_28" parent="text_light_bold">
+        <item name="android:textSize">@dimen/text_size_28</item>
+    </style>
+
+    <style name="text_light_bold_32" parent="text_light_bold">
+        <item name="android:textSize">@dimen/text_size_32</item>
+    </style>
+
+    <style name="text_18" parent="text_normal">
+        <item name="android:textSize">@dimen/text_size_18</item>
+    </style>
+
+    <style name="text_16" parent="text_normal">
+        <item name="android:textSize">@dimen/text_size_16</item>
+    </style>
+
+    <style name="text_14" parent="text_normal">
+        <item name="android:textSize">@dimen/text_size_14</item>
+    </style>
+
+    <style name="specific_rounded_corner">
+        <item name="cornerSizeTopLeft">10dp</item>
+        <item name="cornerSizeBottomRight">10dp</item>
+        <item name="cornerSizeTopRight">10dp</item>
+        <item name="cornerFamilyTopLeft">rounded</item>
+        <item name="cornerFamilyBottomRight">rounded</item>
+        <item name="cornerFamilyTopRight">rounded</item>
+    </style>
+
+
+    <style name="text_12" parent="text_normal">
+        <item name="android:textSize">@dimen/text_size_12</item>
+    </style>
+
+    <style name="text_11" parent="text_normal">
+        <item name="android:textSize">@dimen/text_size_11</item>
+    </style>
+
+    <style name="text_10.5" parent="text_normal">
+        <item name="android:textSize">@dimen/text_size_10.5</item>
+    </style>
+
+    <style name="text_10" parent="text_normal">
+        <item name="android:textSize">@dimen/text_size_10</item>
+    </style>
+
+    <style name="text_9" parent="text_normal">
+        <item name="android:textSize">@dimen/text_size_9</item>
+    </style>
+
+    <style name="text_8" parent="text_normal">
+        <item name="android:textSize">@dimen/text_size_8</item>
+    </style>
+
+    <style name="layout_parent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="recycler_common">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="FullScreenDialogStyle" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="colorPrimary">@color/white</item>
+
+        <!-- Set this to true if you want Full Screen without status bar -->
+        <item name="android:windowFullscreen">false</item>
+
+        <item name="android:windowIsFloating">false</item>
+
+        <!-- This is important! Don't forget to set window background -->
+        <item name="android:windowBackground">@color/white</item>
+
+        <!-- Additionally if you want animations when dialog opening -->
+        <!--        <item name="android:windowEnterAnimation">@anim/slide_up</item>-->
+        <!--        <item name="android:windowExitAnimation">@anim/slide_down</item>-->
+    </style>
+
+    <style name="ButtonRed" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_width">@dimen/button_red_width</item>
+        <item name="android:layout_height">@dimen/button_red_height</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:background">@drawable/bg_button_red</item>
+        <item name="android:paddingBottom">@dimen/dimen_12</item>
+        <item name="android:paddingTop">@dimen/dimen_12</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/regular</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="ButtonWhite" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">@color/color_4e4e4e</item>
+        <item name="android:layout_width">@dimen/button_red_width</item>
+        <item name="android:layout_height">@dimen/button_red_height</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/regular</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="ButtonWhiteBorder" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">#EC0D3A</item>
+        <item name="android:layout_width">@dimen/button_red_width</item>
+        <item name="android:layout_height">@dimen/button_red_height</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:background">@drawable/bg_white_stroke_corner_8_custom</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/semi_bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="ButtonRedPolicy" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_width">@dimen/button_red_width</item>
+        <item name="android:layout_height">@dimen/button_red_height</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:background">@drawable/bg_corner_red_8_custom</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/semi_bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="ButtonRedGray" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_width">@dimen/button_red_width</item>
+        <item name="android:layout_height">@dimen/button_red_height</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:background">@drawable/bg_button_red_gray</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/semi_bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="CustomBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CustomBottomSheetStyle</item>
+    </style>
+
+    <style name="CustomBottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="BottomNavigationView.Active" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">1sp</item>
+    </style>
+
+    <style name="BottomNavigationView" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="BottomNavigationView2.Active" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="BottomNavigationView2" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="Widget.BottomNavigationView" parent="Widget.Design.BottomNavigationView">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/regular</item>
+        <item name="android:textColor">@color/text_black</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay_card_custom_corners" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">@dimen/dimen_20</item>
+        <item name="cornerSizeTopLeft">@dimen/dimen_20</item>
+        <item name="cornerSizeBottomRight">@dimen/dimen_20</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+
+    <style name="CustomCardViewStyle" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay_card_custom_corners</item>
+    </style>
+
+    <style name="CustomButtonRed" parent="text_bold_14">
+        <item name="android:background">@drawable/bg_corner_red_8_custom</item>
+        <item name="android:fontFamily">@font/semi_bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">@dimen/dimen_50</item>
+        <item name="android:paddingTop">@dimen/dimen_12</item>
+        <item name="android:paddingRight">@dimen/dimen_50</item>
+        <item name="android:paddingBottom">@dimen/dimen_12</item>
+        <item name="android:elevation">@dimen/dimen_2</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="CustomButtonRed_stroke" parent="text_bold_14">
+        <item name="android:background">@drawable/bg_stroke_corner_16_top_bottom_f8214b</item>
+        <item name="android:fontFamily">@font/semi_bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">@dimen/dimen_50</item>
+        <item name="android:paddingTop">@dimen/dimen_12</item>
+        <item name="android:paddingRight">@dimen/dimen_50</item>
+        <item name="android:paddingBottom">@dimen/dimen_12</item>
+        <item name="android:elevation">@dimen/dimen_2</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">#EC0D3A</item>
+    </style>
+
+    <style name="CustomButtonRed_stroke_cancel" parent="text_bold_14">
+        <item name="android:background">@drawable/bg_stroke_corner_8_cancel_f8214b</item>
+        <item name="android:fontFamily">@font/semi_bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">@dimen/dimen_50</item>
+        <item name="android:paddingTop">@dimen/dimen_12</item>
+        <item name="android:paddingRight">@dimen/dimen_50</item>
+        <item name="android:paddingBottom">@dimen/dimen_12</item>
+        <item name="android:elevation">@dimen/dimen_2</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">#EC0D3A</item>
+    </style>
+
+    <style name="CustomButtonGray" parent="text_bold_14">
+        <item name="android:background">@drawable/bg_corner_16_top_bottom_586d89</item>
+        <item name="android:fontFamily">@font/semi_bold</item>
+        <item name="android:layout_width">@dimen/button_red_width</item>
+        <item name="android:layout_height">@dimen/button_red_height</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:elevation">@dimen/dimen_2</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="CustomButtonGrayNotification" parent="text_bold_14">
+        <item name="android:background">@drawable/bg_corner_16_notification</item>
+        <item name="android:fontFamily">@font/semi_bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">@dimen/dimen_70</item>
+        <item name="android:paddingTop">@dimen/dimen_12</item>
+        <item name="android:paddingRight">@dimen/dimen_70</item>
+        <item name="android:paddingBottom">@dimen/dimen_12</item>
+        <item name="android:elevation">@dimen/dimen_2</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/color_EC0D3A</item>
+    </style>
+
+    <style name="CustomButtonWhite" parent="text_bold_14">
+        <item name="android:background">@drawable/bg_corner_16_top_bottom_ffeae8</item>
+        <item name="android:fontFamily">@font/semi_bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">@dimen/dimen_70</item>
+        <item name="android:paddingTop">@dimen/dimen_12</item>
+        <item name="android:paddingRight">@dimen/dimen_70</item>
+        <item name="android:paddingBottom">@dimen/dimen_12</item>
+        <item name="android:elevation">@dimen/dimen_2</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/color_EC0D3A</item>
+    </style>
+
+    <style name="CustomButtonGrayRedBorder" parent="text_bold_16">
+        <item name="android:background">@drawable/bg_corner_16_top_bottom_red_stroke</item>
+        <item name="android:fontFamily">@font/semi_bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">@dimen/dimen_70</item>
+        <item name="android:paddingTop">@dimen/dimen_12</item>
+        <item name="android:paddingRight">@dimen/dimen_70</item>
+        <item name="android:paddingBottom">@dimen/dimen_12</item>
+        <item name="android:elevation">@dimen/dimen_4</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/color_EC0D3A</item>
+    </style>
+
+    <style name="CustomButton_F5F7F9" parent="text_bold_16">
+        <item name="android:background">@drawable/bg_corner_16_top_bottom_f5f7f9</item>
+        <item name="android:fontFamily">@font/semi_bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">@dimen/dimen_70</item>
+        <item name="android:paddingTop">@dimen/dimen_12</item>
+        <item name="android:paddingRight">@dimen/dimen_70</item>
+        <item name="android:paddingBottom">@dimen/dimen_12</item>
+        <item name="android:elevation">@dimen/dimen_4</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/color_EC0D3A</item>
+    </style>
+
+    <style name="CustomButton_Stroke_4e4de4e" parent="text_bold_14">
+        <item name="android:background">@drawable/bg_stroke_16_top_bottom_4e4e4e</item>
+        <item name="android:fontFamily">@font/semi_bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">@dimen/dimen_70</item>
+        <item name="android:paddingTop">@dimen/dimen_12</item>
+        <item name="android:paddingRight">@dimen/dimen_70</item>
+        <item name="android:paddingBottom">@dimen/dimen_12</item>
+        <item name="android:elevation">@dimen/dimen_2</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="CustomButton_DCDCDC" parent="text_bold_16">
+        <item name="android:background">@drawable/bg_stroke_16_top_bottom_dcdcdc</item>
+        <item name="android:fontFamily">@font/semi_bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">@dimen/dimen_70</item>
+        <item name="android:paddingTop">@dimen/dimen_12</item>
+        <item name="android:paddingRight">@dimen/dimen_70</item>
+        <item name="android:paddingBottom">@dimen/dimen_12</item>
+        <item name="android:elevation">@dimen/dimen_2</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/color_4e4e4e</item>
+    </style>
+
+    <style name="roundedImageViewRounded">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">8dp</item>
+        <item name="cornerSizeTopLeft">8dp</item>
+    </style>
+
+    <style name="roundedImageViewRounded_12">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">@dimen/dimen_12</item>
+        <item name="cornerSizeTopLeft">@dimen/dimen_12</item>
+    </style>
+
+    <style name="connerImageViewRounded">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/dimen_16</item>
+    </style>
+
+    <dimen name="text_size_7">7sp</dimen>
+    <color name="color_EC0D3A">#EC0D3A</color>
+
+    <declare-styleable name="ARIndicatorView">
+        <attr name="indicator_color" format="color" />
+        <attr name="number_of_indicators" format="integer" />
+        <attr name="selected_color" format="color" />
+        <attr name="indicator_size_width" format="integer" />
+        <attr name="indicator_size_height" format="integer" />
+        <attr name="padding_size" format="integer" />
+        <attr name="indicator_animation" format="reference" />
+        <attr name="indicator_shape" format="reference" />
+        <attr name="indicator_scrubbing" format="boolean" />
+        <attr name="animate_indicator_scrubbing" format="boolean" />
+    </declare-styleable>
+
+    <style name="ThemeDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowMinWidthMajor">90%</item>
+        <item name="android:windowMinWidthMinor">90%</item>
+    </style>
+
+    <style name="NumberPicker" parent="text_normal">
+        <item name="android:textSize">@dimen/text_size_60</item>
+    </style>
+    <style name="TextAppearanceTablayout" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+    </style>
+</resources>

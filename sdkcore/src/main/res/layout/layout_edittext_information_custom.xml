@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitle"
+            style="@style/text_bold_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_10"
+            android:drawableEnd="@drawable/ic_star_sign"
+            android:drawablePadding="@dimen/dimen_5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Tên người dùng" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTotalLength"
+            style="@style/text_14"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="0/30"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtInformation"
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10"
+            style="@style/text_14"
+            android:textColorHint="@color/color_6F6F6F"
+            android:background="@drawable/bg_edittext_information"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/dimen_40"
+            android:paddingEnd="@dimen/dimen_40"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+            tools:text="Thao huyenThao huyenThao111111111111111" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imvTitle"
+            android:layout_width="@dimen/dimen_16"
+            android:layout_height="@dimen/dimen_16"
+            android:layout_marginStart="@dimen/dimen_16"
+            android:src="@drawable/ic_avatar_edittext"
+            app:layout_constraintBottom_toBottomOf="@+id/edtInformation"
+            app:layout_constraintStart_toStartOf="@+id/edtInformation"
+            app:layout_constraintTop_toTopOf="@+id/edtInformation" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imvClearText"
+            android:layout_width="@dimen/dimen_40"
+            android:layout_height="@dimen/dimen_40"
+            android:padding="@dimen/dimen_12"
+            android:visibility="gone"
+            android:src="@drawable/ic_close_edittext"
+            app:layout_constraintBottom_toBottomOf="@+id/edtInformation"
+            app:layout_constraintEnd_toEndOf="@+id/edtInformation"
+            app:layout_constraintTop_toTopOf="@+id/edtInformation" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvError"
+            style="@style/text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:visibility="gone"
+            android:textColor="@color/color_Ef1e4a"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtInformation"
+            tools:text="Tên người dùng chứa tối thiểu 6 ký tự." />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

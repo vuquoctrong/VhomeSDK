@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/rl_setting_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_setting_item"
+            style="@style/text_bold_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:text="@string/setting_key"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_value"
+            style="@style/text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dimen_10"
+            android:layout_toLeftOf="@+id/ic_arrow_left"
+            android:layout_toRightOf="@+id/tv_setting_item"
+            android:gravity="end" />
+
+        <ImageView
+            android:id="@+id/ic_arrow_left"
+            android:layout_width="@dimen/dimen_24"
+            android:layout_height="@dimen/dimen_24"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/dimen_15"
+            android:src="@drawable/ic_next" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/toggleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dimen_15"
+            android:thumb="@drawable/thumb_selector"
+            android:visibility="visible"
+            app:track="@drawable/track_selector" />
+
+    </RelativeLayout>
+
+</layout>

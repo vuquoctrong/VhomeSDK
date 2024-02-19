@@ -1,0 +1,22 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "Vhome SDK"
+include ':app'
+include ':lib1'
+include ':lib2'
+include ':sdkcamera'
+include ':sdkcore'
+include ':libxmfunsdk'
+include ':libcalendar'

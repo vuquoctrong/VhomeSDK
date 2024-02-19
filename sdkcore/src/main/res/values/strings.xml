@@ -1,0 +1,2280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    //module App
+
+    <string name="tab_scene">Ngữ cảnh</string>
+    <string name="detect_acttion">Phát hiện chuyển động</string>
+    <string name="detect_hi_title">Phát hiện người</string>
+    <string name="detect_hi">Phát hiện có người tại %s vào %s</string>
+    <string name="detect_motion">Phát hiện có chuyển động tại %s vào %s</string>
+    <string name="user">Người dùng</string>
+    <string name="tab_favorite_title">Yêu thích</string>
+    <string name="repeat_later">Nhắc lại sau</string>
+
+    <string name="default_notification_channel_id">VHome</string>
+
+    <string name="text_empty" />
+
+    <!--    setting-->
+    <string name="ok">OK</string>
+    <string name="ok_title">Đồng ý</string>
+    <string name="ok_title_private_policy">TÔI ĐÃ HIỂU</string>
+    <string name="cancel">Huỷ bỏ</string>
+    <string name="cancel_title">Thoát</string>
+    <string name="refuse">Từ chối</string>
+    <string name="agree">Chấp nhận</string>
+    <string name="understand">Đã hiểu</string>
+    <string name="setting">Cài đặt</string>
+    <string name="always_on">Luôn bật</string>
+
+    <string name="support">Hỗ trợ</string>
+    <!--    <string name="support_information">サポート情報</string>-->
+    <!--    <string name="help">ヘルプ</string>-->
+    <string name="guid_to_use_app">このアプリの使い方</string>
+    <string name="privacy_policy">プライバシーポリシー</string>
+
+    <string name="app_info">アプリの情報</string>
+    <string name="version">バージョン</string>
+    <string name="term_of_service">利用規約</string>
+
+    <string name="not_connected_internet">ネットワーク接続をご確認ください。</string>
+    <string name="bulk_packing">一括パッキング</string>
+    <string name="password_is_provided_one_time_use_only">Mật khẩu dưới đây được cấp để sử dụng một lần duy nhất. Hãy gửi mật khẩu này để cho phép khách của bạn mở cửa. Bạn cũng có thể xóa mật khẩu trước khi hết hiệu lực.</string>
+    <string name="setting_key">Thiết lập phím</string>
+    <string name="delete_device_success">Xóa thiết bị thành công</string>
+    <string name="bottom_sheet_camera_information">Xem thông tin Camera</string>
+    <string name="bottom_sheet_change_the_camera_name">Đổi tên camera</string>
+    <string name="bottom_sheet_update_firm_ware">Cập nhật Firmware</string>
+    <string name="bottom_sheet_sd_card_info">Thẻ nhớ</string>
+    <string name="string_notification">Thông báo</string>
+
+    <string name="delete_ezviz_camera_fail">Camera không còn tồn tại trong tài khoản này</string>
+    <string name="show_title_private_policy">Cập nhật chính sách bảo vệ dữ liệu cá nhân</string>
+    <string name="show_title_spread_vt">Đồng chí chưa thực hiện lan tỏa Viettel Home</string>
+    <string name="show_content_spread_vt">Vui lòng hoàn thành việc thi đua lan tỏa trước ngày 31/12/2023.</string>
+    <string name="show_title_logout_private_policy">Rút lại sự Đồng ý điều khoản và Chính sách sử dụng thành công. Dữ liệu cá nhân của bạn sẽ được xóa trong vòng 72 giờ.</string>
+    <string name="show_content_logout_private_policy">Vui lòng liên hệ Hotline 18008168 để mở khóa tài khoản.</string>
+    <string name="content_show_title_private_policy">Theo nghị định số 13/2023/NĐ-CP của Chính phủ về Bảo vệ dữ liệu cá nhân, Viettel Home thông báo Điều khoản và chính sách của Viettel Home được cập nhật từ 01/08/2023.</string>
+    <string name="allow_app_overlay">Vui lòng cho phép ứng dụng xuất hiện trên cùng</string>
+    <string name="request_overlay_description">Cuộc gọi từ camera cần sự cho phép của bạn. Mở cài đặt điện thoại để bật chức năng này.</string>
+    <string name="request_do_not_disturb">Vui lòng cho phép ứng dụng quyền thông báo ở chế độ không làm phiền</string>
+    <string name="not_showing_again">Không hiển thị lại</string>
+    <string name="allow_title">Cho phép</string>
+    <string name="conversation">Đàm thoại</string>
+    <string name="string_tv_open_location_gps">Cho phép truy cập GPS?</string>
+
+    // k dc sửa vì dùng trong logic kotlin
+    <string name="string_banner_free">Miễn phí gói lưu trữ Cloud %s ngày trong %s tháng.Nhanh tay Đăng ký trước ngày %s.</string>
+    <string name="string_banner_com_expired">Gói lưu trữ Cloud của bạn sắp hết hạn.<font color='#EF1E4A'><u>Gia hạn ngay</u></font> để tiếp tục sử dụng.</string>
+    <string name="string_banner_just_expired">Gói lưu trữ Cloud của bạn đã sắp hết hạn. Vui lòng <font color='#EF1E4A'><u>Gia hạn</u></font> để tiếp tục sử dụng.</string>
+
+    <string name="inputLength">%d/%d</string>
+
+
+    //Module Device
+    <!--    <string name="app_name">Viettel Home</string>-->
+    <!--    <string name="media_folder">@string/app_name</string>-->
+    <string name="video_folder">Viettel_Home_Video</string>
+    <string name="photo_folder">Viettel_Home_Photo</string>
+
+    <!--PIN Dialog-->
+    <string name="pin_dialog_title">Nhập mã bảo vệ để mở camera</string>
+    <string name="camera_view_locked">Video đã được mã hóa</string>
+    <string name="btn_cancel">HỦY</string>
+    <string name="btn_accepted">Xác nhận</string>
+    <string name="string_content_delete_share_device">Bạn sẽ không thể sử dụng thiết bị nếu từ chối nhận chia sẻ</string>
+    <string name="string_content_reject_share_device">Bạn sẽ không thể sử dụng thiết bị nếu hủy nhận chia sẻ</string>
+    <string name="btn_ok">OK</string>
+    <string name="empty_camera">Bạn không có camera nào!</string>
+    <string name="empty_playback_video">Không tìm thấy video nào</string>
+    <string name="error_verify_pin">Mã xác nhận không chính xác</string>
+
+    <string name="camera_live">● Trực tiếp</string>
+    <string name="camera_playback">Xem lại</string>
+    <string name="cam_error_msg">%1s. (%2d)</string>
+    <string name="dont_have_permission_share">Tài khoản của bạn không có quyền sử dụng tính năng này</string>
+
+    <!-- CameraDetailFragment -->
+    <string name="ptz_limit">Đã đạt đến giới hạn xoay</string>
+    <string-array name="video_level">
+        <item>Fluent</item>
+        <item>SD</item>
+        <item>HD</item>
+        <item>Full HD</item>
+    </string-array>
+    <string name="verify_code_title">Video đã được mã hóa, vui lòng nhập mật khẩu. Mật khẩu mặc định là mã xác nhận được ghi trên nhãn thiết bị</string>
+    <string name="verify_code_ezviz_title">Video đã bị mã hóa, nhập mật khẩu để xem thiết bị. Mật khẩu mặc định là mã xác nhận của thiết bị được ghi trên nhãn thiết bị. Nếu không có mã xác nhận trên thiết bị của bạn, hãy nhập mã xác nhận mặc định: ABCDEF (chữ in hoa)</string>
+    <string name="verify_code_off_title">Vui lòng nhập mật khẩu mã hóa đã kích hoạt tính năng mã hóa. Mật khẩu mặc định là mã xác nhận của thiết bị được ghi trên nhãn thiết bị</string>
+    <string name="label_video_encrypted">Video đã được mã hóa</string>
+    <string name="ezviz_incorrect_password_title">Mật khẩu mã hóa không chính xác.</string>
+    <string name="ezviz_incorrect_password_message">Bạn có thể reset camera để đưa mật khẩu mã hóa về mặc định.</string>
+    <string name="label_pan_title_description">Ấn mũi tên để điều khiển các hướng, hoặc nhấn nút tròn chính giữa để camera kích hoạt chế độ dò tìm tự động (Khi một người xuất hiện, camera sẽ tự động theo dõi chuyển động)</string>
+    <string name="label_video_history">Xem lịch sử</string>
+    <string name="label_record">Ghi hình</string>
+    <string name="label_capture_image">Chụp ảnh</string>
+    <string name="label_pan_auto">Tự động</string>
+    <string name="label_camera_share">Chia sẻ</string>
+    <string name="label_camera_library">Thư viện</string>
+    <string name="label_camera_multi_screen">Xem nhiều \n màn hình</string>
+    <string name="label_camera_defence">Phòng vệ\nchủ động</string>
+    <string name="label_btn_definition">SD</string>
+    <string name="dialog_feature_not_support">Camera bạn sử dụng chưa hỗ trợ tính năng này.
+        Để trải nghiệm tính năng, bạn có thể tham khảo thêm các dòng camera khác</string>
+    <string name="label_play_fail">Tải không thành công.\n Vui thử lại hoặc kiểm tra kết nối mạng.</string>
+    <string name="label_retry">Thử lại</string>
+    <string name="dialog_save_video_success">Video đã lưu thành công.\n Bạn có thể xem lại ở thư viện của điện thoại.</string>
+    <string name="dialog_save_photo_success">Ảnh đã lưu thành công.\n Bạn có thể xem lại ở thư viện của điện thoại.</string>
+    <string name="dialog_btn_goto_library">Xem thư viện</string>
+    <string name="dialog_confirm_save_video">Đã hoàn thành ghi hình.\nBạn có muốn lưu video vào thư viện của điện thoại?</string>
+    <string name="dialog_confirm_save_photo">Đã hoàn thành chụp ảnh.\nBạn có muốn lưu ảnh vào thư viện của điện thoại?</string>
+    <string name="dialog_btn_save">Lưu</string>
+    <string name="dialog_btn_ok">OK</string>
+    <string name="dialog_btn_cancel">Hủy</string>
+    <string name="label_library">Thư viện</string>
+    <string name="label_video">Video</string>
+    <string name="label_photo">Ảnh</string>
+    <string name="toast_record_video">Đang thực hiện ghi hình</string>
+
+    <!--    Add Camera-->
+    <string name="tips_scan_code">Vui lòng quét mã QR trên thiết bị \nhoặc sách hướng dẫn sử dụng</string>
+    <string name="add_camera_title">Add Camera</string>
+    <string name="device_serial">Device serial</string>
+    <string name="device_serial_hint">Input the device serial</string>
+    <string name="validate_code">Validate code</string>
+    <string name="validate_code_hint">Input the validate code</string>
+    <string name="open_manual_input"><![CDATA[<font color=\'#FFFFFF\'>Nếu không quét mã QR thành công.\nVui lòng thử </font><font color=\'#BE0A45\'>thủ công ></font>]]></string>
+    <string name="save">Save</string>
+
+    <!--share camera-->
+    <string name="add_share">Thêm chia sẻ</string>
+    <string name="receiver_information">Thông tin người nhận</string>
+    <string name="enter_phone_number">Nhập số điện thoại</string>
+    <string name="shared_list">Danh sách đã chia sẻ</string>
+    <string name="next">Tiếp</string>
+    <string name="setting_share_camera">Cài đặt quyền</string>
+    <string name="choose_access_permission">Lựa chọn quyền truy cập</string>
+    <string name="live_streaming">Xem trực tiếp</string>
+    <string name="replay">Phát lại</string>
+    <string name="warning">Cảnh báo</string>
+    <string name="live_chat">Đàm thoại trực tiếp</string>
+    <string name="controlPTZ">Điều khiển quay/ nghiêng</string>
+    <string name="all_access">Tất cả quyền truy cập</string>
+    <string name="not_cancel_default_permission">Không thể hủy quyền mặc định</string>
+    <string name="resolution">1x</string>
+    <string name="label_video_live_stream">Xem trực tuyến</string>
+    <string name="register_cloud_storage_service">Bạn chưa đăng ký dịch vụ lưu trữ đám mây. Vui lòng đăng ký dịch vụ hoặc chuyển sang chế độ thẻ nhớ.</string>
+    <string name="register">Đăng ký</string>
+    <string name="cloud_storage">Lưu trữ đám mây</string>
+    <string name="control_cloud_storage">Tắt/ bật lưu trữ đám mây</string>
+    <string name="please_register_cloud_service">Bạn chưa có dung lượng lưu trữ trên đám mây.\nHãy đăng ký để trải nghiệm lưu trữ mọi lúc mọi nơi.</string>
+    <string name="vhome_basic">Viettel Home basic</string>
+    <string name="content_cloud_service">Chỉ 22.000 VNĐ/tháng cho 7 ngày lưu trữ đám mây và Free dung lượng 3G/4G khi xem lại video trên ứng dụng.</string>
+    <string name="help">Trợ giúp</string>
+    <string name="contact_with_us">Liên hệ với chúng tôi</string>
+    <string name="frequently_question">Câu hỏi thường gặp</string>
+
+    <string name="ezviz_latest_verion_firmware">Thiết bị của bạn đã được cập nhật phiên bản mới nhất</string>
+    <string name="ezviz_notification">Thông báo</string>
+    <string name="ezviz_not_latest_verion_firmware">Thiết bị của bạn chưa được cập nhật phiên bản mới nhất</string>
+
+    <string name="alert_defendence_function">Chức năng phòng vệ chủ động chỉ hoạt động khi đang xem trực tuyến. Vui lòng trở lại màn hình xem trực tuyến để kích hoạt tính năng.</string>
+
+    <string-array name="frequently_question_list">
+        <item>Chế độ kết nối tương thích Compatible mode là gì?</item>
+        <item>Chế độ kết nối Bluetooth là gì?</item>
+        <item>Quét mã QR là gì?</item>
+        <item>Quét mã QR là gì?</item>
+        <item>Kết nối tài khoản là gì?</item>
+    </string-array>
+
+    <string name="no_memory_card">Không có dữ liệu hiển thị do không tìm thấy thẻ nhớ. Vui lòng kiểm tra và lắp đặt lại thẻ nhớ.</string>
+    <string name="speed_video">%dX</string>
+
+    //add camera
+    <string name="no_info_device">Không tìm thấy thông tin thiết bị.</string>
+    <string name="device_added_by_current">Thiết bị đang online và đã được thêm vào tài khoản hiện tại.</string>
+    <string name="device_added_by_other_account">Thiết bị đang online và đã được thêm vào tài khoản khác.</string>
+    <string name="device_offline_by_other_account">Thiết bị đang tắt và đã được thêm vào một tài khoản khác.</string>
+    <string name="device_offline_by_current_account">Thiết bị đang ngoại tuyến và đc thêm vào tài khoản này.</string>
+    <string name="error_add_camera">Có lỗi xảy ra.</string>
+    <string name="add_device_title">Thêm thiết bị</string>
+    <string name="add_device_connecting">Đang kết nối</string>
+    <string name="config_camera">Đang cấu hình thiết bị</string>
+    <string name="config_wifi_success">Thiết lập wifi thành công</string>
+    <string name="config_wifi">Đang thiết lập wifi cho thiết bị, vui lòng chờ đợi ...</string>
+    <string name="register_success">Đăng kí thiết bị thành công.</string>
+    <string name="check_info_device">Đang kiểm tra thông tin thiết bị, vui lòng đợi!</string>
+    <string name="setup_wifi_camera">Đang thực hiện cấu hình mạng cho thiết bị, vui lòng chờ đợi!</string>
+    <string name="connecting_camera">Đang kết nối... </string>
+    <string name="click_to_turn_on_light">Nhấp vào để bật đèn</string>
+    <string name="connect_device">Kết nối thiết bị</string>
+    <string name="info_serial_camera">Đã tìm thấy thiết bị có mã serial %s</string>
+    <string name="lable_setting_sound">Khi đã tắt, cả video xem trực tiếp và video được ghi lại đều sẽ không có âm thanh.</string>
+    <string name="lable_setting_ir">Khi tắt, chất lượng hình ảnh có thể bị ảnh hưởng trong điều kiện tối.</string>
+    <string name="lable_setting_password">Mật khẩu mặc định là mã xác nhận thiết bị.</string>
+    <string name="lable_flip_image">Nhấn để lật hình ảnh</string>
+    <string name="lable_sleep_mode">Khi chế ngủ được bật, thiết bị sẽ ngừng theo dõi và ghi hình. Tắt chế độ ngủ để tiếp tục.</string>
+    <string name="update_success">Cập nhật thành công</string>
+    <string name="setting_sound">Âm thanh</string>
+    <string name="sound">Âm thanh</string>
+    <string name="device_light">Đèn trạng thái</string>
+    <string name="ir_light">Ánh sáng hồng ngoại</string>
+    <string name="alarm_message">Thông báo báo động</string>
+    <string name="night_mode">Chế độ ban đêm</string>
+    <string name="storage_status">Trạng thái lưu trữ</string>
+    <string name="device_version">Phiên bản thiết bị</string>
+    <string name="device_current_version">Phiên bản hiện tại</string>
+    <string name="device_latest_version">Phiên bản mới nhất</string>
+    <string name="image_encoding">Mã hóa hình ảnh</string>
+    <string name="update_firmware_setting_update_success">Cập nhật thành công</string>
+    <string name="update_firmware_setting_update_fail">Cập nhật thất bại vui lòng thử lại sau</string>
+    <string name="change_password">Đổi mật khẩu</string>
+    <string name="flip_pictures">Lật hình ảnh</string>
+    <string name="sleep_mode">Chế độ ngủ</string>
+    <string name="setting_advanced_picture">Cài đặt hình ảnh nâng cao</string>
+    <string name="introduce">Giới thiệu</string>
+    <string name="time_zone">Múi giờ</string>
+    <string name="date_format">Định dạng ngày</string>
+    <string name="alarm_notification">Thông báo báo động</string>
+    <string name="detect_person">Phát hiện hình dạng người</string>
+    <string name="detect_image">Phát hiện thay đổi hình ảnh</string>
+    <string name="setting_notification_plan">Bạn sẽ nhận được thông báo 24/7 khi chọn bật tính năng này.</string>
+    <string name="setting_notification_mark">Khi bật chức năng này đối tượng sẽ được đánh dấu trong video</string>
+    <string name="setting_notification_mark_event">Khi bật chức năng này thông báo sẽ được gửi theo lịch trình</string>
+    <string name="check_detect">Đánh dấu phát hiện</string>
+    <string name="tittle_check_detect">Khi tắt, các đối tượng mục tiêu sẽ không được đánh dấu trong video.</string>
+    <string name="setting_plan">Cài đặt lịch trình</string>
+    <string name="title_setting_plan">Khi kích hoạt, thiết bị sẽ bật/tắt thông báo theo thiết lập lịch trình của bạn.</string>
+    <string name="motion_zoning">Khoanh vùng chuyển động</string>
+    <string name="title_motion_zoning">0: Phát hiện chuyển động sẽ tắt</string>
+    <string name="motion_sensitivity">Độ nhạy chuyển động</string>
+    <string name="mode_alarm_sound">Chọn chế độ</string>
+    <string name="title_mode_alarm_sound">Cảnh báo bằng âm thanh sẽ được thực hiện nếu thiết bị phát hiện ra chuyển động của con người hoặc động vật</string>
+    <string name="notifi_camera">Quản lý thông báo</string>
+    <string name="notification">Thông báo</string>
+    <string name="sdcard_information_error">Không có thẻ nhớ hoặc thẻ nhớ lỗi</string>
+
+    <string name="input_verifyCode">Nhập mã xác nhận</string>
+    <string name="introduce_get_verifyCode">Một tin nhắn đã được gửi đến số điện thoại được đăng ký, nhập mã xác nhận được nhận vào</string>
+    <string name="received_code">Mã xác nhận</string>
+    <string name="successful_activation">Kích hoạt thành công</string>
+    <string name="alert_encrypt">Nếu bị vô hiệu hóa, có thể làm giảm độ an toàn của các video và hình ảnh. Có tiếp tục không?</string>
+    <string name="adjust_motion_detection_sensitivity">1: Chỉ có chuyển động lớn mới kích hoạt cảnh báo chuyển động</string>
+    <string name="adjust_motion_detection_sensitivity_high">6: Các chuyển động nhỏ cũng sẽ kích hoạt cảnh báo chuyển động</string>
+
+    //mode alarm sound
+    <string name="long_mode">Nhạy hơn (Tăng âm lượng cảnh báo xâm nhập)</string>
+    <string name="sub_long_mode">Tăng âm lượng cảnh báo xâm nhập</string>
+    <string name="short_mode">Mềm (Giọng nói cảnh báo cho việc xâm nhập)</string>
+    <string name="sub_short_mode">Giọng nói cảnh báo cho việc xâm nhập</string>
+    <string name="mute_mode">Chế độ yên lặng</string>
+    <string name="sub_mute_mode">""</string>
+    <string name="remove_all">Xóa tất cả</string>
+    <string name="remove">Xóa</string>
+    <string name="confirm_remove_motion_detect">Bạn có chắc chắn muốn hủy bỏ khu vực đã vẽ không</string>
+    <string name="announcement_schedule">Lịch trình thông báo</string>
+    <string name="add_time_schedule">Thêm lịch trình thời gian</string>
+    <string name="monday">Hai</string>
+    <string name="tuesday">Ba</string>
+    <string name="wednesday">Tư</string>
+    <string name="thursday">Năm</string>
+    <string name="friday">Sáu</string>
+    <string name="saturday">Bảy</string>
+    <string name="sunday">CN</string>
+    <string name="time_start">Thời gian bắt đầu</string>
+    <string name="time_end">Thời gian kết thúc</string>
+    <string name="repeat">Lặp lại</string>
+    <string name="text_monday">Thứ Hai</string>
+
+    <string-array name="day_of_week_schedule">
+        <item>Hai</item>
+        <item>Ba</item>
+        <item>Tư</item>
+        <item>Năm</item>
+        <item>Sáu</item>
+        <item>Bảy</item>
+        <item>CN</item>
+    </string-array>
+
+    <string name="set_up_successfully">Thiết lập thành công</string>
+    <string name="product_category">Danh mục sản phẩm</string>
+    <string name="device_type">Kiểu thiết bị</string>
+    <string name="serial_no">Serial No.</string>
+    <string name="event_over">The event has expired within the selected time period</string>
+    <string name="not_file_history">Không tìm thấy lịch sử video trong thời gian tìm kiếm.</string>
+    <string name="all_video_played">Tất cả video đã được phát</string>
+
+    //record camera
+    <string name="record_fail" translatable="false">Có lỗi xảy ra!</string>
+    <string name="auto_tracking_status" translatable="false">%s chế độ dò tìm tự động</string>
+    <string name="error_play_video">Không thể phát video. Vui lòng thử lại.</string>
+    <string name="mode_sleep">Chế độ ngủ đã được bật</string>
+    <string name="label_wakeup">Đánh thức</string>
+
+    <string name="fragment_camera_setting_vhome_title">Cài đặt</string>
+    <string name="format_day">%s ngày</string>
+    <string name="format_month">%s tháng</string>
+    <string name="package_name">Gói</string>
+    <string name="date_effective">Hiệu lực:</string>
+    <string name="status_package">Tình trạng:</string>
+
+
+    <string name="string_on_off_mode_private_liveview">Tắt chế độ</string>
+    <string name="string_show_mode_private">Đang bật chế độ riêng tư</string>
+    <string name="motion_tracking_ezviz">Theo dõi chuyển động</string>
+    <string name="today_shortcut">Hôm nay</string>
+    <string name="register_now"><u>Đăng ký ngay</u></string>
+    <string name="save_video_success_content">Bạn có muốn lưu video vào thư viện của điện thoại?</string>
+    <string name="save_video_success_title">Đã hoàn thành ghi hình</string>
+    <string name="private_mode">Chế độ riêng tư</string>
+    <string name="config_setting">Cấu hình cài đặt</string>
+    <string name="alarm_setting">Cài đặt thông báo</string>
+    <string name="text_cancel">Hủy</string>
+    <string name="text_delete">Xóa</string>
+
+    <string name="noti_jf_camera_connected">Camera %s đã kết nối trở lại vào lúc %s</string>
+    <string name="noti_jf_camera_disconnected">Camera %s mất kết nối vào lúc %s</string>
+
+    <string name="text_ezviz_sdcard_capacity">Dung lượng: </string>
+    <string name="text_ezviz_sdcard_used">Đã dùng: </string>
+    <string name="text_ezviz_sdcard_used_left">Còn trống: </string>
+
+    <string name="camera_doesnot_have_card">Chưa có thẻ</string>
+
+    <!--  Defence Scheduled  -->
+    <string name="alarm_message_24_hour">Thông báo 24h</string>
+    <string name="alarm_message_off">Tắt thông báo</string>
+    <string name="alarm_message_scheduled">Thông báo theo lịch trình</string>
+    <string name="note_setting_defend_schedule">Bạn sẽ nhận được thông báo 24/7 hoặc theo lịch trình khi chọn bật tính năng này.</string>
+
+    <string name="mode_24_hour">24h</string>
+    <string name="mode_scheduled">Lịch trình</string>
+
+    <string name="monday_acro">T2</string>
+    <string name="tuesday_acro">T3</string>
+    <string name="wednesday_acro">T4</string>
+    <string name="thursday_acro">T5</string>
+    <string name="friday_acro">T6</string>
+    <string name="saturday_acro">T7</string>
+    <string name="sunday_acro">CN</string>
+    <string name="time_period">%s - %s</string>
+
+    <string name="hour">Giờ</string>
+    <string name="minute">Phút</string>
+    <string name="second">Giây</string>
+    <string name="number_picker_formatter">%02d</string>
+
+    <string name="mark_human_detection">Đánh dấu phát hiện người</string>
+    <string name="mark_human_detection_description">Khi bật chức năng này thì đối tượng sẽ được đánh dấu trong video</string>
+
+    <string name="delete_camera_failed">Xóa camera thất bại</string>
+
+
+    //Module device_vhome
+
+    <string name="title_humidity">Độ ẩm</string>
+    <string name="title_pressure">Áp suất</string>
+    <string name="title_air">Không khí</string>
+    <string name="view_type_grid">Xem dạng lưới</string>
+    <string name="view_type_list">Xem dạng danh sách</string>
+    <string name="online_title">Đang hoạt động</string>
+    <string name="grid_online_title">Hoạt động</string>
+    <string name="offline_title">Đang ngoại tuyến</string>
+    <string name="grid_offline_title">Ngoại tuyến</string>
+
+    <string name="text_greeting">Xin chào, %s</string>
+    <string name="quantity_camera_preview">%d/%d Hoạt động</string>
+    <string name="quantity_endpoint">%d công tắc</string>
+    <string name="card_title">Thẻ thanh toán</string>
+    <string name="no_card">Chưa có thẻ</string>
+    <string name="security_title">Chính sách bảo mật</string>
+    <string name="service_title">Thỏa thuận đăng ký và sử dụng dịch vụ</string>
+    <string name="response_title">Phản hồi</string>
+    <string name="change_pass_title">Thay đổi mật khẩu</string>
+    <string name="rating_title">Đánh giá chúng tôi</string>
+    <string name="logout_title">Đăng xuất</string>
+    <string name="version_title">Phiên bản hiện tại</string>
+    <string name="tab_home_camera_page">Thiết bị</string>
+    <string name="tab_event">Sự kiện</string>
+    <string name="tab_individual">Cá nhân</string>
+    <string name="tab_setting">Cài đặt</string>
+    <string name="tab_util">Tiện ích</string>
+    <string name="profile">Hồ sơ</string>
+    <string name="empty_notification">Chưa có thông báo</string>
+    <string name="tab_service">Dịch vụ</string>
+    <string name="tab_sell">Kênh bán</string>
+    <string name="tab_support">Hỗ trợ</string>
+    <string name="tab_game">Giải trí</string>
+    <string name="title_no_camera">Không có camera</string>
+    <string name="title_no_device">Không có thiết bị</string>
+    <string name="title_no_event">Không có ngữ cảnh</string>
+    <string name="hold_to_delete">Giữ 2s để chọn sự kiện muốn xoá</string>
+    <string name="chosse_camera">Chọn Camera</string>
+    <string name="video">Video</string>
+    <string name="save_video">Lưu video</string>
+    <string name="delete_video">Xóa video</string>
+    <string name="image">Hình ảnh</string>
+    <string name="delete_event_failed">Xóa sự kiện thất bại</string>
+    <string name="no_data">Không có dữ liệu</string>
+    <string name="string_recording_success">Video đã được lưu vào thiết bị thành công</string>
+    <string name="playback">Playback</string>
+    <string name="text_playback">Xem lại</string>
+    <string name="list_device">Danh sách thiết bị</string>
+    <string name="delete_event_success">Xóa sự kiện thành công</string>
+    <string name="live_view">Live view</string>
+    <string name="share">Chia sẻ</string>
+    <string name="list_device_camera">Danh sách camera</string>
+    <string name="choose_event">Chọn sự kiện</string>
+    <string name="confirm_remove_event">Dữ liệu đã xoá không thể khôi phục lại được</string>
+    <string name="dialog_button_cancel">Thoát</string>
+    <string name="confirm_remove">Bạn có chắc chắn muốn xoá?</string>
+    <string name="confirm_remove_central_noti">Bạn có chắc muốn xoá %s sự kiện đã chọn</string>
+    <string name="delete_event_successful">Xóa thành công %s/%s video</string>
+    <string name="selected_size">Đã chọn(%s)</string>
+    <string name="read_all_event_failed">Đọc tất cả không thành công</string>
+    <string name="download_event_success">Tải sự kiện thành công</string>
+    <string name="download_event_failed">Không tìm thấy video của sự kiện</string>
+    <string name="read_all">Đọc tất cả</string>
+    <string name="notification_system">Thông báo hệ thống</string>
+    <string name="share_manager">Quản lý chia sẻ</string>
+    <string name="device_shared">Thiết bị đã chia sẻ</string>
+    <string name="device_waiting_accept">Thiết bị đợi chấp nhận</string>
+    <string name="device_accepted">Thiết bị đã chấp nhận</string>
+    <string name="create_share">Thêm chia sẻ</string>
+    <string name="string_title_toolbar_spread">Lan tỏa Viettel Home</string>
+    <string name="sharing_device_success">Gửi lời mời chia sẻ thành công</string>
+    <string name="account_shared">Tài khoản đã chia sẻ</string>
+    <string name="device_selection">Chọn thiết bị</string>
+    <string name="string_not_device_accout">Không có thiết bị nào trong tài khoản</string>
+    <string name="choose_permission">Chọn quyền</string>
+    <string name="reminiscent_name">Tên gợi nhớ</string>
+    <string name="input_eminiscent_name">2-50 ký tự</string>
+    <string name="complete">Hoàn thành</string>
+    <string name="waiting_accept">Đợi chấp nhận</string>
+    <string name="accepted">Đã chấp nhận</string>
+    <string name="permission_grant">Quyền Camera</string>
+    <string name="detail_friend">Chi tiết bạn bè</string>
+    <string name="time_share">Thời gian chia sẻ %s</string>
+    <string name="edit_name">Chỉnh sửa tên gợi nhớ</string>
+    <string name="setting_permission">Thiết lập quyền</string>
+    <string name="count_camera_shared">Đã chia sẻ cho %s người bạn</string>
+    <string name="title_delete_sharing">Thông báo</string>
+    <string name="content_delete_sharing">Bạn của bạn sẽ không thể sử dụng thiết bị nếu chia sẻ bị hủy. Tiếp tục?</string>
+    <string name="content_delete_shared">Bạn không thể sử dụng thiết bị nếu hủy chia sẻ. Tiếp tục?</string>
+    <string name="from_camera_shared">Từ %s</string>
+    <string name="accept">Chấp nhận</string>
+    <string name="detail_share">Chi tiết chia sẻ</string>
+    <string name="info_camera">Thông tin camera</string>
+    <string name="account_share">Tài khoản chia sẻ</string>
+    <string name="manufacturer">Hãng sản xuất</string>
+    <string name="kind_device">Loại thiết bị</string>
+    <string name="serial_number">Mã thiết bị (serial number)</string>
+    <string name="name_account">Tên tài khoản</string>
+    <string name="time_shared">Thời gian chia sẻ</string>
+    <string name="permission">Quyền</string>
+    <string name="cancel_share">Hủy chia sẻ</string>
+    <string name="error_invalid_phone_number">Số điện thoại không hợp lệ</string>
+    <string name="no_share_device">Không có thiết bị nào</string>
+    <string name="accept_all">Chấp nhận tất cả</string>
+    <string name="type_camera">Loại camera</string>
+    <string name="audio">Đàm thoại</string>
+    <string name="control_ptz">Điều khiển PTZ</string>
+    <string name="cancel_share_device_success">Bạn đã từ chối thiết bị %s từ %s</string>
+    <string name="accept_share_device_success">Bạn đã chấp nhận thiết bị %s được chia sẻ từ %s</string>
+    <string name="accept_all_device">Bạn đã chấp nhận tất cả thiết bị được chia sẻ</string>
+    <string name="fcm_camera_shared_title">Chia sẻ thiết bị</string>
+    <string name="confirm_remove_event_shared_camera">Bạn không được xóa sự kiện của Camera được chia sẻ, chỉ được xóa sự kiện Camera chính chủ. Bạn vẫn muốn tiếp tục?</string>
+    <string name="continue_delete">Tiếp tục xóa</string>
+    <string name="fcm_camera_invitation">Tài khoản %s đã chia sẻ thiết bị %s cho bạn vào lúc %s.</string>
+    <string name="fcm_camera_accepted">Tài khoản %s đã chấp nhận thiết bị %s vào lúc %s.</string>
+    <string name="fcm_camera_rejected">Tài khoản %s đã từ chối thiết bị %s bạn chia sẻ vào lúc %s.</string>
+    <string name="fcm_camera_deleted">Bạn bị loại bỏ quyền xem thiết bị %s vào lúc %s.</string>
+    <string name="have_new_shared">Bạn có %s chia sẻ mới</string>
+    <string name="fcm_camera_delete_shared">Tài khoản %s đã thực hiện hủy chia sẻ với thiết bị %s vào lúc %s.</string>
+    <string name="fcm_camera_update_permission_shared">Tài khoản %s đã cập nhật quyền của bạn cho thiết bị %s vào lúc %s.</string>
+    <string name="camera_dont_exist">Camera không tồn tại</string>
+    <string name="notification_remove_event_shared_camera">Bạn không thể xóa các sự kiện được chia sẻ</string>
+    <string name="notification_remove_event_not_setected">Bạn hãy chọn sự kiện muốn xóa</string>
+    <string name="string_title_nubmer_spread_dialog">Nhập số điện thoại giới thiệu thành công</string>
+    <string name="string_content_nubmer_spread_dialog">Điểm lan tỏa Viettel Home sẽ được tính khi Camera đăng ký sử dung dịch vụ Cloud.</string>
+    <string name="share_device_success">Chia sẻ thành công</string>
+    <string name="delete_noti_success">Xóa thông báo thành công</string>
+    <string name="no_data_playback_cloud">Không có dữ liệu ở ngày được chọn</string>
+    <string name="register_cloud">Đăng ký lưu trữ Cloud ngay để đảm bảo an toàn cho dữ liệu của bạn.</string>
+    <string name="string_error_create_share">Mỗi thiết bị chỉ được chia sẻ tối đa 5 tài khoản. Vui lòng xóa chia sẻ cũ để tiếp tục.</string>
+    <string name="string_state_share_accept">Đã chấp nhận</string>
+    <string name="string_state_share_pending">Chờ chấp nhận</string>
+    <string name="string_btn_reject_share">Hủy chia sẻ</string>
+    <string name="string_title_information_share">Thông tin chia sẻ</string>
+    <string name="string_title_manager_house">Nhà quản lý*</string>
+    <string name="string_title_manager_room">Phòng quản lý</string>
+    <string name="share_cam_permission_text">Quyền Camera</string>
+    <string name="string_btn_reject_share_jf">Hủy chia sẻ</string>
+    <string name="txt_share_please_select_home">Vui lòng chọn nhà nhận thiết bị</string>
+    <string name="string_content_number_spread_camera">Số điện thoại giới thiệu Viettel Home cho bạn</string>
+    <string name="dummy_text">123 Dummy textWhat is Lorem Ipsum?\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\n\nWhy do we use it?\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for \'lorem ipsum\' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).\n\n\nWhere does it come from?\nContrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.\n\nThe standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from \"de Finibus Bonorum et Malorum\" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.\n\nWhere can I get some?\nThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don\'t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn\'t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</string>
+
+    <string name="service_tab_msg_not_found">Không tìm thấy kết quả với từ khóa</string>
+    <string name="service_tab_msg_try_again">Thử lại với từ khóa khác</string>
+    <string name="service_tab_msg_find_result">Tìm thấy <b>%s</b> sản phẩm</string>
+    <string name="service_tab_hint_search">Tìm kiếm sản phẩm</string>
+    <string name="service_tab_title_service">Dịch vụ</string>
+    <string name="service_tab_title_all_service">Tất cả dịch vụ</string>
+    <string name="service_tab_title_products">Danh mục sản phẩm</string>
+    <string name="service_tab_title_see_more">Xem thêm</string>
+
+
+    //Module ipccamera
+
+    <string name="string_play_stream_fail">Tải không thành công. Vui lòng thử lại hoặc kiểm tra kết nối mạng/ Thử lại</string>
+    <string name="search_video_error">Đang mất kết nối, bạn vui lòng kiểm tra lại kết nối và thử lại</string>
+    <string name="connect_wifi">Kết nối Wifi</string>
+    <string name="scan_qrcode">Quét mã QR</string>
+    <string name="string_tv_camera_manufacturer">Hãng sản xuất</string>
+    <string name="string_tv_camera_device_type">Loại thiết bị</string>
+    <string name="string_tv_camera_device_code">Mã thiết bị (Serial)</string>
+    <string name="string_tv_camera_password">Mã xác nhận</string>
+    <string name="string_error_plan_text">Không để trống giá trị này</string>
+    <string name="string_error_contains_space">Không được chứa khoảng trống</string>
+    <string name="string_error_wrong_email_format">Sai định dạng email</string>
+    <string name="string_error_pwd_too_short">Mật khẩu quá ngắn</string>
+    <string name="string_error_non_matching_password">Mật khẩu nhập lại phải khớp với dòng trên</string>
+    <string name="string_error_wrong_phone_format">Số điện thoại không hợp lệ</string>
+    <string name="string_error_min_text_length">Chưa đạt độ dài tối thiểu</string>
+    <string name="string_error_format_password">Mật khẩu 8-50 ký tự, bao gồm chữ hoa, chữ thường, số và ký tự đặc biệt.</string>
+    <string name="string_error_max_text_length">Mật khẩu không quá  50 ký tự</string>
+    <string name="string_error_otp_wrong">Mã xác minh không đúng hoặc đã hết hạn</string>
+    <string name="string_error_not_equal_password">Mật khẩu cũ không chính xác</string>
+    <string name="string_error_qr_code_camera">QR không hợp lệ</string>
+    <string name="string_error_qr_code_camera_wrong_qr_body_model">Hệ thống chưa hỗ trợ quét QR với thiết bị, bạn vui lòng lựa chọn thêm mới thủ công.</string>
+    <string name="string_error_qr_code_camera_wrong_qr_body">Hệ thống chưa hỗ trợ quét QR với thiết bị, bạn vui lòng lựa chọn thêm mới thủ công.</string>
+    <string name="string_title_toolbar_instructions_add_camera_content"><b>Bước 1:</b>\nĐảm bảo thiết bị đã kết nối nguồn điện.<b>\nBước 2:</b>\nBạn hãy Reset Camera bằng cách bấm giữ nút Reset cho đến khi đèn nháy màu xanh.</string>
+    <string name="string_title_toolbar_instructions_add_camera_device_red_light_flashes">Đèn trạng thái đã nháy xanh</string>
+    <string name="string_error_plan_text_name_wifi">Bạn vui lòng nhập Tên wifi</string>
+    <string name="string_error_plan_text_serial_camera">Bạn vui lòng nhập mã thiết bị</string>
+    <string name="string_error_plan_text_password_camera">Bạn vui lòng nhập mã xác nhận</string>
+    <string name="string_quick_qr_code">Vui lòng quét mã QR trên thiết bị hoặc sách hướng dẫn sử dụng</string>
+    <string name="string_quick_qr_code_1">Nếu không quét mã QR không thành công. \n Vui lòng thử thêm <font color='#ff738e'><u>thủ công</u></font></string>
+    <string name="string_open_gallery_qr">Vui lòng quét mã QR trên thiết bị hoặc chọn từ <font color='#ff738e'><u>thư viện ảnh</u></font></string>
+    <string name="string_description_connect_wifi_meari_1">Vui lòng kết nối điện thoại của bạn với mạng wifi có tên<b>“%s”</b>.</string>
+    <string name="string_description_connect_wifi_meari_2">Nhấn vào nút <font color='#ff738e'><u>Kết nối Wifi</u></font> \u27F6 Kết nối wifi %s \u27F6 Quay lại app để tiếp tục thêm thiết bị</string>
+    <string name="string_camera_connect_wifi_room">Vui lòng đặt thiết bị của bạn gần bộ định tuyến nhất có thể.</string>
+    <string name="string_camera_connect_wifi_room_success">Đèn trạng thái đã xanh.</string>
+    <string name="string_connect_device_hotspot_error">Kết nối camera thất bại, vui lòng kiểm tra lại kết nối WiFi</string>
+    <string name="string_connect_device_hotspot_retry_error">Kết nối camera thất bại, Vui lòng thử lại</string>
+    <string name="string_connect_error_wifi_camera">Không tìm thấy wifi do camera phát ra. Vui lòng nhấn nút reset trên camera và thử lại.</string>
+    <string name="string_recording_loading">Đang thực hiện lưu video</string>
+    <string name="string_recording_error">Ghi lại thất bại</string>
+    <string name="capture_success">Ảnh đã được lưu vào thiết bị</string>
+    <string name="string_add_camera_manual">Thêm  thủ công</string>
+    <string name="string_connect_wifi"><u>Kết nối Wifi</u></string>
+    <string name="error_serial_no">Không tồn tại camera, vui lòng kiểm tra lại!</string>
+    <string name="string_setting_information_camera">Xem thông tin Camera</string>
+    <string name="string_setting_edit_namera_camera">Đổi tên Camera</string>
+    <string name="string_setting_reset_camera">Khởi động lại Camera</string>
+    <string name="string_setting_update_fw_Camera">Cập nhật Firmware</string>
+    <string name="lastest_app">Ứng dụng đã ở phiên bản mới nhất</string>
+    <string name="current_version">Phiên bản hiện tại</string>
+    <string name="size_app">Kích thước: %s</string>
+    <string name="latest_version">Phiên bản mới nhất</string>
+    <string name="string_setting_camera_title">Cấu hình cài đặt</string>
+    <string name="string_setting_on_off_led">Bật/Tắt LED trạng thái</string>
+    <string name="string_tv_setting_private_mode">Chế độ riêng tư</string>
+    <string name="string_setting_night_mode">Chế độ ban đêm</string>
+    <string name="string_setting_flip_image">Lật hình ảnh</string>
+    <string name="string_setting_follow_action">Theo dõi chuyển động</string>
+    <string name="string_setting_notificaiton_alarm">Thông báo</string>
+    <string name="string_setting_notificaiton_system">Cài đặt thông báo hệ thống</string>
+    <string name="string_setting_notificaiton_setting_alarm">Tính năng thông minh</string>
+    <string name="string_setting_record_mode">Chế độ ghi hình</string>
+    <string name="string_setting_white_light">Chế độ ban đêm</string>
+    <string name="string_setting_time_zone">Múi giờ</string>
+    <string name="string_setting_card">Thẻ nhớ</string>
+    <string name="live">Live</string>
+    <string name="string_setting_image_encoding">Mã hóa hình ảnh</string>
+    <string name="tab_memory_stick">Thẻ nhớ</string>
+    <string name="tab_cloud">Cloud</string>
+    <string name="date">Ngày</string>
+    <string name="camera">Camera</string>
+    <string name="event">Sự kiện</string>
+    <string name="expired_event_selected_time">Không có video trong khoảng thời gian được chọn</string>
+    <string name="no_event_selected_time">Không có video trong khoảng thời gian được chọn</string>
+    <string name="all_event_played">Tất cả video đã được phát</string>
+    <string name="no_data_to_show">Không có dữ liệu để hiển thị</string>
+
+    <string name="string_update">Cập nhật</string>
+    <string name="string_active">Kích hoạt</string>
+    <string name="string_title_delete_data">Xóa dữ liệu thẻ nhớ</string>
+    <string name="string_text_rb_handmade">Thủ công</string>
+    <string name="string_rb_automatic">Tự động</string>
+    <string name="string_tv_information">Thông tin</string>
+    <string name="string_title_total_data">Dung lượng:</string>
+    <string name="string_total_used">Đã dùng</string>
+    <string name="string_toolbar_memory_card">Thẻ nhớ</string>
+    <string name="string_title_information_cam">Thông tin Camera</string>
+    <string name="disconnected_camera">Không thể kết nối tới camera</string>
+    <string name="updating_firmware">Đang thực hiện cập nhật Firmware mới nhất, chúng tôi sẽ thông báo cho bạn khi quá trình cập nhật hoàn tất</string>
+    <string name="update_firmware_fail">Cập nhật Firmware thất bại</string>
+    <string name="no_connection">Không có kết nối\nVui lòng kiểm tra kết nối Internet</string>
+    <string name="title_notification">Lịch trình thông báo</string>
+    <string name="string_human_detect">Phát hiện hình dạng người</string>
+    <string name="string_motion_detect">Phát hiện chuyển động</string>
+    <string name="string_low">Thấp</string>
+    <string name="notification_smart_setting_24h">Thông báo 24h</string>
+    <string name="notification_smart_setting_24h_title">24h</string>
+    <string name="notification_smart_setting_scheduled">Thông báo theo lịch trình</string>
+    <string name="notification_turn_on_setting_scheduled">Bật</string>
+    <string name="notification_turn_off_setting_scheduled">Tắt</string>
+    <string name="notification_smart_setting_scheduled_title">Lịch trình</string>
+    <string name="notification_smart_setting_turn_off">Tắt thông báo</string>
+    <string name="notification_smart_setting_turn_off_title">Tắt</string>
+    <string name="notification_smart_setting_update_success">Cập nhật thành công</string>
+    <string name="notification_smart_setting_update_fail">Cập nhật thất bại</string>
+    <string name="notification_smart_setting_update_fail_overlap">Bạn không thể cập nhật trùng thời gian</string>
+    <string name="notification_smart_setting_add_success">Thêm thành công</string>
+    <string name="notification_smart_setting_add_fail_overlap">Lịch trình đã trùng</string>
+    <string name="notification_smart_setting_add_fail_device_schedule_limit_reached">Bạn chỉ có tối đa 5 lịch trình, vui lòng xóa một lịch trình đi để tiếp tục</string>
+    <string name="notification_smart_setting_add_fail">Thêm thất bại</string>
+    <string name="string_medium">Trung bình</string>
+    <string name="string_high">Cao</string>
+    <string name="string_title_alarm_notification">Thông báo báo động</string>
+    <string name="string_avail_data">Còn trống</string>
+    <string name="string_24h">24h</string>
+    <string name="string_state_motion">Phát hiện chuyển động</string>
+    <string name="string_5_fps">5 fps</string>
+    <string name="string_10_fps">10 fps</string>
+    <string name="string_15_fps">15 Fps</string>
+    <string name="string_quality_sd">SD</string>
+    <string name="string_quality_hd">HD</string>
+    <string name="string_quality_fhd">FHD</string>
+    <string name="string_quality_image_title">Chất lượng hình ảnh</string>
+    <string name="string_frame_rate_title">Tốc độ khung hình</string>
+    <string name="string_20_fps">20fps</string>
+    <string name="string_video_encoding_title">Chuẩn nén video</string>
+    <string name="string_guick_gide_zone_0">Vẽ để tạo hàng rào an ninh cảnh báo. Nếu không vẽ thì hàng rào an ninh mặc định sẽ là toàn màn hình</string>
+    <string name="string_content_guick_gide_1">Nhấn</string>
+    <string name="string_content_quick_gide_2">Kéo một nét liền</string>
+    <string name="string_content_quick_gide_3">Kéo một một nét liền đóng</string>
+    <string name="string_setting_zone_content">Hàng rào an ninh</string>
+    <string name="string_recording_failed">Lưu video thất bại</string>
+    <string name="not_found_video">Không tìm thấy video</string>
+    <string name="string_save">Lưu</string>
+    <string name="string_cancel">Hủy</string>
+    <string name="string_delete">Xóa</string>
+    <string name="string_ok">Ok</string>
+    <string name="string_content_back">Bạn có chắc chắn hủy bỏ sự thay đổi?</string>
+    <string name="string_content_delete_zone">Bạn có chắc chắn hủy bỏ các khu vực đã vẽ không?</string>
+    <string name="string_content_save_all">Nếu bạn không vẽ khung hình cụ thể, toàn bộ khung hình sẽ trở thành khu vực phát hiện. Tiếp tục?</string>
+    <string name="string_content_clould">Cài đặt lưu trữ</string>
+
+    <string name="quality_sd">SD</string>
+    <string name="quality_hd">HD</string>
+    <string name="quality_fhd">FHD</string>
+    <string name="string_setting_volume">Âm thanh</string>
+    <string name="string_content_mark_detection">Đánh dấu phát hiện</string>
+    <string name="string_setting_led">Đèn LED</string>
+    <string name="string_content_notification_event_setting">Thông báo sự kiện</string>
+    <string name="string_content_setting_time_notification">Thời gian gửi thông báo</string>
+    <string name="string_setting_schedule_time">Lịch trình thông báo</string>
+    <string name="string_setting_shedule">Cài đặt lịch trình</string>
+    <string name="string_content_setting_h264">Chuẩn nén video</string>
+    <string name="string_content_frame_rate">Tốc độ khung hình</string>
+    <string name="string_content_image_quality">Chất lượng hình ảnh</string>
+    <string name="string_content_video_length">Độ dài video</string>
+    <string name="string_setting_video">Cài đặt video</string>
+    <string name="gallery_image">Thư viện ảnh</string>
+    <string name="delete_all">Xóa tất cả</string>
+    <string name="confirm_delete">Bạn có chắc chắn muốn xóa?</string>
+    <string name="confirm_delete_content">Dữ liệu đã xóa không thể khôi phục lại được</string>
+    <string name="string_setting_is_thumbnail_on">Có hình ảnh</string>
+    <string name="string_setting_is_thumbnail_off">Không có hình ảnh</string>
+    <string name="string_setting_reset_default">Thiết lập cài đặt mặc định</string>
+    <string name="string_setting_factoy_reset">Khôi phục cài đặt gốc</string>
+    <string name="string_default_zone_ipc">Mặc định</string>
+    <string name="string_custom_zone_ipc">Tùy chỉnh</string>
+    <string name="string_setting_volume_value">Âm lượng camera</string>
+    <string name="string_setting_camera_is_thumbnail_1">Có hình ảnh</string>
+    <string name="string_setting_camera_is_thumbnail_0">Không có hình ảnh</string>
+    <string name="string_setting_alarm_sound_silent">Im lặng</string>
+    <string name="string_setting_alarm_sound_gentle">Nhẹ nhàng</string>
+    <string name="string_setting_sound_repeated">Dồn dập</string>
+    <string name="string_setting_onvif">Bật/Tắt ONVIF</string>
+    <string name="string_setting_infor_times_old_card">Ngày và giờ lưu trữ cũ nhất \n %s</string>
+    <string name="string_add_schedule">Thêm lịch trình</string>
+    <string name="string_title_toolbar_schedule">Cài đặt lịch trình</string>
+    <string name="string_title_time_start">Từ:</string>
+    <string name="string_title_time_end">Đến</string>
+    <string name="string_alarm_control_success">Bật báo động thành công</string>
+    <string name="confirm_continue">Bạn có chắc muốn tiếp tục?</string>
+    <string name="confirm_factory_reset">Sau khi khôi phục cài đặt gốc, nếu muốn sử dụng bạn phải thêm lại Camera. Bạn vẫn muốn tiếp tục?</string>
+    <string name="regiter_dialog_button_continue">Tiếp tục</string>
+    <string name="confirm_reset_default">Tất cả cài đặt sẽ được khôi phục về mặc định. Bạn vẫn muốn tiếp tục?</string>
+    <string name="confirm_reboot_device">Trong quá trình khởi động lại Camera bạn sẽ không thể xem Liveview. Bạn vẫn muốn tiếp tục?</string>
+    <string name="dialog_button_cancel_2">Hủy bỏ</string>
+    <string name="string_title_manufacturer">Hãng sản xuất</string>
+    <string name="string_title_model">Loại thiết bị</string>
+    <string name="string_title_serial_number">Mã thiết bị (Serial Number)</string>
+    <string name="string_title_verification_code">Mã xác nhận (Verification Code)</string>
+    <string name="string_title_mac">Địa chỉ MAC</string>
+    <string name="string_update_wifi">Đổi wifi</string>
+    <string name="string_title_name_device">Tên thiết bị</string>
+    <string name="string_information_wifi">Thông tin mạng</string>
+    <string name="string_title_firmware">Phiên bản firmware</string>
+    <string name="string_title_release_date">Ngày phát hành</string>
+    <string name="string_title_cloud">Chế độ lưu trữ Cloud</string>
+    <string name="string_title_start_time">Từ</string>
+    <string name="string_title_end_time">Đến</string>
+    <string name="string_loop">Lặp lại</string>
+    <string name="string_monday">Thứ 2</string>
+    <string name="string_tuesday">Thứ 3</string>
+    <string name="string_wednesday">Thứ 4</string>
+    <string name="string_thursday">Thứ 5</string>
+    <string name="string_friday">Thứ 6</string>
+    <string name="string_saturday">Thứ 7</string>
+    <string name="string_sunday">Chủ nhật</string>
+    <string name="empty_memory">Không có thẻ nhớ</string>
+    <string name="setting_memory">Cài đặt thẻ nhớ?</string>
+    <string name="empty_cloud">Chưa kích hoạt Cloud</string>
+    <string name="setting_cloud">Kích hoạt Cloud?</string>
+    <string name="hold_to_delete_gallery">Giữ 2s để chọn sự kiện muốn xóa</string>
+    <string name="hold_to_delete_event">Giữ 2s để chọn sự kiện muốn xóa</string>
+    <string name="string_schedule_alarm_total_max">Bạn chỉ có thể thêm tối đa 5 lịch trình</string>
+    <string name="string_schedule_alarm_content_delete">Bạn có chắc chắn Xóa lịch trình?</string>
+
+    <string name="string_format_card_title">Bạn có chắc muốn Format?</string>
+    <string name="string_btn_format">Format</string>
+    <string name="string_format_card_content">Dữ liệu được Format trên thẻ nhớ sẽ không thể khôi phục lại. Vẫn tiếp tục</string>
+    <string name="string_format_card_content_1">Sau khi định dạng, toàn bộ dữ liệu sẽ bị xóa khỏi thẻ nhớ của bạn.</string>
+    <string name="string_success_setting_time_zone">Cập nhật thông tin múi giờ thành công!</string>
+    <string name="string_note_schedule_alarm">Khi bật thì Camera sẽ gửi cảnh báo sự kiện theo Lịch trình cài đặt. Khi tắt thì Camera gửi cảnh báo sự kiện 24h.</string>
+    <string name="string_off_led_qr">Nhấn vào để tắt đèn</string>
+    <string name="string_on_led_qr">Nhấn vào để bật đèn</string>
+    <string name="string_no_memory_card">Chưa có thẻ nhớ</string>
+    <string name="string_full_memory_card">Thẻ nhớ đầy</string>
+    <string name="string_content_dialog_error">Không có thẻ nhớ</string>
+    <string name="string_add_camera_success">Thêm thiết bị thành công</string>
+    <string name="string_setting_infor_times_old_card_null">Ngày và giờ lưu trữ cũ nhất \n  __:__:__ __/__/____</string>
+    <string name="string_error_model_camera">Loại thiết bị không đúng</string>
+    <string name="dont_register">Chưa đăng ký</string>
+    <string name="expired_cloud">Hết hạn</string>
+    <string name="active_cloud">Đang kích hoạt</string>
+    <string name="string_schedule_error_duplicate">Lịch trình đã trùng</string>
+    <string name="string_schedule_error_infor">Không đủ thông tin</string>
+    <string name="string_schedule_error_infor_error">Lịch đã trùng</string>
+    <string name="string_title_config_update_fw">Đã có bản cập nhật Firmware mới.Vui lòng cập nhật để sử dụng Camera.</string>
+    <string name="string_detail_view"><u>Xem chi tiết</u></string>
+    <string name="string_title_update_note">Cập nhật thay đổi:</string>
+    <string name="multiple_live">Trực tiếp nhiều màn hình</string>
+    <string name="String_flip_image_success">Lật hình ảnh thành công.</string>
+    <string name="shared_device_to_user">Tài khoản đã được chia sẻ thiết bị</string>
+    <string name="not_share_device">Không thể chia sẻ thiết bị</string>
+    <string name="not_found_shared_user">Tài khoản không tồn tại</string>
+    <string name="user_not_possess_device">Tài khoản không sở hữu thiết bị</string>
+    <string name="error_default">Đã có lỗi xảy ra</string>
+    <string name="formating_progress">Quá trình Format đang diễn ra, có thể mất 1-2 phút</string>
+    <string name="format_success">Format thành công</string>
+    <string name="format_error">Đã có lỗi xảy ra. Vui lòng thử lại</string>
+    <string name="formating">Đang format</string>
+    <string name="content_formating">Đang format thẻ nhớ. Vui lòng chờ ít phút</string>
+    <string name="error_sdcard">Thẻ nhớ lỗi</string>
+    <string name="format_failed">Không có thẻ nhớ, format thất bại</string>
+    <string name="string_setting_value_volume_mic">Độ nhạy Microphone</string>
+    <string name="string_rb_setting_human_title">Phát hiện người</string>
+    <string name="string_rb_setting_detection_title">Phát hiện chuyển động</string>
+    <string name="string_rb_setting_no_event_title">Không phát hiện sự kiện</string>
+    <string name="connecting_lan">Mạng LAN</string>
+    <string name="wifi_connecting">Wifi đang kết nối</string>
+    <string name="sharing_limit">Thiết bị đã vượt quá số lượng người được chia sẻ. Vui lòng kiểm tra lại</string>
+    <string name="error_card_need_format">Thẻ nhớ bị lỗi, vui lòng định dạng thẻ nhớ để tiếp tục sử dụng tính năng lưu trữ</string>
+    <string name="later">Để sau</string>
+    <string name="format">Định dạng</string>
+    <string name="string_error_authorization">Lỗi xác thực, vui lòng thử lại</string>
+    <string name="video_in_sync">Video đang được đồng bộ. Vui lòng quay lại sau</string>
+    <string name="download_video">Tải video</string>
+    <string name="download_video_success">Tải video thành công</string>
+    <string name="download_video_message">Bạn có muốn lưu video vào thư viện của điện thoại?</string>
+    <string name="title_notification_dialog">Thông báo</string>
+    <string name="string_fw_waiting">Thiết bị đang thực hiện cập nhật firmware.</string>
+    <string name="string_error_private_mode">Thiết bị đang thiết lập cài đặt chế độ riêng tư, vui lòng thử lại sau.</string>
+    <string name="refused_camera_sharing">Thao tác không thành công vì bạn đã từ chối %s được chia sẻ từ %s</string>
+    <string name="accepted_camera_sharing">Thao tác không thành công vì bạn đã chấp nhận %s được chia sẻ từ %s</string>
+    <string name="edit_camera_name_success">Tên camera đã được thay đổi</string>
+    <string name="control">Điều khiển</string>
+    <string name="feature">Tính năng</string>
+    <string name="service">Dịch vụ</string>
+    <string name="motion_detection">Phát hiện chuyển động</string>
+    <string name="human_intrustion">Phát hiện người</string>
+    <string name="near_event">Gần đây</string>
+    <string name="not_share_device_event">Bạn chưa được phân quyền để sử dụng tính năng này.</string>
+    <string name="see_more">Xem thêm</string>
+    <string name="count_selected">Đã chọn: %s</string>
+    <string name="delete_video_event">Xóa</string>
+    <string name="motion_tracking">Theo dõi chuyển động</string>
+    <string name="defence_feature">Phòng vệ chủ động</string>
+    <string name="share_device">Chia sẻ thiết bị</string>
+    <string name="buy_cloud">Mua dịch vụ để trải nghiệm</string>
+    <string name="weak_signal">Tín hiệu Yếu</string>
+    <string name="normal_signal">Tín hiệu Trung bình</string>
+    <string name="good_signal">Tín hiệu Tốt</string>
+    <string name="no_signal">Không có tín hiệu</string>
+    <string name="recording_success">Đã hoàn thành ghi hình</string>
+    <string name="quality_2k_new">2K</string>
+    <string name="quality_fhd_new">FHD</string>
+    <string name="quality_hd_new">HD</string>
+    <string name="quality_sd_new">SD</string>
+    <string name="quality_image">Chất lượng hình ảnh</string>
+
+    //jfTech
+    <string name="string_quick_gide_one_jftech_Camera"><b>Bước 1:</b>\n Đảm bảo thiết bị đã kết nối nguồn điện.<b>\n \nBước 2:</b>\ Nếu bạn nghe “Bắt đầu kết nối nhanh” hoặc “ Đang chờ kết nối” từ Camera, chọn “TIẾP”.</string>
+    <string name="string_quick_gide_two_jftech_Camera">1. Hướng mã QR của điện thoại vào ống kính của camera.\n2. Giữ khoảng cách 25 – 35 cm giữa camera và điện thoại.\n3. Sau khi bạn nghe camera nhắc nhở “ Đang kết nối”, bạn có thể bỏ điện thoại ra.\n4. Chờ cho camera kết nối WIFI thành công.</string>
+    <string name="string_show_title_add_camera_jftech">Đang tìm thiết bị ... Có thể mất khoảng 2 phút</string>
+    <string name="downloading">Đang tải</string>
+    <string name="string_quick_gide_4">Giữ khoảng cách 25 - 35 cm giữa camera và điện thoại.</string>
+    <string name="string_title_set_password">Đặt mật khẩu bảo mật thiết bị</string>
+    <string name="string_set_password_camera_iftech_error">Mật khẩu không chính xác(mật khẩu chứa 8-64 ký tự.</string>
+    <string name="string_set_password_camera_iftech">Đặt mật khẩu thiết bị thành công.</string>
+    <string name="string_confirm_back_add_camera">Vẫn đang kết nối...Bạn có muốn dừng thêm thiết bị?</string>
+    <string name="string_security_zone">Vùng an ninh</string>
+    <string name="string_setting_security_zone"><u>Thiết lập vùng an ninh</u></string>
+    <string name="string_security_fence">Hàng rào an ninh</string>
+    <string name="string_safe_zone">Vùng an toàn</string>
+    <string name="string_open_wifi">Bật wifi</string>
+    <string name="string_see_more_package"><u>Xem thêm gói cước</u></string>
+    <string name="string_message_dev_restart">Thời gian xác minh vượt quá giới hạn, vui lòng khởi động lại thiết bị rồi thử lại</string>
+    <string name="string_message_cloud_postpaid">Nếu bạn muốn  thay đổi gói cước. Vui lòng liên hệ tổng đài <font color='#F8214B'>19001xxx</font></string>
+    <string name="string_message_cloud_register">Nhấn vào “Thanh toán” đồng nghĩa với việc bạn đồng ý với <u><font color='#F8214B'>Điều khoản Viettel Home.</font></u></string>
+    <string name="string_message_cloud_promotion_register">Nhấn vào “Đăng ký” đồng nghĩa với việc bạn đồng ý với <u><font color='#F8214B'>Điều khoản Viettel Home.</font></u></string>
+    <string name="string_title_share_from">Thiết bị đã chia sẻ đến</string>
+    <string name="choose_type_add">Chọn kiểu thêm</string>
+    <string name="connection_guide">Hướng dẫn kết nối</string>
+    <string name="content_check_stop_record">Bạn đang thực hiện ghi hình. Vui lòng dừng ghi hình để thực hiện thao tác này.</string>
+    <string name="security_setting">Thiết lập bảo mật</string>
+
+    //ezviz
+    <string name="string_quick_gide_one_ezviz_Camera"><b>Bước 1:</b>\n Đảm bảo thiết bị đã kết nối nguồn điện.<b>\n \nBước 2:</b>\n Bạn reset cam bằng cách bấm giữ nút Reset cho đến khi nghe thấy âm thanh và đèn nháy màu xanh.</string>
+    <string name="cloud_play_back_no_internet">Tải không thành công. Vui lòng thử lại hoặc kiểm tra kết nối mạng</string>
+    // cloud service
+    <string name="string_title_efect">Hiệu lực:</string>
+    <string name="string_title_status_service">Trạng thái:</string>
+    <string name="string_status_service">Loại gói:</string>
+    <string name="string_title_extend_service">Gia hạn tự động:</string>
+    <string name="string_title_service_pack">Đóng gói cước:</string>
+    <string name="string_title_date_register">Ngày đăng ký:</string>
+    <string name="string_title_price">Giá tiền</string>
+    <string name="string_title_pay_method">Phương thức thanh toán</string>
+    <string name="string_bank_viettel_pay_gate">Thanh toán bằng Viettel Pay Gate</string>
+    <string name="string_parent_account_pay">Tài khoản gốc</string>
+    <string name="string_pay_link">Tài khoản đã liên kết</string>
+    <string name="string_content_postpaid_cloud">Nếu bạn muốn thay đổi gói cước. Vui lòng liên hệ tổng đài <font color='#EF1E4A'><b>18008168</b></font> </string>
+    <string name="string_title_otp_pay_link">Vui lòng nhập mã OTP được gửi đến Số điện thoại của bạn để hoàn tất thanh toán</string>
+    <string name="string_show_content_auto_promotion">Vui lòng đăng ký gia hạn tự động để nhận gói cước miễn phí, bạn có thể Hủy gia hạn ở màn hình thông tin gói cước đã đăng ký.</string>
+    <string name="string_cloud_free_live_view"><b>MIỄN PHÍ</b> lưu trữ\nCloud %d ngày\ntrong %d tháng.\nThử ngay!</string>
+    <string name="add_preset_failed">Lưu góc quay thất bại</string>
+    <string name="add_preset_success">Lưu góc quay thành công</string>
+    <string name="edit_preset_success">Đổi tên góc quay thành công</string>
+    <string name="delete_preset_success">Xóa góc quay đã lưu thành công</string>
+    <string name="delete_preset_success_1">Xóa %s góc quay đã lưu thành công</string>
+    <string name="delete_preset_fail">Xóa góc quay đã lưu thất bại</string>
+    <string name="delete_preset_fail_1">Xóa %s góc quay đã lưu thất bại</string>
+    <string name="confirm_delete_preset">Xác nhận xóa góc quay đã lưu</string>
+    <string name="confirm_delete_preset_1">Xác nhận xóa %s góc quay đã lưu</string>
+    <string name="note_delete_preset">Các ngữ cảnh có sử dụng góc quay này sẽ không hoạt động được</string>
+
+    <string name="guide_message_control">1. Điều khiển camera quay đến vị trí góc nhìn mà bạn muốn lưu lại \n2. Chọn “Lưu góc quay” và nhập tên gợi nhớ góc quay của bạn.</string>
+
+    <string name="guide_message_preset">1. Điều khiển camera quay đến vị trí góc nhìn mà bạn muốn lưu lại \n2. Chọn “+” và nhập tên gợi nhớ góc quay của bạn. \n3. Bạn có thể nhấn giữ vào góc quay đã lưu và chọn “Cập nhật góc quay đã lưu” để thay thế góc đã lưu của bạn.</string>
+
+    <string name="guide_message_patrol">1. Chọn 3 góc quay đã lưu và nhấp vào “Bắt đầu tuần tra”.\n2. Sau khi kết thúc tuần tra, góc quay sẽ trở về vị trí ban đầu.\nLưu ý: Chế độ tuần tra sẽ bị ảnh hưởng khi bật chế độ phát hiện chuyển động.</string>
+
+    <string name="selected_size_home">Đã chọn: %s</string>
+
+    <string name="string_content_two_promotion_cloud">Gói cloud %d ngày sẽ tự động gia hạn sau %d tháng dùng thử với cước phí %s. Quý khách có thể huỷ gia hạn trước thời điểm hệ thống thực hiện gia hạn bằng cách tích chọn huỷ gia hạn trong mục Cài đặt của camera</string>
+    <string name="string_device_camera">Thiết bị camera</string>
+    <string name="string_content_list_camera_cloud">Lưu trữ trên Cloud của Viettel giúp dữ liệu của bạn không còn phụ thuộc vào thiết bị lưu trữ, tránh nguy cơ mất dữ liệu. Xác thực bảo mật 2 lớp đảm bảo an toàn thông tin tuyệt đối.</string>
+    <string name="string_content_select_cloud_camera">Chọn để đăng ký dịch vụ Cloud trên thiết bị của bạn.</string>
+
+    <string-array name="types_camera">
+        <item>HC2</item>
+        <item>HC3</item>
+        <item>HC22</item>
+        <item>HC32</item>
+    </string-array>
+
+
+    //Module main
+
+    <string name="wrong_password_empty">Mật khẩu không được để trống</string>
+    <string name="wrong_name_empty">Tên thiết bị không được để trống</string>
+    <string name="wrong_password_confirm_empty">Mật khẩu xác nhận không được để trống</string>
+    <string name="wrong_password_length_not_enough">Số ký tự của mật khẩu từ 6 trở lên</string>
+    <string name="wrong_password_confirm_length_not_enough">Số ký tự của mật khẩu nhập lại từ 6 trở lên</string>
+    <string name="wrong_password_vs_password_confirm_not_match">Mật khẩu xác nhận không chính xác.</string>
+    <string name="wrong_verification_code_empty">Mã xác nhận không được để trống</string>
+    <string name="string_wrong_verification_code_empty">Mật khẩu và \'Mật khẩu xác nhận\' không khớp. Vui lòng nhập lại</string>
+    <string name="wrong_verification_code_length_not_enough">Mã xác nhận phải đủ 6 ký tự</string>
+    <string name="wrong_agree_terms">Vui lòng đồng ý điều khoản</string>
+    <string name="wrong_email_empty">Số điện thoại không được đê trống</string>
+    <string name="wrong_email_format">Sai định dạng Email</string>
+    <string name="wrong_has_name_data">Những thay đổi có thể không lưu được sau khi thoát.</string>
+    <string name="save_text">Lưu</string>
+    <string name="save_accept">Xác nhận</string>
+    <string name="sort_success">Sắp xếp thành công</string>
+    <string name="wrong_phone_number_format">Số điện thoại không hợp lệ</string>
+    <string name="wrong_phone_number_use">Bạn không thể tặng cho chính mình. Vui lòng nhập số điện thoại người thân.</string>
+    <string name="notify_enter_serial">Mã serial camera là bắt buộc</string>
+    <string name="notify_enter_phone_number">Vui lòng nhập số điện thoại của bạn</string>
+    <string name="notify_gift_relative_enter_phone_number">Vui lòng không để trống số điện thoại</string>
+    <string name="notify_enter_password">Vui lòng nhập mật khẩu</string>
+    <string name="wrong_password_length">Mật khẩu bao gồm 8–16 ký tự, bao gồm ít nhất 1 ký tự số, 1 chữ hoa, 1 chữ thường và 1 ký tự đặc biệt @#$%&amp;-+()/*:;!?~=^</string>
+    <string name="wrong_identifier_exists">Số điện thoại đã tồn tại</string>
+    <string name="dataset_is_existed">Dataset đã tồn tại</string>
+    <string name="OTP_is_incorrect">Mã xác nhận không hợp lệ. Vui lòng kiểm tra lại.</string>
+    <string name="OTP_is_expired">Mã OTP hết hạn. Vui lòng nhập mã OTP mới</string>
+    <string name="accout_not_exit">Tài khoản chưa đăng ký. Vui lòng đăng ký để sử dụng dịch vụ</string>
+    <string name="identifier_password_incorrect">Tài khoản hoặc mật khẩu không chính xác. Vui lòng thử lại</string>
+    <string name="account_not_activated">Thuê bao của quý khách đang bị tạm ngưng. Quý khách vui lòng liên hệ 18008119 (Miễn phí) để biết thêm chi tiết. Trân trọng!</string>
+    <string name="non_existent_entity">Số điện thoại chưa được đăng kí trên hệ thống</string>
+    <string name="password_different">Mật khẩu mới không được trùng với mật khẩu cũ</string>
+    <string name="password_is_incorrect">Tài khoản hoặc mật khẩu không chính xác. Vui lòng thử lại.</string>
+    <string name="wrong_new_password_empty">Vui lòng nhập mật khẩu mới</string>
+    <string name="wrong_old_password_empty">Vui lòng nhập mật khẩu cũ</string>
+    <string name="string_wrong_new_password_empty">Vui lòng nhập mật khẩu xác nhận</string>
+    <string name="password_not_like_ezviz">Tài khoản đã tồn tại trên ezviz, vui lòng sử dụng mật khẩu trên ezviz để đăng ký</string>
+    <string name="captcha_please">Vui lòng nhập captcha</string>
+    <string name="captcha_wrong">Mã captcha không hợp lệ. Vui lòng thử lại</string>
+    <string name="phone_lock_down">Bạn đã nhập sai mã OTP quá 5 lần. Vui lòng thử lại sau 5 phút</string>
+    <string name="otp_lock_down">Bạn đã sử dụng tối đa số lượng OTP trong ngày. Vui lòng thử lại sau</string>
+    <string name="generate_otp_failed">Gửi mã OTP thất bại</string>
+    <string name="fotgot_password_wrong_phone_number">Số điện thoại chưa đăng ký. Vui lòng kiểm tra lại thông tin</string>
+    <string name="password_existed">Mật khẩu đã tồn tại</string>
+
+    <!-- Add Device-->
+    <string name="set_device_name">Đặt tên thiết bị</string>
+    <string name="main_activity_html_error_code">html</string>
+    <string name="main_activity_html_error_message">Đã có lỗi xảy ra, vui lòng thử lại</string>
+    <string name="quick_pairing_add_single_device">Thêm một thiết bị</string>
+    <string name="quick_pairing_add_multiple_device">Thêm nhiều thiết bị</string>
+    <string name="device_searching">Đang tìm thiết bị</string>
+    <string name="device_info_getting">Đang lấy thông tin thiết bị</string>
+    <string name="device_info_registering">Đang đăng ký thiết bị</string>
+    <string name="device_info_updating">Đang cập nhật thiết bị</string>
+    <string name="network_info_sending">Đang gửi thông tin mạng</string>
+    <string name="confirm_initing">Đang khởi tạo cấu hình</string>
+    <string name="route_connecting">Đang kết nối lại với route</string>
+    <string name="add_device_success">Thiết bị đã kết nối thành công.</string>
+    <string name="add_to_room">Thêm vào phòng</string>
+    <string name="done">Xong</string>
+    <string name="try_again">Thử lại</string>
+    <string name="try_again_compatible_mode">Thử lại với compatiable mode</string>
+    <string name="faq">FAQ</string>
+    <string name="wifi_ssid_title">SSID: </string>
+    <string name="wifi_bssid_title">BSSID: </string>
+    <string name="wifi_password_title">Password: </string>
+    <string name="message_permission">APP require Location permission to get Wi-Fi information. \nClick to request permission</string>
+    <string name="message_location">Please turn on GPS to get Wi-Fi information.</string>
+    <string name="message_wifi_connection">Please connect Wi-Fi first.</string>
+    <string name="message_wifi_frequency">Current Wi-Fi connection is 5G, but the device just support 2.4G.</string>
+    <string name="location_permission_message">On Android M or higher version, App can\'t get Wi-Fi connection information if you forbid Location permission.</string>
+    <string name="wifi_5g_message">Device don\'t support 5G Wi-Fi, please make sure the currently connected Wi-Fi is 2.4G, or you can try multicast</string>
+
+    <string name="guide_detail">Vui lòng đặt thiết bị kết nối ở chế độ ghép nối dựa trên hướng dẫn sử dụng.\nSau đó mang thiết bị và điện thoại của bạn tới gấn Router Wi-Fi càng tốt</string>
+
+    <string name="number_added_device">Tổng số thiết bị: %d</string>
+    <string name="number_online_device">Trực tuyến: %d</string>
+    <string name="delete_success">Xóa thành công</string>
+    <string name="guide_add_sensor">Vui lòng đặt thiết bị của bạn gần với bộ định tuyến nhất có thể</string>
+    <string name="number_device">%d thiết bị</string>
+    <string name="found_device">Tìm thấy thiết bị</string>
+    <string name="added_device">%d thiết bị đã được thêm vào</string>
+    <string name="close_pair">Thoát ghép nối ?</string>
+    <string name="close_and_save_device">Thoát mà không đổi tên</string>
+    <string name="confirm_logout">Bạn có chắc chắn muốn đăng xuất?</string>
+    <string name="confirm_reject_policy">Bạn có chắc chắn muốn rút lại sự đồng ý?</string>
+    <string name="change_name_success">Đổi tên thành công</string>
+    <string name="add_camera_ok">OK</string>
+
+    <!--Register-->
+
+    <string name="register_text_him">Nhập email hoặc số điện thoại</string>
+    <string name="register_passwrod_confirm_text_him">Nhập lại mật khẩu</string>
+    <string name="register_agree_terms">Đồng ý <font color='#EF1E4A'><u>điều khoản dịch vụ</u></font></string>
+    <string name="string_agree">Đồng ý</string>
+    <string name="register_otp">OTP</string>
+    <string name="register_opt_guide">Vui lòng nhập mã OTP vừa gửi đến số điện thoại %s của bạn!</string>
+    <string name="register_opt_resend_question">Bạn chưa nhận được mã OTP?</string>
+    <string name="register_opt_resend_time">Gửi lại mã OTP</string>
+    <string name="verification_code_confirm">Xác nhận</string>
+    <string name="verification_code_reuqest_success">Đã gửi mã xác nhận về sô điện thoại %s</string>
+    <string name="register_dialog_success_tile">Đăng ký thành công!</string>
+    <string name="regiter_dialog_success_messgae">Vui lòng tiếp tục đăng nhập để sử dụng\n ứng dụng</string>
+    <string name="regiter_dialog_button_done">Đồng ý</string>
+    <string name="please_input_correct_infomation">Vui lòng kiểm tra lại thông tin đã nhập</string>
+
+    <string name="fail_to_add_to_favorite_device">Thêm vào yêu thích thất bại</string>
+    <string name="device_name_cannot_empty">Tên thiết  bị không được để trống</string>
+
+    <!--login-->
+    <string name="reset_password">Quên mật khẩu</string>
+    <string name="terms_of_use_title">Điều khoản sử dụng</string>
+    <string name="login">Đăng nhập</string>
+    <string name="input_email">Email</string>
+    <string name="phone_number">Số điện thoại</string>
+    <string name="input_password">Mật khẩu</string>
+    <string name="forgot_password">Quên mật khẩu?</string>
+    <string name="remember">Ghi nhớ tài khoản</string>
+    <string name="no_account">Bạn chưa có tài khoản?</string>
+
+    <string name="change_name">Đổi tên thiết bị</string>
+    <string name="password">Mật khẩu</string>
+    <string name="language">Ngôn ngữ</string>
+    <string name="delete_account">Xóa tài khoản</string>
+    <string name="logout">Đăng xuất</string>
+
+    <string name="current_account">Tài khoản hiện tại</string>
+    <string name="old_password">Mật khẩu cũ</string>
+    <string name="new_password">Mật khẩu mới</string>
+    <string name="confirm_new_password">Xác nhận mật khẩu mới</string>
+    <string name="wrong_new_password_vs_password_confirm_not_match">Mật khẩu nhập mới và mật khẩu xác nhận phải giống nhau</string>
+    <string name="note_delete_account">Lưu ý: Xin lưu ý sau khi tài khoản Viettel Home của bạn bị xóa, quyền truy cập của bạn vào các dịch vụ Viettel Home sẽ bị vô hiệu hóa.\n\n
+    Sau khi xóa tài khoản, ngay cả khi bạn tạo lại tài khoản Viettel Home với cùng 1 email, tất cả thông tin cuat tài khoản cũ như gói đăng ký hoặc dữ liệu thiết bị đều không
+    thể truy xuất được. Vui lòng suy nghĩ kỹ trước khi xóa tài khoản của mình.</string>
+    <string name="input_infor">Nhập thông tin</string>
+    <string name="alert_before_delete_account">Sau khi trình xóa, bạn không thể sử dụng dịch vụ Viettel Home. Bạn có chắc bạn muốn xóa tài khoản ngay?</string>
+    <string name="finish">Xong</string>
+    <string name="store">Store</string>
+    <string name="user_information">Thông tin tài khoản</string>
+    <string name="info_name">Tên chủ nhà</string>
+    <string name="info_email">Email</string>
+    <string name="info_phone_number">Số điện thoại</string>
+
+
+    <!--List Home, room-->
+    <string name="home_manager">Quản lý nhà</string>
+    <string name="add">Thêm</string>
+    <string name="room_manager">Quản lý phòng</string>
+    <string name="sort_device_title">Sắp xếp lại</string>
+    <string name="action_sort">Sắp xếp</string>
+    <string name="home_name">Tên nhà*</string>
+    <string name="name">Tên*</string>
+    <string name="delete">Xoá</string>
+    <string name="add_home_title">Thêm Nhà</string>
+    <string name="enter_home_name">Nhập tên</string>
+    <string name="room_name">Tên phòng*</string>
+    <string name="add_room_title">Thêm phòng</string>
+    <string name="move_device_title">Di chuyển thiết bị</string>
+    <string name="home">Nhà</string>
+    <string name="cancel_button">Hủy</string>
+    <string name="android_tv_cacel">Hủy</string>
+    <string name="home_user_count">%d người dùng</string>
+    <string name="home_device_count">%d thiết bị</string>
+    <string name="home_room_count_title">Số lượng:</string>
+    <string name="home_user_count_title">Người dùng:</string>
+    <string name="home_device_count_title">Thiết bị:</string>
+    <string name="add_home">Thêm nhà</string>
+    <string name="change_home_name">Đổi tên nhà</string>
+    <string name="device_manager">Quản lý thiết bị</string>
+    <string name="change_room_name">Đổi tên phòng</string>
+    <string name="string_show_config_extend_cloud">Gia hạn tự động sẽ được thanh toán qua tài khoản liên kết.</string>
+    <string name="string_content_show_webview_pay_link">Gia hạn tự động sẽ được thanh toán qua tài khoản liên kết. Vui lòng thực hiện liên kết tài khoản.</string>
+    <string name="text_cancel_without_not_confict">Hủy bỏ</string>
+
+    <!--change language-->
+    <string name="language_vietnamese" translatable="false">Tiếng Việt</string>
+    <string name="language_english" translatable="false">English</string>
+    <string name="change_language">Thay đổi ngôn ngữ \n Bạn có chắc muốn chuyển sang %s</string>
+    <string name="please_input_name">Vui lòng nhập tên</string>
+    <!--    scene-->
+
+    <!--Home-->
+    <string name="smoke_in_living_room">Có khói ở phòng khách</string>
+    <string name="all">Tất cả</string>
+    <string name="authentication_error">Phiên làm việc hết hạn.Vui lòng đăng nhập lại!</string>
+    <string name="network_error">Không có kết nối mạng.Vui lòng thử lại!</string>
+    <string name="no_device">Chưa có thiết bị</string>
+    <string name="add_quickly">Thêm nhanh</string>
+    <string name="content_add_quickly">Khả dụng cho gateway zigbee và IR</string>
+    <string name="scan_qr">Quét mã QR</string>
+    <string name="content_scan_qr">Khả dụng cho Viettel AI Camera.</string>
+    <string name="compatible_connection">Kết nối tương thích</string>
+    <string name="content_compatible_connection">Khả dụng cho gateway zigbee và IR</string>
+    <string name="content_air_filter_connection">Khả dụng cho Viettel Smart Purifier</string>
+    <string name="content_ont_connection">Khả dụng cho Viettel ONT</string>
+    <string name="content_tuya_connection">Khả dụng cho Tuya gateway</string>
+    <string name="air_filter_connection">Kết nối máy lọc không khí</string>
+    <string name="ont_connection">Kết nối ONT</string>
+    <string name="add_device_tuya">Thêm thiết bị Tuya</string>
+    <string name="audio_pairing">Kết nối âm thanh</string>
+    <string name="content_audio_pairing">Khả dụng cho camera và các thiết bị hỗ trợ phương pháp ghép nối này.</string>
+    <string name="connect_bluetooth">Kết nối Bluetooth</string>
+    <string name="content_connect_bluetooth">Khả dụng cho kết nối Bluetooth.</string>
+    <string name="remote_control">Điều khiển từ xa</string>
+    <string name="content_remote_control">Tạo điều khiển từ xa.</string>
+    <string name="connect_account">Kết nối tài khoản</string>
+    <string name="content_connect_account">Kết nối với Alexa, EVIZ và các tài khoản của bên thứ ba.</string>
+    <string name="temperature">Nhiệt độ</string>
+    <string name="humidity">Độ ẩm</string>
+    <string name="history">Lịch sử</string>
+    <string name="infor_home">Thông tin nhà</string>
+    <string name="location_home">Vị trí nhà</string>
+    <string name="save_home_success">Thêm nhà thành công</string>
+    <string name="save_home_fail">Thêm nhà thất bại</string>
+    <string name="choose_room">Chọn phòng</string>
+    <string name="enter_home_address">Nhập địa chỉ</string>
+    <string name="alert_empty_room_name">Tên phòng không được null hoặc để trống!</string>
+    <string name="alert_empty_home_name">Tên nhà không được null hoặc để trống!</string>
+    <string name="alert_delete_room">Bạn có chắc chắn muốn xóa phòng!</string>
+    <string name="alert_delete_room_has_device">Không thể xóa phòng khi phòng có thiết bị</string>
+    <string name="alert_delete_home">Bạn có chắc chắn muốn xóa nhà!</string>
+    <string name="alert_delete_home_has_device">Không thể xóa nhà khi nhà có thiết bị</string>
+    <string name="alert_delete_device">Bạn có chắc chắn muốn xóa thiết bị này</string>
+    <string name="alert_delete_device_message">Sau khi xóa thiết bị, tất cả ngữ cảnh liên quan đến thiết bị này sẽ bị xóa</string>
+    <string name="alert_delete_device_content">Dữ liệu đã xóa không thể khôi phục lại được</string>
+    <string name="alert">Cảnh báo</string>
+    <string name="alert_delete_scene">Bạn có chắc chắn muốn xóa ngữ cảnh?</string>
+    <string name="is_online">Đang bật</string>
+    <string name="is_offline">Đang tắt</string>
+    <string name="scene_manual">Thủ công</string>
+    <string name="scene_auto">Tự động</string>
+    <string name="scene_create_scene_description">Dễ dàng thiết lập các hành động tự động cho ngôi nhà của bạn</string>
+    <string name="continue_text">Tiếp tục</string>
+    <string name="continue_link">Liên kết</string>
+    <string name="compatible_text">Chế độ tương thích</string>
+    <string name="edit_device">Chỉnh sửa thiết bị</string>
+    <string name="move_text">Di chuyển</string>
+    <string name="please_choose_one_device">Vui lòng chọn một thiết bị!</string>
+    <string name="move_device_success">Thiết bị đã được di chuyển thành công đến %s</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
+    <string name="on">on</string>
+    <string name="off">off</string>
+    <string name="text_open">Mở</string>
+    <string name="text_close">Đóng</string>
+    <string name="text_reject_pay_link">Hủy liên kết</string>
+    <string name="string_content_reject_pay_link">Sau khi hủy liên kết, các giao dịch tự động thực hiện qua Viettel Money sẽ bị hủy.</string>
+    <string name="string_content_reject_item_pay_link">Sau khi xác nhận, tính năng gia hạn dịch vụ tự động sẽ bị hủy, vui lòng chủ động mua thêm gói khi đến hạn để đảm bảo dịch vụ.</string>
+    <string name="string_content_accept_item_pay_link">Gói cước của bạn sẽ được gia hạn tự động bằng tài khoản đã liên kết tại ngày thanh toán.</string>
+    <string name="string_show_text_pay_link_register">Vui lòng thực hiện liên kết tài khoản thanh toán để kích hoạt gia hạn tự động cho gói lưu trữ Cloud của bạn.</string>
+    <string name="text_ok">Ok</string>
+    <string name="turn_on">Bật</string>
+    <string name="turn_off">Tắt</string>
+    <string name="active_event">Thực thi</string>
+    <string name="online">Đang hoạt động</string>
+    <string name="offline">Ngoại tuyến</string>
+    <string name="stand_still">Đứng im</string>
+    <string name="motion">Có chuyển động</string>
+    <string name="not_detect">Không có chuyển động</string>
+    <string name="temperature_and_humidity"> %s°C - %s%%</string>
+    <string name="no_smoke">Không có khói</string>
+    <string name="smoke">Có khói</string>
+    <string name="connect_phone_to_wifi_device">Vui lòng kết nối điện thoại của bạn với Wifi của thiết bị</string>
+    <string name="connect">Kết nối</string>
+    <string name="save_sort_room_success">Sắp xếp phòng thành công</string>
+    <string name="save_sort_room_fail">Sắp xếp phòng thất bại \n Vui lòng thử lại</string>
+    <string name="automatic_scene">Ngữ cảnh tự động</string>
+    <string name="set_up_automated_actions">Dễ dàng thiết lập các hành động tự động cho ngôi nhà của bạn </string>
+    <string name="add_scene">Thêm ngữ cảnh</string>
+    <string name="edit_scene">Chỉnh sửa ngữ cảnh</string>
+    <string name="name_scene">Tên ngữ cảnh</string>
+    <string name="input_name_scene">Ví dụ: Bật đèn</string>
+    <string name="if_condition">NẾU (Hành động này xảy ra)</string>
+    <string name="then_condition">THÌ (Hành động này xảy ra)</string>
+    <string name="note_condition_scene">Với điều kiện Hẹn giờ, bạn sẽ không thể thiết lập thêm điều kiện NẾU khác.</string>
+    <string name="if_text">Nếu</string>
+    <string name="then_text">Thì</string>
+    <string name="smart_device">Vận hành thiết bị</string>
+    <string name="smart_device_example_if">Ví dụ: Khi cửa mở</string>
+    <string name="smart_device_example_then">Ví dụ: Bóng đèn sáng</string>
+    <string name="equipment_operation">Vận hành thiết bị</string>
+    <string name="filter_by">Lọc theo</string>
+    <string name="basic_condition">Điều kiện cơ bản</string>
+    <string name="room">Phòng</string>
+
+    <string name="connecting">Đang kết nối</string>
+    <string name="lost_connection">Mất kết nối</string>
+    <string name="offline_mode">Chế độ ngoại tuyến</string>
+    <string name="status">Trạng thái</string>
+    <string name="time_in_day">Cài đặt lịch trình thời gian</string>
+    <string name="condition_delay">Điều kiện không thay đổi</string>
+    <string name="example_condition_delay">Ví dụ: Cảm biến chuyển động không có chuyển động trong 15 phút</string>
+    <string name="example_time_condition">Ví dụ: Vào lúc 7 giờ hàng ngày</string>
+    <string name="send_message">Gửi SMS</string>
+    <string name="example_send_sms">Gửi tin nhắn đến số điện thoại</string>
+
+    <string-array name="day_of_week">
+        <item>Một lần</item>
+        <item>Thứ Hai</item>
+        <item>Thứ Ba</item>
+        <item>Thứ Tư</item>
+        <item>Thứ Năm</item>
+        <item>Thứ Sáu</item>
+        <item>Thứ Bảy</item>
+        <item>Chủ Nhật</item>
+    </string-array>
+
+    <string-array name="value_day_of_week">
+        <item>""</item>
+        <item>monday</item>
+        <item>tuesday</item>
+        <item>wednesday</item>
+        <item>thursday</item>
+        <item>friday</item>
+        <item>saturday</item>
+        <item>sunday</item>
+    </string-array>
+
+    <string-array name="day_of_week_effective">
+        <item>Thứ Hai</item>
+        <item>Thứ Ba</item>
+        <item>Thứ Tư</item>
+        <item>Thứ Năm</item>
+        <item>Thứ Sáu</item>
+        <item>Thứ Bảy</item>
+        <item>Chủ Nhật</item>
+    </string-array>
+
+    <string-array name="value_day_of_week_effective">
+        <item>monday</item>
+        <item>tuesday</item>
+        <item>wednesday</item>
+        <item>thursday</item>
+        <item>friday</item>
+        <item>saturday</item>
+        <item>sunday</item>
+    </string-array>
+
+    <string name="temperature_air">Nhiệt độ: %s°C</string>
+    <string name="humidity_air">Độ ẩm: %s%%</string>
+    <string name="iaq_air">IAQI: %s </string>
+    <string name="co2_air">Co2: %s ppm</string>
+    <string name="pm1_air">Pm1: %s</string>
+    <string name="pm25_air">Pm2.5: %s</string>
+    <string name="pm10_air">Pm10: %s</string>
+    <string name="hcho_air">Hcho: %s</string>
+    <string name="sms">SMS</string>
+    <string name="input_phone_number">Nhập số điện thoại</string>
+    <string name="text_phone_number">Số điện thoại*</string>
+    <string name="input_title">Nhập tiêu đề</string>
+    <string name="text_title">Tiêu đề</string>
+    <string name="input_content">Nhập nội dung</string>
+    <string name="text_message">Nội dung</string>
+    <string name="send_sms_to_number">Gửi tin nhắn đến %s</string>
+    <string name="info_not_empty">Thông tin không được để trống!</string>
+    <string name="temperature_content">%s°C</string>
+    <string name="humidity_content">%s%%</string>
+    <string name="device">Thiết bị</string>
+    <string name="daily">Hàng ngày</string>
+
+    <string name="please_input_phone_to_register">Vui lòng nhập số điện thoại bạn đã sử dụng để đăng ký tài khoản </string>
+
+    <string name="text_open_lock">Mở khóa</string>
+    <string name="is_opening_text">Đang mở</string>
+    <string name="add_one_time_password">Cấp mật khẩu một lần</string>
+    <string name="delete_one_time_password">Xóa mật khẩu một lần</string>
+    <string name="alert_no_internet_move_offline_mode">Mất kết nối internet!\nHệ thống đã chuyển sang offline mode.\nVui lòng chờ 30 giây để kết nối với thiết bị.</string>
+    <string name="alert_have_internet_move_nomal">Đã có kết nối internet!\nHệ thống đã chuyển về chế độ bình thường.\nVui lòng chờ(tối đa có thể đến 30 giây) để thiết bị kết nối lại.</string>
+    <string name="title_tutorial_compatible">Để vào chế độ ghép nối tương thích, đặt đèn báo vào chế độ nháy liên tục</string>
+    <string name="tutorial_compatible_1">① Vui lòng rút phích cắm và cắm lại thiết bị vào nguồn điện.</string>
+    <string name="tutorial_compatible_2">② Nhấn giữ nút ghép nối trong 5 giây cho đến khi đèn led nhấp nháy nhanh</string>
+    <string name="tutorial_compatible_3">③ Đối với các thiết bị Heiman, Aquara không giữ nút ghép nối quá 10 giây hoặc giữ 5 giây 2 lần liên tiếp!\nĐể vào chế độ ghép tương thích, đặt đèn báo vào chế độ nháy liên tục.</string>
+    <string name="name_product">Product: %s</string>
+    <string name="text_initializing">Đang khởi tạo</string>
+    <string name="detail_text">Chi tiết</string>
+    <string name="any_action_happen">Bất kỳ hành động nào xảy ra</string>
+    <string name="every_action_happen">Mọi hành động xảy ra</string>
+    <string name="if_any_action_happen">NẾU (Bất kỳ hành động nào xảy ra) 🔻</string>
+    <string name="if_every_action_happen">NẾU (Mọi hành động xảy ra) 🔻</string>
+    <string name="see_camera">Xem Camera</string>
+    <string name="scene_label">Ngữ cảnh</string>
+    <string name="on_off_scene">Bật/tắt ngữ cảnh</string>
+    <string name="action_ir_scene">Thao tác thiết bị IR</string>
+    <string name="action_scene_delay">Cài đặt thực hiện độ trễ</string>
+    <string name="string_error_not_device">Không tìm thấy thông tin thiết bị</string>
+
+    <string name="condition_weather">Điều kiện thời tiết</string>
+    <string name="current_location">Địa điểm hiện tại</string>
+    <string name="weather">Thời tiết</string>
+    <string name="sun_rise">Bình minh/Hoàng hôn</string>
+    <string name="wind_speed">Tốc độ gió</string>
+
+    <string name="add_zigbee">Thiết bị Zigbee</string>
+    <string name="example_add_zigbee">Thiết bị sử dụng </string>
+    <string name="add_led">Thiết bị BLE</string>
+    <string name="add_led_rd">Thiết bị BLE Rạng Đông</string>
+    <string name="example_add_led">Thiết bị của BLE</string>
+    <string name="example_add_led_rd">Thiết bị BLE của Rạng Đông</string>
+    <string name="add_tuya">Thiết bị Tuya</string>
+    <string name="example_add_tuya">Thiết bị của Tuya</string>
+
+    <string name="condition_weather_change">Điều kiện thời tiết thay đổi</string>
+    <string name="example_condition_weather_change">Ví dụ: Nhiệt độ lớn hơn 28°C</string>
+    <string name="status_device_change">Trạng thái thiết bị thay đổi</string>
+    <string name="example_status_device_change">Ví dụ: Cảm biến báo có khói</string>
+
+    <string name="condition_setting">Thiết lập điều kiện %s </string>
+    <string name="condition_humidity_description">Khô (0% - 40%), Thoải mái (40% - 70%), Ẩm ướt (70% - 100%) </string>
+    <string name="condition_sun_description">Thời gian bình minh hoặc hoàng hôn được xác định dựa vào thông tin thời tiết của điện thoại. Vui lòng vào cài đặt điều kiện NẾU —> Cài đặt lịch trình thời gian để thiết lập lịch trình của riêng bạn.</string>
+
+    <string-array name="value_humidity">
+        <item>Khô</item>
+        <item>Thoải mái</item>
+        <item>Ẩm</item>
+    </string-array>
+
+
+    <string-array name="value_weather">
+        <item>Nắng</item>
+        <item>Nhiều mây</item>
+        <item>Mưa</item>
+        <item>Tuyết rơi</item>
+        <item>Sương mù</item>
+    </string-array>
+
+    <string-array name="value_sun">
+        <item>Bình minh</item>
+        <item>Hoàng hôn</item>
+    </string-array>
+
+    <string name="lesser">Nhỏ hơn</string>
+    <string name="equal">Bằng</string>
+    <string name="bigger">Lớn hơn</string>
+    <string name="looking_for_device">Đang cấu hình thiết bị</string>
+    <string name="string_add_device_ipc">Đang cấu hình thiết bị</string>
+    <string name="add_extra_equipment">Thêm thiết bị phụ</string>
+    <string name="turn_all_off">Bật/tắt tất cả</string>
+
+    <string name="close_curtain">Đóng rèm</string>
+    <string name="pause">Dừng</string>
+    <string name="open_curtain">Mở rèm</string>
+    <string name="connect_internet">Kết nối mạng</string>
+    <string name="choose_wifi">Chọn Wifi</string>
+    <string name="remember_password">Ghi nhớ mật khẩu</string>
+    <string name="please_choose_wifi_to_connect">Vui lòng chọn mạng wifi để thực hiện kết nối</string>
+    <string name="connection_available_2_4_network">Kết nối chỉ khả dụng cho mạng 2.4GHz</string>
+    <string name="ezviz_connect_device">Đặt tên thiết bị</string>
+    <string name="register_cloud_to_safe">Đăng ký lưu trữ Cloud ngay để đảm bảo an toàn cho dữ liệu của bạn.</string>
+    <string name="device_name">Tên thiết bị</string>
+    <string name="search_location">Tìm kiếm địa điểm</string>
+    <string name="scan_qr_code">Quét mã QR</string>
+    <string name="switch_text">Công tắc %d</string>
+    <string name="switch_text_2">Công tắc\n%d</string>
+    <string name="text_stop">Dừng</string>
+    <string name="activated">Kích hoạt</string>
+    <string name="no_activated">Không kích hoạt</string>
+    <string name="convert">Đảo chiều</string>
+    <string name="delete_control">Xóa điều khiển</string>
+    <string name="control_led">Đèn báo</string>
+
+    <string-array name="setting_control_data">
+        <item>Đổi tên điều khiển</item>
+        <item>Đổi chức năng phím</item>
+        <item>Thêm phím mới</item>
+    </string-array>
+
+    <!--    infrared-->
+    <string name="custom">Tuỳ chỉnh</string>
+    <string name="device_control_name">Tên điều khiển</string>
+    <string name="available_keys">Phím có sẵn</string>
+    <string name="number_keyboard">Bàn phím số</string>
+    <string name="name_device">Tên điều khiển</string>
+    <string name="voice_control">Điều khiển giọng nói</string>
+    <string name="create_keyboard">Tạo phím mới</string>
+    <string name="add_keyboard">Thêm phím mới</string>
+    <string name="add_device">Thêm thiết bị</string>
+    <string name="main_keyboard">Phím chính</string>
+    <string name="extra_key">"Phím phụ "</string>
+    <string name="connect_control_to_device">Đặt điều khiển thiết bị của bạn gần với bộ điều khiển hồng ngoại nhất có thể.</string>
+    <string name="guide_add_infrared_step_1">1. Hướng điều khiển thiết bị vào chính diện bộ điều khiển hồng ngoại</string>
+    <string name="guide_add_infrared_step_2">2. Nhấn giữ phím cần thiết lập trên điều khiển thiết bị</string>
+    <string name="guide_add_infrared_step_3">3. Nhập tên phím sau khi có thông báo thiết lập thành công</string>
+    <string name="control_infrared">Điều khiển hồng ngoại</string>
+    <string name="add_control">Thêm điều khiển</string>
+    <string name="choose_product_name">Lựa chọn hãng</string>
+
+    <string-array name="key_function_data">
+        <item>Home</item>
+        <item>Back</item>
+        <item>Stop/play</item>
+        <item>Rewind</item>
+        <item>Next</item>
+    </string-array>
+
+    <string name="joystick_success_enter_key_name">Đã thiết lập thành công phím điều khiển mới.\nVui lòng nhập tên phím.</string>
+    <string name="key_name">Tên phím</string>
+    <string name="main_key">Phím chính</string>
+    <string name="extra_key_label">Phím phụ</string>
+    <string name="option">Tùy chọn</string>
+    <string name="default_color">Màu mặc định</string>
+    <string name="change_key_function">Đổi chức năng phím</string>
+    <string name="upgrade_firmware">Nâng cấp firmware</string>
+    <string name="setting_wifi">Thiết lập wifi</string>
+    <string name="setting_success">Thiết lập thành công</string>
+    <string name="setting_fail">Thiết lập thất bại</string>
+    <string name="network_connect_fail">Thông báo</string>
+    <string name="confirm_upgrade_firmware">Bạn có chắc chắn muốn nâng cấp firmware thiết bị?</string>
+    <string name="action_maika">Hành động %d</string>
+    <string name="title_event">Ngữ cảnh %s</string>
+    <string name="press_button">Bấm nút %s</string>
+    <string name="config">Cài đặt chung</string>
+    <string name="remove_account">Xoá tài khoản</string>
+    <string name="more">Tìm hiểu thêm</string>
+    <string name="version_app">Phiên bản phần mềm</string>
+    <string name="on_off_notification">Bật/tắt thông báo</string>
+    <string name="suggest_wifi_list">Để đảm bảo kết nối thiết bị thành công, vui lòng kết nối điện thoại và thiết bị với wifi có chất lượng tốt nhất theo danh sách bên dưới:</string>
+    <string name="setting_wifi_phone">Cài đặt wifi cho điện thoại</string>
+    <string name="setting_device">Cài đặt</string>
+    <string name="setting_rolling_door_duration">Thời gian hành trình cửa</string>
+    <string name="setting_set_password_smart_lock">Tạo mật khẩu</string>
+    <string name="setting_list_password_smart_lock">Danh sách mật khẩu</string>
+    <string name="setting_firmware">Thông tin Firmware</string>
+    <string name="delete_device">Xóa thiết bị</string>
+    <string name="delete_device_update">Cập nhật</string>
+    <string name="delete_sd_card_info_title">Định dạng thẻ</string>
+    <string name="establish_setting">Thiết lập cài đặt</string>
+    <string name="not_found_device">Không tìm thấy thiết bị</string>
+    <string name="rename_button">Đổi tên công tắc</string>
+
+
+    <string name="please_turn_on_power_device">Vui lòng bật nguồn thiết bị, đảm bảo đèn xanh sáng và đèn đỏ nhấp nháy.</string>
+    <string name="tutorial_step_1">Nếu đèn đỏ đã nhấp nháy, vui lòng ấn chọn “tiếp” để tiếp tục thực hiện thêm thiết bị.</string>
+    <string name="tutorial_step_2">Nếu bạn chưa đặt lại được, vui lòng thực hiện từng bước Tại đây >></string>
+    <string name="tutorial_step_3">Bạn có thể chuyển đổi nhanh sang các chế độ thêm thiết bị khác ở nút đổi trên cùng.</string>
+    <string name="quick_mode_step_1">Bước 1: Vui lòng kết nối dây nguồn vào thiết bị</string>
+    <string name="quick_mode_step_2">Bước 2: Nhấn giữ nút Reset trong 5 giây.</string>
+    <string name="quick_mode_step_3">Bước 3: Đảm bảo đèn xanh sáng và đèn đỏ nhấp nháy nhanh. Ấn “Tiếp tục” để tiếp tục thực hiện thêm thiết bị.</string>
+
+    <string name="compatible_mode_step_1">Bước 1: Vui lòng kết nối dây nguồn vào thiết bị</string>
+    <string name="compatible_mode_step_2">Bước 2: Nhấn giữ nút Reset trong 5 giây.</string>
+    <string name="compatible_mode_step_3">Bước 3: Đảm bảo đèn xanh sáng và đèn đỏ nhấp nháy.</string>
+    <string name="compatible_mode_step_4">Bước 4: Nhấn giữ nút Reset trong 5 giây.</string>
+    <string name="compatible_mode_step_5">Bước 5: Đảm bảo đèn xanh sáng và đèn đỏ nhấp nháy nhanh. Ấn “Tiếp tục” để tiếp tục thực hiện thêm thiết bị.</string>
+    <string name="again_text">Trở lại</string>
+    <string name="tap_condition">Chạm để thực hiện</string>
+    <string name="example_tap_condition">Ví dụ: Chạm để tắt bóng đèn</string>
+    <string name="link_device">Đã liên kết với %s</string>
+    <string name="assistant">Trợ lý ảo</string>
+    <string name="time_format">Định dạng ngày</string>
+    <string name="warning_ir">Chất lượng tín hiệu không tốt, Vui lòng để thiết bị gần với bộ điều khiển.</string>
+    <string name="not_found_info_device">Không tìm thấy thông tin thiết bị.</string>
+    <string name="today">Ngày hôm nay</string>
+    <string name="read">Đọc</string>
+    <string name="select_all">Chọn tất cả</string>
+    <string name="play">Phát</string>
+    <string name="motion_detect_alarm">B.động phát hiện ch.động</string>
+
+    <string-array name="category_filter_message">
+        <item>Ngày</item>
+        <item>Loại tin nhắn</item>
+        <item>Thiết bị</item>
+    </string-array>
+
+    <string name="setting_real_time_scene">Thiết lập thời gian thực của ngữ cảnh</string>
+    <string name="effective_time">Thời gian có hiệu lực</string>
+    <string name="start_time">Bắt đầu</string>
+    <string name="end_time">Kết thúc</string>
+    <string name="choose_schedule">Chọn lịch trình</string>
+    <string name="every_day">Mỗi ngày</string>
+
+    <string name="select">Chọn</string>
+
+    //Forgot password
+    <string name="reset_password_successful">Đặt lại mật khẩu thành công</string>
+
+
+    //Update user information
+    <string name="something_wrong">Có lỗi xảy ra. Vui lòng thử lại</string>
+    <string name="add_camera_success">Thêm mới thành công</string>
+    <string name="update_user_info_success">Chỉnh sửa thông tin cá nhân thành công</string>
+    <string name="active_scene_on_tab_success">Ngữ cảnh thực hiện thành công</string>
+    <string name="active_scene_on_tab_fail">Ngữ cảnh thực hiện không thành công</string>
+    <string name="active_scene_outside">Ngữ cảnh không có hiệu lực</string>
+    <string name="camera_added">Camera đã được thêm vào tài khoản\n*******%s \n Vui lòng xóa và thử lại.</string>
+    <string name="camera_belong_old_account">Thiết bị đã được thêm bởi tài khoản khác.\nBạn vui lòng xóa thiết bị trên tài khoản cũ.</string>
+    <string name="camera_binding">Thiết bị đang thuộc quyền sở hữu của tài khoản %s****%s.</string>
+    <string name="camera_support_binding">Vui lòng thêm thiết bị bằng tài khoản sở hữu. Hoặc liên hệ tổng đài 18008119 (Miễn phí) để được hỗ trợ.</string>
+    <string name="camera_cannot_added">Thiết bị đã thêm vào tài khoản này.</string>
+    <string name="hint_text_verify_code">Nhập mã xác nhận</string>
+    <string name="hint_text_camera_id">Nhập mã thiết bị</string>
+    <string name="camera_not_own">Thiết bị không thuộc quyền sở hữu trong tài khoản của bạn. Vui lòng liên hệ tổng đài 18008119 (Miễn phí) để được hỗ trợ</string>
+    <string name="title_statistic_label">Thống kê nhãn</string>
+    <string name="progress_upgrade">"Cập nhật %d %s"</string>
+    <string name="upgrade_success">Cập nhật phiên bản firmware thành công</string>
+    <string name="upgrade_firmware_recommend">Vui lòng cập nhật phiên bản firmware mới nhất để đảm bảo hoạt động của thiết bị.</string>
+    <string name="upgrade_firmware_success">Cập nhật Firmware thành công</string>
+    <string name="upgrade_firmware_failed">Cập nhật Firmware thất bại</string>
+    <string name="upgrading_firmware_description">Đang thực hiện cập nhật Firmware mới nhất.\nHệ thống sẽ thông báo cho bạn khi quá trình cập nhật hoàn tất.</string>
+    <string name="auto_upgrade_firmware_confirm">Xác nhận tắt cập nhật firmware tự động</string>
+    <string name="auto_upgrade_firmware_on_success">Bật cập nhật firmware thành công</string>
+    <string name="auto_upgrade_firmware_off_success">Tắt cập nhật firmware thành công</string>
+    <string name="auto_upgrade_firmware_on_failed">Bật cập nhật firmware thất bại</string>
+    <string name="auto_upgrade_firmware_off_failed">Tắt cập nhật firmware thất bại</string>
+    <string name="reset_device">"Đang khởi động"</string>
+    <string name="start_update">Bắt đầu cập nhật</string>
+
+    <string name="text_expand_button">Chức năng chung</string>
+    <string name="switch_name_button">Công tắc %d</string>
+    <string name="socket_name_button">Ổ cắm %d</string>
+
+    <string name="title_pair_mode_bottom_sheet">Chọn trạng thái hiển thị của đèn tín hiệu</string>
+    <string name="pair_mode_quick">Đèn nháy nhanh</string>
+    <string name="pair_mode_slow">Đèn nháy chậm</string>
+    <string name="scence">Ngữ cảnh</string>
+    <string name="title_home">Home</string>
+    <string name="time">Thời gian</string>
+
+    <string name="border_light_off">Tắt đèn báo</string>
+    <string name="border_light_on">Bật đèn báo</string>
+    <string name="border_light_revert">Đổi màu đèn báo</string>
+    <string name="text_call_ai">Lắng nghe \"Phương Anh ơi\"</string>
+
+    <string name="ask_fill_information">Vui lòng nhập thông tin cá nhân đầy đủ và chính xác để chúng tôi dễ dàng hỗ trợ bạn!</string>
+
+    <string name="add_link_switch">Thêm liên kết</string>
+
+    <string name="popup_custom">Tùy chỉnh</string>
+    <string name="popup_add_scene">Thêm ngữ cảnh</string>
+    <string name="popup_add_device">Thêm thiết bị</string>
+
+    <string name="title_smart_home">Smart home</string>
+    <string name="title_gateway">Gateway</string>
+
+    <string name="name_register">Tên đăng nhập</string>
+    <string name="input_name_error">Vui lòng nhập tên người dùng</string>
+    <string name="input_name_error_validate">Tên người dùng không hợp lệ.</string>
+    <string name="input_name_length_error">Tên đăng nhập phải từ 1-50 ký tự</string>
+
+    <string name="quantity_room_device">%d thiết bị</string>
+    <string name="quantity_room_camera">%d camera</string>
+
+    <string name="title_no_sub_device">Chưa có thiết bị phụ</string>
+    <string name="title_quantity_sub_device">Tổng số thiết bị</string>
+    <string name="title_quantity_online">Trực tuyến</string>
+    <string name="status_door_open">Cửa mở</string>
+    <string name="status_door_close">Cửa đóng</string>
+    <string name="title_curtain">Rèm cửa</string>
+    <string name="title_add_link_button">Thiết lập phím liên kết</string>
+    <string name="choose_device">Vui lòng lựa chọn phòng mà bạn muốn di chuyển thiết bị.</string>
+    <string name="suggest_title">Đề xuất</string>
+    <string name="auto_title">Tự động</string>
+    <string name="auto_click_title">Chạm để bật</string>
+    <string name="convenient">Tiện ích</string>
+    <string name="ecosystem">Tiết kiệm năng lượng</string>
+    <string name="security">An ninh an toàn</string>
+
+    <string name="no_scene">Chưa có ngữ cảnh</string>
+    <string name="scene_manager">Quản lý ngữ cảnh</string>
+    <string name="title_scene_delay">Ví dụ: Độ trễ 1 phút</string>
+    <string name="title_ir_scene">Bật/ tắt ngữ cảnh</string>
+    <string name="multiplate_date">Nhiều ngày</string>
+    <string name="from">Từ</string>
+    <string name="to">đến</string>
+    <string name="count_device">%d Thiết bị đã được thêm</string>
+    <string name="change_dimmer">Điều chỉnh độ sáng của đèn:</string>
+    <string name="temperature_of_downlight">Điều chỉnh nhiệt độ màu</string>
+    <string name="dimmer">Độ sáng</string>
+    <string name="color">Màu</string>
+    <string name="suggest_create_room">Gợi ý tạo phòng</string>
+    <string name="restarting_device">Đang khởi động lại thiết bị</string>
+
+    <string name="fcm_camera_new_fw_title">Thiết bị có bản Firmware mới</string>
+    <string name="fcm_camera_connected_title">Thiết bị đã hoạt động </string>
+    <string name="fcm_camera_disconnected_title">Thiết bị ngoại tuyến</string>
+    <string name="fcm_camera_update_firmware">Cập nhật Firmware</string>
+    <string name="fcm_camera_connected">Camera %s đã kết nối trở lại vào lúc %s</string>
+    <string name="fcm_camera_disconnected">Camera %s mất kết nối vào lúc %s</string>
+    <string name="fcm_camera_fw_update_success">Camera %s cập nhật Firmware thành công vào lúc %s</string>
+    <string name="fcm_camera_fw_update_failed">Camera %s cập nhật Firmware thất bại vào lúc %s</string>
+    <string name="fcm_camera_fw_update_avaible">Camera %s có bản cập nhật firmware mới</string>
+    <string name="count_pair_sensor">Đã tìm thấy: %d thiết bị</string>
+    <string name="payment_success">Thanh toán thành công.</string>
+    <string name="viettel_pay">Thanh toán Viettel Pay</string>
+    <string name="deny">Từ chối</string>
+    <string name="input_captcha">Captcha</string>
+    <string name="notification_understand">Đã hiểu</string>
+    <string name="play_video">Camera</string>
+    <string name="add_tag_favorite">Thêm thẻ</string>
+    <string name="update">Cập nhật</string>
+    <string name="hint_search_product">Bạn muốn tìm gì?</string>
+    <string name="new_password_vs_password_duplicate">Mật khẩu mới không được trùng với mật khẩu cũ</string>
+    <string name="old_password_incorrect">Mật khẩu cũ không chính xác</string>
+    <string name="add_to_favorite">Thêm vào Yêu thích</string>
+    <string name="string_error_recording_live">Độ dài video ghi hình yêu cầu tối thiểu 5s</string>
+    <string name="saturation">Độ bão hòa</string>
+    <string name="no_tag_favorite_added">Chưa có thẻ được thêm</string>
+    <string name="manage_tag">Quản lý thẻ</string>
+    <string name="add_camera">Thêm camera</string>
+    <string name="form_share">Từ %s</string>
+    <string name="total_share">Đã chia sẻ cho %d người bạn</string>
+    <string name="base_information">Thông tin cơ bản</string>
+    <string name="noti_data_not_changed">Bạn có chắc muốn huỷ thay đổi. Các thay đổi của bạn sẽ không được lưu lại.</string>
+    <string name="instruct_sync_data_ezviz">Tài khoản 0xxxxx%s của bạn chưa được đồng bộ. Vui lòng ấn nút Cập nhật và thực hiện theo hướng dẫn để đồng bộ tài khoản</string>
+
+    <string name="instruct_tab_favorite_title">Đây là trang Yêu thích</string>
+    <string name="instruct_tab_favorite_desc">Hãy thêm các thiết bị bạn hay sử dụng vào trang này để thao tác nhanh.</string>
+
+    <string name="instruct_tab_device_title">Đây là trang Thiết bị</string>
+    <string name="instruct_tab_device_desc">Hãy thêm các thiết bị bạn có vào ứng dụng để điều khiển</string>
+
+    <string name="instruct_tab_smart_scene_title">Đây là trang Ngữ cảnh</string>
+    <string name="instruct_tab_smart_scene_desc">Hãy thêm các điều kiện thiết bị, thời gian để thiết bị hoạt động tự động theo ý muốn</string>
+
+    <string name="instruct_tab_event_camera_title">Đây là trang Sự kiện</string>
+    <string name="instruct_tab_event_camera_desc">Xem lại các sự kiện xảy ra trong nhà của bạn được ghi lại tại đây</string>
+
+    <string name="instruct_tab_setting_title">Đây là trang Cài đặt</string>
+    <string name="instruct_tab_setting_desc">Thay đổi thông tin cá nhân, Chính sách pháp lý, Đăng xuất tài khoản …</string>
+
+    <string name="instruct_add_device">Bạn chưa có thiết bị nào được thêm vào ứng dụng. Hãy thêm ngay nhé !!!</string>
+    <string name="instruct_add_favorite">Hãy thêm các thẻ bạn hay sử dụng vào trang này để dễ theo dõi nhé !</string>
+    <string name="instruct_add_favorite_device">Lựa chọn các thẻ bạn hay sử dụng để thêm vào màn hình Yêu thích.</string>
+    <string name="instruct_edit_favorite">Chọn vào đây để chỉnh sửa các thẻ hiển thị trên màn hình Yêu thích.</string>
+    <string name="touch_screen_to_continue">Chạm vào màn hình để tiếp tục</string>
+    <string name="dialog_button_ok">Đồng ý</string>
+    <string name="show_share_device_pending_count">Bạn đang có chia sẻ chờ chấp nhận</string>
+
+    <string name="smart_light_lighting">Độ sáng: %d%%</string>
+    <string name="smart_light_color">Màu sắc: %s</string>
+    <string name="smart_light_temperature">Nhiệt độ màu: %s</string>
+    <string name="turn_on_smart_light">Bật bóng đèn</string>
+    <string name="lighting_color_suggestion">Màu đèn gợi ý</string>
+    <string name="bed_room">Phòng ngủ</string>
+    <string name="main_bedroom">Phòng ngủ chính</string>
+    <string name="classroom">Phòng học</string>
+    <string name="bath_room">Phòng tắm</string>
+    <string name="living_room">Phòng khách</string>
+    <string name="kitchen">Phòng bếp</string>
+    <string name="string_later">Để sau</string>
+    <string name="string_content_version_update">Viettel Home đã ra mắt phiên bản mới %s.\n Vui lòng cập nhật ứng dụng để tiếp tục sử dụng.</string>
+    <string name="switch_on_all">Bật tất cả</string>
+    <string name="switch_off_all">Tắt tất cả</string>
+    <string name="notify_add_favorite_device_endpoint_0">Nếu chọn công tắc chính, các thẻ công tắc con sẽ được gộp lại.</string>
+    <string name="message_not_have_permission_add_camera">Bạn không có quyền thêm Camera ở nhà được chia sẻ.</string>
+
+    <string name="notification_bursting_speed">Dồn dập</string>
+    <string name="notification_lightly_speed">Nhẹ nhàng</string>
+    <string name="notification_silent_speed">Im lặng</string>
+    <string name="the_changed_do_not_save">Các thay đổi của bạn sẽ không được lưu lại</string>
+    <string name="update_org_name_success">Đổi tên nhà thành công</string>
+    <string name="update_room_name_success">Đổi tên phòng thành công</string>
+    <string name="add_room_success">Thêm phòng thành công</string>
+    <string name="string_content_private_policy">Là một ứng dụng Smart Home và cung cấp dịch vụ lưu trữ Cloud, dữ liệu của bạn sẽ luôn được Viettel Home mã hóa bảo mật.</string>
+    <string name="string_no_access">Tôi không đồng ý</string>
+    <string name="string_show_access">Tôi đã hiểu</string>
+    <string name="string_withdraw_consent">Rút lại sự đồng ý</string>
+    <string name="string_title_dialog_unaccess">Xác nhận không đồng ý điều khoản</string>
+    <string name="string_content_dialog_unaccess"><![CDATA[Nếu bạn không đồng ý Điều khoản & chính sách sử dụng của Viettel Home, bạn sẽ không sử dụng được ứng dụng này.]]></string>
+    <string name="string_delete_data">Xóa toàn bộ dữ liệu cá nhân.</string>
+    <string name="string_question_frequently">Câu hỏi thường gặp</string>
+    <string name="string_content_question_frequently">Trả lời các vấn đề thường gặp của bạn.</string>
+    <string name="string_title_wifi_setting">Kiểm tra tín hiệu mạng</string>
+    <string name="string_live_view_lan">Xem trực tiếp qua mạng LAN</string>
+    <string name="string_change_password">ĐỔI MẬT KHẨU</string>
+
+    <string name="overlay_permission_request">Cho phép ViettelHome xuất hiện phía trên các ứng dưng khác ?</string>
+
+    <!-- Faces management   -->
+    <string name="faces_management">Quản lý gương mặt</string>
+    <string name="faces_group_management">Quản lý nhóm gương mặt</string>
+    <string name="add_face">Thêm gương mặt</string>
+    <string name="add_face_note">Đưa khuôn mặt của bạn khớp với\nđường tròn để đảm bảo tính chính xác</string>
+    <string name="add_face_start">Bắt đầu</string>
+    <string name="add_face_center">Chính diện</string>
+    <string name="add_face_left">Nghiêng trái</string>
+    <string name="add_face_right">Nghiêng phải</string>
+    <string name="add_face_done">Hoàn thành</string>
+    <string name="choose_image_from_gallery">Chọn ảnh từ bộ sưu tập</string>
+    <string name="uploadNote">Bạn chỉ có thể chọn %d ảnh</string>
+    <string name="select_at_least">Vui lòng tải lên 3 - %d ảnh, ít nhất 1 ảnh chính giữa,\n1 nghiêng trái, 1 nghiêng phải.</string>
+    <string name="message_maximum_sample_data_can_pick">Số ảnh tối đa trong dữ liệu mẫu là %d ảnh. Bạn không thể thực hiện thao tác này."</string>
+    <string name="message_only_allow_to_select_sample">Bạn chỉ được phép chọn %d ảnh trong thư viện. Số ảnh tối đa trong Dữ liệu ảnh là %d"</string>
+    <string name="message_image_exceed_size">Ảnh tải lên phải có kích thước trong khoảng %dx%dpx đến %dx%d px</string>
+    <string name="title_list_face">Danh sách gương mặt</string>
+    <string name="title_list_face_group">Danh sách nhóm gương mặt</string>
+    <string name="message_there_is_no_face">Chưa có gương mặt</string>
+    <string name="move_to_group">Chuyển đến nhóm</string>
+    <string name="move_to_group_success">Chuyển đến nhóm thành công</string>
+    <string name="move">Chuyển</string>
+    <string name="add_into_new_group">Thêm vào nhóm mới</string>
+    <string name="message_confirm_delete_faces">Bạn có chắc muốn xóa gương mặt đã chọn. Sau khi xóa, dữ liệu gương mặt đã thêm sẽ bị mất.</string>
+    <string name="message_confirm_delete_face_groups">Bạn có chắc muốn xóa nhóm gương mặt đã chọn.</string>
+    <string name="message_confirm_delete_face_data">Bạn có chắc muốn xóa gương mặt này. Sau khi xóa, dữ liệu gương mặt sẽ bị mất.</string>
+    <string name="title_edit">Chỉnh sửa</string>
+    <string name="add_new_face_group">Thêm nhóm gương mặt</string>
+    <string name="add_new_face_group_success">Thêm nhóm gương mặt thành công</string>
+    <string name="delete_face_group_success">Xóa nhóm gương mặt thành công</string>
+    <string name="add_new_success">Thêm mới thành công</string>
+    <string name="edit_face_group_success">Sửa nhóm gương mặt thành công</string>
+    <string name="edit_new_face_group">Sửa nhóm gương mặt</string>
+    <string name="face_group">Nhóm gương mặt</string>
+    <string name="group_name">Tên nhóm</string>
+    <string name="confirm_data">Xác nhận dữ liệu</string>
+    <string name="face_info">Thông tin gương mặt</string>
+    <string name="face_name">Tên gương mặt</string>
+    <string name="sample_data">Dữ liệu mẫu</string>
+    <string name="list_face_sample_data">Danh sách gương mặt mẫu</string>
+    <string name="take_picture_again">Chụp lại</string>
+    <string name="choose_face_group">Chọn nhóm gương mặt</string>
+    <string name="add_from_gallery">Thêm từ bộ sưu tập</string>
+    <string name="add_automatic">Thêm tự động</string>
+    <string name="message_confirm_delete_face_sample_data">Bạn có chắc muốn xóa dữ liệu mẫu đã chọn. Sau khi xóa, dữ liệu  mẫu đã thêm sẽ bị mất.</string>
+    <string name="message_confirm_delete_all_face_sample_data">Nếu xóa toàn bộ dữ liệu mẫu, gương mặt đã thêm sẽ bị xóa. Bạn có muốn xóa Gương mặt này.</string>
+
+    <string name="condition_camera_face_recognition">Camera Nhận diện gương mặt</string>
+    <string name="example_condition_camera_face_recognition">Ví dụ: Phát hiện người lạ trong phòng khách</string>
+    <string name="recognition_device">Thiết bị nhận diện</string>
+    <string name="face_recognition">Nhận diện gương mặt</string>
+
+    <string name="group_family">Người nhà</string>
+    <string name="group_acquaintance">Người quen</string>
+    <string name="group_blacklist">Danh sách đen</string>
+
+    <string name="note_face_samples">Dữ liệu mẫu phải có ít nhất 1 ảnh mỗi góc gương mặt.</string>
+
+    <string name="edit_samples">Sửa</string>
+
+    <string name="error_upload_invalid_images">Vui lòng tải lên đủ ít nhất 1 ảnh chính giữa, 1 nghiêng trái, 1 nghiêng phải</string>
+    <string name="error_upload_no_face_image">Không thể nhận diện gương mặt</string>
+    <string name="error_upload_no_face_image_content">Vui lòng tải lên ảnh có hình ảnh gương mặt rõ nét hơn, có độ phân giải cao hơn.</string>
+    <string name="message_confirm_update_face_images">Bạn đã thay đổi dữ liệu mẫu. Ban có muốn cập nhật dữ liệu này không ?</string>
+    <string name="message_confirm_update_face_info">Bạn đã thay đổi thông tin gương mặt. Ban có muốn cập nhật dữ liệu này không ?</string>
+    <string name="message_confirm_face_data">Dữ liệu gương mặt đã được ghi nhận. Bạn có chắc muốn thoát. Nếu thoát, vui lòng cập nhật dữ liệu gương mặt lại.</string>
+    <string name="please_upload_enough_image">Vui lòng tải lên đủ ít nhất 1 ảnh chính giữa, 1 nghiêng trái, 1 nghiêng phải</string>
+    <string name="not_enough_image">Ảnh tải lên chưa đủ</string>
+
+    <!--Defend Schedule-->
+    <string name="setup_defend_schedule">Cài đặt lịch trình</string>
+    <string name="setup_defend_schedule_underline"><u>Cài đặt lịch trình</u></string>
+    <string name="defend_schedule_note">Thông báo và sự kiện sẽ được gửi theo\nlịch trình cài đặt</string>
+    <string name="defend_schedule">Lịch trình</string>
+    <string name="add_defend_schedule">Thêm lịch trình</string>
+    <string name="string_titlte_number_money">Số tài khoản Viettel Money</string>
+    <string name="string_content_promotion">Bạn đã nhận được gói lưu trữ Cloud %d ngày\n <b>MIỄM PHÍ</b> trong %d tháng.\nTrải nghiệm ngay!</string>
+    <string name="string_title_dialog_enter_phone_pay_link">Nhập tài khoản liên kết với Viettel Money</string>
+    <string name="string_enter_phone">Nhập số điện thoại</string>
+    <string name="string_manager_paylink">Quản lý liên kết thanh toán</string>
+    <string name="string_auto_charging">Thanh toán tự động</string>
+    <string name="string_text_not_data_pay_link">Bạn chưa sử dụng dịch vụ Cloud. Vui lòng đăng ký và kích hoạt gia hạn tự động để sử dụng tính năng.</string>
+    <string name="label_button_scene_1">Scence 1</string>
+    <string name="label_button_scene_2">Scence 2</string>
+    <string name="label_button_scene_3">Scence 3</string>
+    <string name="label_button_scene_4">Scence 4</string>
+    <string name="dimmer_ligting_group">Độ sáng nhóm đèn</string>
+    <string name="temperature_lighting_group">Nhiệt độ màu đèn</string>
+    <string name="add_lighting_group">Thêm nhóm thiết bị</string>
+    <string name="text_confirm">Xác nhận</string>
+
+    <string name="android_tv_log_in_other_device">Đăng nhập tài khoản trên thiết bị khác</string>
+    <string name="android_tv_log_please_login">Vui lòng chọn ĐĂNG NHẬP, để đăng nhập tài khoản Viettel Home trên thiết bị này</string>
+    <string name="android_tv_reject_so_many_times_title">Vhome muốn truy cập Camera</string>
+    <string name="android_tv_reject_so_many_times_content">Bạn đã từ chối quyền Camera nhiều lần \n Vui lòng cho phép quyền Camera </string>
+    <string name="android_tv_allowed">Cho phép</string>
+    <string name="android_tv_denied">Từ chối</string>
+
+    <string name="android_tv_login_success">Đăng nhập tài khoản thành công</string>
+    <string name="android_tv_login_fail">Đăng nhập tài khoản thất bại</string>
+
+    <string name="android_tv_in_valid_qr_code">Mã QR không hợp lệ</string>
+    <string name="android_tv_exist_android_tv_owner">Thiết bị đã được liên kết với tài khoản của bạn</string>
+    <string name="android_tv_exist_android_tv_not_owner">Thiết bị đã được liên kết với tài khoản khác</string>
+
+    <string name="string_phone_error">Số điện thoại không hợp lệ</string>
+    <string name="please_reset_and_try_again">Vui lòng Reset thiết bị và thực hiện lại</string>
+
+    <string name="delete_androidtv_success">Đăng xuất thiết bị thành công</string>
+    <string name="delete_androidtv_fail">Xóa liên kết thất bại</string>
+    <string name="android_tv_confirm_logout">Xác nhận đăng xuất trên thiết bị</string>
+    <string name="android_tv_time_to_linked">Thời gian liên kết thiết bị: </string>
+
+    <string name="linked_android_tv_success">Liên kết Android TV thành công</string>
+    <string name="linked_android_tv_fail">Liên kết Android TV thất bại \n Vui lòng thử lại</string>
+
+    <string name="android_tv_used_a_token">TV used a token</string>
+
+    <string name="critical_notification">Thông báo khẩn cấp</string>
+    <string name="push_critical_notification">Thông báo đẩy khẩn cấp</string>
+    <string name="push_notification">Thông báo đẩy</string>
+    <string name="send_notification">Gửi thông báo</string>
+    <string name="input_notification_title">Nhập tiêu đề thông báo</string>
+    <string name="notification_content">Nội dung thông báo</string>
+    <string name="type_notification_content">Kiểu nội dung thông báo</string>
+    <string name="name_of_smart_scene">Tên ngữ cảnh kích hoạt</string>
+    <string name="custom_notification_content">Nội dung thông báo tùy chỉnh</string>
+    <string name="input_custom_notification_content">Nhập nội dung thông báo tùy chỉnh</string>
+    <string name="string_hotline"><b>18008168</b>\n Tư vấn \n bán hàng</string>
+    <string name="string_call_error"><b>18008119</b>\n Báo hỏng</string>
+
+    <string name="device_network_info">Thông tin mạng</string>
+    <string name="device_connection_type">Loại kết nối</string>
+    <string name="name_of_network">Tên mạng</string>
+    <string name="signal_strength">Chất lượng tín hiệu</string>
+    <string name="device_ip">IP trong mạng</string>
+    <string name="wifi_configuration">Cấu hình Wifi</string>
+    <string name="current_network">Mạng hiện tại</string>
+    <string name="network_available">Mạng đang có</string>
+    <string name="wired_network">Mạng có dây</string>
+    <string name="add_network">Thêm mạng</string>
+    <string name="node_id">Node ID</string>
+    <string name="connected">Đã kết nối</string>
+    <string name="disconnected">Mất kết nối</string>
+    <string name="very_bad">Rất kém</string>
+    <string name="bad">Kém</string>
+    <string name="normal">Bình thường</string>
+    <string name="strong">Tốt</string>
+    <string name="string_searching_wifi">Đang tìm kiếm các mạng wifi…</string>
+    <string name="string_error_searching_wifi">Không tìm thấy wifi trong khu vực</string>
+    <string name="string_input_info_new_network">Nhập thông tin mạng mới</string>
+    <string name="string_input_name_of_network">Nhập tên mạng</string>
+    <string name="string_input_password_of_network">Nhập mật mã</string>
+    <string name="string_error_input_name_of_network">Vui lòng nhập tên mạng</string>
+    <string name="string_connecting_new_wifi">Đang kết nối với mạng mới …</string>
+    <string name="string_sending_new_wifi_info_successfully">Gửi cấu hình thông tin wifi mới xuống thiết bị thành công</string>
+    <string name="string_sending_new_wifi_info_failed">Gửi cấu hình thông tin wifi mới xuống thiết bị thất bại</string>
+    <string name="string_sending_new_wifi_info_successfully_description">Quá trình chuyển mạng wifi có thể mất 2 phút. Nếu không thể kết nối tới mạng wifi mới, thiết bị sẽ khôi phục lại kết nối mạng cũ.</string>
+    <string name="string_open_gallery_qr_v2">Vui lòng quét mã QR trên thiết bị hoặc truy cập vào <font color='#ff738e'>Thư viện ảnh</font></string>
+    <string name="string_quick_qr_code_1_v2">Nếu không quét mã QR thành công.\nVui lòng thử thêm <font color='#ff738e'>thủ công</font></string>
+    <string name="message_permission_camera">"(Việc truy cập camera nhằm mục đích quét mã QR trên thiết bị của bạn. Vui lòng nhấn “CHO PHÉP” để cho phép ứng dụng truy cập camera)   "</string>
+    <string name="signal_strength_unit"> (%sdBm)</string>
+    <string name="string_title_spread_check">Kết quả chương trình lan tỏa Viettel</string>
+    <string name="string_spread_thank_you">Cảm ơn sự đóng góp của bạn</string>
+    <string name="string_not_spread_yet">Bạn chưa lan tỏa thành công cho trường hợp nào!</string>
+    <string name="group_device" translatable="false">Nhóm thiết bị</string>
+    <string name="or" translatable="false">hoặc</string>
+    <string name="select_to_change_preview_camera" translatable="false">để thay đổi kiểu hiện thị thẻ</string>
+    <string name="select_and_hold" translatable="false">Chọn và giữ</string>
+    <string name="select_and_hold_to_arrange_card_group_positions" translatable="false">để sắp xếp vị trí nhóm thẻ.</string>
+    <string name="card_management" translatable="false">Quản lý thẻ</string>
+    <string name="update_failed" translatable="false">Cập nhật thất bại</string>
+    <string name="select_and_hold_the_card_sort_position_in_the_group_card" translatable="false">Chọn và giữ thẻ sắp xếp vị trí trong nhóm thẻ.</string>
+    <string name="fire_alarm_service" translatable="false">Dịch vụ báo cháy</string>
+    <string name="setting_fire_alarm_service" translatable="false">Thiết lập dịch vụ báo cháy</string>
+    <string name="location" translatable="false">Vị trí</string>
+    <string name="are_you_sure_you_want_to_exit_without_saving" translatable="false">Bạn có chắc muốn thoát mà không lưu</string>
+    <string name="update_service_information_success" translatable="false">Cập thật thông tin dịch vụ thành công</string>
+    <string name="update_service_information_fail" translatable="false">Cập thật thông tin dịch vụ thất bại</string>
+    <string name="phone_number_to_receive_alerts" translatable="false">Số điện thoại nhận cảnh báo </string>
+    <string name="the_maximum_number_of_phone_numbers_to_receive_alert_is_3" translatable="false">Số điện thoại nhận cảnh báo được thêm tối đa là 3.</string>
+    <string name="add_phone_number" translatable="false">Thêm số điện thoại</string>
+    <string name="phone_number_has_not_been_entered" translatable="false">Chưa nhập số điện thoại đăng ký</string>
+    <string name="main_phone_number" translatable="false">(Số chính)</string>
+    <string name="phone_number_recieve_alert" translatable="false">SĐT nhận cảnh báo</string>
+    <string name="name_required" translatable="false">Tên*</string>
+    <string name="phone_number_required" translatable="false">Số điện thoại*</string>
+    <string name="erase_phone_number" translatable="false">Xóa số điện thoại</string>
+    <string name="please_do_not_leave_the_name_blank" translatable="false">Vui lòng không để trống tên</string>
+    <string name="invalid_phone_number" translatable="false">Số điện thoại không hợp lệ</string>
+    <string name="set_location" translatable="false">Thiết lập vị trí</string>
+    <string name="set_phone_number" translatable="false">Thiết lập số điện thoại</string>
+    <string name="set_main_phone_number" translatable="false">Đặt là số điện thoại chính</string>
+    <string name="set_name" translatable="false">Thiết lập tên</string>
+    <string name="hint_set_name_fire_alert" translatable="false">Nhập tên gợi nhớ</string>
+    <string name="hint_set_phone_number_fire_alert" translatable="false">Nhập số điện thoại</string>
+    <string name="hint_set_location_fire_alert" translatable="false">Nhập vị trí cảm biến</string>
+    <string name="confirm_delete_phone_number" translatable="false">Xác nhận xóa số điện thoại nhận cảnh bảo</string>
+    <string name="please_input_location" translatable="false">Vui lòng thiết lập vị trí cảm biến để cảnh báo chính xác hơn</string>
+    <string name="phone_number_required_error" translatable="false">Số điện thoại là bắt buộc</string>
+    <string name="phone_number_invalid_format" translatable="false">Số điện thoại không hợp lệ</string>
+    <string name="phone_number_is_already" translatable="false">Số điện thoại đã đăng ký hoặc đã nhập trước đó</string>
+    <string name="confirm_delete_main_phone_number" translatable="false">Xác nhận xoá số điện thoại chính</string>
+    <string name="delete_main_phone_number_when_have_normal_phone_number" translatable="false">Sau khi xoá, số điện thoại phụ của bạn sẽ được đặt làm số chính.</string>
+    <string name="delete_main_phone_number_when_not_have_normal_phone_number" translatable="false">Sau khi xoá, bạn sẽ không nhận được cuộc gọi cảnh báo từ dịch vụ báo cháy tự động.</string>
+    <string name="edit_favorite" translatable="false">Thiết lập yêu thích</string>
+    <string name="string_spread_total">Bạn để lan tỏa thành công cho %d người.</string>
+    <string name="your_changes_will_not_be_saved" translatable="false"> Các thay đổi của bạn sẽ không được lưu lại.</string>
+
+    <string name="mode_on">Bật chế độ</string>
+    <string name="mode_off">Tắt chế độ</string>
+    <string name="privacy_mode">Chế độ riêng tư</string>
+    <string name="active_defence">Phòng vệ chủ động</string>
+    <string name="move_to_preset_position">Quay đến vị trí thiết lập trước</string>
+    <string name="no_preset_position">Hiện chưa có góc quay nào được lưu</string>
+
+    <string name="connection_status">Trạng thái kết nối</string>
+    <string name="human_detection">Phát hiện người</string>
+    <string name="detection">Phát hiện</string>
+    <string name="not_detection">Không phát hiện</string>
+    <string name="status_change">Chuyến sang trạng thái</string>
+    <string name="camera_online">Camera Online</string>
+    <string name="camera_offline">Camera Offline</string>
+    <string name="online_status">Online</string>
+    <string name="offline_status">Offline</string>
+    <string name="no_setting">Không thiết lập</string>
+
+    /module libcalendar
+    <string name="string_material_calendar_monday">T2</string>
+    <string name="string_material_calendar_tuesday">T3</string>
+    <string name="string_material_calendar_wednesday">T4</string>
+    <string name="string_material_calendar_thursday">T5</string>
+    <string name="string_material_calendar_friday">T6</string>
+    <string name="string_material_calendar_saturday">T7</string>
+    <string name="string_material_calendar_sunday">CN</string>
+
+    <array name="material_calendar_day_abbreviations_array">
+        <item>CN</item>
+        <item>T2</item>
+        <item>T3</item>
+        <item>T4</item>
+        <item>T5</item>
+        <item>T6</item>
+        <item>T7</item>
+    </array>
+
+    <array name="string_material_calendar_months_array">
+        <item>Tháng 1</item>
+        <item>Tháng 2</item>
+        <item>Tháng 3</item>
+        <item>Tháng 4</item>
+        <item>Tháng 5</item>
+        <item>Tháng 6</item>
+        <item>Tháng 7</item>
+        <item>Tháng 8</item>
+        <item>Tháng 9</item>
+        <item>Tháng 10</item>
+        <item>Tháng 11</item>
+        <item>Tháng 12</item>
+    </array>
+
+    <string name="material_calendar_today_button">Today</string>
+    <string name="material_calendar_positive_button">OK</string>
+    <string name="material_calendar_negative_button">Cancel</string>
+    <string name="waiting_for_answering">Waiting for answering</string>
+    <string name="incoming_call">Đang có cuộc gọi đến...</string>
+    <string name="waking_up">Waking Up...</string>
+    <string name="suggestion">Gợi ý</string>
+    <string name="start_patrolling">Bắt đầu tuần tra</string>
+    <string name="the_hosting_package_has_expired">Gói lưu trữ đã hết hạn. Vui lòng</string>
+    <string name="renew">gia hạn</string>
+    <string name="to_continue_using">để tiếp tục sử dụng</string>
+    <string name="convenient_lamp">Đèn tiện lợi</string>
+    <string name="turn_on_all_lights_and_air_conditioner_in_house">Chức năng có tác dụng mở hết đèn và điều hòa trong nhà</string>
+    <string name="example_turn_on_all_lights_after_coming_home_every_day">Ví dụ: Mở hết đèn sau khi về nhà mỗi ngày</string>
+    <string name="see_all">Xem tất cả</string>
+    <string name="the_hosting_package">Gói lưu trữ</string>
+    <string name="start_check">Bắt đầu kiểm tra</string>
+    <string name="check_may_take_about_30_seconds">Đang kiểm tra... Quá trình kiểm tra có thể sẽ mất khoảng 30 giây</string>
+    <string name="wifi_quality">Chất lượng Wifi</string>
+    <string name="network_latency_105ms_and_data_upload_speed_greater_than_2mbs">Độ trễ mạng 105ms và tốc độ tải dữ liệu lên lớn hơn 2.00 Mb/s</string>
+    <string name="connect_to_server_failed">Kết nối với máy chủ không thành công</string>
+    <string name="recheck">Kiểm tra lại</string>
+    <string name="remove_obstacles_between_router_and_device">Loại bỏ bớt vật cản giữa bộ định tuyến và thiết bị.</string>
+    <string name="no_gateway_has_been_added_yet">Chưa có Gateway được thêm</string>
+    <string name="no_context_has_been_added_yet">Chưa có ngữ cảnh được thêm</string>
+    <string name="no_devices_have_been_added_yet">Chưa có thiết bị được thêm</string>
+    <string name="select_context">Chọn ngữ cảnh liên kết</string>
+    <string name="device_information">Thông tin thiết bị</string>
+    <string name="serial_code">Serial code</string>
+    <string name="connected_to_wifi">Đã kết nối với Wifi thiết bị</string>
+    <string name="please_connect_your_phone_to_wifi">Vui lòng kết nối điện thoại của bạn với Wifi VHOME_XXX_XXX phát ra từ thiết bị.</string>
+    <string name="verification_code_is_incorrect_please_try_again">Mã xác minh không chính xác. Vui lòng thử lại!</string>
+    <string name="enter_the_verification_code">Nhập mã xác minh</string>
+    <string name="select_camera_type">Chọn loại Camera</string>
+    <string name="sync_setting">Thiết lập đồng bộ</string>
+    <string name="please_set_up_your_device_manager">Vui lòng thiết lập nhà quản lý thiết bị của bạn.</string>
+    <string name="enter_password">Nhập mật khẩu</string>
+    <string name="wrong_password_please_re_enter">Mật khẩu sai. Vui lòng nhập lại.</string>
+    <string name="share_home">Chia sẻ nhà</string>
+    <string name="shared_account">Tài khoản được chia sẻ</string>
+    <string name="nick_name">Biệt danh</string>
+    <string name="access_permissions">Quyền truy cập</string>
+    <string name="administrators">Quản trị viên</string>
+    <string name="member">Thành viên</string>
+    <string name="smart_device_usage">Sử dụng thiết bị | Sử dụng thông minh</string>
+    <string name="smart_device_settings_management">Quản lí thiết bị và phòng | Quản lí cài đặt thông minh</string>
+    <string name="no_device_groups_have_been_added_yet">Chưa có nhóm thiết bị được thêm</string>
+    <string name="please_connect_your_phone_to_the_network_you_want_to_connect_to">Vui lòng kết nối điện thoại của bạn đến mạng cần kết nối và đặt ở nơi lắp đặt thiết bị</string>
+    <string name="user_name">Tên người dùng</string>
+    <string name="establish">Thiết lập</string>
+    <string name="set_up_switch_button">Thiết lập nút công tắc</string>
+    <string name="can_only_be_entered_once">*Chỉ được nhập một lần duy nhất</string>
+    <string name="phone_number_is_not_in_the_correct_format">Số điện thoại không đúng định dạng</string>
+    <string name="device_control">Điều khiển thiết bị</string>
+    <string name="turn_on_chandelier">Bật đèn chùm</string>
+    <string name="cloud_storage_en">Lưu trữ Cloud</string>
+    <string name="link_now">Liên kết ngay</string>
+    <string name="link_date">Ngày liên kết</string>
+    <string name="establish_links">Thiết lập liên kết</string>
+    <string name="funds">Nguồn tiền</string>
+    <string name="transaction_limit">Hạn mức giao dịch</string>
+    <string name="cancel_link">Hủy liên kết</string>
+    <string name="producer">Nhà sản xuất</string>
+    <string name="device_id">ID Thiết bị</string>
+    <string name="firmware_name">Tên firmware</string>
+    <string name="link_your_viettel_pay_account_to_pay">Liên kết tài khoản Viettel Money để thanh toán nhanh chóng tiện lợi.</string>
+    <string name="receive_now">Nhận ngay</string>
+    <string name="setting_up_synchronization">Đang thiết lập đồng bộ</string>
+    <string name="synchronization_setup_successful">Thiết lập đồng bộ thành công</string>
+    <string name="synchronization_setup_failed">Thiết lập đồng bộ thất bại</string>
+    <string name="no_event">Chưa có Ngữ cảnh</string>
+    <string name="adding_devices">Đang thêm thiết bị</string>
+    <string name="step1">Bước 1:</string>
+    <string name="step2_select_wifi_to_connect">Bước 2: Chọn wifi đã kết nối với điện thoại</string>
+    <string name="strength_of_signal_is_sorted">Độ mạnh của tín hiệu được sắp xếp: </string>
+    <string name="fire_alarm">Dịch vụ cảnh báo cháy</string>
+    <string name="switch_four_buttons">Công tắc 4 nút</string>
+    <string name="device_notifications">Thông báo thiết bị</string>
+    <string name="open_the_window">Mở cửa sổ</string>
+    <string name="status_notification">Thông báo trạng thái</string>
+    <string name="set_up_device">Thiết lập thiết bị</string>
+    <string name="device_name_cannot_be_blank">Tên thiết bị không được để trống</string>
+    <string name="set_limits">Thiết lập hạn mức</string>
+    <string name="maximum_limit_per_transaction">Hạn mức tối đa mỗi giao dịch</string>
+    <string name="maximum_limit_per_transaction_10000000">Hạn mức tối đã mỗi giao dịch phải nhỏ hơn hoặc bằng 10.000.000đ</string>
+    <string name="maximum_limit_per_day">Hạn mức tối đa trong ngày</string>
+    <string name="maximum_limit_per_day_10000000">Hạn mức tối trong ngày phải nhỏ hơn 10.000.000đ</string>
+    <string name="update_password_name">Cập nhật tên mật khẩu</string>
+    <string name="password_name">Tên mật khẩu</string>
+    <string name="use_viettel_home_on_smart_tv">Sử dụng Viettel Home trên Smart TV</string>
+    <string name="link_devices">Liên kết thiết bị</string>
+    <string name="device_linked">Thiết bị đã liên kết</string>
+    <string name="select_a_device_to_log_out">Chọn 1 thiết bị để đăng xuất</string>
+    <string name="have_not_linked_any_device_yet">Bạn chưa liên kết với thiết bị nào</string>
+    <string name="select_home">Chọn nhà</string>
+    <string name="view_event">Xem sự kiện</string>
+    <string name="promotion">Ưu đãi</string>
+    <string name="set_up_receiving_shares">Thiết lập nhận chia sẻ</string>
+    <string name="cancel_sharing">Hủy nhận chia sẻ</string>
+    <string name="event_control_button_1">Phím điều khiển ngữ cảnh 1</string>
+    <string name="event_control_button_2">Phím điều khiển ngữ cảnh 2</string>
+    <string name="event_control_button_3">Phím điều khiển ngữ cảnh 3</string>
+    <string name="event_control_button_4">Phím điều khiển ngữ cảnh 4</string>
+    <string name="user_manual">Hướng dẫn sử dụng</string>
+    <string name="facebook">Facebook</string>
+    <string name="telegram">Telegram</string>
+    <string name="device_registration">Thiết bị đăng ký</string>
+    <string name="device_has_added_the_maximum_number_of_groups">Thiết bị đã thêm vào số nhóm tối đa</string>
+    <string name="detail_descriptions_of_device_and_application">Đây là các mô tả chi tiết của thiết bị và ứng dụng của bạn.</string>
+    <string name="camera_label">Camera</string>
+    <string name="switch_1">Công tắc 1</string>
+    <string name="switch_2">Công tắc 2</string>
+    <string name="switch_3">Công tắc 3</string>
+    <string name="switch_4">Công tắc 4</string>
+    <string name="three_devices">3 thiết bị</string>
+    <string name="linking">Đang liên kết</string>
+    <string name="what_is_qr_code_scanning">Quét mã QR là gì?</string>
+    <string name="no_events_were_detected">Không có sự kiện được phát hiện</string>
+    <string name="hello">Xin chào</string>
+    <string name="no_notifications">Không có thông báo</string>
+    <string name="lamps_light">Ánh sáng đèn</string>
+    <string name="enter_personal_email">Nhập email cá nhân</string>
+    <string name="close_the_lock">Đóng khóa</string>
+    <string name="traffic_light">Đèn tín hiệu</string>
+    <string name="members_list">Danh sách thành viên</string>
+    <string name="leaving_home">Rời nhà</string>
+    <string name="please_place_your_device_as_close_to_router_as_possible">Vui lòng đặt thiết bị của bạn gần với bộ \n định tuyến nhất có thể</string>
+    <string name="firmware_update_process_is_in_progress">Quá trình cập nhật Firmware đang diễn ra, có thế mất 1-2 phút</string>
+    <string name="service_tab_title_warning">Dịch vụ cảnh báo cháy</string>
+    <string name="service_tab_warning_content">Cung cấp các tính năng cơ bản như báo động khi phát hiện khói hoặc lửa. Thêm các tính năng mở rộng như báo động điện thoại di động. Khi thiết bị báo cháy, hệ thống sẽ gửi thông báo đến điện thoại di động của người dùng đã đăng ký dịch vụ bằng cuộc gọi và tin nhắn tự động.\n\n An toàn là trên hết - Thiết bị báo cháy bảo vệ ngôi nhà của bạn.\n\n Chỉ với 20.000đ bạn đã sở hữu gói cước trọn đời.</string>
+
+    <string name="used">Đã dùng</string>
+    <string name="select_house_want_to_view_directly">Chọn nhà muốn xem trực tiếp</string>
+    <string name="selected">Đã chọn:</string>
+    <string name="internet">Internet</string>
+    <string name="notification_source">Nguồn thông báo</string>
+    <string name="select_device_type">Chọn loại thiết bị</string>
+    <string name="no_camera">Chưa có Camera</string>
+    <string name="members_name">Tên thành viên</string>
+    <string name="enter_member_name">Nhập tên thành viên</string>
+    <string name="member_name_already_exists">Tên thành viên đã tồn tại</string>
+    <string name="door_lock_code">Mã khóa cửa</string>
+    <string name="door_lock_code_length">Độ dài mã khóa 4-6 ký tự</string>
+    <string name="door_lock_code_already_exists">Mã khóa cửa đã tồn tại</string>
+    <string name="add_members">Thêm thành viên</string>
+    <string name="move_to_home">Chuyển đến nhà</string>
+    <string name="your_device_has_not_been_synced_yet">Thiết bị của bạn chưa được đồng bộ nhà.</string>
+    <string name="password_type">Loại mật khẩu</string>
+    <string name="select_storage_type">Chọn kiểu lưu trữ</string>
+    <string name="storage_time">Thời gian lưu trữ</string>
+    <string name="used_time">Thời gian sử dụng</string>
+    <string name="price">Giá</string>
+    <string name="following">Tiếp theo</string>
+    <string name="storage_type">Kiểu lưu trữ</string>
+    <string name="thirty_days">30 ngày</string>
+    <string name="buy_new_packages">Mua thêm gói</string>
+    <string name="list_of_devices_in_the_network">Danh sách thiết bị trong mạng</string>
+    <string name="searching_devices_on_the_network">Đang tìm kiếm thiết bị trong mạng</string>
+    <string name="total_payment">Tổng thanh toán</string>
+    <string name="link_to_event_switch">Liên kết với công tắc ngữ cảnh</string>
+    <string name="delete_device_group">Xóa nhóm thiết bị</string>
+    <string name="list_of_group_devices">Danh sách thiết bị nhóm</string>
+    <string name="zero_value">0</string>
+    <string name="one_hundred_values">100</string>
+    <string name="not_yet_set_up">Chưa thiết lập</string>
+    <string name="device_is_offline">Thiết bị đang ngoại tuyến</string>
+    <string name="device_not_found_on_network_please_check_your_connection">Không tìm thấy thiết bị trong mạng. Vui lòng kiểm tra lại kết nối của bạn</string>
+    <string name="wifi_network_is_not_supported">Mạng WiFi không được hỗ trợ</string>
+    <string name="please_connect_to_2_4_GHZ_wifi_network_to_continue">Vui lòng kết nối đến mạng WiFi có băng tần 2.4Ghz để tiếp tục</string>
+    <string name="device_warranty_information">Thông tin bảo hành thiết bị</string>
+    <string name="warranty_status_and_device_warranty_history">Trạng thái bảo hành và lịch sử bảo hành thiết bị.</string>
+    <string name="device_warranty_label">Thông tin bảo hành thiết bị\nTrạng thái bảo hành và lịch sử bảo hành thiết bị.</string>
+    <string name="warranty_information">Thông tin bảo hành</string>
+    <string name="an_error_occurred">Có lỗi xảy ra</string>
+    <string name="question_frequently_label">Câu hỏi thường gặp\nTrả lời các vấn đề thường gặp của bạn.</string>
+    <string name="user_manual_label">Hướng dẫn sử dụng\nĐây là các mô tả chi tiết của thiết bị và ứng dụng của bạn.</string>
+    <string name="detail_device_warranty">Chi tiết bảo hành</string>
+    <string name="activation_date">Ngày kích hoạt</string>
+    <string name="device_warranty_list">Danh sách thiết bị trong bảo hành</string>
+    <string name="group_device_size">%d Thiết bị</string>
+    <string name="no_device_warranty_list">Không có thiết bị trong bảo hành</string>
+    <string name="string_hint_refer_code">Chưa nhập mã</string>
+    <string name="string_hint_refer_code_dialog">Vui lòng nhập thông tin</string>
+    <string name="string_title_dialog_refer_code_cloud">Mã giới thiệu</string>
+    <string name="string_enter_refer_code">Nhập mã giới thiệu</string>
+    <string name="string_number_refer_code_error">Mã giới thiệu không hợp lệ</string>
+    <string name="string_refer_code_error_member">Nhân viên không thuộc đối tượng được tính phí</string>
+    <string name="thirty_seconds">30s</string>
+    <string name="sixty_seconds">60s</string>
+    <string name="ninety_seconds">90s</string>
+    <string name="billing_information">Thông tin thanh toán</string>
+    <string name="supplier">Nhà cung cấp</string>
+    <string name="code_orders">Mã đơn hàng</string>
+    <string name="amount_of_money">Số tiền</string>
+    <string name="viettel_pay_text">Viettel Pay</string>
+    <string name="payment_link">Liên kết thanh toán</string>
+    <string name="enter_or_scan_the_referral_code">Nhập hoặc quét mã giới thiệu</string>
+    <string name="capacity">Dung lượng</string>
+    <string name="set_up_the_dashboard">Thiết lập bảng điều khiển</string>
+    <string name="city">Thành phố</string>
+    <string name="condition">Điều kiện</string>
+    <string name="spreak_event_date_expired">Chương trình lan tỏa kết thúc vào 31/12/2023</string>
+    <string name="hcl_mode">Chế độ HCL</string>
+    <string name="update_fw">Cập nhật firmware</string>
+    <string name="status_online">Trực tuyến</string>
+    <string name="status_disconnected">Mất kết nối</string>
+    <string name="can_not_access">Không có quyền truy cập</string>
+    <string name="string_message_device_share">%s vào lúc %s</string>
+    <string name="string_payment_tkg">Tài khoản gốc</string>
+    <string name="string_payment_vtt">Viettel Money</string>
+    <string name="string_payment_napas">Thẻ nội địa</string>
+    <string name="string_payment_cyber">Thẻ quốc tế</string>
+    <string name="string_payment_other">Hình thức khác</string>
+    <string name="string_payment_counter">Thanh toán tại quầy</string>
+    <string name="string_payment_type_auto">Tự động</string>
+    <string name="string_payment_type_manual">Thủ công</string>
+    <string name="string_title_payment_type">Phương thức thanh toán:</string>
+    <string name="string_refer_code_success">Nhập mã giới thiệu thành công</string>
+    <string name="system">Hệ thống</string>
+    <string name="wifi_connect_may_not_be_on_band_support">Wifi đang kết nối có thể không phải băng tần 2.4Ghz</string>
+    <string name="please_check_again_to_ensure_connection">Quý khách vui lòng kiểm tra lại để đảm bảo kết nối</string>
+    <string name="cancel_text">Hủy</string>
+    <string name="service_tab_text_button_coming_soon">Sắp ra mắt</string>
+    <string name="service_tab_text_search_recent">Tìm kiếm gần đây</string>
+    <string name="service_tab_toast_no_use_service">Hiện tại chưa thể sử dụng dịch vụ. Quý khách vui lòng chờ trong thời gian tới.</string>
+    <string name="please_input_button_name">Vui lòng không để trống tên nút công tắc</string>
+    <string name="switch_button_name_index">Công tắc số %d</string>
+    <string name="switch_button_name">Tên nút công tắc</string>
+    <string name="hint_edit_switch_button_name">Nhập tên nút công tắc</string>
+    <string name="border_light_on_normal_light">Bật đèn báo (Màu mặc định)</string>
+    <string name="border_light_on_revert_light">Bật đèn báo (Màu ngược lại)</string>
+
+
+    // multi views
+    <string name="select_camera_max_20_camera">Chỉ cho phép chọn tối đa 20 camera</string>
+    <string name="select_camera_min_2_camera">Chức năng xem nhiều màn hình cần tối thiểu 1 camera trở lên</string>
+    <string name="select_camera_save_success">Cập nhật danh sách xem trực tiếp thành công</string>
+    <string name="select_camera_save_fail">Cập nhật danh sách xem trực tiếp thất bại</string>
+    <string name="select_camera_content_no_camera">Không có Camera để chọn</string>
+    <string name="select_camera_header_text">Chọn và giữ Camera để sắp xếp thứ tự hiển thị</string>
+    <string name="home_dont_have_camera">Nhà bạn chọn chưa có Camera</string>
+    <string name="all_home">Tất cả nhà</string>
+    <string name="sort_camera">Sắp xếp Camera</string>
+    <string name="select_camera">Chọn camera</string>
+
+    // login
+    <string name="login_version">v%s</string>
+    <string name="login_with_text">hoặc đăng nhập bằng</string>
+    <string name="login_term_of_use"><u>Điều khoản sử dụng và chính sách bảo mật Viettel Home</u></string>
+
+    <string name="string_title_validate_pw">Mật khẩu phải bao gồm:</string>
+    <string name="string_validate_length_pw">8 đến 16 ký tự</string>
+    <string name="string_input_name">Nhập tên người dùng</string>
+    <string name="string_phone_number">Số điện thoại</string>
+    <string name="string_repeat_pw">Xác nhận mật khẩu</string>
+    <string name="string_error_pw">Mật khẩu không hợp lệ</string>
+    <string name="string_validate_pattern_pw"><![CDATA[Ít nhất 1 chữ in thường, 1 chữ in hoa, 1 chữ số và 1 ký tự đặc biệt @#$%&-+()/*:;!?=^.]]></string>
+    <string name="string_already_have_account">Bạn đã có tài khoản?</string>
+
+    // login supper fragment
+    <string name="biometric_authentication_title">Xác thực sinh trắc học</string>
+    <string name="biometric_authentication_message">Sử dụng khuôn mặt hoặc vân tay để xác thực</string>
+    <string name="biometric_authentication_content">Ứng dụng cần sử dụng sinh trắc học của thiết bị (Vân tay / Khuôn mặt) để xác thực hộp thoại</string>
+    <string name="biometric_login_with_fingering">Đăng nhập sinh trắc học</string>
+    <string name="login_with_password">Đăng nhập với mật khẩu</string>
+    <string name="biometric_login_error">Bạn chưa bật xác thực sinh trắc học</string>
+    <string name="biometric_login">Đăng nhập bằng sinh trắc học</string>
+    <string name="login_activity">Hoạt động đăng nhập</string>
+    <string name="change_passsword">Thay đổi mật khẩu </string>
+    <string name="biometric_error_so_many_time">Quá nhiều lần thử. Vui lòng thử lại sau 30s</string>
+    <string name="biometric_error_so_many_time_disable_title">Xác thực thất bại</string>
+    <string name="biometric_error_so_many_time_disable_message">Quá nhiều lần thử, Xác thực bằng sinh trắc học đã bị vô hiệu hóa</string>
+    <string name="biometric_error_no_data">Không có dữ liệu khuôn mặt / vân tay</string>
+    <string name="biometric_error_content">Vui lòng đăng nhập với mật khẩu và vân tay vào Cài đặt của bạn trên điện thoại</string>
+
+    <string name="biometric_title_login_error">Xác thực thất bại</string>
+    <string name="biometric_message_login_error">Thiết bị chưa cài đặt sinh trắc học \n Quý khách vui lòng cài đặt để đăng nhập hoặc đăng nhập bằng hình thức khác</string>
+
+    <string name="biometric_setting_request_title">Kích hoạt sinh trắc học thất bại</string>
+    <string name="biometric_setting_request_title_setting">Kích hoạt sinh trắc học thất bại</string>
+    <string name="biometric_setting_request_message">Xác thực sinh trắc học thất bại \n Vui lòng kích hoạt sinh trắc học trong cài đặt trên điện thoại của bạn</string>
+    <string name="biometric_setting_request_message_setting">Vui lòng kích hoạt sinh trắc học trong cài đặt trên điện thoại của bạn</string>
+
+    <string name="biometric_setting_request_title_ok">Cài đặt</string>
+
+    <string name="biometric_face">khuôn mặt</string>
+    <string name="biometric_finger">vân tay</string>
+    <string name="change_new_password_title">Đặt mật khẩu mới</string>
+    <string name="step_title_1_3">1/3</string>
+    <string name="step_title_2_3">2/3</string>
+    <string name="step_title_2_2">2/2</string>
+    <string name="step_title_3_3">3/3</string>
+    <string name="verify_otp_title">Mã OTP:</string>
+    <string name="verify_otp_hint">Nhập mã OTP</string>
+    <string name="verify_otp_expired_text">Mã OTP sẽ hết hạn trong</string>
+    <string name="string_enter_receive_phone">Nhập số điện thoại nhận</string>
+    <string name="verify_otp_expired_resend_text">OTP đã hết hạn. Vui lòng gửi lại OTP để tiếp tục.</string>
+    <string name="string_gift_to_relatives">Tặng người thân</string>
+    <string name="serial_camera">Serial Camera</string>
+    <string name="enter_serial_camera">Nhập Serial Camera</string>
+    <string name="string_title_phone_error_validate">Số điện thoại không hợp lệ</string>
+    <string name="string_title_serial_error_validate">Mã serial camera không hợp lệ</string>
+    <string name="string_title_toolbar_gift_relative">Nhập thông tin nhận</string>
+    <string name="string_content_phone_not_register_vhome">Số điện thoại chưa đăng ký tài khoản Viettel Home. Đăng ký tài khoản ngay để sử dụng tính năng này.</string>
+    <string name="string_content_serial_error_validate">Mã serial camera bạn cung cấp không thuộc tài khoản. Vui lòng kiểm tra lại.</string>
+    <string name="string_gift_status">Tặng bởi</string>
+    <string name="string_gift_give_status">Tặng đến</string>
+    <string name="update_name_device_success">Cập nhật tên thiết bị thành công</string>
+    <string name="hint_edit_device_name">Nhập tên thiết bị</string>
+    <string name="edit_device_name">Đổi tên</string>
+    <string name="device_name_already_exists_in_the_system">Tên thiết bị đã tồn tại trong hệ thống</string>
+    <string name="rename_device_successfully">Cập nhật tên thiết bị thành công</string>
+    <string name="rename_device_failed">Cập nhật tên thiết bị không thành công</string>
+    <string name="delelte_device_failed">Xóa thiết bị không thành công</string>
+    <string name="login_app_text_incorrect_phone_or_password">Số điện thoại hoặc mật khẩu không chính xác</string>
+    <string name="add_to_favorite_fail">Thêm vào Yêu thích thất bại!</string>
+    <string name="update_device_name_fail">Cập nhật tên thiết bị thất bại!</string>
+    <string name="update_room_fail">Cập nhật phòng thất bại!</string>
+    <string name="create_room_fail">Tạo phòng thất bại!</string>
+    <string name="field_name_device_required">Trường tên thiết bị là bắt buộc</string>
+    <string name="this_name_is_already_in_use">Tên này đã được sử dụng</string>
+    <string name="string_not_device_camera">Bạn chưa có thiết bị Camera Viettel \n\nThêm thiết bị ngay để trải nghiệm dịch vụ</string>
+    <string name="string_not_data_buy_cloud">Không có dữ liệu mua hàng</string>
+
+    <string name="string_all">Tất cả</string>
+    <string name="string_accept_extend">Đồng ý <u><font color='#F8214B'>Gia hạn tự động</font></u></string>
+    <string name="string_terms_of_use"> và <u><font color='#F8214B'>Điều khoản Viettel Home</font></u></string>
+    <string name="string_show_content_extent_cloud_camera">Quý khách có thể huỷ gia hạn trước thời điểm hệ thống thực hiện gia hạn bằng cách tích chọn huỷ gia hạn trong mục Cài đặt của camera.</string>
+    <string name="string_show_content_title_cloud_camera">Gói cloud %d ngày sẽ tự động gia hạn sau %d tháng dùng thử với cước phí %s.</string>
+    <string name="string_you_do_not_have_payment_account_link_to_money">Bạn chưa có liên kết tài khoản thanh toán với Viettel Money</string>
+    <string name="string_note_register_automatic">Lưu ý khi đăng ký gia hạn tự động</string>
+    <string name="string_title_expiry_time">Thời gian kết thúc ưu đãi:</string>
+    <string name="string_register_total">Đăng ký(%d)</string>
+    <string name="string_verification_code_sent_phone">Mã xác minh sẽ được gửi đến SĐT của bạn, vui lòng nhập đúng mã để hoàn tất thanh toán</string>
+
+    <string name="text_hint_input_old_password">Nhập mật khẩu cũ</string>
+    <string name="text_hint_input_new_password">Nhập mật khẩu mới</string>
+    <string name="text_hint_input_repeat_new_password">Nhập lại mật khẩu mới</string>
+    <string name="text_content_change_password_success">Đổi mật khẩu thành công.</string>
+    <string name="rgb_mode">RGB</string>
+    <string name="color_temperature">Nhiệt độ màu</string>
+    <string name="turn_on_hcl_failed">Bật HCL thất bại</string>
+    <string name="turn_off_hcl_failed">Tắt HCL thất bại</string>
+
+</resources>

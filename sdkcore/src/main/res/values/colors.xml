@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F3F5F9</color>
+    <color name="colorPrimaryDark">#F3F5F9</color>
+    <color name="colorAccent">#D60C4A</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="gray">#BEBEBE</color>
+    <color name="transparent">#00FFFFFF</color>
+
+    <color name="color_button_common_blue">#4356B4</color>
+
+    <!--color common-->
+    <color name="background_common">@color/colorPrimary</color>
+    <color name="background_color_white">@color/white</color>
+    <color name="background_color_gray">#EFEFF4</color>
+    <color name="start_color_btn_common">#087EFF</color>
+    <color name="end_color_btn_common">#05E8BA</color>
+
+    <!-- app color start-->
+    <!--    alpha 43%-->
+    <color name="silver_43">#6dd5d6d9</color>
+    <color name="charcoal_grey">#323336</color>
+    <color name="raspberry">#b70256</color>
+    <color name="paleGrey">#f3f5f9</color>
+    <color name="paleGrey_2">#f6f8fb</color>
+    <color name="paleGrey_3">#e5ebf7</color>
+    <color name="pinkyRed">#f8214b</color>
+    <color name="purplishRed">#be0a45</color>
+    <color name="cerise">#d60c4a</color>
+    <color name="coolGrey">#b2b3b5</color>
+    <color name="darkGreyBlue">#313f5b</color>
+    <color name="material_grey_300">#ffe0e0e0</color>
+    <!-- app color end-->
+
+    <color name="color_hint_edit_text">#333333</color>
+
+    <color name="gray_">#919090</color>
+    <color name="gray_right">#DDDBDB</color>
+    <color name="color_323336">#323336</color>
+    <color name="color_4e4e4e">#4E4E4E</color>
+    <color name="color_9D9696">#9D9696</color>
+    <color name="color_e1e1e1">#E1E1E1</color>
+
+    <!--color text-->
+    <color name="text_black">#FF000000</color>
+    <color name="text_setting_black">#111111</color>
+    <color name="text_pink">#D60C4A</color>
+    <color name="text_hint">#B2B3B5</color>
+
+    <color name="color_F3F5F9">#F3F5F9</color>
+
+    <color name="color_pinky_red">#fff8214b</color>
+    <color name="color_raspberry">#ffb70256</color>
+    <color name="color_purplish_red">#ffbe0a45</color>
+    <color name="color_view_line">#B2B3B5</color>
+    <color name="color_E5EBF7">#E5EBF7</color>
+    <color name="color_707070">#707070</color>
+    <color name="color_orange">#FFEB3B</color>
+    <color name="color_83858a">#83858a</color>
+
+    <color name="color_bgr_oval_setting">#F0EFEF</color>
+    <color name="color_line_timeline">#999999</color>
+    <color name="color_progress_seekbar">#DBDBDB</color>
+    <color name="colorAppSecondaryWhite">#ffffff</color>
+    <color name="colorAppPrimaryDark">#12937a</color>
+    <color name="colorAppPrimary">#ED1B2F</color>
+    <color name="color_transparent">#00FFFFFF</color>
+    <color name="color_F8214B">#F8214B</color>
+    <color name="color_F8214B_transparent_50">#80F8214B</color>
+    <color name="color_BE0A45">#BE0A45</color>
+    <color name="color_A31818">#A31818</color>
+    <color name="color_BE0A45_transparent_50">#80BE0A45</color>
+    <color name="color_586D89">#586D89</color>
+    <color name="color_FFEAE8">#FFEAE8</color>
+    <color name="color_F5F7F9">#F5F7F9</color>
+    <color name="color_e6e6e6">#E6E6E6</color>
+    <color name="color_4D000000">#4d000000</color>
+    <color name="color_DCDCDC">#DCDCDC</color>
+    <color name="color_F5F5F5">#F5F5F5</color>
+    <color name="color_F3F5F90">#8CF3F5F9</color>
+
+    <color name="black_transparent_10">#1A000000</color>
+    <color name="black_transparent_15">#26000000</color>
+    <color name="black_transparent_25">#40000000</color>
+    <color name="black_transparent_30">#4D000000</color>
+    <color name="black_transparent_50">#80000000</color>
+    <color name="color_red_EC0D3A">#EC0D3A</color>
+    <color name="color_gray_AEAEAE">#AEAEAE</color>
+    <color name="color_4E4E4E">#4E4E4E</color>
+    <color name="color_EBEBEB">#EBEBEB</color>
+    <color name="color_CECECE">#CECECE</color>
+    <color name="color_F5F7F940">#66F5F7F9</color>
+    <color name="color_4e4e4e_50">#804E4E4E</color>
+    <color name="color_494949">#494949</color>
+    <color name="color_Ef1e4a">#EF1E4A</color>
+
+    <color name="color_6F6F6F">#6F6F6F</color>
+
+</resources>

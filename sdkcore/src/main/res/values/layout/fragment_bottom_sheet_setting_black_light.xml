@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_gray_corner_12"
+        tools:context="com.viettel.vht.device.ui.camera.settingCamera.BottomSheetCameraSetting">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/groupContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_30"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/groupCardMain"
+                android:layout_width="50dp"
+                android:layout_height="4dp"
+                android:layout_gravity="center"
+                app:cardBackgroundColor="#DCDCDC"
+                app:cardElevation="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitle"
+                style="@style/text_bold_16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_16"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:gravity="center"
+                android:text="Chế độ ban đêm"
+                app:layout_constraintTop_toBottomOf="@+id/groupCardMain"
+                tools:ignore="HardcodedText" />
+
+            <View
+                android:id="@+id/viewDivider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/dimen_16"
+                android:background="#CECECE"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llNightModeBlackWhite"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/viewDivider">
+
+
+                <ImageView
+                    android:id="@+id/imgNightModeBlackWhite"
+                    android:layout_width="@dimen/dimen_24"
+                    android:layout_height="@dimen/dimen_24"
+                    android:src="@drawable/ic_check_box_selected" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_15"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/text_bold_16"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Chế độ ban đêm đen trắng"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tự động bật đèn LED hồng ngoại vào ban đêm"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dimen_12" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/radioNightModeHaveColor"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dimen_25"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llNightModeBlackWhite">
+
+                <ImageView
+                    android:id="@+id/imgNightModeHaveColor"
+                    android:layout_width="@dimen/dimen_24"
+                    android:layout_height="@dimen/dimen_24"
+                    android:src="@drawable/ic_check_box_un_selected" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_15"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/text_bold_16"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Chế độ ban đêm có màu"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tự động bật đèn LED chiếu rọi vào ban đêm"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dimen_12" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/radioNightModeSmart"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dimen_25"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioNightModeHaveColor">
+
+                <ImageView
+                    android:id="@+id/imgNightModeSmart"
+                    android:layout_width="@dimen/dimen_24"
+                    android:layout_height="@dimen/dimen_24"
+                    android:src="@drawable/ic_check_box_un_selected" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_15"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/text_bold_16"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Chế độ ban đêm thông minh"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tự động bật đèn LED khi có sự kiện và bật LED hồng ngoại khi sự kiện kết thúc"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dimen_12" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tvBottomSheetEditLight"
+            style="@style/text_bold_16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16"
+            android:layout_marginTop="@dimen/dimen_30"
+            android:layout_marginEnd="@dimen/dimen_10"
+            android:text="Điều chỉnh độ sáng"
+            app:layout_constraintTop_toBottomOf="@+id/groupContainer" />
+
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:id="@+id/cameraSettingSeekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16"
+            android:layout_marginTop="@dimen/dimen_13"
+            android:layout_marginEnd="@dimen/dimen_10"
+            android:indeterminate="false"
+            android:max="100"
+            android:paddingBottom="@dimen/dimen_30"
+            android:progress="10"
+            android:progressDrawable="@drawable/seekbar_style"
+            android:splitTrack="false"
+            android:thumb="@drawable/custom_thumb"
+            app:layout_constraintTop_toBottomOf="@+id/tvBottomSheetEditLight" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
