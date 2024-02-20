@@ -1,4 +1,4 @@
-package com.viettel.vht.core.base
+package com.vht.sdkcore.base
 
 import android.bluetooth.BluetoothHeadset
 import android.content.BroadcastReceiver

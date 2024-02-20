@@ -1,4 +1,4 @@
-package com.viettel.vht.core.utils.custom
+package com.vht.sdkcore.utils.custom
 
 import android.annotation.SuppressLint
 import android.content.Context

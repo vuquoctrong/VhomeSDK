@@ -1,4 +1,4 @@
-package com.viettel.vht.core.navigationComponent
+package com.vht.sdkcore.navigationComponent
 
 import android.os.Bundle
 import androidx.annotation.IdRes

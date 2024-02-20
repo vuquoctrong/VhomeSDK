@@ -1,4 +1,4 @@
-package com.viettel.vht.core.base
+package com.vht.sdkcore.base
 
 import android.util.Log
 import com.vht.sdkcore.utils.Define

@@ -16,7 +16,7 @@ rootProject.name = "Vhome SDK"
 include ':app'
 include ':lib1'
 include ':lib2'
-include ':sdkcamera'
 include ':sdkcore'
 include ':libxmfunsdk'
 include ':libcalendar'
+include ':vhomesdk'
