@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.softap.WifiConfigFragment">
+
+        <com.viettel.vht.sdk.utils.custom.AppToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:src_left="@drawable/ic_app_back"
+            app:string_title="@string/reset_device" />
+
+        <LinearLayout
+            android:id="@+id/llMain"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/margin_app_toolbar"
+            android:orientation="vertical"
+            android:padding="@dimen/app_margin_small"
+            app:layout_constraintBottom_toTopOf="@id/btnSubmit"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/layout_server_ip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/app_margin_10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    style="@style/text_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/string_quick_gide_one_jftech_Camera" />
+
+                <ImageView
+                    android:id="@+id/imCamera1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/margin_14"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/img_reset_hc23" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/text_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:text="Nếu bạn không nghe thấy lời nhắc này, bạn có thể nhấn giữ nút Reset khoảng 6 giây cho đến khi bạn nghe “Khôi phục cài đặt gốc, không tắt nguồn điện” và bắt đầu cấu hình thiết bị sau khi khởi động lại." />
+
+<!--                <androidx.appcompat.widget.AppCompatTextView-->
+<!--                    style="@style/TextMedium14Color2StyleError"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="@dimen/margin_16"-->
+<!--                    android:text="Xem tờ Hướng dẫn sử dụng để tìm nút Reset." />-->
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSubmit"
+            style="@style/CustomButtonRed"
+            android:layout_marginTop="@dimen/default_app_margin"
+            android:layout_marginBottom="@dimen/default_app_margin"
+            android:text="@string/next"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

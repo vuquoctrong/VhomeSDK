@@ -129,7 +129,7 @@
                 android:paddingRight="@dimen/dimen_24"
                 android:paddingBottom="@dimen/dimen_12"
                 android:text="@string/ok"
-                android:textColor="@color/white"
+                android:textColor="@color/white_sdk"
                 android:textSize="@dimen/text_size_16"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"

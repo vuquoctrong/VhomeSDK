@@ -1,4 +1,4 @@
-package com.vht.sdkcore.utils.custom
+package com.viettel.vht.sdk.utils.custom
 
 import android.content.Context
 import android.content.res.ColorStateList
@@ -10,12 +10,12 @@ import androidx.annotation.ColorRes
 import androidx.core.view.isVisible
 import androidx.core.widget.ImageViewCompat
 import androidx.databinding.DataBindingUtil
-import com.vht.sdkcore.R
-import com.vht.sdkcore.databinding.LayoutAppToolbarBinding
 import com.vht.sdkcore.utils.gone
-import com.vht.sdkcore.utils.setGradientColor
 import com.vht.sdkcore.utils.invisible
+import com.vht.sdkcore.utils.setGradientColor
 import com.vht.sdkcore.utils.visible
+import com.viettel.vht.sdk.R
+import com.viettel.vht.sdk.databinding.LayoutAppToolbarBinding
 
 class AppToolbar @JvmOverloads constructor(
     context: Context,
@@ -113,7 +113,7 @@ class AppToolbar @JvmOverloads constructor(
         if (resId != -1) {
             binding.ivBackground.setImageResource(resId)
         } else {
-            binding.ivBackground.setImageResource(R.drawable.ic_toolbar_top)
+            binding.ivBackground.setImageResource(com.vht.sdkcore.R.drawable.ic_toolbar_top)
         }
     }
 

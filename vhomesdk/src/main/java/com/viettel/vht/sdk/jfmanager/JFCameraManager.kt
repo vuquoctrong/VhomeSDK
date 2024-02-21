@@ -1,4 +1,4 @@
-package com.viettel.vht.main.utils
+package com.viettel.vht.sdk.jfmanager
 
 import android.content.Context
 import android.graphics.Bitmap
@@ -39,7 +39,6 @@ import com.utils.XUtils
 import com.vht.sdkcore.utils.Constants.EventKey.EVENT_SYSTEM_CHANGE_INFORMATION_CAMERA_JF
 import com.vht.sdkcore.utils.Utils
 import com.vht.sdkcore.utils.eventbus.RxEvent
-import com.viettel.vht.sdk.jfmanager.CloudImageManager
 import com.viettel.vht.sdk.model.DeviceDataResponse
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

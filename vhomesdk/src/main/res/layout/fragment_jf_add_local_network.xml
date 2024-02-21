@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.jftechaddcamera.JFAddLocalNetworkFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.viettel.vht.sdk.utils.custom.AppToolbar
+            android:id="@+id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/dimen_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:src_left="@drawable/ic_app_back"
+            app:string_title="Thêm qua mạng cục bộ" />
+
+        <View
+            android:id="@+id/viewContent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/margin_app_toolbar"
+            android:background="@color/color_white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="@id/viewContent">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/dimen_20">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_lan_device" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/text_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:text="Bước 1:\nĐảm bảo kết nối nguồn điện camera và camera được kết nối với mạng cục bộ qua LAN/Wifi" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/text_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:text="Bước 2:\nĐảm bảo rằng thiết bị điện thoại của bạn và camera đang kết nối cùng 1 mạng cục bộ" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/text_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:text="Bước 3:\nChọn “TIẾP” để thêm thiết bị." />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/text_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_60"
+                    android:text="Nếu thiết bị kết nối qua LAN lần đầu, bạn không nghe thấy thông báo “Kết nối mạng dây thành công”, kiểm tra lại kết nối hoặc thực hiện Reset thiết bị."
+                    android:textColor="@color/color_8E8E8E" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/text_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginVertical="@dimen/dimen_8"
+                    android:text="Hoặc"
+                    android:textColor="@color/color_8E8E8E" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/text_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nếu thiết bị đã kết nối với Wifi trước đó, đảm bảo thiết bị trong khu vực phủ sóng."
+                    android:textColor="@color/color_8E8E8E" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/text_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:text="\u2022 Xem Hướng dẫn sử dụng để tìm nút Reset"
+                    android:textColor="@color/color_ef1e4a" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/btnNext"
+                    style="@style/CustomButtonRed"
+                    android:layout_width="@dimen/dimen_160"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dimen_60"
+                    android:text="@string/next" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

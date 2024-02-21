@@ -5,6 +5,7 @@ plugins {
     id 'kotlin-kapt'
     id 'kotlin-android'
     id 'kotlin-parcelize'
+    id 'dagger.hilt.android.plugin'
 }
 
 android {
@@ -32,7 +33,6 @@ android {
         jvmTarget = '1.8'
     }
     buildFeatures {
-        viewBinding = true
         dataBinding = true
     }
 }
@@ -51,6 +51,8 @@ dependencies {
     implementation  'androidx.fragment:fragment-ktx:1.3.0-rc01'
 
     // implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.4.21'
+
+
 
     //view
     implementation  'com.google.android.material:material:1.2.1'
@@ -83,6 +85,7 @@ dependencies {
     implementation 'org.greenrobot:eventbus:3.3.1'
     implementation 'com.alibaba:fastjson:1.1.72.android'
     implementation 'org.modelmapper:modelmapper:3.1.1'
+    implementation "com.airbnb.android:lottie:4.2.0"
 
     implementation project(path: ':libxmfunsdk', configuration: 'default')
     embed project(path: ':sdkcore', configuration: 'default')

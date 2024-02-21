@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/add_camera_jftech_graph"
+    app:startDestination="@id/JFChooseTypeAddFragment">
+
+    <fragment
+        android:id="@+id/JFChooseTypeAddFragment"
+        android:name="com.viettel.vht.sdk.ui.jftechaddcamera.JFChooseTypeAddFragment"
+        tools:layout="@layout/fragment_jf_choose_type_add"
+        android:label="JFChooseTypeAddFragment">
+
+        <action
+            android:id="@+id/action_JFChooseTypeAddFragment_to_JFAddLocalNetworkFragment"
+            app:destination="@id/JFAddLocalNetworkFragment" />
+
+        <action
+            android:id="@+id/action_JFChooseTypeAddFragment_to_JFTechQuickGide1AddCameraFragment"
+            app:destination="@id/JFTechQuickGide1AddCameraFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/JFAddLocalNetworkFragment"
+        android:name="com.viettel.vht.sdk.ui.jftechaddcamera.JFAddLocalNetworkFragment"
+        tools:layout="@layout/fragment_jf_add_local_network"
+        android:label="JFAddLocalNetworkFragment" >
+
+        <action
+            android:id="@+id/action_JFAddLocalNetworkFragment_to_JFLanConnectFragment"
+            app:destination="@id/JFLanConnectFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/JFLanConnectFragment"
+        android:name="com.viettel.vht.sdk.ui.jftechaddcamera.JFLanConnectFragment"
+        tools:layout="@layout/fragment_jf_lan_connect"
+        android:label="JFLanConnectFragment">
+        <action
+            android:id="@+id/action_JFLanConnectFragment_to_PairSuccessFragment"
+            app:destination="@id/pairSuccessFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/JFTechQuickGide1AddCameraFragment"
+        android:name="com.viettel.vht.sdk.ui.jftechaddcamera.JFTechQuickGide1AddCameraFragment"
+        tools:layout="@layout/fragment_one_quick_gide_add_camera_iftech"
+        android:label="JFTechQuickGide1AddCameraFragment" >
+        <action
+            android:id="@+id/action_JFTechQuickGide1AddCameraFragment_to_JFTechWifiRoomAddCameraFragment"
+            app:destination="@id/JFTechWifiRoomAddCameraFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/JFTechWifiRoomAddCameraFragment"
+        android:name="com.viettel.vht.sdk.ui.jftechaddcamera.JFTechWifiRoomAddCameraFragment"
+        tools:layout="@layout/fragment_wifi_room_add_camera_jftech"
+        android:label="JFTechWifiRoomAddCameraFragment" >
+        <action
+            android:id="@+id/action_JFTechWifiRoomAddCameraFragment_to_JFTechQuickGide2AddCameraFragment"
+            app:destination="@id/JFTechQuickGide2AddCameraFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/JFTechQuickGide2AddCameraFragment"
+        android:name="com.viettel.vht.sdk.ui.jftechaddcamera.JFTechQuickGide2AddCameraFragment"
+        tools:layout="@layout/fragment_two_quick_gide_add_camera_iftech"
+        android:label="JFTechQuickGide2AddCameraFragment" >
+        <action
+            android:id="@+id/action_JFTechQuickGide2AddCameraFragment_to_JFTechShowQRCodeAddCameraFragment"
+            app:destination="@id/JFTechShowQRCodeAddCameraFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/JFTechShowQRCodeAddCameraFragment"
+        android:name="com.viettel.vht.sdk.ui.jftechaddcamera.JFTechShowQRCodeAddCameraFragment"
+        tools:layout="@layout/fragment_show_qrcode_add_camera_iftech"
+        android:label="JFTechShowQRCodeAddCameraFragment" >
+        <action
+            android:id="@+id/action_JFTechShowQRCodeAddCameraFragment_to_JFTechSetPassWordAddCameraFragment"
+            app:destination="@id/JFTechSetPassWordAddCameraFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/JFTechSetPassWordAddCameraFragment"
+        android:name="com.viettel.vht.sdk.ui.jftechaddcamera.JFTechSetPassWordAddCameraFragment"
+        tools:layout="@layout/fragment_set_password_add_camera_jftech"
+        android:label="JFTechSetPassWordAddCameraFragment">
+        <action
+            android:id="@+id/action_JFTechSetPassWordAddCameraFragment_to_PairSuccessFragment"
+            app:destination="@id/pairSuccessFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/pairSuccessFragment"
+        android:name="com.viettel.vht.main.ui.pair_device.success.PairSuccessFragment"
+        android:label="PairSuccessFragment"
+        tools:layout="@layout/fragment_pair_success" />
+
+</navigation>

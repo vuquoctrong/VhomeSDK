@@ -45,7 +45,7 @@ open class IndicatorView : LinearLayout {
         indicatorColor =
             styledAttributes.getColor(R.styleable.ARIndicatorView_indicator_color, Color.LTGRAY)
         selectionColor =
-            styledAttributes.getColor(R.styleable.ARIndicatorView_selected_color, Color.BLACK)
+            styledAttributes.getColor(R.styleable.ARIndicatorView_selected_color_sdk, Color.BLACK)
         numberOfIndicators =
             styledAttributes.getInteger(R.styleable.ARIndicatorView_number_of_indicators, 0)
         indicatorSizeWidth = styledAttributes.getInteger(R.styleable.ARIndicatorView_indicator_size_width, 32)

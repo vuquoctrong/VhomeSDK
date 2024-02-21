@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="DialogFragmentNavigator">
+        <attr name="android:name" />
+    </declare-styleable>
+    <declare-styleable name="FragmentNavigator">
+        <attr name="android:name" />
+    </declare-styleable>
+    <declare-styleable name="NavHostFragment">
+        <attr name="defaultNavHost" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="SettingItem">
+        <attr name="string_title_setting" format="string" />
+        <attr name="string_value" format="string" />
+        <attr name="trailingIcon" format="reference" />
+        <attr name="is_show_arrow" format="boolean" />
+        <attr name="is_show_switch" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="AppToolbar">
+        <attr name="src_left" format="reference" />
+        <attr name="trans_status_bar" format="boolean" />
+        <attr name="src_right" format="reference" />
+        <attr name="string_right" format="string|reference" />
+        <attr name="string_title" format="string|reference" />
+        <attr name="left_tint" format="reference" />
+        <attr name="src_background" format="reference" />
+        <attr name="src_right_color" format="string" />
+        <attr name="show_elevation" format="boolean" />
+    </declare-styleable>
+
+
+    <declare-styleable name="CustomEdittext">
+        <attr name="title_edittext" format="string|reference" />
+        <attr name="src_image_title" format="reference" />
+        <attr name="type_edittext" format="reference" />
+        <attr name="text_hint_edittext" format="integer" />
+        <attr name="is_show_title" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="WheelPicker">
+        <attr name="fadingEdgeEnabled" format="boolean" />
+        <attr name="max" format="integer" />
+        <attr name="min" format="integer" />
+        <attr name="selectedTextColor" format="color" />
+        <attr name="selectedTextScale" format="float" />
+        <attr name="timeTextColor" format="color" />
+        <attr name="timeTextSize" format="dimension" />
+        <attr name="typeface" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="sans" value="1" />
+            <enum name="serif" value="2" />
+            <enum name="monospace" value="3" />
+        </attr>
+        <attr name="wheelItemCount" format="integer" />
+        <attr name="wrapSelectorWheel" format="boolean" />
+        <attr name="minValidIndex" format="integer" />
+        <attr name="maxValidIndex" format="integer" />
+        <attr name="align">
+            <enum name="LEFT" value="0" />
+            <enum name="CENTER" value="1" />
+            <enum name="RIGHT" value="2" />
+        </attr>
+    </declare-styleable>
+</resources>

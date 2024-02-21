@@ -14,8 +14,8 @@
             <option value="$PROJECT_DIR$/lib2" />
             <option value="$PROJECT_DIR$/libcalendar" />
             <option value="$PROJECT_DIR$/libxmfunsdk" />
-            <option value="$PROJECT_DIR$/sdkcamera" />
             <option value="$PROJECT_DIR$/sdkcore" />
+            <option value="$PROJECT_DIR$/vhomesdk" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />

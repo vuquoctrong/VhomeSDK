@@ -133,7 +133,7 @@ class WheelPicker @JvmOverloads constructor(
 
         mSelectedTextColor = attributesArray.getColor(
             R.styleable.WheelPicker_selectedTextColor,
-            ContextCompat.getColor(context, R.color.black)
+            ContextCompat.getColor(context, R.color.black_sdk)
         )
         mUnSelectedTextColor = attributesArray.getColor(
             R.styleable.WheelPicker_timeTextColor,

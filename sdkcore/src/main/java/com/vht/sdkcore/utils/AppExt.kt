@@ -14,6 +14,7 @@ import androidx.lifecycle.lifecycleScope
 import com.vht.sdkcore.R
 import com.vht.sdkcore.databinding.LayoutCustomToastAndroidTvBinding
 import com.vht.sdkcore.databinding.LayoutCustomToastBinding
+import com.vht.sdkcore.databinding.LayoutToastBinding
 import com.vht.sdkcore.utils.dialog.CommonAlertDialogNotification
 import com.vht.sdkcore.utils.dialog.DialogType
 import kotlinx.coroutines.Dispatchers
@@ -104,6 +105,47 @@ fun Fragment.showCustomToast(
         }
     }
 }
+
+fun Fragment.showCustomToast(
+    resTitle: Int = R.string.string_success_setting_time_zone,
+    resTitleString:  String = "",
+    icon: Int = R.drawable.ic_show_toast_success,
+    onFinish: (suspend () -> Unit)? = null,
+    showImage: Boolean = false
+): Dialog {
+    return Dialog(requireContext(), R.style.ThemeDialog).apply {
+        lifecycleScope.launch {
+            setCancelable(false)
+            window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+            setCanceledOnTouchOutside(false)
+            val binding = LayoutToastBinding.inflate(LayoutInflater.from(requireContext()))
+            setContentView(binding.root)
+            if (showImage) {
+                binding.imvIcon.visible()
+            } else {
+                binding.imvIcon.gone()
+            }
+            binding.imvIcon.setImageResource(icon)
+            binding.tvTitle.text = getString(resTitle)
+            if(resTitleString.isNotEmpty()){
+                binding.tvTitle.text =resTitleString
+            }
+            lifecycle.addObserver(object : LifecycleObserver {
+                @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
+                fun onDestroy() {
+                    dismiss()
+                }
+            })
+            show()
+            delay(2000)
+            withContext(Dispatchers.Main) {
+                onFinish?.invoke()
+                dismiss()
+            }
+        }
+    }
+}
+
 
 fun Fragment.showCustomToastForAndroidTV(
     title: String,
