@@ -87,7 +87,7 @@ dependencies {
     implementation 'org.modelmapper:modelmapper:3.1.1'
     implementation "com.airbnb.android:lottie:4.2.0"
 
-    implementation project(path: ':libxmfunsdk', configuration: 'default')
+    embed project(path: ':libxmfunsdk', configuration: 'default')
     embed project(path: ':sdkcore', configuration: 'default')
     embed project(path: ':libcalendar', configuration: 'default')
 }

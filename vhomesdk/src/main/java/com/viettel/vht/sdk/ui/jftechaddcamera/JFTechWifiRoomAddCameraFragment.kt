@@ -46,7 +46,11 @@ class JFTechWifiRoomAddCameraFragment :
     }
 
     override fun onResume() {
-        isCheckLocation()
+        if(isCheckLocation()){
+            initConnectedWifiInfo()
+        }else{
+            gotoApplicationPermissionSetting(requireContext())
+        }
         super.onResume()
     }
 

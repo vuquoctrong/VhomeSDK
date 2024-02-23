@@ -26,4 +26,6 @@ interface AppNavigation : BaseNavigator {
     fun openSetPassWordCamera(bundle: Bundle? = null)
 
     fun openQuickGide2AddCamera(bundle: Bundle?= null)
+
+    fun openAddCameraJF(bundle: Bundle? = null)
 }

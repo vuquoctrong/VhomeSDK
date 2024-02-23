@@ -36,11 +36,7 @@
         android:id="@+id/JFLanConnectFragment"
         android:name="com.viettel.vht.sdk.ui.jftechaddcamera.JFLanConnectFragment"
         tools:layout="@layout/fragment_jf_lan_connect"
-        android:label="JFLanConnectFragment">
-        <action
-            android:id="@+id/action_JFLanConnectFragment_to_PairSuccessFragment"
-            app:destination="@id/pairSuccessFragment" />
-    </fragment>
+        android:label="JFLanConnectFragment"/>
 
     <fragment
         android:id="@+id/JFTechQuickGide1AddCameraFragment"
@@ -82,16 +78,6 @@
         android:id="@+id/JFTechSetPassWordAddCameraFragment"
         android:name="com.viettel.vht.sdk.ui.jftechaddcamera.JFTechSetPassWordAddCameraFragment"
         tools:layout="@layout/fragment_set_password_add_camera_jftech"
-        android:label="JFTechSetPassWordAddCameraFragment">
-        <action
-            android:id="@+id/action_JFTechSetPassWordAddCameraFragment_to_PairSuccessFragment"
-            app:destination="@id/pairSuccessFragment" />
-    </fragment>
-
-    <fragment
-        android:id="@+id/pairSuccessFragment"
-        android:name="com.viettel.vht.main.ui.pair_device.success.PairSuccessFragment"
-        android:label="PairSuccessFragment"
-        tools:layout="@layout/fragment_pair_success" />
+        android:label="JFTechSetPassWordAddCameraFragment"/>
 
 </navigation>

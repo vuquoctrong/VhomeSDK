@@ -29,7 +29,7 @@ class AppNavigatorImpl @Inject constructor() : BaseNavigatorImpl(), AppNavigatio
     }
 
     override fun openLanToSetNameCameraJF(bundle: Bundle?) {
-        openScreen(R.id.action_JFLanConnectFragment_to_PairSuccessFragment, bundle)
+       // openScreen(R.id.action_JFLanConnectFragment_to_PairSuccessFragment, bundle)
     }
     override fun openWifiRoomAddCamera(bundle: Bundle?) {
         openScreen(
@@ -46,7 +46,7 @@ class AppNavigatorImpl @Inject constructor() : BaseNavigatorImpl(), AppNavigatio
     }
 
     override fun openSetDeviceNameCameraJF(bundle: Bundle?) {
-        openScreen(R.id.action_JFTechSetPassWordAddCameraFragment_to_PairSuccessFragment, bundle)
+       // openScreen(R.id.action_JFTechSetPassWordAddCameraFragment_to_PairSuccessFragment, bundle)
     }
 
     override fun openSetPassWordCamera(bundle: Bundle?) {
@@ -58,6 +58,13 @@ class AppNavigatorImpl @Inject constructor() : BaseNavigatorImpl(), AppNavigatio
     override fun openQuickGide2AddCamera(bundle: Bundle?) {
         openScreen(
             R.id.action_JFTechWifiRoomAddCameraFragment_to_JFTechQuickGide2AddCameraFragment,
+            bundle
+        )
+    }
+
+    override fun openAddCameraJF(bundle: Bundle?) {
+        openScreen(
+            R.id.action_SDKVHomeLoadingFragment_to_add_camera_jftech_graph,
             bundle
         )
     }

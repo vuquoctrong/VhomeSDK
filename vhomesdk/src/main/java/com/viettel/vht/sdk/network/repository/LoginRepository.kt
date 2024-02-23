@@ -14,7 +14,7 @@ import javax.inject.Inject
 
 class LoginRepository @Inject constructor(
     private val rxPreferences: RxPreferences,
-    private val authApiInterface: com.viettel.vht.sdk.network.AuthApiInterface,
+    private val authApiInterface: AuthApiInterface,
 ) {
 
     fun login(bodyJson: String): Flow<com.vht.sdkcore.network.Result<LoginResponse>> = flow {
