@@ -7,7 +7,7 @@ plugins {
     id 'dagger.hilt.android.plugin'
     id 'com.kezong.fat-aar'
 }
-
+apply from: 'autodimension.gradle'
 android {
     namespace 'com.vht.sdkcore'
     compileSdk 33

@@ -41,7 +41,7 @@
                 <ImageView
                     android:id="@+id/imCamera1"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/dimen_440"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="@dimen/margin_14"
                     android:src="@drawable/ic_jftech_quick_gide_3" />
