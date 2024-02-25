@@ -1,0 +1,732 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F5F5F5">
+
+        <com.viettel.vht.sdk.utils.custom.AppToolbar
+            android:id="@+id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/dimen_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:src_left="@drawable/ic_app_back"
+            app:string_title="@string/setting_device" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/dimen_88"
+            android:clipToPadding="false"
+            android:fillViewport="true"
+            android:paddingVertical="@dimen/dimen_20"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/dimen_16">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/settingMore"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_16"
+                    android:background="@drawable/bg_setting_camera"
+                    android:padding="@dimen/dimen_16"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imvSettingMore"
+                        android:layout_width="@dimen/dimen_40"
+                        android:layout_height="@dimen/dimen_40"
+                        android:src="@drawable/ic_product_camera_hc23"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvNameCamera"
+                        style="@style/text_bold_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_5"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/imvSettingMore"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="@string/config_setting" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/btnNext"
+                        style="@style/text_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dimen_5"
+                        android:src="@drawable/ic_back_left"
+                        app:layout_constraintBottom_toBottomOf="@id/tvNameCamera"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvNameCamera" />
+
+                    <View
+                        android:id="@+id/hasNewFirmWareNotification"
+                        android:layout_width="@dimen/dimen_10"
+                        android:layout_height="@dimen/dimen_10"
+                        android:background="@drawable/bg_circle_white"
+                        android:backgroundTint="#EF1E4A"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toTopOf="@id/btnNext"
+                        app:layout_constraintEnd_toEndOf="@id/btnNext"
+                        app:layout_constraintStart_toEndOf="@id/btnNext"
+                        app:layout_constraintTop_toTopOf="@id/btnNext"
+                        tools:visibility="visible" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clGeneral"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_16"
+                    android:layout_marginTop="@dimen/dimen_16"
+                    android:background="@drawable/bg_setting_camera"
+                    android:paddingStart="@dimen/dimen_16"
+                    android:paddingBottom="@dimen/dimen_16"
+                    app:layout_constraintTop_toBottomOf="@id/settingMore">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvPrivateMode"
+                        style="@style/text_bold_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_20"
+                        android:text="@string/string_tv_setting_private_mode"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/swStatusPrivateMode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dimen_16"
+                        android:thumb="@drawable/thumb_selector"
+                        app:layout_constraintBottom_toBottomOf="@id/tvPrivateMode"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvPrivateMode"
+                        app:track="@drawable/track_selector" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvFollowAction"
+                        style="@style/text_bold_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_20"
+                        android:text="@string/string_setting_follow_action"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvPrivateMode" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/swTurnOffFollowAction"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dimen_16"
+                        android:thumb="@drawable/thumb_selector"
+                        app:layout_constraintBottom_toBottomOf="@id/tvFollowAction"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvFollowAction"
+                        app:track="@drawable/track_selector" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvSettingOnOffLed"
+                        style="@style/text_bold_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_20"
+                        android:text="Đèn trạng thái"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvFollowAction"
+                        tools:ignore="HardcodedText" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/swTurnOffLED"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_4"
+                        android:layout_marginEnd="@dimen/dimen_16"
+                        android:thumb="@drawable/thumb_selector"
+                        app:layout_constraintBottom_toBottomOf="@id/tvSettingOnOffLed"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvSettingOnOffLed"
+                        app:track="@drawable/track_selector" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvFlipImage"
+                        style="@style/text_bold_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_24"
+                        android:text="Lật hình ảnh 180⁰"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvSettingOnOffLed"
+                        tools:ignore="HardcodedText" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imStatusFlipImage"
+                        android:layout_width="@dimen/dimen_40"
+                        android:layout_height="@dimen/dimen_40"
+                        android:layout_marginEnd="@dimen/dimen_10"
+                        android:padding="@dimen/dimen_5"
+                        android:src="@drawable/ic_flip_image_camera"
+                        app:layout_constraintBottom_toBottomOf="@id/tvFlipImage"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvFlipImage" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvFlipImageLeftRight"
+                        style="@style/text_bold_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_24"
+                        android:text="Lật hình ảnh trái - phải"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvFlipImage"
+                        tools:ignore="HardcodedText" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imStatusFlipImageLeftRight"
+                        android:layout_width="@dimen/dimen_40"
+                        android:layout_height="@dimen/dimen_40"
+                        android:layout_marginEnd="@dimen/dimen_10"
+                        android:padding="@dimen/dimen_5"
+                        android:src="@drawable/ic_flip_image_camera"
+                        app:layout_constraintBottom_toBottomOf="@id/tvFlipImageLeftRight"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvFlipImageLeftRight" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clNotificationSettingAlarm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_16"
+                    android:layout_marginTop="@dimen/dimen_16"
+                    android:background="@drawable/bg_setting_camera"
+                    android:padding="@dimen/dimen_15"
+                    app:layout_constraintTop_toBottomOf="@id/clGeneral">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvNotificationSettingAlarm"
+                        style="@style/text_bold_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/string_setting_notificaiton_alarm"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvNotificationSettingAlarmContent"
+                        style="@style/text_bold_14"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/dimen_10"
+                        android:gravity="end"
+                        android:text="Tắt"
+                        app:layout_constraintEnd_toStartOf="@id/imgNotificationSettingAlarm"
+                        app:layout_constraintStart_toEndOf="@id/tvNotificationSettingAlarm"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="HardcodedText" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/imgNotificationSettingAlarm"
+                        style="@style/text_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/ic_back_left"
+                        android:gravity="center_vertical"
+                        app:layout_constraintBottom_toBottomOf="@id/tvNotificationSettingAlarm"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvNotificationSettingAlarm" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvSettingNotification"
+                        style="@style/text_bold_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_10"
+                        android:gravity="center"
+                        android:padding="@dimen/dimen_10"
+                        android:text="@string/string_setting_shedule"
+                        android:textColor="#EC0D3A"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvNotificationSettingAlarm"
+                        tools:visibility="visible" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clSettingAlarmFeature"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_16"
+                    android:layout_marginTop="@dimen/dimen_16"
+                    android:background="@drawable/bg_setting_camera"
+                    android:padding="@dimen/dimen_15"
+                    app:layout_constraintTop_toBottomOf="@id/clNotificationSettingAlarm">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvSettingAlarmFeature"
+                        style="@style/text_bold_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Thiết lập cảnh báo"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="HardcodedText" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/imgSettingAlarmFeature"
+                        style="@style/text_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/ic_back_left"
+                        android:gravity="center_vertical"
+                        app:layout_constraintBottom_toBottomOf="@id/tvSettingAlarmFeature"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvSettingAlarmFeature" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clImageEncoding"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_16"
+                    android:layout_marginTop="@dimen/dimen_16"
+                    android:background="@drawable/bg_setting_camera"
+                    android:paddingHorizontal="@dimen/dimen_16"
+                    android:paddingBottom="@dimen/dimen_16"
+                    app:layout_constraintTop_toBottomOf="@id/clSettingAlarmFeature">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvImageEncoding"
+                        style="@style/text_bold_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_16"
+                        android:text="@string/string_setting_image_encoding"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/swTurnOffImageEncoding"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:alpha="0.5"
+                        android:checked="true"
+                        android:clickable="false"
+                        android:enabled="false"
+                        android:thumb="@drawable/thumb_selector"
+                        app:layout_constraintBottom_toBottomOf="@id/tvImageEncoding"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvImageEncoding"
+                        app:track="@drawable/track_selector" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/btnChangePasswordImageEncoding"
+                        style="@style/text_bold_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/dimen_16"
+                        android:text="Đổi mật khẩu mã hóa"
+                        android:textColor="#EC0D3A"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvImageEncoding"
+                        tools:ignore="HardcodedText" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clWhiteLight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_16"
+                    android:layout_marginTop="@dimen/dimen_16"
+                    android:background="@drawable/bg_setting_camera"
+                    android:padding="@dimen/dimen_16"
+                    app:layout_constraintTop_toBottomOf="@id/clImageEncoding">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvWhiteLight"
+                        style="@style/text_bold_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/string_setting_white_light"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvStatusBlackLight"
+                        style="@style/text_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/ic_back_left"
+                        android:gravity="center_vertical"
+                        app:layout_constraintBottom_toBottomOf="@id/tvWhiteLight"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvWhiteLight"
+                        tools:text="Có màu" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clTimeZone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_16"
+                    android:layout_marginTop="@dimen/dimen_16"
+                    android:background="@drawable/bg_setting_camera"
+                    android:padding="@dimen/dimen_16"
+                    app:layout_constraintTop_toBottomOf="@id/clWhiteLight">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvTimeZone"
+                        style="@style/text_bold_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/string_setting_time_zone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvStatuTimeZone"
+                        style="@style/text_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dimen_30"
+                        android:gravity="center_vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="GMT +7" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imStatusFlipTimeZone"
+                        android:layout_width="@dimen/dimen_20"
+                        android:layout_height="@dimen/dimen_20"
+                        android:src="@drawable/ic_flip_image_camera"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clDateFormat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_16"
+                    android:layout_marginTop="@dimen/dimen_16"
+                    android:background="@drawable/bg_setting_camera"
+                    android:padding="@dimen/dimen_16"
+                    app:layout_constraintTop_toBottomOf="@id/clTimeZone">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvDateFormat"
+                        style="@style/text_bold_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/date_format"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvValueDateFormat"
+                        style="@style/text_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/ic_back_left"
+                        android:gravity="center_vertical"
+                        app:layout_constraintBottom_toBottomOf="@id/tvDateFormat"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvDateFormat"
+                        tools:text="YYYY-MM-DD" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clVolume"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_16"
+                    android:layout_marginTop="@dimen/dimen_16"
+                    android:background="@drawable/bg_setting_camera"
+                    android:padding="@dimen/dimen_16"
+                    app:layout_constraintTop_toBottomOf="@id/clDateFormat">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvVolume"
+                        style="@style/text_bold_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/string_setting_volume_value"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvValueVolume"
+                        style="@style/text_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/ic_back_left"
+                        android:gravity="center_vertical"
+                        app:layout_constraintBottom_toBottomOf="@id/tvVolume"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvVolume"
+                        tools:text="100" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clMicSensitivity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_16"
+                    android:layout_marginTop="@dimen/dimen_16"
+                    android:background="@drawable/bg_setting_camera"
+                    android:padding="@dimen/dimen_16"
+                    app:layout_constraintTop_toBottomOf="@id/clVolume">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvMicSensitivity"
+                        style="@style/text_bold_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/string_setting_value_volume_mic"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvValueMicSensitivity"
+                        style="@style/text_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/ic_back_left"
+                        android:gravity="center_vertical"
+                        app:layout_constraintBottom_toBottomOf="@id/tvMicSensitivity"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvMicSensitivity"
+                        tools:text="100" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clStorage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_16"
+                    android:layout_marginTop="@dimen/dimen_16"
+                    android:background="@drawable/bg_setting_camera"
+                    android:paddingHorizontal="@dimen/dimen_10"
+                    app:layout_constraintTop_toBottomOf="@id/clMicSensitivity">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvStorageSetting"
+                        style="@style/text_bold_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_5"
+                        android:layout_marginTop="@dimen/dimen_20"
+                        android:text="@string/string_content_clould"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/viewStorageSettingDivider"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/dimen_5"
+                        android:background="@color/color_CECECE"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvStorageSetting" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvCard"
+                        style="@style/text_bold_14"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_5"
+                        android:layout_marginTop="@dimen/dimen_15"
+                        android:paddingVertical="@dimen/dimen_15"
+                        android:text="@string/string_setting_card"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/viewStorageSettingDivider" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvInforCard"
+                        style="@style/text_14"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginEnd="4dp"
+                        android:drawableRight="@drawable/ic_back_left"
+                        android:gravity="center_vertical|end"
+                        android:text="@string/string_no_memory_card"
+                        android:textColor="@color/text_EC0D3A"
+                        app:layout_constraintBottom_toBottomOf="@id/tvCard"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/tvCard"
+                        app:layout_constraintTop_toTopOf="@id/tvCard" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvCloud"
+                        style="@style/text_bold_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_5"
+                        android:layout_marginBottom="@dimen/dimen_5"
+                        android:paddingVertical="@dimen/dimen_15"
+                        android:text="Lưu trữ Cloud"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvCard"
+                        tools:ignore="HardcodedText" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvInforCloud"
+                        style="@style/text_14"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginEnd="4dp"
+                        android:drawableRight="@drawable/ic_back_left"
+                        android:gravity="center_vertical|end"
+                        android:text="@string/dont_register"
+                        android:textColor="@color/text_EC0D3A"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="@id/tvCloud"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/tvCloud"
+                        app:layout_constraintTop_toTopOf="@id/tvCloud"
+                        tools:visibility="visible" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clSettingSpreadCamera"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_16"
+                    android:layout_marginTop="@dimen/dimen_16"
+                    android:background="@drawable/bg_setting_camera"
+                    android:visibility="gone"
+                    android:padding="@dimen/dimen_15"
+                    tools:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@id/clStorage">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvTitleSettingSpreadCamera"
+                        style="@style/text_bold_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lan tỏa Viettel Home"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="HardcodedText" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvSettingSpreadCamera"
+                        style="@style/text_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/ic_back_left"
+                        android:gravity="center_vertical"
+                        app:layout_constraintBottom_toBottomOf="@id/tvTitleSettingSpreadCamera"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvTitleSettingSpreadCamera" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/groupEncrypt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:constraint_referenced_ids="clGeneral,clNotificationSettingAlarm,clSettingAlarmFeature,clImageEncoding,clWhiteLight,clVolume,clMicSensitivity,clTimeZone,clDateFormat,clStorage,clSettingSpreadCamera"
+                    tools:visibility="visible" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clError"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_20"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toTopOf="@id/btDelete"
+                    app:layout_constraintTop_toBottomOf="@id/settingMore"
+                    tools:visibility="visible">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivError"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.3"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvError"
+                        style="@style/text_14"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_20"
+                        android:gravity="center"
+                        android:textColor="@color/color_4e4e4e"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/ivError"
+                        tools:text="Thiết bị của bạn đang bị khóa" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvErrorDicription"
+                        style="@style/text_bold_12"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_20"
+                        android:gravity="center"
+                        android:textColor="@color/color_AEAEAE"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvError"
+                        tools:text="Vui lòng thực hiện Tắt - Bật nguồn thiết bị để mở khóa." />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btDelete"
+                    style="@style/text_bold_16"
+                    android:layout_width="@dimen/dimen_160"
+                    android:layout_height="@dimen/dimen_40"
+                    android:layout_marginTop="@dimen/dimen_16"
+                    android:background="@drawable/bg_button_home"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_10"
+                    android:text="@string/delete_device"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white_sdk"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/clSettingSpreadCamera"
+                    app:layout_constraintVertical_bias="1" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

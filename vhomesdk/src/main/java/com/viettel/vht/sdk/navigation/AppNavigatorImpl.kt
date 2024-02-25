@@ -68,4 +68,18 @@ class AppNavigatorImpl @Inject constructor() : BaseNavigatorImpl(), AppNavigatio
             bundle
         )
     }
+
+    override fun openDetailCameraJF(bundle: Bundle?) {
+        openScreen(
+            R.id.action_SDKVHomeLoadingFragment_to_jfcamera_detail_graph,
+            bundle
+        )
+    }
+
+    override fun openSettingCameraJF(bundle: Bundle?) {
+        openScreen(
+            R.id.action_JFCameraDetailFragment_to_settingCameraJFFragment,
+            bundle
+        )
+    }
 }

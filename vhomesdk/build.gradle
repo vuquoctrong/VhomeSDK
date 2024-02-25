@@ -20,6 +20,56 @@ android {
     }
 
     buildTypes {
+        debug {
+            buildConfigField("String", "APP_NAME", "\"VHome Test\"")
+            resValue "string", "app_name", "VHome Test"
+            buildConfigField "String", "VERSION_NAME", "\"${defaultConfig.versionName}\""
+
+
+            buildConfigField "String", "APP_KEY", "\"nlaDOC8uS6Xn7L0JIcPD\""
+            buildConfigField "String", "APP_SECRET", "\"yKeMoImiHp9DUXxoGpERza31xSyCWunW\""
+            buildConfigField "String", "MQTT_HOST", "\"tcp://dev-iotapi.viettel.io:1883\""
+            buildConfigField "String", "MQTT_HOST_IOT", "\"mqtt://dev-iotapi.viettel.io:1883\""
+            buildConfigField "String", "BASE_URL", "\"https://dev-iotapi.viettel.io\""
+            buildConfigField "String", "HOST_TCP", "\"dev-p2papi.viettel.io\""
+            buildConfigField "String", "TUYA_APP_KEY", "\"3t4chf8umtcpj7w9gv9p\""
+            buildConfigField "String", "TUYA_APP_SECRET", "\"v4m8dmfr9tpg89r4vxae7euqu4hjs5pj\""
+            buildConfigField "String", "TUYA_USERNAME", "\"minhotmt@gmail.com\""
+            buildConfigField "String", "TUYA_PASSWORD", "\"123456a@\""
+            buildConfigField "String", "MQTT_USER_NAME", "\"user\""
+
+            buildConfigField "String", "JF_APP_UUID", "\"6391d1a360b238987546d15b\""
+            resValue("string", "string_jf_app_uuid", "6391d1a360b238987546d15b")
+
+            buildConfigField "String", "JF_APP_KEY", "\"b6461fefb0424b66f9085623443d0847\""
+            resValue("string", "string_jf_app_key", "b6461fefb0424b66f9085623443d0847")
+
+            buildConfigField "String", "JF_APP_SECRET", "\"503bc0203f094edcb8a1e88f5365acd7\""
+            resValue("string", "string_jf_app_secret", "503bc0203f094edcb8a1e88f5365acd7")
+
+            buildConfigField "String", "JF_APP_MOVECARD", "\"4\""
+            resValue("string", "string_jf_app_movecard", "4")
+
+
+            buildConfigField "String", "SERVICE_URL", "\"https://as-dispa.coolkit.cc/dispatch/app\""
+            buildConfigField "int", "DISPATCH_SERVER_PORT", "443"
+            buildConfigField "String", "DISPATCH_DOMAIN", "\"as-dispd.coolkit.cc\""
+            buildConfigField "String", "APP_ID", "\"AwlhloNOptjH7B6mFdOC4x89w8FmSGcO\""
+            buildConfigField "String", "SECRET", "\"Zsr7Gj28cKOjJTK3Uhv9ESUm40S5KtRJ\""
+            buildConfigField "String", "COUNTRY_CODE", "\"+84\""
+            buildConfigField "String", "BASE_URL_CAMERA", "\"https://open.camera.thingplus.vn\""
+            buildConfigField "String", "BASE_URL_CAMERA_JF", "\"https://rs.viettelcamera.vn\""
+            buildConfigField "String", "DISPATCH_DEVICE", "\"192.168.4.1\""
+            buildConfigField "String", "DISPATCH_AIR_FILTER", "\"10.10.10.1\""
+            buildConfigField "int", "PORT_TCP", "5120"
+
+            buildConfigField "String", "IMOU_BASE_URL", "\"https://openapi.easy4ip.com:443/openapi/\""
+            buildConfigField "String", "IMOU_APP_ID", "\"lc5313df4610e24c92\""
+            buildConfigField "String", "IMOU_APP_SECRET", "\"7e85dff936064feea1bd3795208ef8\""
+
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
@@ -81,11 +131,12 @@ dependencies {
     kapt 'com.github.bumptech.glide:glide:4.11.0'
     implementation  'io.reactivex.rxjava2:rxandroid:2.1.1'
 
-    // event bus
     implementation 'org.greenrobot:eventbus:3.3.1'
     implementation 'com.alibaba:fastjson:1.1.72.android'
     implementation 'org.modelmapper:modelmapper:3.1.1'
     implementation "com.airbnb.android:lottie:4.2.0"
+
+    implementation 'com.makeramen:roundedimageview:2.3.0'
 
     embed project(path: ':libxmfunsdk', configuration: 'default')
     embed project(path: ':sdkcore', configuration: 'default')

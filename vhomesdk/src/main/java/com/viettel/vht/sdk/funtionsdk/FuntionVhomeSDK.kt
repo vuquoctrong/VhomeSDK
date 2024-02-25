@@ -10,6 +10,7 @@ import com.viettel.vht.sdk.network.AuthApiInterface
 import com.viettel.vht.sdk.network.NetworkEvent
 import com.viettel.vht.sdk.network.NetworkState
 import com.viettel.vht.sdk.ui.main.SDKVHomeMainActivity
+import com.viettel.vht.sdk.utils.Config
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.collectLatest
@@ -25,6 +26,7 @@ interface VHomeSDKManager {
     fun loginAccountVHome(phone: String?, password: String?, listener: VHomeSDKLoginListener?)
 
     fun openAddCameraJF(context: Context)
+    fun openDetailCameraJF(context: Context)
 
 }
 
@@ -109,7 +111,14 @@ class VHomeSDKManagerImpl constructor(
     }
 
     override fun openAddCameraJF(context: Context) {
-        context.startActivity(Intent(context, SDKVHomeMainActivity::class.java))
+        val intent = Intent(context, SDKVHomeMainActivity::class.java)
+        intent.putExtra(Config.SDK_DATA_FUNCTION_VHOME, Config.SDK_FUNCTION_OPEN_ADD_CAMERA_JF)
+        context.startActivity(intent)
     }
 
+    override fun openDetailCameraJF(context: Context) {
+        val intent = Intent(context, SDKVHomeMainActivity::class.java)
+        intent.putExtra(Config.SDK_DATA_FUNCTION_VHOME, Config.SDK_FUNCTION_OPEN_DETAIL_CAMERA_JF)
+        context.startActivity(intent)
+    }
 }

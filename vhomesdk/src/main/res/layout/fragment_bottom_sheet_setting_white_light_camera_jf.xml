@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bgr_bottom_sheet"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="50dp"
+            android:layout_height="4dp"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_16"
+            app:cardBackgroundColor="#DCDCDC"
+            app:cardElevation="0dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitle"
+            style="@style/text_bold_16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_16"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:gravity="center"
+            android:text="@string/string_setting_white_light" />
+
+        <View
+            android:id="@+id/viewDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_16"
+            android:background="#CECECE" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_30"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:layout_marginEnd="@dimen/dimen_20"
+            android:layout_marginBottom="@dimen/dimen_20">
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cbClose"
+                style="@style/text_bold_14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:background="@null"
+                android:button="@drawable/bg_radio_select"
+                android:enabled="false"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="@dimen/dimen_15"
+                android:text="Chế độ ban đêm đen trắng"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText,RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/descriptionClose"
+                style="@style/text_14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_35"
+                android:text="Tự động bật đèn LED hồng ngoại vào ban đêm"
+                app:layout_constraintTop_toBottomOf="@id/cbClose"
+                tools:ignore="HardcodedText" />
+
+            <View
+                android:id="@+id/viewClickClose"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@id/descriptionClose"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/cbClose"
+                tools:visibility="gone" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cbAuto"
+                style="@style/text_bold_14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:background="@null"
+                android:button="@drawable/bg_radio_select"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="@dimen/dimen_15"
+                android:text="Chế độ ban đêm có màu"
+                app:layout_constraintTop_toBottomOf="@id/descriptionClose"
+                tools:ignore="HardcodedText,RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/descriptionAuto"
+                style="@style/text_14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_35"
+                android:text="Tự động bật đèn LED rọi vào ban đêm"
+                app:layout_constraintTop_toBottomOf="@id/cbAuto"
+                tools:ignore="HardcodedText" />
+
+            <View
+                android:id="@+id/viewClickAuto"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@id/descriptionAuto"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/cbAuto"
+                tools:visibility="gone" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cbIntelligent"
+                style="@style/text_bold_14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:background="@null"
+                android:button="@drawable/bg_radio_select"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="@dimen/dimen_15"
+                android:text="Chế độ ban đêm thông minh"
+                app:layout_constraintTop_toBottomOf="@id/descriptionAuto"
+                tools:ignore="HardcodedText,RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/descriptionIntelligent"
+                style="@style/text_14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_35"
+                android:text="Tự động bật LED rọi khi có sự kiện và bật LED hồng ngoại khi không có sự kiện"
+                app:layout_constraintTop_toBottomOf="@id/cbIntelligent"
+                tools:ignore="HardcodedText" />
+
+            <View
+                android:id="@+id/viewClickIntelligent"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@id/descriptionIntelligent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/cbIntelligent"
+                tools:visibility="gone" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cbOff"
+                style="@style/text_bold_14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:background="@null"
+                android:button="@drawable/bg_radio_select"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="@dimen/dimen_15"
+                android:text="Tắt chế độ ban đêm"
+                app:layout_constraintTop_toBottomOf="@id/descriptionIntelligent"
+                tools:ignore="HardcodedText,RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/descriptionOff"
+                style="@style/text_14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_35"
+                android:text="Không tự động bật LED rọi và LED hồng ngoại"
+                app:layout_constraintTop_toBottomOf="@id/cbOff"
+                tools:ignore="HardcodedText" />
+
+            <View
+                android:id="@+id/viewClickOff"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@id/descriptionOff"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/cbOff"
+                tools:visibility="gone" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</layout>

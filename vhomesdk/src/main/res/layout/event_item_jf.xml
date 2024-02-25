@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/event_item_layout"
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        android:layout_marginStart="@dimen/margin_8"
+        android:layout_marginEnd="@dimen/dimen_13"
+        android:elevation="@dimen/dimen_4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:id="@+id/viewEvent"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#CECECE"
+            app:layout_constraintEnd_toEndOf="@+id/view_read"
+            app:layout_constraintStart_toStartOf="@+id/view_read" />
+
+        <View
+            android:id="@+id/view_read"
+            android:layout_width="@dimen/dimen_8"
+            android:layout_height="@dimen/dimen_8"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:background="@drawable/shape_oval_white"
+            android:backgroundTint="#F8214B"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDate"
+            style="@style/text_light_bold_12"
+            android:layout_marginStart="@dimen/margin_16"
+            android:textColor="@color/color_333333"
+            app:layout_constraintBottom_toBottomOf="@id/view_read"
+            app:layout_constraintStart_toEndOf="@id/view_read"
+            app:layout_constraintTop_toTopOf="@id/view_read"
+            tools:text="10:20:15" />
+
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imvThumbnail"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_preview_event_encrypted"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="W,16:9"
+            app:layout_constraintStart_toEndOf="@id/guideline"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_corner_radius="@dimen/margin_4" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.23" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvEventName"
+            style="@style/text_light_bold_12"
+            android:layout_width="0dp"
+            android:layout_marginStart="@dimen/margin_16"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/color_333333"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imvThumbnail"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Nhận diện gương mặt" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

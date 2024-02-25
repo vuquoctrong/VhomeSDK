@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:uilib="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.jfcameradetail.call.IDRVisitorActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/layoutRoot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_sdk"
+        android:orientation="vertical">
+
+        <com.xm.ui.widget.DisplayImageView
+            android:id="@+id/imgPushPic"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_260"
+            android:layout_marginTop="50dp"
+            android:visibility="visible" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black_sdk">
+
+            <TextView
+                android:id="@+id/txtDelayTime"
+                style="@style/text_14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:textColor="@android:color/white"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:id="@+id/tv_sn"
+                style="@style/text_18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/white_sdk"
+                tools:text="Camera01" />
+
+            <TextView
+                style="@style/text_18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_sn"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:text="@string/waiting_for_answering"
+                android:textColor="#C3C3CB" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="80dp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtIgnore"
+                    style="@style/CustomButtonGrayRedBorder"
+                    android:layout_width="@dimen/dimen_120"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@id/btnAllow"
+                    android:paddingHorizontal="@dimen/dimen_10"
+                    android:text="@string/refuse"
+                    android:textSize="@dimen/text_size_16" />
+
+                <TextView
+                    android:id="@+id/txtAnswer"
+                    style="@style/CustomButtonRed"
+                    android:layout_width="@dimen/dimen_120"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="@dimen/dimen_40"
+                    android:paddingHorizontal="@dimen/dimen_10"
+                    android:text="@string/conversation"
+                    android:textSize="@dimen/text_size_16" />
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</layout>

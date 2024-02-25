@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true">
+
+        <View
+            android:id="@+id/pan_background"
+            android:layout_width="@dimen/dimen_135"
+            android:layout_height="@dimen/dimen_135"
+            android:layout_margin="@dimen/dimen_10"
+            android:background="@drawable/pan_background"
+            android:elevation="@dimen/dimen_5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/btnAuto"
+            style="@style/text_light_bold_10"
+            android:background="@drawable/bg_auto_tracking_selector"
+            android:elevation="@dimen/dimen_8"
+            android:gravity="center"
+            android:textColor="@color/charcoal_grey"
+            app:layout_constraintBottom_toBottomOf="@id/pan_background"
+            app:layout_constraintEnd_toEndOf="@id/pan_background"
+            app:layout_constraintStart_toStartOf="@id/pan_background"
+            app:layout_constraintTop_toTopOf="@id/pan_background" />
+
+        <ImageButton
+            android:id="@+id/btnPanLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/dimen_2"
+            android:background="@color/transparent_sdk"
+            android:elevation="@dimen/dimen_8"
+            android:src="@drawable/ic_back_bt_camera"
+            app:layout_constraintBottom_toBottomOf="@id/btnAuto"
+            app:layout_constraintStart_toStartOf="@id/pan_background"
+            app:layout_constraintTop_toTopOf="@id/btnAuto" />
+
+        <ImageButton
+            android:id="@+id/btnPanUp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_2"
+            android:background="@color/transparent_sdk"
+            android:elevation="@dimen/dimen_8"
+            android:rotation="90"
+            android:src="@drawable/ic_back_bt_camera"
+            app:layout_constraintEnd_toEndOf="@id/btnAuto"
+            app:layout_constraintStart_toStartOf="@id/btnAuto"
+            app:layout_constraintTop_toTopOf="@id/pan_background" />
+
+        <ImageButton
+            android:id="@+id/btnPanRight"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginEnd="@dimen/dimen_2"
+            android:background="@color/transparent_sdk"
+            android:elevation="@dimen/dimen_8"
+            android:rotation="180"
+            android:src="@drawable/ic_back_bt_camera"
+            app:layout_constraintBottom_toBottomOf="@id/btnAuto"
+            app:layout_constraintEnd_toEndOf="@id/pan_background"
+            app:layout_constraintTop_toTopOf="@id/btnAuto" />
+
+        <ImageButton
+            android:id="@+id/btnPanDown"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_2"
+            android:background="@color/transparent_sdk"
+            android:elevation="@dimen/dimen_8"
+            android:rotation="-90"
+            android:src="@drawable/ic_back_bt_camera"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@id/pan_background"
+            app:layout_constraintEnd_toEndOf="@id/btnAuto"
+            app:layout_constraintStart_toStartOf="@id/btnAuto" />
+
+        <View
+            android:clickable="true"
+            android:visibility="gone"
+            android:id="@+id/viewDisable"
+            android:elevation="@dimen/dimen_8"
+            app:layout_constraintBottom_toBottomOf="@+id/pan_background"
+            app:layout_constraintTop_toTopOf="@+id/pan_background"
+            app:layout_constraintStart_toStartOf="@+id/pan_background"
+            app:layout_constraintEnd_toEndOf="@+id/pan_background"
+            android:layout_width="0dp"
+            android:layout_height="0dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

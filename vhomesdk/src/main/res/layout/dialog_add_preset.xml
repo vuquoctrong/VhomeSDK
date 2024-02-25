@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_setting_camera_jf"
+        android:padding="@dimen/dimen_20">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title"
+            style="@style/text_bold_16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Lưu góc quay"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:background="#CECECE"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title_name"
+            style="@style/text_bold_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_10"
+            android:gravity="center"
+            android:text="Tên góc quay"
+            app:layout_constraintBottom_toTopOf="@+id/edt_input"
+            app:layout_constraintStart_toStartOf="@+id/edt_input"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edt_input"
+            style="@style/text_14"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_60"
+            android:background="@drawable/bg_edittext_name_camera_jf"
+            android:ellipsize="start"
+            android:gravity="center_vertical"
+            android:hint="Nhập tên góc quay"
+            android:inputType="textAutoComplete"
+            android:maxLength="30"
+            android:maxLines="1"
+            android:paddingHorizontal="@dimen/dimen_20"
+            android:paddingVertical="@dimen/dimen_15"
+            android:scrollHorizontally="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnClear"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_margin="@dimen/margin_16"
+            android:src="@drawable/ic_close"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/edt_input"
+            app:layout_constraintEnd_toEndOf="@id/edt_input"
+            app:layout_constraintTop_toTopOf="@id/edt_input" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNumberEdt"
+            style="@style/text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_10"
+            app:layout_constraintBottom_toTopOf="@+id/edt_input"
+            app:layout_constraintEnd_toEndOf="@+id/edt_input"
+            tools:text="1/30" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvError"
+            style="@style/text_12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:text="Tên góc quay không được để trống"
+            android:textColor="@color/text_EC0D3A"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edt_input"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btnCancel"
+            style="@style/text_bold_16"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/dimen_30"
+            android:background="@drawable/bg_button_setting_cancel"
+            android:gravity="center"
+            android:text="@string/string_cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/color_F8214B"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="120:40"
+            app:layout_constraintEnd_toStartOf="@id/btnOK"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvError"
+            app:layout_constraintWidth_percent="0.32" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btnOK"
+            style="@style/text_bold_16"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/dimen_30"
+            android:background="@drawable/bg_button_setting_submit"
+            android:gravity="center"
+            android:text="@string/string_save"
+            android:textAllCaps="true"
+            android:textColor="@color/white_sdk"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="120:40"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnCancel"
+            app:layout_constraintTop_toBottomOf="@id/tvError"
+            app:layout_constraintWidth_percent="0.32" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

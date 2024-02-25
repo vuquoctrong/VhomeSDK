@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#66C4C4C4">
+
+        <ImageView
+            android:id="@+id/btn_left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dimen_15"
+            android:contentDescription="@null"
+            android:paddingRight="@dimen/dimen_24"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/tv_camera"
+            style="@style/text_light_bold_14"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/btn_left"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:visibility="gone"
+            android:maxLines="1"
+            android:textColor="@color/white_sdk"
+            tools:text="Title " />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/text_14"
+            android:layout_width="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@+id/tvRight"
+            android:layout_toRightOf="@+id/btn_left"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:visibility="gone"
+            android:textColor="@color/white_sdk"
+            tools:text="Title " />
+
+        <ImageView
+            android:id="@+id/btn_right"
+            android:layout_width="@dimen/dimen_24"
+            android:layout_height="@dimen/dimen_24"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dimen_15"
+            android:contentDescription="@null"
+            android:visibility="gone"
+            tools:src="@drawable/ic_arrow_left" />
+
+        <TextView
+            android:id="@+id/tvRight"
+            style="@style/text_14"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dimen_15"
+            android:background="@drawable/bg_white_border_12"
+            android:gravity="center"
+            android:paddingStart="@dimen/dimen_10"
+            android:paddingTop="@dimen/dimen_5"
+            android:paddingEnd="@dimen/dimen_10"
+            android:paddingBottom="@dimen/dimen_10"
+            android:textColor="@color/color_323336"
+            android:visibility="invisible"
+            tools:text="Lưu" />
+    </RelativeLayout>
+
+</layout>

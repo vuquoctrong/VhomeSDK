@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/darkGreyBlue"
+        android:clickable="true"
+        android:elevation="@dimen/dimen_10"
+        android:focusable="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/text_14"
+            android:layout_marginStart="@dimen/dimen_32"
+            android:layout_marginEnd="@dimen/dimen_32"
+            android:fontFamily="@font/regular"
+            android:gravity="center_horizontal"
+            android:text="@string/mode_sleep"
+            android:textColor="@color/white_sdk" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_retry"
+            style="@style/text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_24"
+            android:background="@drawable/bg_white_stroke_24"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dimen_24"
+            android:paddingTop="@dimen/dimen_6"
+            android:paddingRight="@dimen/dimen_24"
+            android:paddingBottom="@dimen/dimen_6"
+            android:text="@string/label_wakeup"
+            android:textColor="@color/white_sdk" />
+
+    </LinearLayout>
+</layout>

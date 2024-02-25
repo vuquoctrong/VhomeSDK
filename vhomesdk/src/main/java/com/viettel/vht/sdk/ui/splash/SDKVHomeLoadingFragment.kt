@@ -12,6 +12,7 @@ import com.viettel.vht.sdk.R
 import com.viettel.vht.sdk.databinding.FragmentSdkhomeSplashBinding
 import com.viettel.vht.sdk.jfmanager.JFCameraManager
 import com.viettel.vht.sdk.navigation.AppNavigation
+import com.viettel.vht.sdk.utils.Config
 import dagger.hilt.android.AndroidEntryPoint
 import org.json.JSONObject
 import timber.log.Timber
@@ -72,7 +73,7 @@ class SDKVHomeLoadingFragment :
                     showHideLoading(false)
                     result.data?.orgId?.let { rxPreferences.put(PREF_ORG_ID, it) }
                     configCameraJF()
-                    appNavigation.openAddCameraJF()
+                    openFunctionSDK()
                 }
 
                 Status.ERROR -> {
@@ -128,6 +129,17 @@ class SDKVHomeLoadingFragment :
 //        } catch (e: Exception) {
 //            Timber.e(e)
 //        }
+    }
+
+    private fun openFunctionSDK(){
+        when((requireActivity().intent.getStringExtra(Config.SDK_DATA_FUNCTION_VHOME))){
+            Config.SDK_FUNCTION_OPEN_ADD_CAMERA_JF ->{
+                appNavigation.openAddCameraJF()
+            }
+            Config.SDK_FUNCTION_OPEN_DETAIL_CAMERA_JF ->{
+                appNavigation.openDetailCameraJF()
+            }
+        }
     }
 
 }

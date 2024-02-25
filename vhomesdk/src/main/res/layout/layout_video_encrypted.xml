@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_sdk"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/btn_encrypted"
+            style="@style/text_16"
+            android:text="@string/label_video_encrypted"
+            android:textColor="@color/white_sdk"
+            android:drawableTop="@drawable/ic_video_encrypted"
+            android:drawablePadding="@dimen/dimen_6"/>
+    </RelativeLayout>
+</layout>

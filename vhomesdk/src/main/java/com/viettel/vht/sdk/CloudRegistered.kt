@@ -33,18 +33,7 @@ data class Description(
     val viRaw: String = ""
 ): Parcelable
 
-data class PricingCloudResponse(
-    @SerializedName("code")
-    val code: Int,
-    @SerializedName("msg")
-    val msg: String,
 
-    @SerializedName("message")
-    val message: String? = null,
-
-    @SerializedName("data")
-    val data: DataPricingCloud?,
-)
 
 data class DataPricingCloud(
     @SerializedName("promotions")// khuyến mãi

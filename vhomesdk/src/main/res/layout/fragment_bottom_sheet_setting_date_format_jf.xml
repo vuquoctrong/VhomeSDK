@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bgr_bottom_sheet"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="50dp"
+            android:layout_height="4dp"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_16"
+            app:cardBackgroundColor="#DCDCDC"
+            app:cardElevation="0dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitle"
+            style="@style/text_bold_16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_16"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:gravity="center"
+            android:text="@string/date_format" />
+
+        <View
+            android:id="@+id/viewDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_16"
+            android:background="#CECECE" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_20"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:layout_marginBottom="@dimen/dimen_20">
+
+            <TextView
+                android:id="@+id/tvMMDDYYYY"
+                style="@style/text_14"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dimen_40"
+                android:gravity="center_vertical"
+                android:text="MM-DD-YYYY"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/tvDDMMYYYY"
+                style="@style/text_14"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dimen_40"
+                android:gravity="center_vertical"
+                android:text="DD-MM-YYYY"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvMMDDYYYY"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/tvYYYYMMDD"
+                style="@style/text_14"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dimen_40"
+                android:gravity="center_vertical"
+                android:text="YYYY-MM-DD"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDDMMYYYY"
+                tools:ignore="HardcodedText" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cbMMDDYYYY"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:button="@drawable/bg_radio_select"
+                android:checked="true"
+                android:clickable="false"
+                android:enabled="false"
+                app:layout_constraintBottom_toBottomOf="@+id/tvMMDDYYYY"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvMMDDYYYY" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cbDDMMYYYY"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:button="@drawable/bg_radio_select"
+                android:checked="true"
+                android:clickable="false"
+                android:enabled="false"
+                app:layout_constraintBottom_toBottomOf="@+id/tvDDMMYYYY"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvDDMMYYYY" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cbYYYYMMDD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:button="@drawable/bg_radio_select"
+                android:checked="true"
+                android:clickable="false"
+                android:enabled="false"
+                app:layout_constraintBottom_toBottomOf="@+id/tvYYYYMMDD"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvYYYYMMDD" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</layout>

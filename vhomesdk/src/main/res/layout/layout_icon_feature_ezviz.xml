@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="58dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imvIcon"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:background="@drawable/bgr_normal_icon_feature"
+            android:padding="16dp"
+            android:src="@drawable/ic_feature_defence" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv"
+            style="@style/text_light_bold_12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="4dp"
+            android:textSize="@dimen/app_font_size_medium" />
+
+    </LinearLayout>
+
+</layout>

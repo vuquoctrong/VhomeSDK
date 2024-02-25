@@ -62,6 +62,8 @@ fun String.readFirstLine(filePath: String): String? {
     return reader.readLine()
 }
 
+
+
 fun String.getBitmapFromFilePath(): Bitmap? {
     var bitmap: Bitmap? = null
     try {

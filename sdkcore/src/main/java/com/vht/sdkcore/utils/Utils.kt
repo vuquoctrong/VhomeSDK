@@ -773,4 +773,24 @@ class Utils {
         }
     }
 
+    fun formatBitrate(size: Long): String? {
+        val df = DecimalFormat("#.0", DecimalFormatSymbols.getInstance(Locale.ENGLISH))
+        var fileSizeString = ""
+        val wrongSize = "0 KB/s"
+        return if (size == 0L) {
+            wrongSize
+        } else {
+            fileSizeString = if (size < 1024L) {
+                df.format(size.toDouble()) + " B/s"
+            } else if (size < 1048576L) {
+                df.format(size.toDouble() / 1024.0) + " KB/s"
+            } else if (size < 1073741824L) {
+                df.format(size.toDouble() / 1048576.0) + " MB/s"
+            } else {
+                df.format(size.toDouble() / 1.073741824E9) + " GB/s"
+            }
+            fileSizeString
+        }
+    }
+
 }

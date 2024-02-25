@@ -28,4 +28,11 @@ interface AppNavigation : BaseNavigator {
     fun openQuickGide2AddCamera(bundle: Bundle?= null)
 
     fun openAddCameraJF(bundle: Bundle? = null)
+
+    fun openDetailCameraJF(bundle: Bundle? = null)
+
+    fun openSettingCameraJF(bundle: Bundle? = null)
+
+
+
 }

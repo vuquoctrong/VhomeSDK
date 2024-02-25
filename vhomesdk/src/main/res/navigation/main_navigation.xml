@@ -13,6 +13,10 @@
         <action
             android:id="@+id/action_SDKVHomeLoadingFragment_to_add_camera_jftech_graph"
             app:destination="@id/add_camera_jftech_graph" />
+        <action
+            android:id="@+id/action_SDKVHomeLoadingFragment_to_jfcamera_detail_graph"
+            app:destination="@id/jfcamera_detail_graph" />
     </fragment>
     <include app:graph="@navigation/add_camera_jftech_graph" />
+    <include app:graph="@navigation/jfcamera_detail_graph" />
 </navigation>

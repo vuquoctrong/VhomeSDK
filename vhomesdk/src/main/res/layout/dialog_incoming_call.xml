@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginHorizontal="@dimen/dimen_20"
+            android:background="@drawable/bg_setting_camera">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/dimen_20"
+                android:gravity="center">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgLoading"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/img_incoming_call" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvNotificationSettingAlarmContent"
+                    style="@style/text_bold_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_8"
+                    android:text="@string/incoming_call"
+                    android:textColor="@color/color_4E4E4E"/>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/btnRefuse"
+                        style="@style/CustomButtonGrayRedBorder"
+                        android:layout_width="@dimen/dimen_120"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_toStartOf="@id/btnAllow"
+                        android:paddingHorizontal="@dimen/dimen_10"
+                        android:text="@string/refuse"
+                        android:textSize="@dimen/text_size_16"
+                        app:layout_constraintEnd_toStartOf="@id/btnAllow"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/btnConversation"
+                        style="@style/CustomButtonRed"
+                        android:layout_width="@dimen/dimen_120"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_40"
+                        android:layout_alignParentEnd="true"
+                        android:paddingHorizontal="@dimen/dimen_10"
+                        android:text="@string/conversation"
+                        android:textSize="@dimen/text_size_16" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+</layout>

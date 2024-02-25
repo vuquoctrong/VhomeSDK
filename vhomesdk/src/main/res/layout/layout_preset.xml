@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white_sdk">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imvBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_arrow_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/color_4E4E4E" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvBack"
+            style="@style/text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/control"
+            android:textColor="@color/black_sdk"
+            app:layout_constraintBottom_toBottomOf="@id/imvBack"
+            app:layout_constraintStart_toEndOf="@id/imvBack"
+            app:layout_constraintTop_toTopOf="@id/imvBack" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/tvSelectAll"
+            style="@style/text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:button="@drawable/bg_radio_select"
+            android:paddingStart="@dimen/dimen_16"
+            android:text="@string/all"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/imvBack"
+            app:layout_constraintTop_toBottomOf="@id/imvBack" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCount"
+            style="@style/text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="@string/count_selected"
+            android:textColor="@color/black_sdk"
+            app:layout_constraintBottom_toBottomOf="@id/tvSelectAll"
+            app:layout_constraintEnd_toStartOf="@id/tvDelete"
+            app:layout_constraintTop_toTopOf="@id/tvSelectAll" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDelete"
+            style="@style/text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/bgr_button_delete"
+            android:drawableLeft="@drawable/ic_delete_video_cloud"
+            android:drawablePadding="6dp"
+            android:drawableTint="@color/white_sdk"
+            android:gravity="center"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="4dp"
+            android:text="@string/delete"
+            android:textColor="@color/white_sdk"
+            app:layout_constraintBottom_toBottomOf="@id/tvSelectAll"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvSelectAll" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/groupDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="tvSelectAll,tvCount,tvDelete" />
+
+        <com.viettel.vht.sdk.ui.jfcameradetail.view.PresetViewPager
+            android:id="@+id/vpPreset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_16"
+            app:layout_constraintTop_toBottomOf="@id/tvSelectAll" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvGuide"
+            style="@style/text_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:drawableLeft="@drawable/ic_infomation_hcl"
+            android:drawablePadding="6dp"
+            android:gravity="center"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="4dp"
+            android:text="@string/suggestion"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vpPreset" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btnTour"
+            style="@style/text_bold_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_16"
+            android:background="@drawable/selector_button_tour"
+            android:drawableLeft="@drawable/ic_start_tour"
+            android:drawablePadding="8dp"
+            android:enabled="false"
+            android:gravity="center"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="4dp"
+            android:text="@string/start_patrolling"
+            android:textColor="@color/white_sdk"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_control_right_side"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingEnd="@dimen/dimen_7">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/btn_record_video"
+                    android:layout_width="@dimen/dimen_42"
+                    android:layout_height="@dimen/dimen_42"
+                    android:layout_margin="@dimen/dimen_11"
+                    android:background="@drawable/bg_control_live_view"
+                    android:src="@drawable/ic_stop_record"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/white_sdk" />
+
+                <ProgressBar
+                    android:id="@+id/loadingRecoding"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:elevation="@dimen/dimen_10"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/btn_record_video"
+                    app:layout_constraintEnd_toEndOf="@+id/btn_record_video"
+                    app:layout_constraintStart_toStartOf="@+id/btn_record_video"
+                    app:layout_constraintTop_toTopOf="@+id/btn_record_video" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <ImageButton
+                android:id="@+id/btn_capture_image"
+                android:layout_width="@dimen/dimen_42"
+                android:layout_height="@dimen/dimen_42"
+                android:layout_margin="@dimen/dimen_11"
+                android:background="@drawable/bg_control_live_view"
+                android:src="@drawable/ic_take_picuture_snap_shot" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/pan_expand"
+            android:layout_width="@dimen/dimen_179"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="-179dp"
+            android:background="@drawable/bg_control_right_side"
+            android:elevation="@dimen/dimen_10"
+            android:gravity="center_vertical"
+            android:visibility="visible">
+
+            <include
+                android:id="@+id/pan_layout"
+                layout="@layout/layout_pan_tilt" />
+
+            <ImageButton
+                android:id="@+id/btn_record_video_pan"
+                android:layout_width="@dimen/dimen_42"
+                android:layout_height="@dimen/dimen_42"
+                android:layout_below="@id/pan_layout"
+                android:layout_marginStart="@dimen/dimen_31"
+                android:layout_marginTop="@dimen/dimen_56"
+                android:background="@drawable/bg_control_live_view"
+                android:src="@drawable/ic_un_recording"
+                app:tint="@color/white_sdk" />
+
+            <ProgressBar
+                android:id="@+id/loadingRecoding2"
+                android:layout_width="@dimen/dimen_42"
+                android:layout_height="@dimen/dimen_42"
+                android:layout_below="@id/pan_layout"
+                android:layout_marginStart="@dimen/dimen_31"
+                android:layout_marginTop="@dimen/dimen_56"
+                android:visibility="gone" />
+
+            <ImageButton
+                android:id="@+id/btn_capture_image_pan"
+                android:layout_width="@dimen/dimen_42"
+                android:layout_height="@dimen/dimen_42"
+                android:layout_below="@id/pan_layout"
+                android:layout_marginStart="@dimen/dimen_34"
+                android:layout_marginTop="@dimen/dimen_56"
+                android:layout_toEndOf="@id/btn_record_video_pan"
+                android:background="@drawable/bg_control_live_view"
+                android:src="@drawable/ic_take_picuture_snap_shot" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</layout>

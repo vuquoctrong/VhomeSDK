@@ -63,4 +63,11 @@
             <enum name="RIGHT" value="2" />
         </attr>
     </declare-styleable>
+
+    <declare-styleable name="IconFeature">
+        <attr name="text" format="string"/>
+        <attr name="icon" format="reference"/>
+        <attr name="state_active" format="boolean"/>
+    </declare-styleable>
+
 </resources>

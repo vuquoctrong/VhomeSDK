@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bgr_bottom_sheet"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="50dp"
+            android:layout_height="4dp"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_16"
+            app:cardBackgroundColor="#DCDCDC"
+            app:cardElevation="0dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitle"
+            style="@style/text_bold_16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_16"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:gravity="center"
+            android:text="Thông báo báo động"
+            tools:ignore="HardcodedText" />
+
+        <View
+            android:id="@+id/viewDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_16"
+            android:background="#CECECE" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_20"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:layout_marginBottom="@dimen/dimen_20">
+
+            <TextView
+                android:id="@+id/cbNotification24h"
+                style="@style/text_16"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dimen_40"
+                android:gravity="center_vertical"
+                android:text="@string/notification_smart_setting_24h"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/cbTurnOffNotification"
+                style="@style/text_16"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dimen_40"
+                android:gravity="center_vertical"
+                android:text="@string/notification_smart_setting_turn_off"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cbNotification24h" />
+
+            <TextView
+                android:id="@+id/cbNotificationSchedule"
+                style="@style/text_16"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dimen_40"
+                android:gravity="center_vertical"
+                android:text="@string/notification_smart_setting_scheduled"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cbTurnOffNotification" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cbNotification24hValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:button="@drawable/bg_radio_select"
+                android:checked="true"
+                android:clickable="false"
+                android:enabled="false"
+                app:layout_constraintBottom_toBottomOf="@+id/cbNotification24h"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/cbNotification24h" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cbTurnOffNotificationValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:button="@drawable/bg_radio_select"
+                android:checked="true"
+                android:clickable="false"
+                android:enabled="false"
+                app:layout_constraintBottom_toBottomOf="@+id/cbTurnOffNotification"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/cbTurnOffNotification" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cbNotificationScheduleValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:button="@drawable/bg_radio_select"
+                android:checked="true"
+                android:clickable="false"
+                android:enabled="false"
+                app:layout_constraintBottom_toBottomOf="@+id/cbNotificationSchedule"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/cbNotificationSchedule" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true">
+
+        <View
+            android:id="@+id/pan_background"
+            android:layout_width="@dimen/dimen_135"
+            android:layout_height="@dimen/dimen_135"
+            android:layout_margin="@dimen/dimen_10"
+            android:background="@drawable/pan_background"
+            android:elevation="@dimen/dimen_5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/btnAuto"
+            style="@style/text_light_bold_10"
+            android:background="@drawable/bg_auto_tracking_selector"
+            android:elevation="@dimen/dimen_8"
+            android:gravity="center"
+            android:textColor="@color/charcoal_grey"
+            app:layout_constraintBottom_toBottomOf="@id/pan_background"
+            app:layout_constraintEnd_toEndOf="@id/pan_background"
+            app:layout_constraintStart_toStartOf="@id/pan_background"
+            app:layout_constraintTop_toTopOf="@id/pan_background" />
+
+        <ImageButton
+            android:id="@+id/btnPanLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/dimen_2"
+            android:background="@color/transparent_sdk"
+            android:elevation="@dimen/dimen_8"
+            android:src="@drawable/ic_back_bt_camera"
+            app:layout_constraintBottom_toBottomOf="@id/btnAuto"
+            app:layout_constraintStart_toStartOf="@id/pan_background"
+            app:layout_constraintTop_toTopOf="@id/btnAuto" />
+
+        <ImageButton
+            android:id="@+id/btnPanUp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_2"
+            android:background="@color/transparent_sdk"
+            android:elevation="@dimen/dimen_8"
+            android:rotation="90"
+            android:src="@drawable/ic_back_bt_camera"
+            app:layout_constraintEnd_toEndOf="@id/btnAuto"
+            app:layout_constraintStart_toStartOf="@id/btnAuto"
+            app:layout_constraintTop_toTopOf="@id/pan_background" />
+
+        <ImageButton
+            android:id="@+id/btnPanRight"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginEnd="@dimen/dimen_2"
+            android:background="@color/transparent_sdk"
+            android:elevation="@dimen/dimen_8"
+            android:rotation="180"
+            android:src="@drawable/ic_back_bt_camera"
+            app:layout_constraintBottom_toBottomOf="@id/btnAuto"
+            app:layout_constraintEnd_toEndOf="@id/pan_background"
+            app:layout_constraintTop_toTopOf="@id/btnAuto" />
+
+        <ImageButton
+            android:id="@+id/btnPanDown"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_2"
+            android:background="@color/transparent_sdk"
+            android:elevation="@dimen/dimen_8"
+            android:rotation="-90"
+            android:src="@drawable/ic_back_bt_camera"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@id/pan_background"
+            app:layout_constraintEnd_toEndOf="@id/btnAuto"
+            app:layout_constraintStart_toStartOf="@id/btnAuto" />
+
+        <View
+            android:id="@+id/viewDisable"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:clickable="true"
+            android:elevation="@dimen/dimen_8"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/pan_background"
+            app:layout_constraintEnd_toEndOf="@+id/pan_background"
+            app:layout_constraintStart_toStartOf="@+id/pan_background"
+            app:layout_constraintTop_toTopOf="@+id/pan_background" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/groupPan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="btnPanDown,btnPanRight,btnPanUp,btnPanLeft,btnAuto,pan_background" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_marginTop="@dimen/margin_16"
+            android:id="@+id/containerFeature"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSavePreset"
+                style="@style/text_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bgr_highlight_preset"
+                android:drawableLeft="@drawable/ic_auto_mode"
+                android:drawablePadding="6dp"
+                android:gravity="center"
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="4dp"
+                android:text="Lưu góc quay"
+                android:textColor="#F8214B"
+                app:layout_constraintEnd_toStartOf="@id/tvPatrol"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPatrol"
+                style="@style/text_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bgr_normal_preset"
+                android:drawableLeft="@drawable/ic_solar_map_point_rotate_linear"
+                android:drawablePadding="6dp"
+                android:gravity="center"
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="4dp"
+                android:text="Tuần tra"
+                android:textColor="@color/color_4e4e4e"
+                app:layout_constraintEnd_toStartOf="@id/tvSaved"
+                app:layout_constraintStart_toEndOf="@id/tvSavePreset"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSaved"
+                style="@style/text_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bgr_normal_preset"
+                android:drawableLeft="@drawable/ic_preset_saved"
+                android:drawablePadding="6dp"
+                android:gravity="center"
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="4dp"
+                android:text="Góc đã lưu"
+                android:textColor="@color/color_4e4e4e"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvPatrol"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvGuide"
+            style="@style/text_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:drawableLeft="@drawable/ic_infomation_hcl"
+            android:drawablePadding="6dp"
+            android:gravity="center"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="4dp"
+            android:text="Gợi ý"
+            android:visibility="gone"
+            android:layout_marginBottom="@dimen/dimen_8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <include
+            android:id="@+id/layoutPreset"
+            layout="@layout/layout_preset"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
