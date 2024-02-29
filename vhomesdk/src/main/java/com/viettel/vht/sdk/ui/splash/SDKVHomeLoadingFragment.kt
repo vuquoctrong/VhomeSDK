@@ -1,5 +1,6 @@
 package com.viettel.vht.sdk.ui.splash
 
+import android.os.Bundle
 import android.widget.TextView
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.viewModels
@@ -137,7 +138,29 @@ class SDKVHomeLoadingFragment :
                 appNavigation.openAddCameraJF()
             }
             Config.SDK_FUNCTION_OPEN_DETAIL_CAMERA_JF ->{
-                appNavigation.openDetailCameraJF()
+                val bundle = Bundle()
+                val idCamera = "68cadfb7-2f64-47be-90c5-5cbd84d5e1af"
+                val serialCamera = "7ceeaf9b3e9b6000"
+                val nameCamera = "7ceeaf9b3e9b6000"
+                bundle.putString(
+                    Define.BUNDLE_KEY.PARAM_DEVICE_SERIAL,
+                    serialCamera
+                )
+                bundle.putString(Define.BUNDLE_KEY.PARAM_DEVICE_ID, idCamera)
+                bundle.putString(Define.BUNDLE_KEY.PARAM_ID, idCamera)
+                bundle.putString(Define.BUNDLE_KEY.PARAM_NAME, nameCamera)
+
+                bundle.putString(Define.BUNDLE_KEY.PARAM_MODEL_CAMERA, "HC23")
+
+                bundle.putString(
+                    Define.BUNDLE_KEY.PARAM_STATUS_SHARE, ""
+                )
+
+                bundle.putString(
+                    Define.BUNDLE_KEY.PARAM_PERMISSIONS, ""
+                )
+
+                appNavigation.openDetailCameraJF(bundle)
             }
         }
     }

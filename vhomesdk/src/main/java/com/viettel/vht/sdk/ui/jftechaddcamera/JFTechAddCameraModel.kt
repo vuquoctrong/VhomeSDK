@@ -333,7 +333,7 @@ class JFTechAddCameraModel @Inject constructor(
 
     fun createCameraIOTPlatform(serialNumber: String, isInDoor: Boolean) {
         viewModelScope.launch(Dispatchers.IO + exceptionHandler) {
-            addDeviceRepository.createCameraJF(serialNumber, serialNumber, currentOrgId(), isInDoor)
+            addDeviceRepository.createCameraJF(serialNumber, serialNumber, rxPreferences.getOrgIDAccount(), isInDoor)
                 .collect { result ->
                     if (result.isSuccess && result.getOrNull() != null) {
                         uistate.postValue(UIState.CreateDeviceIOTPlatformSuccess(result.getOrNull()!!))

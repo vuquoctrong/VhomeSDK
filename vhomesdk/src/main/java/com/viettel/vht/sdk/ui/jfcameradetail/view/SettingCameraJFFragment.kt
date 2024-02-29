@@ -29,6 +29,7 @@ import com.vht.sdkcore.utils.showCustomToast
 import com.viettel.vht.sdk.R
 import com.viettel.vht.sdk.databinding.FragmentSettingCameraJfBinding
 import com.viettel.vht.sdk.eventbus.EventBusPushInfo
+import com.viettel.vht.sdk.funtionsdk.VHomeSDKManager
 import com.viettel.vht.sdk.jfmanager.CommandJF
 import com.viettel.vht.sdk.jfmanager.JFCameraManager
 import com.viettel.vht.sdk.model.camera_cloud.CloudStorageRegistered
@@ -61,6 +62,9 @@ class SettingCameraJFFragment :
 
     @Inject
     lateinit var appNavigation: AppNavigation
+
+    @Inject
+    lateinit var vHomeSDKManager: VHomeSDKManager
 
 
     override val layoutId = R.layout.fragment_setting_camera_jf
@@ -533,6 +537,8 @@ class SettingCameraJFFragment :
                         showImage = true,
                         onFinish = {
                            // appNavigation.popBackStackToHome()
+                            requireActivity().finish()
+                            vHomeSDKManager.vHomeDetailCameraJFSDKListener?.onDeleteCameraJF(true)
                         })
                 }
 
@@ -540,6 +546,7 @@ class SettingCameraJFFragment :
                     showHideLoading(false)
                     showAlertDialog("Lỗi đồng bộ thiết bị")
                     Timber.tag("ERROR").e("${it.exception}")
+                    vHomeSDKManager.vHomeDetailCameraJFSDKListener?.onDeleteCameraJF(false)
                 }
             }
         })

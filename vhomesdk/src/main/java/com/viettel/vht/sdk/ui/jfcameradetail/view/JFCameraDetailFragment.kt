@@ -1232,7 +1232,7 @@ class JFCameraDetailFragment : BaseFragment<FragmentJfcameraDetailBinding, JFCam
         }
         binding.toolbar.setOnLeftClickListener {
             if (checkStopRecord()) return@setOnLeftClickListener
-            appNavigation.navigateUp()
+            requireActivity().finish()
         }
 
         binding.layoutControl.btnTalk.setOnClickListener {

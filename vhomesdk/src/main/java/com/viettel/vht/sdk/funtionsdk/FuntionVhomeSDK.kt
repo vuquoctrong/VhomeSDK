@@ -6,6 +6,7 @@ import com.vht.sdkcore.pref.RxPreferences
 import com.vht.sdkcore.utils.AppLog
 import com.vht.sdkcore.utils.Constants
 import com.vht.sdkcore.utils.Define
+import com.viettel.vht.sdk.model.DeviceDataResponse
 import com.viettel.vht.sdk.network.AuthApiInterface
 import com.viettel.vht.sdk.network.NetworkEvent
 import com.viettel.vht.sdk.network.NetworkState
@@ -23,11 +24,27 @@ import timber.log.Timber
 import javax.inject.Singleton
 
 interface VHomeSDKManager {
+
+    var vHomeSDKAddCameraJFListener: VHomeSDKAddCameraJFListener?
+
+    var vHomeDetailCameraJFSDKListener: VHomeDetailCameraJFSDKListener?
+
     fun loginAccountVHome(phone: String?, password: String?, listener: VHomeSDKLoginListener?)
 
-    fun openAddCameraJF(context: Context)
-    fun openDetailCameraJF(context: Context)
+    fun openAddCameraJF(context: Context, listener: VHomeSDKAddCameraJFListener?)
 
+    fun openDetailCameraJF(context: Context,listener: VHomeDetailCameraJFSDKListener?)
+
+}
+
+interface VHomeSDKAddCameraJFListener {
+    fun onSuccess(token: DeviceDataResponse)
+
+    fun onFailed(messageError: String)
+}
+
+interface VHomeDetailCameraJFSDKListener {
+    fun onDeleteCameraJF(statusDelete: Boolean)
 }
 
 interface VHomeSDKLoginListener {
@@ -42,10 +59,10 @@ class VHomeSDKManagerImpl constructor(
     private val coroutineScope: CoroutineScope,
     private val rxPreferences: RxPreferences,
     private val authApiInterface: AuthApiInterface,
-    private val  apiInterface: AuthApiInterface,
-    private val networkEvent: NetworkEvent
+    private val apiInterface: AuthApiInterface,
+    private val networkEvent: NetworkEvent,
 
-) : VHomeSDKManager {
+    ) : VHomeSDKManager {
 
     private var errorCode: Int? = 0
 
@@ -72,6 +89,10 @@ class VHomeSDKManagerImpl constructor(
                 }
         }
     }
+
+    override var vHomeSDKAddCameraJFListener: VHomeSDKAddCameraJFListener? = null
+
+    override var vHomeDetailCameraJFSDKListener: VHomeDetailCameraJFSDKListener? = null
 
     override fun loginAccountVHome(
         phone: String?,
@@ -110,15 +131,18 @@ class VHomeSDKManagerImpl constructor(
 
     }
 
-    override fun openAddCameraJF(context: Context) {
+    override fun openAddCameraJF(context: Context, listener: VHomeSDKAddCameraJFListener?) {
         val intent = Intent(context, SDKVHomeMainActivity::class.java)
         intent.putExtra(Config.SDK_DATA_FUNCTION_VHOME, Config.SDK_FUNCTION_OPEN_ADD_CAMERA_JF)
+        vHomeSDKAddCameraJFListener = listener
         context.startActivity(intent)
     }
 
-    override fun openDetailCameraJF(context: Context) {
+
+    override fun openDetailCameraJF(context: Context,listener: VHomeDetailCameraJFSDKListener?) {
         val intent = Intent(context, SDKVHomeMainActivity::class.java)
         intent.putExtra(Config.SDK_DATA_FUNCTION_VHOME, Config.SDK_FUNCTION_OPEN_DETAIL_CAMERA_JF)
+        vHomeDetailCameraJFSDKListener = listener
         context.startActivity(intent)
     }
 }

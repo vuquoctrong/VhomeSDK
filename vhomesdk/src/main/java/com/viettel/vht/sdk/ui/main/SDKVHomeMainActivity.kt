@@ -23,6 +23,7 @@ import com.vht.sdkcore.utils.dialog.CommonAlertDialog
 import com.vht.sdkcore.utils.dialog.CommonAlertDialogNotification
 import com.viettel.vht.sdk.R
 import com.viettel.vht.sdk.databinding.ActivitySdkVhomeMainBinding
+import com.viettel.vht.sdk.funtionsdk.VHomeSDKAddCameraJFListener
 import com.viettel.vht.sdk.jfmanager.JFCameraManager
 import com.viettel.vht.sdk.model.home.RequestGetAppLogUpLoadLink
 import com.viettel.vht.sdk.model.home.RequestUpLoadAppLog
@@ -69,6 +70,7 @@ class SDKVHomeMainActivity : BaseActivity<ActivitySdkVhomeMainBinding, MainViewM
     private val viewModel: MainViewModel by viewModels()
     private var logID: String? = null
     private var isTheFirstTime: Boolean = true
+
 
     override fun getVM() = viewModel
 

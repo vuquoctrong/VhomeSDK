@@ -39,7 +39,7 @@ class JFChooseTypeAddFragment : BaseFragment<FragmentJfChooseTypeAddBinding, JFT
     override fun setOnClick() {
         super.setOnClick()
         binding.toolBar.setOnLeftClickListener {
-            appNavigation.navigateUp()
+            requireActivity().finish()
         }
         binding.rlAddWifi.setOnClickListener {
             appNavigation.openWifiConnectCameraJF()
