@@ -38,7 +38,7 @@ interface VHomeSDKManager {
 }
 
 interface VHomeSDKAddCameraJFListener {
-    fun onSuccess(token: DeviceDataResponse)
+    fun onSuccess(data: DeviceDataResponse)
 
     fun onFailed(messageError: String)
 }
