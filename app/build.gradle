@@ -23,7 +23,7 @@ android {
             resValue "string", "app_name", "VHome Test"
         }
         release {
-            minifyEnabled true
+            minifyEnabled false
             // shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             buildConfigField("String", "APP_NAME", "\"Viettel Home\"")

@@ -69,7 +69,7 @@ android {
 
         }
         release {
-            minifyEnabled true
+            minifyEnabled false
             shrinkResources false
 
             buildConfigField "String", "APP_KEY", "\"nlaDOC8uS6Xn7L0JIcPD\""
