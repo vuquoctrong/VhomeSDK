@@ -17,6 +17,7 @@ import com.viettel.vht.sdk.jfmanager.JFCameraManager
 import com.viettel.vht.sdk.R
 import com.viettel.vht.sdk.databinding.FragmentJfLanConnectBinding
 import com.viettel.vht.sdk.eventbus.EventBusPushInfo
+import com.viettel.vht.sdk.funtionsdk.VHomeSDKManager
 import com.viettel.vht.sdk.navigation.AppNavigation
 import dagger.hilt.android.AndroidEntryPoint
 import org.greenrobot.eventbus.EventBus
@@ -32,6 +33,9 @@ class JFLanConnectFragment : BaseFragment<FragmentJfLanConnectBinding, JFTechAdd
 
     @Inject
     lateinit var appNavigation: AppNavigation
+
+    @Inject
+    lateinit var vHomeSDKManager: VHomeSDKManager
 
 
     override val layoutId: Int
@@ -130,7 +134,6 @@ class JFLanConnectFragment : BaseFragment<FragmentJfLanConnectBinding, JFTechAdd
                             val bundle = Bundle().apply {
                                 putSerializable(Define.BUNDLE_KEY.PARAM_DEVICE_ITEM, state.device)
                             }
-                            appNavigation.openLanToSetNameCameraJF(bundle)
                             EventBus.getDefault().post(
                                 EventBusPushInfo(
                                     viewModel.devID,
@@ -138,6 +141,8 @@ class JFLanConnectFragment : BaseFragment<FragmentJfLanConnectBinding, JFTechAdd
                                     null
                                 )
                             )
+                            vHomeSDKManager.vHomeSDKAddCameraJFListener?.onSuccess(state.device)
+                            requireActivity().finish()
                         },
                         showImage = true
                     )

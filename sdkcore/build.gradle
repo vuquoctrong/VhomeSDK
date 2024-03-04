@@ -71,7 +71,7 @@ android {
 
         }
         release {
-            minifyEnabled true
+            minifyEnabled false
             shrinkResources false
             buildConfigField("String", "APP_NAME", "\"VHome Test\"")
             resValue "string", "app_name", "VHome Test"

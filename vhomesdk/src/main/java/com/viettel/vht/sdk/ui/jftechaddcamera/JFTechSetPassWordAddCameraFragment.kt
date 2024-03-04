@@ -33,6 +33,7 @@ import com.vht.sdkcore.utils.toastMessage
 import com.viettel.vht.sdk.jfmanager.JFCameraManager
 import com.viettel.vht.sdk.R
 import com.viettel.vht.sdk.databinding.FragmentSetPasswordAddCameraJftechBinding
+import com.viettel.vht.sdk.funtionsdk.VHomeSDKManager
 import com.viettel.vht.sdk.model.DeviceDataResponse
 import com.viettel.vht.sdk.navigation.AppNavigation
 import com.viettel.vht.sdk.utils.getArgSerializable
@@ -65,6 +66,8 @@ class JFTechSetPassWordAddCameraFragment :
 
     @Inject
     lateinit var appNavigation: AppNavigation
+    @Inject
+    lateinit var sdkManager: VHomeSDKManager
 
 
     private var _msgId = 0xff00ff
@@ -532,7 +535,9 @@ class JFTechSetPassWordAddCameraFragment :
                 val bundle = Bundle().apply {
                     putSerializable(Define.BUNDLE_KEY.PARAM_DEVICE_ITEM, device)
                 }
-                appNavigation.openSetDeviceNameCameraJF(bundle)
+                sdkManager.vHomeSDKAddCameraJFListener?.onSuccess(device)
+              //  appNavigation.openSetDeviceNameCameraJF(bundle)
+                requireActivity().finish()
             },
             showImage = true
         )
@@ -621,7 +626,9 @@ class JFTechSetPassWordAddCameraFragment :
                                         val bundle = Bundle().apply {
                                             putSerializable(Define.BUNDLE_KEY.PARAM_DEVICE_ITEM, device)
                                         }
-                                        appNavigation.openSetDeviceNameCameraJF(bundle)
+                                      //  appNavigation.openSetDeviceNameCameraJF(bundle)
+                                        sdkManager.vHomeSDKAddCameraJFListener?.onSuccess(device)
+                                        requireActivity().finish()
                                     }
 //                            setNewPasswordDevice()
 //                            verifyCodeDevice()
