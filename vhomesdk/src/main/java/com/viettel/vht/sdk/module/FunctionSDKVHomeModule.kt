@@ -4,6 +4,7 @@ import android.content.Context
 import com.vht.sdkcore.pref.RxPreferences
 import com.viettel.vht.sdk.funtionsdk.VHomeSDKManager
 import com.viettel.vht.sdk.funtionsdk.VHomeSDKManagerImpl
+import com.viettel.vht.sdk.network.ApiInterface
 import com.viettel.vht.sdk.network.AuthApiInterface
 import com.viettel.vht.sdk.network.NetworkEvent
 import dagger.Module
@@ -24,7 +25,7 @@ class FunctionSDKVHomeModule {
         coroutineScope: CoroutineScope,
         rxPreferences: RxPreferences,
         authApiInterface: AuthApiInterface,
-        apiInterface: AuthApiInterface,
+        apiInterface: ApiInterface,
         networkEvent: NetworkEvent
     ): VHomeSDKManager = VHomeSDKManagerImpl(context, coroutineScope,rxPreferences,authApiInterface,apiInterface,networkEvent)
 }

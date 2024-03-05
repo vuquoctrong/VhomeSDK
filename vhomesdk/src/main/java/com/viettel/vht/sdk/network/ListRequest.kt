@@ -2,10 +2,11 @@ package com.viettel.vht.sdk.network
 
 import android.app.Application
 import android.content.Context
-import com.vht.sdkcore.BuildConfig
 import com.vht.sdkcore.file.AppLogFileManager
 import com.vht.sdkcore.utils.Constants
 import com.vht.sdkcore.utils.HTTPAppLogModel
+import com.viettel.vht.sdk.BuildConfig
+import com.viettel.vht.sdk.utils.Config
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -71,9 +72,9 @@ class ListRequest @Inject constructor(
                         timeStamp = currentTime,
                         actionId = actionId,
                         deviceId = serialCamera,
-                        serverDomainIP = BuildConfig.BASE_URL,
+                        serverDomainIP = Config.sdkBASE_URL,
                         httpMethod = request.method,
-                        httpURL = request.url.toString().replace(BuildConfig.BASE_URL, ""),
+                        httpURL = request.url.toString().replace(Config.sdkBASE_URL, ""),
                         httpVersion = Constants.LOG_DEFAULT,
                         httpResponseCode = Constants.NetworkRequestCode.REQUEST_CODE_200.toString(),
                         traceParent = traceParent
@@ -106,10 +107,10 @@ class ListRequest @Inject constructor(
                             screenId = currentNetworkRequest?.screenID ?: Constants.LOG_DEFAULT,
                             actionId = currentNetworkRequest?.actionID ?: Constants.LOG_DEFAULT,
                             deviceId = currentNetworkRequest?.serialCamera ?: Constants.LOG_DEFAULT,
-                            serverDomainIP = BuildConfig.BASE_URL,
+                            serverDomainIP = Config.sdkBASE_URL,
                             httpMethod = currentNetworkRequest?.httpMethod ?: Constants.EMPTY,
                             httpURL = currentNetworkRequest?.httpURL?.replace(
-                                BuildConfig.BASE_URL,
+                                Config.sdkBASE_URL,
                                 Constants.EMPTY
                             ) ?: Constants.EMPTY,
                             httpVersion = Constants.LOG_DEFAULT,

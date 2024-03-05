@@ -1,9 +1,10 @@
 package com.viettel.vht.sdk.network
 
 import com.google.gson.Gson
-import com.vht.sdkcore.BuildConfig
 import com.vht.sdkcore.pref.RxPreferences
+import com.viettel.vht.sdk.BuildConfig
 import com.viettel.vht.sdk.model.login.LoginResponse
+import com.viettel.vht.sdk.utils.Config
 import okhttp3.Authenticator
 import okhttp3.Request
 import okhttp3.Response
@@ -45,7 +46,7 @@ class TokenAuthenticator @Inject constructor(
     }
 
     private fun refreshToken(): Boolean {
-        val refreshUrl = URL("${BuildConfig.BASE_URL}/api/vhome/refresh")
+        val refreshUrl = URL("${Config.sdkBASE_URL}/api/vhome/refresh")
         val urlConnection = refreshUrl.openConnection() as HttpURLConnection
         urlConnection.apply {
             doInput = true

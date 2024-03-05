@@ -45,7 +45,11 @@
     <application>
         <activity
             android:name=".ui.main.SDKVHomeMainActivity"
-            android:exported="false" />
+            android:configChanges="orientation|screenSize"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
     </application>
 
 </manifest>
