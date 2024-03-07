@@ -28,9 +28,6 @@ class SDKVHomeLoadingViewModel @Inject constructor(
                 _loginResponse.value = loginResponse
             }
         }
-        GlobalScope.launch{
-
-        }
     }
 
 }

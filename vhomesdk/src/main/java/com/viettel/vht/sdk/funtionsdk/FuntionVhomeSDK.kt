@@ -3,6 +3,7 @@ package com.viettel.vht.sdk.funtionsdk
 import android.content.Context
 import android.content.Intent
 import android.graphics.Bitmap
+import androidx.core.content.ContextCompat.startActivity
 import com.vht.sdkcore.pref.RxPreferences
 import com.vht.sdkcore.utils.AppLog
 import com.vht.sdkcore.utils.Constants
@@ -27,6 +28,7 @@ import okhttp3.RequestBody.Companion.toRequestBody
 import org.json.JSONObject
 import timber.log.Timber
 import javax.inject.Singleton
+
 
 interface VHomeSDKManager {
 
@@ -165,20 +167,25 @@ class VHomeSDKManagerImpl constructor(
     }
 
     override fun openAddCameraJF(context: Context, listener: VHomeSDKAddCameraJFListener?) {
-        vHomeSDKAddCameraJFListener = listener
-        val intent = Intent(this.context, SDKVHomeMainActivity::class.java)
-        intent.putExtra(Config.SDK_DATA_FUNCTION_VHOME, Config.SDK_FUNCTION_OPEN_ADD_CAMERA_JF)
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-        this.context.startActivity(intent)
+        coroutineScope.launch(Dispatchers.Main){
+            vHomeSDKAddCameraJFListener = listener
+            val intent = Intent(context, SDKVHomeMainActivity::class.java)
+            intent.putExtra(Config.SDK_DATA_FUNCTION_VHOME, Config.SDK_FUNCTION_OPEN_ADD_CAMERA_JF)
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            context.startActivity(intent)
+        }
+
     }
 
 
     override fun openDetailCameraJF(context: Context,listener: VHomeDetailCameraJFSDKListener?) {
-        vHomeDetailCameraJFSDKListener = listener
-        val intent = Intent(this.context, SDKVHomeMainActivity::class.java)
-        intent.putExtra(Config.SDK_DATA_FUNCTION_VHOME, Config.SDK_FUNCTION_OPEN_DETAIL_CAMERA_JF)
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-        this.context.startActivity(intent)
+        coroutineScope.launch(Dispatchers.Main){
+            vHomeDetailCameraJFSDKListener = listener
+            val intent = Intent(context, SDKVHomeMainActivity::class.java)
+            intent.putExtra(Config.SDK_DATA_FUNCTION_VHOME, Config.SDK_FUNCTION_OPEN_DETAIL_CAMERA_JF)
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            context.startActivity(intent)
+        }
     }
 
     override fun setLogcat(boolean: Boolean) {
