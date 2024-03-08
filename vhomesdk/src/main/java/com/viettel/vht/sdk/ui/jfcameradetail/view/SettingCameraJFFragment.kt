@@ -34,12 +34,14 @@ import com.viettel.vht.sdk.jfmanager.CommandJF
 import com.viettel.vht.sdk.jfmanager.JFCameraManager
 import com.viettel.vht.sdk.model.camera_cloud.CloudStorageRegistered
 import com.viettel.vht.sdk.navigation.AppNavigation
+import com.viettel.vht.sdk.ui.cardsetting.CardSettingJFViewModel
 import com.viettel.vht.sdk.ui.jfcameradetail.smart_feature.IAlarmPushSetView
 import com.viettel.vht.sdk.ui.jfcameradetail.smart_feature.IHumanDetectView
 import com.viettel.vht.sdk.ui.jfcameradetail.update_firmware.UpdateFirmwareCameraJFViewModel
 import com.viettel.vht.sdk.ui.jfcameradetail.view.dialog.BottomSheetSettingCameraJFFragment
 import com.viettel.vht.sdk.ui.jfcameradetail.view.dialog.BottomSheetSettingDateFormatJFFragment
 import com.viettel.vht.sdk.ui.jfcameradetail.view.dialog.BottomSheetSettingVolumeCameraJFFragment
+import com.viettel.vht.sdk.ui.jfcameradetail.view.dialog.BottomSheetSettingWhiteLightCameraJFFragment
 import com.viettel.vht.sdk.ui.jfcameradetail.view.dialog.BottomSheetSmartSettingNotificationCameraJFFragment
 import com.viettel.vht.sdk.ui.jfcameradetail.view.dialog.SmartSettingNotificationCameraJF
 import com.viettel.vht.sdk.ui.jfcameradetail.view.dialog.WhiteLight
@@ -252,8 +254,7 @@ class SettingCameraJFFragment :
                         binding.tvInforCard.setOnClickListener {
                             val bundle = Bundle()
                             bundle.putString(Define.BUNDLE_KEY.PARAM_ID, viewModel.devId)
-                            //todo open setting card
-                          //  appNavigation.openCardSettingJFCamera(bundle)
+                            appNavigation.openCardSettingJFCamera(bundle)
                         }
                     } else {
                         binding.tvInforCard.text = getText(com.vht.sdkcore.R.string.string_no_memory_card)
@@ -323,9 +324,7 @@ class SettingCameraJFFragment :
                     Bundle().apply {
                         putString(Define.BUNDLE_KEY.PARAM_DEVICE_SERIAL, viewModel.devId)
                     }.let { bundle ->
-
-                        //todo open mowr FirmareJF
-                        //appNavigation.openUpdateFirmwareJFCamera(bundle)
+                        appNavigation.openUpdateFirmwareJFCamera(bundle)
                     }
                 }
 
@@ -398,9 +397,7 @@ class SettingCameraJFFragment :
                             arguments?.getString(Define.BUNDLE_KEY.PARAM_MODEL_CAMERA)
                         )
                     }
-
-                    //todo open info setting camera
-                   // appNavigation.openInfoSettingCameraJF(bundle)
+                    appNavigation.openInfoSettingCameraJF(bundle)
                 }
 
                 Config.EventKey.EVENT_SETTING_CAMERA_REBOOT_DEVICE -> {
@@ -536,7 +533,6 @@ class SettingCameraJFFragment :
                         resTitleString = "Xóa thiết bị thành công",
                         showImage = true,
                         onFinish = {
-                           // appNavigation.popBackStackToHome()
                             requireActivity().finish()
                             vHomeSDKManager.vHomeDetailCameraJFSDKListener?.onDeleteCameraJF(true)
                         })
@@ -599,9 +595,7 @@ class SettingCameraJFFragment :
                                     val bundle = bundleOf().apply {
                                         putString(Define.BUNDLE_KEY.PARAM_ID, viewModel.deviceId)
                                     }
-
-                                    //todo
-                                    //appNavigation.openSpreadCameraFragment(bundle)
+                                    appNavigation.openSpreadCameraFragment(bundle)
                                 }
                             } else {
                                 binding.clSettingSpreadCamera.gone()
@@ -789,8 +783,7 @@ class SettingCameraJFFragment :
 //            listCloudPackage?.let {
 //                bundle.putParcelableArrayList(Define.BUNDLE_KEY.PARAM_LIST_CLOUD, ArrayList(it))
 //            }
-            //todo  open cloud JF
-          //  appNavigation.openCloudStorageJFCamera(bundle)
+            appNavigation.openCloudStorageJFCamera(bundle)
         }
 
         binding.btDelete.setOnClickListener {
@@ -839,39 +832,39 @@ class SettingCameraJFFragment :
                 "BottomSheetSmartSettingNotificationFragment"
             )
         }
-//        binding.tvSettingNotification.setOnClickListener {
-//            val bundle = Bundle().apply {
-//                putString(Define.BUNDLE_KEY.PARAM_ID, viewModel.devId)
-//            }
-//            appNavigation.openListScheduleAlarmJFCamera(bundle)
-//        }
-//
-//        binding.clSettingAlarmFeature.setOnClickListener {
-//            val bundle = Bundle().apply {
-//                putString(Define.BUNDLE_KEY.PARAM_ID, viewModel.devId)
-//            }
-//            appNavigation.openSettingAlarmFeatureCameraJFFragment(bundle)
-//        }
-//
-//        binding.clWhiteLight.setOnClickListener {
-//            if (viewModel.whiteLight == null || viewModel.cameraParam == null) {
-//                return@setOnClickListener
-//            }
-//            BottomSheetSettingWhiteLightCameraJFFragment.newInstance().show(
-//                childFragmentManager,
-//                BottomSheetSettingWhiteLightCameraJFFragment.TAG
-//            )
-//        }
-//        binding.btnChangePasswordImageEncoding.setOnClickListener {
-//            val bundle = Bundle().apply {
-//                putString(Define.BUNDLE_KEY.PARAM_ID, viewModel.devId)
-//            }
-//            appNavigation.openChangePasswordImageEncodingFragment(bundle)
-//        }
+        binding.tvSettingNotification.setOnClickListener {
+            val bundle = Bundle().apply {
+                putString(Define.BUNDLE_KEY.PARAM_ID, viewModel.devId)
+            }
+            appNavigation.openListScheduleAlarmJFCamera(bundle)
+        }
 
-//        binding.clSettingSpreadCamera.setOnClickListener {
-//            appNavigation.openSpreadCameraFragment()
-//        }
+        binding.clSettingAlarmFeature.setOnClickListener {
+            val bundle = Bundle().apply {
+                putString(Define.BUNDLE_KEY.PARAM_ID, viewModel.devId)
+            }
+            appNavigation.openSettingAlarmFeatureCameraJFFragment(bundle)
+        }
+
+        binding.clWhiteLight.setOnClickListener {
+            if (viewModel.whiteLight == null || viewModel.cameraParam == null) {
+                return@setOnClickListener
+            }
+            BottomSheetSettingWhiteLightCameraJFFragment.newInstance().show(
+                childFragmentManager,
+                BottomSheetSettingWhiteLightCameraJFFragment.TAG
+            )
+        }
+        binding.btnChangePasswordImageEncoding.setOnClickListener {
+            val bundle = Bundle().apply {
+                putString(Define.BUNDLE_KEY.PARAM_ID, viewModel.devId)
+            }
+            appNavigation.openChangePasswordImageEncodingFragment(bundle)
+        }
+
+        binding.clSettingSpreadCamera.setOnClickListener {
+            appNavigation.openSpreadCameraFragment()
+        }
     }
 
     private fun flipImageCamera() {

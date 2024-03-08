@@ -1,4 +1,4 @@
-package com.viettel.vht.sdk.ui.jfcameradetail.view
+package com.viettel.vht.sdk.ui.cardsetting
 
 import android.os.Message
 import androidx.lifecycle.viewModelScope

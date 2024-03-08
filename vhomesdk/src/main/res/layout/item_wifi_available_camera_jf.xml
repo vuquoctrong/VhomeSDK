@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/dimen_5"
+        android:paddingVertical="@dimen/dimen_15">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivStatusWifi"
+            android:layout_width="@dimen/dimen_20"
+            android:layout_height="@dimen/dimen_20"
+            android:scaleType="center"
+            android:src="@drawable/ic_wifi_connection_3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivLockWifi"
+            android:layout_width="@dimen/dimen_10"
+            android:layout_height="@dimen/dimen_10"
+            android:layout_margin="@dimen/dimen_12"
+            android:scaleType="center"
+            android:src="@drawable/ic_lock_wifi_connection"
+            app:layout_constraintStart_toStartOf="@+id/ivStatusWifi"
+            app:layout_constraintTop_toTopOf="@+id/ivStatusWifi" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNameWifi"
+            style="@style/text_bold_14"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivStatusWifi"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Wifi 122221" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

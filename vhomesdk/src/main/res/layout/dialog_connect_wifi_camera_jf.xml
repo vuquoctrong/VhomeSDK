@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:background="#AAAAAA">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_20"
+            android:background="@drawable/bg_white_corner_28_white"
+            android:padding="@dimen/dimen_20"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_max="@dimen/dimen_374">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitle"
+                style="@style/text_bold_16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/string_input_info_new_network"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_1"
+                android:layout_marginTop="@dimen/dimen_3"
+                android:background="#CECECE"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitleNameWifi"
+                style="@style/text_14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:text="@string/name_of_network"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/inputNameWifi"
+                style="@style/text_14"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_50"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:background="@drawable/bg_edittext_name_camera_jf"
+                android:gravity="center_vertical"
+                android:hint="@string/string_input_name_of_network"
+                android:inputType="text"
+                android:paddingHorizontal="@dimen/dimen_50"
+                android:textColor="@color/black"
+                android:textColorHint="#8E8E8E"
+                app:layout_constraintTop_toBottomOf="@id/tvTitleNameWifi"
+                tools:layout_editor_absoluteX="20dp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/dimen_20"
+                android:layout_height="@dimen/dimen_20"
+                android:layout_marginStart="@dimen/dimen_20"
+                android:scaleType="center"
+                android:src="@drawable/ic_wifi_connection_3"
+                android:tint="@color/color_AEAEAE"
+                app:layout_constraintBottom_toBottomOf="@+id/inputNameWifi"
+                app:layout_constraintStart_toStartOf="@+id/inputNameWifi"
+                app:layout_constraintTop_toTopOf="@+id/inputNameWifi" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitlePassword"
+                style="@style/text_14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:text="@string/password"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/inputNameWifi" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/inputPassword"
+                style="@style/text_14"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_50"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:background="@drawable/bg_edittext_name_camera_jf"
+                android:gravity="center_vertical"
+                android:hint="@string/string_input_password_of_network"
+                android:inputType="textPassword"
+                android:paddingHorizontal="@dimen/dimen_50"
+                android:textColor="@color/black"
+                android:textColorHint="#8E8E8E"
+                app:layout_constraintTop_toBottomOf="@id/tvTitlePassword" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/dimen_20"
+                android:layout_height="@dimen/dimen_20"
+                android:layout_marginStart="@dimen/dimen_20"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_lock_wifi_connection"
+                android:tint="@color/color_AEAEAE"
+                app:layout_constraintBottom_toBottomOf="@+id/inputPassword"
+                app:layout_constraintStart_toStartOf="@+id/inputPassword"
+                app:layout_constraintTop_toTopOf="@+id/inputPassword" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivShowPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:paddingHorizontal="@dimen/dimen_16"
+                android:src="@drawable/ic_eye_hide_password"
+                app:layout_constraintBottom_toBottomOf="@id/inputPassword"
+                app:layout_constraintEnd_toEndOf="@id/inputPassword"
+                app:layout_constraintTop_toTopOf="@id/inputPassword" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnCancel"
+                style="@style/text_bold_16"
+                android:layout_width="@dimen/dimen_120"
+                android:layout_height="@dimen/dimen_40"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:background="@drawable/bg_button_setting_cancel"
+                android:gravity="center"
+                android:text="@string/cancel_button"
+                android:textAllCaps="false"
+                android:textColor="@color/color_F8214B"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/btnConfirm"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/inputPassword" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnConfirm"
+                style="@style/text_bold_16"
+                android:layout_width="@dimen/dimen_120"
+                android:layout_height="@dimen/dimen_40"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:background="@drawable/bg_button_setting_submit"
+                android:gravity="center"
+                android:text="@string/connect"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btnCancel"
+                app:layout_constraintTop_toBottomOf="@id/inputPassword" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

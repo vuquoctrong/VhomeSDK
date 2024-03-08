@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F5F5F5">
+
+        <com.viettel.vht.sdk.utils.custom.AppToolbar
+            android:id="@+id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/dimen_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:src_left="@drawable/ic_app_back"
+            app:string_title="@string/string_toolbar_memory_card" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/containerInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_20"
+            android:background="@drawable/bg_information_card"
+            android:paddingHorizontal="@dimen/dimen_10"
+            android:paddingVertical="@dimen/dimen_20"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolBar">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvViewInformation"
+                style="@style/text_bold_14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_5"
+                android:text="Thông tin thẻ"
+                android:textColor="@color/black_sdk"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+            <View
+                android:id="@+id/viewLine"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/dimen_5"
+                android:background="#CECECE"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvViewInformation" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitleTotalData"
+                style="@style/text_bold_14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_5"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:text="Dung lượng thẻ:"
+                android:textColor="@color/black_sdk"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/viewLine"
+                tools:ignore="HardcodedText" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTotalData"
+                style="@style/text_14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black_sdk"
+                app:layout_constraintBottom_toBottomOf="@+id/tvTitleTotalData"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvTitleTotalData"
+                tools:text="128GB" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitleUsed"
+                style="@style/text_bold_14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_5"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:text="Đã dùng:"
+                android:textColor="@color/black_sdk"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitleTotalData"
+                tools:ignore="HardcodedText" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTotalUsed"
+                style="@style/text_14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black_sdk"
+                app:layout_constraintBottom_toBottomOf="@+id/tvTitleUsed"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvTitleUsed"
+                tools:text="128GB" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitleEmptyData"
+                style="@style/text_bold_14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_5"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:text="Còn trống:"
+                android:textColor="@color/black_sdk"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitleUsed"
+                tools:ignore="HardcodedText" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTotalAvail"
+                style="@style/text_14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black_sdk"
+                app:layout_constraintBottom_toBottomOf="@+id/tvTitleEmptyData"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvTitleEmptyData"
+                tools:text="128GB" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitleTimeOldSave"
+                style="@style/text_bold_14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_5"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:text="Thời gian lưu trữ cũ nhất:"
+                android:textColor="@color/black_sdk"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitleEmptyData"
+                tools:ignore="HardcodedText" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTimeOldSave"
+                style="@style/text_14"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:textColor="@color/black_sdk"
+                app:layout_constraintBottom_toBottomOf="@+id/tvTitleTimeOldSave"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvTitleTimeOldSave"
+                app:layout_constraintTop_toTopOf="@+id/tvTitleTimeOldSave"
+                tools:text="--:--:-- --/--/---" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/containerRecordMode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_20"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:background="@drawable/bg_information_card"
+            android:paddingHorizontal="@dimen/dimen_10"
+            android:paddingVertical="@dimen/dimen_10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/containerInfo">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitleRecordMode"
+                style="@style/text_bold_14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_5"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:text="Chọn kiểu ghi hình"
+                android:textColor="@color/black_sdk"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+            <View
+                android:id="@+id/viewDividerRecordMode"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/dimen_5"
+                android:background="#CECECE"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTitleRecordMode" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cbRecordModeAlways"
+                style="@style/text_14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_5"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:background="@null"
+                android:button="@drawable/bg_radio_select"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="@dimen/dimen_10"
+                android:paddingVertical="@dimen/dimen_10"
+                android:text="Ghi hình liên tục (24/7)"
+                app:layout_constraintTop_toBottomOf="@id/viewDividerRecordMode"
+                tools:ignore="HardcodedText,RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cbRecordModeMotion"
+                style="@style/text_14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_5"
+                android:background="@null"
+                android:button="@drawable/bg_radio_select"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="@dimen/dimen_10"
+                android:paddingVertical="@dimen/dimen_10"
+                android:text="Chỉ lưu sự kiện"
+                app:layout_constraintTop_toBottomOf="@id/cbRecordModeAlways"
+                tools:ignore="HardcodedText,RtlSymmetry" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/containerFormatting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_20"
+            android:layout_marginBottom="@dimen/dimen_40"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/loadingFormatting"
+                android:layout_width="@dimen/dimen_150"
+                android:layout_height="@dimen/dimen_150"
+                android:src="@drawable/bg_progress_bar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvProgress"
+                style="@style/text_bold_14"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_16"
+                android:gravity="center"
+                app:layout_constraintBottom_toBottomOf="@id/loadingFormatting"
+                app:layout_constraintEnd_toEndOf="@id/loadingFormatting"
+                app:layout_constraintStart_toStartOf="@id/loadingFormatting"
+                app:layout_constraintTop_toTopOf="@id/loadingFormatting"
+                tools:ignore="HardcodedText"
+                tools:text="0%" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvFormatting"
+                style="@style/text_bold_14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_40"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:gravity="center"
+                android:text="Đang định dạng thẻ nhớ, quá trình có thể mất 1 - 2 phút"
+                app:layout_constraintTop_toBottomOf="@id/loadingFormatting"
+                tools:ignore="HardcodedText" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvError"
+            style="@style/text_14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_20"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:layout_marginBottom="@dimen/dimen_30"
+            android:gravity="center"
+            android:text="Định dạng thể nhớ không đúng.\nVui lòng định dạng thẻ nhớ."
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/btFormat"
+            app:layout_constraintTop_toBottomOf="@id/containerRecordMode"
+            tools:ignore="HardcodedText"
+            tools:visibility="visible" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btFormat"
+            style="@style/text_bold_16"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="@dimen/dimen_20"
+            android:layout_marginBottom="@dimen/dimen_60"
+            android:background="@drawable/bg_button_setting_submit"
+            android:gravity="center"
+            android:text="Định dạng thẻ"
+            android:textAllCaps="true"
+            android:textColor="@color/white_sdk"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="160:40"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_percent="0.5"
+            tools:ignore="HardcodedText" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

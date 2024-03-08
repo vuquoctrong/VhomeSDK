@@ -17,5 +17,148 @@
         android:id="@+id/settingCameraJFFragment"
         android:name="com.viettel.vht.sdk.ui.jfcameradetail.view.SettingCameraJFFragment"
         android:label="SettingCameraJFFragment"
-        tools:layout="@layout/fragment_setting_camera_jf"/>
+        tools:layout="@layout/fragment_setting_camera_jf">
+        <action
+            android:id="@+id/action_settingCameraJFFragment_to_informationCameraJFFragment"
+            app:destination="@id/informationCameraJFFragment" />
+        <action
+            android:id="@+id/action_settingCameraJFFragment_to_cardSettingJFFragment"
+            app:destination="@id/cardSettingJFFragment" />
+        <action
+            android:id="@+id/action_settingCameraJFFragment_to_changePasswordImageEncodingFragment"
+            app:destination="@id/changePasswordImageEncodingFragment" />
+        <action
+            android:id="@+id/action_settingCameraJFFragment_to_JFSmartFeatureFragment"
+            app:destination="@id/JFSmartFeatureFragment" />
+        <action
+            android:id="@+id/action_settingCameraJFFragment_to_settingAlarmFeatureCameraJFFragment"
+            app:destination="@id/settingAlarmFeatureCameraJFFragment" />
+        <action
+            android:id="@+id/action_settingCameraJFFragment_to_JFCloudStorageFragment"
+            app:destination="@id/JFCloudStorageFragment" />
+        <action
+            android:id="@+id/action_settingCameraJFFragment_to_listScheduleAlarmSettingCameraJFFragment"
+            app:destination="@id/listScheduleAlarmSettingCameraJFFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/informationCameraJFFragment"
+        android:name="com.viettel.vht.sdk.ui.informationcamera.InformationCameraJFFragment"
+        android:label="InformationCameraJFFragment"
+        tools:layout="@layout/fragment_information_cam_jf">
+        <action
+            android:id="@+id/action_informationCameraJFFragment_to_settingWifiCameraJFFragment"
+            app:destination="@id/settingWifiCameraJFFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingWifiCameraJFFragment"
+        android:name="com.viettel.vht.sdk.ui.jfcameradetail.settingwifi.SettingWifiCameraJFFragment"
+        android:label="SettingWifiCameraJFFragment"
+        tools:layout="@layout/fragment_setting_wifi_camera_jf"/>
+    <fragment
+        android:id="@+id/cardSettingJFFragment"
+        android:name="com.viettel.vht.sdk.ui.cardsetting.CardSettingJFFragment"
+        android:label="CardSettingJFFragment"
+        tools:layout="@layout/fragment_card_setting_cam_jf"/>
+    <fragment
+        android:id="@+id/changePasswordImageEncodingFragment"
+        android:name="com.viettel.vht.sdk.ui.change_password.ChangePasswordImageEncodingFragment"
+        android:label="ChangePasswordImageEncodingFragment"
+        tools:layout="@layout/fragment_change_password_image_encoding_jf"/>
+    <fragment
+        android:id="@+id/JFSmartFeatureFragment"
+        android:name="com.viettel.vht.sdk.ui.jfcameradetail.smart_feature.view.JFSmartFeatureFragment"
+        android:label="JFSmartFeatureFragment"
+        tools:layout="@layout/fragment_jf_smart_feature">
+        <action
+            android:id="@+id/action_JFSmartFeatureFragment_to_JFSmartAlertSetFragment"
+            app:destination="@id/JFSmartAlertSetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingAlarmFeatureCameraJFFragment"
+        android:name="com.viettel.vht.sdk.ui.jfcameradetail.view.SettingAlarmFeatureCameraJFFragment"
+        android:label="SettingAlarmFeatureCameraJFFragment"
+        tools:layout="@layout/fragment_setting_alarm_feature_camera_jf">
+        <action
+            android:id="@+id/action_settingAlarmFeatureCameraJFFragment_to_JFSmartAlertSetFragment"
+            app:destination="@id/JFSmartAlertSetFragment" />
+        <action
+            android:id="@+id/action_settingAlarmFeatureCameraJFFragment_to_listAlarmVoicePeriodJFFragment"
+            app:destination="@id/listAlarmVoicePeriodJFFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/JFSmartAlertSetFragment"
+        android:name="com.viettel.vht.sdk.ui.jfcameradetail.smart_feature.view.JFSmartAlertSetFragment"
+        android:label="JFSmartAlertSetFragment"
+        tools:layout="@layout/fragment_jf_smart_alert_set"/>
+    <fragment
+        android:id="@+id/listAlarmVoicePeriodJFFragment"
+        android:name="com.viettel.vht.sdk.ui.jfcameradetail.alarm_voice_period.ListAlarmVoicePeriodJFFragment"
+        android:label="ListAlarmVoicePeriodJFFragment"
+        tools:layout="@layout/fragment_list_schedule_alarm_camera_jf">
+        <action
+            android:id="@+id/action_listAlarmVoicePeriodJFFragment_to_addAlarmVoicePeriodJFFragment"
+            app:destination="@id/addAlarmVoicePeriodJFFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addAlarmVoicePeriodJFFragment"
+        android:name="com.viettel.vht.sdk.ui.jfcameradetail.alarm_voice_period.AddAlarmVoicePeriodJFFragment"
+        android:label="AddAlarmVoicePeriodJFFragment"
+        tools:layout="@layout/fragment_add_schedule_alarm_camera_jf"/>
+
+    <fragment
+        android:id="@+id/JFCloudPostpaidFragment"
+        android:name="com.viettel.vht.sdk.ui.jfcameradetail.cloud.JFCloudPostpaidFragment"
+        android:label="JFCloudPostpaidFragment"
+        tools:layout="@layout/fragment_jf_cloud_postpaid"/>
+
+
+    <fragment
+        android:id="@+id/JFCloudStorageFragment"
+        android:name="com.viettel.vht.sdk.ui.jfcameradetail.cloud.JFCloudStorageFragment"
+        android:label="JFCloudStorageFragment"
+        tools:layout="@layout/fragment_jf_cloud_storage">
+
+
+        <action
+            android:id="@+id/action_JFCloudStorageFragment_to_JFCloudPostpaidFragment"
+            app:destination="@id/JFCloudPostpaidFragment" />
+        <action
+            android:id="@+id/action_JFCloudStorageFragment_to_JFCloudRegisterFragment"
+            app:destination="@id/JFCloudRegisterFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/JFCloudRegisterFragment"
+        android:name="com.viettel.vht.sdk.ui.jfcameradetail.cloud.JFCloudRegisterFragment"
+        android:label="JFCloudRegisterFragment"
+        tools:layout="@layout/fragment_jf_cloud_register">
+
+        <action
+            android:id="@+id/action_JFCloudRegisterFragment_to_JFCloudPaymentFragment"
+            app:destination="@id/JFCloudPaymentFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/JFCloudPaymentFragment"
+        android:name="com.viettel.vht.sdk.ui.jfcameradetail.cloud.JFCloudPaymentFragment"
+        android:label="JFCloudPaymentFragment"
+        tools:layout="@layout/fragment_jf_cloud_payment"/>
+
+    <fragment
+        android:id="@+id/listScheduleAlarmSettingCameraJFFragment"
+        android:name="com.viettel.vht.sdk.ui.jfcameradetail.schedule_alarm.ListScheduleAlarmSettingCameraJFFragment"
+        android:label="ListScheduleAlarmSettingCameraJFFragment"
+        tools:layout="@layout/fragment_list_schedule_alarm_camera_jf">
+
+        <action
+            android:id="@+id/action_listScheduleAlarmSettingCameraJFFragment_to_addScheduleAlarmSettingCameraJFFragment"
+            app:destination="@id/addScheduleAlarmSettingCameraJFFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addScheduleAlarmSettingCameraJFFragment"
+        android:name="com.viettel.vht.sdk.ui.jfcameradetail.schedule_alarm.AddScheduleAlarmSettingCameraJFFragment"
+        android:label="AddScheduleAlarmSettingCameraJFFragment"
+        tools:layout="@layout/fragment_add_schedule_alarm_camera_jf"/>
+
 </navigation>

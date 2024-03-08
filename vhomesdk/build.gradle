@@ -119,6 +119,13 @@ dependencies {
 
     implementation 'com.makeramen:roundedimageview:2.3.0'
 
+    implementation 'com.google.guava:guava:27.0.1-android'
+
+    implementation 'androidx.paging:paging-runtime-ktx:3.1.1'
+
+    implementation 'io.github.ShawnLin013:number-picker:2.4.13'
+
+    implementation project(path: ':uilibrary')
     embed project(path: ':libxmfunsdk', configuration: 'default')
     embed project(path: ':sdkcore', configuration: 'default')
     embed project(path: ':libcalendar', configuration: 'default')

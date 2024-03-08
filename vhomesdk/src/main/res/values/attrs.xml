@@ -37,6 +37,8 @@
         <attr name="type_edittext" format="reference" />
         <attr name="text_hint_edittext" format="integer" />
         <attr name="is_show_title" format="boolean" />
+        <attr name="max_length" format="integer" />
+        <attr name="is_drawable_end" format="boolean" />
     </declare-styleable>
 
     <declare-styleable name="WheelPicker">
@@ -69,5 +71,6 @@
         <attr name="icon" format="reference"/>
         <attr name="state_active" format="boolean"/>
     </declare-styleable>
+
 
 </resources>

@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F5F5F5">
+
+        <com.viettel.vht.sdk.utils.custom.AppToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/dimen_2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:src_left="@drawable/ic_app_back"
+            app:string_title="Thiết lập cảnh báo" />
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/dimen_88"
+            android:clipToPadding="false"
+            android:paddingVertical="@dimen/dimen_20"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clHumanDetection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_16"
+                    android:background="@drawable/bg_setting_camera"
+                    android:paddingTop="@dimen/dimen_16"
+                    android:paddingBottom="@dimen/dimen_16"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvHumanDetection"
+                        style="@style/text_bold_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/dimen_16"
+                        android:text="Phát hiện người"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="HardcodedText" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/swHumanDetection"
+                        android:layout_width="@dimen/dimen_40"
+                        android:layout_height="@dimen/dimen_20"
+                        android:layout_marginEnd="@dimen/dimen_20"
+                        android:thumb="@drawable/thumb_selector"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:track="@drawable/track_selector" />
+
+                    <TextView
+                        android:id="@+id/tvHumanDetectionDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/dimen_16"
+                        android:layout_marginTop="@dimen/dimen_20"
+                        android:fontFamily="@font/regular"
+                        android:text="Khi tắt phát hiện người, Camera sẽ chuyển sang chế độ phát hiện chuyển động"
+                        android:textColor="#4E4E4E"
+                        android:textSize="@dimen/text_size_12"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvHumanDetection"
+                        tools:ignore="HardcodedText" />
+
+                    <View
+                        android:id="@+id/viewDivider"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginHorizontal="@dimen/dimen_10"
+                        android:layout_marginTop="@dimen/dimen_20"
+                        android:background="#CECECE"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvHumanDetectionDescription"
+                        tools:visibility="visible" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clMarkHumanDetection"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_20"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/viewDivider"
+                        tools:visibility="visible">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvMarkHumanDetection"
+                            style="@style/text_bold_14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimen_16"
+                            android:text="Đánh dấu phát hiện người"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="HardcodedText" />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/swMarkHumanDetection"
+                            android:layout_width="@dimen/dimen_40"
+                            android:layout_height="@dimen/dimen_20"
+                            android:layout_marginEnd="@dimen/dimen_20"
+                            android:thumb="@drawable/thumb_selector"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:track="@drawable/track_selector" />
+
+                        <TextView
+                            android:id="@+id/valueMarkHumanDetection"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/dimen_16"
+                            android:layout_marginTop="@dimen/dimen_16"
+                            android:fontFamily="@font/regular"
+                            android:text="Khi bật chức năng này thì đối tượng sẽ được đánh dấu trong video"
+                            android:textColor="#4E4E4E"
+                            android:textSize="@dimen/text_size_12"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tvMarkHumanDetection"
+                            tools:ignore="HardcodedText" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clMotionSensitivity"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_16"
+                    android:layout_marginTop="@dimen/dimen_16"
+                    android:background="@drawable/bg_setting_camera"
+                    android:paddingTop="@dimen/dimen_16"
+                    android:paddingBottom="@dimen/dimen_16"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/clHumanDetection">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvMotionSensitivity"
+                        style="@style/text_bold_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/dimen_16"
+                        android:text="Độ nhạy chuyển động"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="HardcodedText" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/dimen_16"
+                        android:layout_marginTop="@dimen/dimen_10"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvMotionSensitivity">
+
+                        <androidx.appcompat.widget.AppCompatCheckBox
+                            android:id="@+id/itemLowMotionSensitivity"
+                            style="@style/text_14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/bg_radio_select"
+                            android:gravity="center_vertical"
+                            android:padding="@dimen/dimen_10"
+                            android:text="Thấp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="HardcodedText" />
+
+                        <androidx.appcompat.widget.AppCompatCheckBox
+                            android:id="@+id/itemMediumMotionSensitivity"
+                            style="@style/text_14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/bg_radio_select"
+                            android:checked="true"
+                            android:gravity="center_vertical"
+                            android:padding="@dimen/dimen_10"
+                            android:text="Trung bình"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="HardcodedText" />
+
+                        <androidx.appcompat.widget.AppCompatCheckBox
+                            android:id="@+id/itemHighMotionSensitivity"
+                            style="@style/text_14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/bg_radio_select"
+                            android:gravity="center_vertical"
+                            android:padding="@dimen/dimen_10"
+                            android:text="Cao"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="HardcodedText" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/tvAdjustMotionDetectionSensitivityLow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/dimen_20"
+                        android:layout_marginTop="@dimen/dimen_10"
+                        android:fontFamily="@font/regular"
+                        android:text="Độ nhạy thấp: Chỉ có chuyển động lớn mới kích hoạt cảnh báo chuyển động"
+                        android:textColor="#4E4E4E"
+                        android:textSize="@dimen/text_size_12"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/tvAdjustMotionDetectionSensitivityHigh"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/dimen_20"
+                        android:fontFamily="@font/regular"
+                        android:text="Độ nhạy cao: Các chuyển động nhỏ cũng sẽ kích hoạt cảnh báo chuyển động"
+                        android:textColor="#4E4E4E"
+                        android:textSize="@dimen/text_size_12"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvAdjustMotionDetectionSensitivityLow"
+                        tools:ignore="HardcodedText" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clSoundSetting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_16"
+                    android:layout_marginTop="@dimen/dimen_16"
+                    android:background="@drawable/bg_setting_camera"
+                    android:padding="@dimen/dimen_16"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/clMotionSensitivity"
+                    tools:visibility="visible">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/titleSoundSetting"
+                        style="@style/text_bold_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cài đặt âm cảnh báo"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="HardcodedText" />
+
+                    <View
+                        android:id="@+id/viewDividerSoundSetting"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/dimen_10"
+                        android:background="#CECECE"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/titleSoundSetting" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvSound"
+                        style="@style/text_bold_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_20"
+                        android:text="Âm thanh cảnh báo"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/viewDividerSoundSetting"
+                        tools:ignore="HardcodedText" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvValueSound"
+                        style="@style/text_14"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_10"
+                        android:drawableRight="@drawable/ic_back_left"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical|end"
+                        android:lines="1"
+                        android:paddingVertical="@dimen/dimen_5"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvSound"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tvSound"
+                        app:layout_constraintTop_toTopOf="@+id/tvSound"
+                        tools:text="Im lặng" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvSoundScheduleSetting"
+                        style="@style/text_bold_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_20"
+                        android:text="Lịch trình cảnh báo"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvSound"
+                        tools:ignore="HardcodedText" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvValueSoundScheduleSetting"
+                        style="@style/text_14"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_10"
+                        android:drawableRight="@drawable/ic_back_left"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical|end"
+                        android:lines="1"
+                        android:paddingVertical="@dimen/dimen_5"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvSoundScheduleSetting"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tvSoundScheduleSetting"
+                        app:layout_constraintTop_toTopOf="@+id/tvSoundScheduleSetting"
+                        tools:text="Luôn luôn" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/btSoundScheduleSetting"
+                        style="@style/text_bold_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_10"
+                        android:gravity="center"
+                        android:padding="@dimen/dimen_10"
+                        android:text="@string/string_setting_shedule"
+                        android:textColor="#EC0D3A"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvSoundScheduleSetting"
+                        tools:visibility="visible" />
+
+                    <androidx.constraintlayout.widget.Group
+                        android:id="@+id/groupSoundScheduleSetting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:constraint_referenced_ids="tvSoundScheduleSetting,tvValueSoundScheduleSetting,btSoundScheduleSetting" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clAlarmPushInterval"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_16"
+                    android:layout_marginTop="@dimen/dimen_16"
+                    android:background="@drawable/bg_setting_camera"
+                    android:padding="@dimen/dimen_16"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/clSoundSetting">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvAlarmPushInterval"
+                        style="@style/text_bold_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Khoảng thời gian báo động"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="HardcodedText" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvValueAlarmPushInterval"
+                        style="@style/text_14"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_10"
+                        android:drawableRight="@drawable/ic_back_left"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical|end"
+                        android:lines="1"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvAlarmPushInterval"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tvAlarmPushInterval"
+                        app:layout_constraintTop_toTopOf="@+id/tvAlarmPushInterval"
+                        tools:text="10s" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clSettingZone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_16"
+                    android:layout_marginVertical="@dimen/dimen_16"
+                    android:background="@drawable/bg_setting_camera"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/clAlarmPushInterval">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvSettingZone"
+                        style="@style/text_bold_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/dimen_16"
+                        android:text="@string/string_security_fence"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvTypeSettingZone"
+                        style="@style/text_14"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:drawableRight="@drawable/ic_back_left"
+                        android:gravity="center_vertical|end"
+                        android:paddingHorizontal="@dimen/dimen_16"
+                        android:text="@string/string_default_zone_ipc"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvSettingZone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tvSettingZone"
+                        app:layout_constraintTop_toTopOf="@+id/tvSettingZone" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvSetupZone"
+                        style="@style/text_bold_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="@dimen/dimen_10"
+                        android:paddingTop="@dimen/dimen_5"
+                        android:paddingBottom="@dimen/dimen_20"
+                        android:textColor="@color/color_ef1e4a"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvSettingZone"
+                        tools:text="@string/string_setting_security_zone"
+                        tools:visibility="visible" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/dimen_15"
+                        android:layout_marginBottom="@dimen/dimen_15"
+                        android:fontFamily="@font/regular"
+                        android:text="Hàng rào an ninh chỉ có hiệu lực khi camera hoạt động ở chế độ phát hiện người"
+                        android:textColor="#4E4E4E"
+                        android:textSize="@dimen/text_size_12"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvSetupZone"
+                        tools:ignore="HardcodedText" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
