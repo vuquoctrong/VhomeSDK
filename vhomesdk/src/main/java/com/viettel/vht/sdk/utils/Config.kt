@@ -85,6 +85,11 @@ object Config {
 
     const val POWERS_DEV_INFO_KEY = "devInfo"
 
+    var sdkAPP_KEY = "nlaDOC8uS6Xn7L0JIcPD"
+    var sdkAPP_SECRET = "yKeMoImiHp9DUXxoGpERza31xSyCWunW"
+    var sdkBASE_URL = "https://stg-iotapi.viettel.io"
+    var sdkBASE_URL_CAMERA_JF = "https://rs.viettelcamera.vn"
+    var sdkAppName = "Vhome"
 
 
 }

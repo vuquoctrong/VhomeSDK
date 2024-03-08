@@ -5,7 +5,6 @@ import android.content.Context
 import android.text.TextUtils
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
-import com.vht.sdkcore.BuildConfig
 import com.vht.sdkcore.file.AppLogFileManager
 import com.viettel.vht.sdk.network.ApiInterface
 import com.viettel.vht.sdk.network.AuthApiInterface
@@ -15,6 +14,8 @@ import com.viettel.vht.sdk.network.NetworkInterceptor
 import com.viettel.vht.sdk.network.TokenAuthenticator
 import com.vht.sdkcore.pref.RxPreferences
 import com.vht.sdkcore.utils.Constants
+import com.viettel.vht.sdk.BuildConfig
+import com.viettel.vht.sdk.utils.Config
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -53,7 +54,7 @@ class ApiModule {
     )
             : ApiInterface {
         val retrofit = Retrofit.Builder()
-            .baseUrl(BuildConfig.BASE_URL)
+            .baseUrl(Config.sdkBASE_URL)
             .client(client)
             .addConverterFactory(GsonConverterFactory.create(gson))
             .build()
@@ -122,7 +123,7 @@ class ApiModule {
         @AuthServerHttpClient client: OkHttpClient
     ): AuthApiInterface {
         val retrofit = Retrofit.Builder()
-            .baseUrl(BuildConfig.BASE_URL)
+            .baseUrl(Config.sdkBASE_URL)
             .client(client)
             .addConverterFactory(NullOnEmptyConverterFactory())
             .addConverterFactory(GsonConverterFactory.create(gson))
@@ -155,8 +156,8 @@ class ApiModule {
                     chain.request()
                         .newBuilder()
                         .header("Content-Type", "application/json")
-                        .addHeader("AppKey", BuildConfig.APP_KEY)
-                        .addHeader("AppSecret", BuildConfig.APP_SECRET)
+                        .addHeader("AppKey", Config.sdkAPP_KEY)
+                        .addHeader("AppSecret", Config.sdkAPP_SECRET)
                         .addHeader("traceparent", traceparent)
                         .build()
 

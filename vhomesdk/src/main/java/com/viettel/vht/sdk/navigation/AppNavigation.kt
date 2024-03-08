@@ -33,6 +33,60 @@ interface AppNavigation : BaseNavigator {
 
     fun openSettingCameraJF(bundle: Bundle? = null)
 
+    fun openCardSettingJFCamera(bundle: Bundle? = null)
 
+    fun openUpdateFirmwareJFCamera(bundle: Bundle? = null)
+
+    fun openInfoSettingCameraJF(bundle: Bundle? = null)
+
+    fun openSpreadCameraFragment(bundle: Bundle? = null)
+
+    fun openListScheduleAlarmJFCamera(bundle: Bundle? = null)
+
+    fun openSettingAlarmFeatureCameraJFFragment(bundle: Bundle? = null)
+
+    fun openChangePasswordImageEncodingFragment(bundle: Bundle? = null)
+
+    fun openCloudStorageJFCamera(bundle: Bundle?= null)
+
+    fun openSettingWifiCameraJF(bundle: Bundle? = null)
+
+    fun openAddScheduleAlarmJFCamera(bundle: Bundle? = null)
+
+    fun openVerificationCodeCameraJF(bundle: Bundle? = null)
+
+    fun openResetPasswordCameraJF(bundle: Bundle? = null)
+
+    fun openSmartAlertSetJFCamera(bundle: Bundle? = null)
+
+    fun openListAlarmVoicePeriodJFCamera(bundle: Bundle? = null)
+
+    fun openAddAlarmVoicePeriodJFCamera(bundle: Bundle? = null)
+
+    fun openRegisterPayLinkFragment(bundle: Bundle? = null)
+
+    fun openViettelPayWebViewFragment(bundle: Bundle? = null)
+
+    fun backToCloudStorageJFCamera()
+
+    fun backToCameraCloudStorageAccountFragment()
+
+    fun openPayLinkConfigOTP(bundle: Bundle? = null)
+
+    fun openCloudRegisterJFCamera(bundle: Bundle?= null)
+
+    fun openHistoryByCloudStorage(bundle: Bundle? = null)
+
+    fun openConfigOTPOnOffPayLinkFragment(bundle: Bundle? = null)
+
+    fun openCloudStorageCamera(bundle: Bundle? = null)
+
+    fun openDetailHistoryCloudStorage(bundle: Bundle? = null)
+
+    fun openRegisterCloudToDetailGiftRelatives(bundle: Bundle? = null)
+
+    fun openRegisterPromotionFree(bundle: Bundle? = null)
+
+    fun openGlobalManageCloudPromotionOTP(bundle: Bundle? = null)
 
 }

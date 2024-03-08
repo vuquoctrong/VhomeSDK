@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.viettel.vht.sdk.utils.custom.AppToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/dimen_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:src_left="@drawable/ic_app_back"
+            app:src_right="@drawable/ic_history_cloud"
+            app:string_title="Lưu trữ Cloud" />
+
+        <View
+            android:id="@+id/viewContent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/margin_app_toolbar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin_app_toolbar"
+            android:paddingHorizontal="@dimen/dimen_16"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imvImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dimen_260"
+                    android:src="@drawable/ic_history_cloud_cam"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvContent"
+                    style="@style/text_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:gravity="center_horizontal"
+                    android:text="@string/string_content_list_camera_cloud"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imvImage" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvGiftOpen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/string_gift_to_relatives"
+                    android:textColor="@color/white"
+                    android:padding="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_12"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvContent"
+                    android:drawableLeft="@drawable/ic_gift"
+                    android:drawablePadding="@dimen/dimen_5"
+                    android:background="@drawable/bg_r8214b_border_8" />
+
+               <androidx.appcompat.widget.AppCompatTextView
+                   android:id="@+id/tvShowNotDevice"
+                   style="@style/text_14"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   android:gravity="center"
+                   android:textColor="#4E4E4E"
+                   android:layout_marginTop="@dimen/dimen_50"
+                   android:text="@string/string_not_device_camera"
+                   app:layout_constraintTop_toBottomOf="@+id/tvGiftOpen"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"/>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/llListCamera"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:background="@drawable/bg_white_border_20"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:paddingHorizontal="@dimen/dimen_10"
+                    android:paddingVertical="@dimen/dimen_20"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvGiftOpen">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/text_bold_14"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/string_device_camera" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/text_10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_5"
+                        android:text="@string/string_content_select_cloud_camera"
+                        android:textColor="#4E4E4E" />
+
+                    <View
+
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_1"
+                        android:layout_marginTop="@dimen/dimen_5"
+                        android:background="#CECECE" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcvPackage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:itemCount="3"
+                        tools:listitem="@layout/item_camera_status_cloud" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

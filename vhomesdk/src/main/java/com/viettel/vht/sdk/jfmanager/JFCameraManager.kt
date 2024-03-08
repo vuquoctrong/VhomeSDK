@@ -40,6 +40,7 @@ import com.vht.sdkcore.utils.Constants.EventKey.EVENT_SYSTEM_CHANGE_INFORMATION_
 import com.vht.sdkcore.utils.Utils
 import com.vht.sdkcore.utils.eventbus.RxEvent
 import com.viettel.vht.sdk.model.DeviceDataResponse
+import com.viettel.vht.sdk.utils.DebugConfig
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
@@ -257,8 +258,10 @@ object JFCameraManager {
 
         FunSDK.SysSetServerIPPort("MI_SERVER", "https://rs.viettelcamera.vn", 443)
 
+        if(DebugConfig.SHOW_DEBUG_LOG){
+            xmFunSDKManager.initLog()
+        }
 
-        xmFunSDKManager.initLog()
 
         /**
          * 低功耗设备：包括 门铃、门锁等，需要调用此方法否则可能无法登录设备，其他设备无需调用

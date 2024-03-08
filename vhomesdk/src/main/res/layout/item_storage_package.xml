@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimen_15">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvItem"
+            style="@style/text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            tools:text="Lưu trữ 3 ngày" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/cb_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:button="@drawable/bg_radio_select"
+            android:checked="false"
+            android:enabled="true"
+            android:minWidth="0dp"
+            android:minHeight="0dp" />
+
+
+    </RelativeLayout>
+
+</layout>

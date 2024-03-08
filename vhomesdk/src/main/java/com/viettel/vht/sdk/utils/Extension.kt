@@ -4,19 +4,28 @@ package com.viettel.vht.sdk.utils
 
 //import com.tuya.smart.sdk.bean.DeviceBean
 //import com.tuya.smart.sdk.bean.DeviceBean
+import android.app.Dialog
 import android.content.Context
 import android.graphics.Bitmap
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.net.Uri
 import android.os.Build
+import android.view.LayoutInflater
 import android.view.View
 import androidx.core.net.toUri
 import androidx.fragment.app.Fragment
+import com.vht.sdkcore.utils.onTextChange
+import com.vht.sdkcore.utils.toastMessage
+import com.viettel.vht.sdk.R
+import com.viettel.vht.sdk.databinding.DialogEnterPhonePayLinkBinding
 import com.viettel.vht.sdk.model.DeviceDataResponse
 import okhttp3.MediaType
 import okhttp3.MediaType.Companion.toMediaType
 import java.io.File
 import java.io.FileOutputStream
 import java.util.Calendar
+import java.util.regex.Pattern
 
 fun List<DeviceDataResponse>?.replace(device: DeviceDataResponse) {
     val index = this?.indexOfFirst { it.id == device.id } ?: -1
@@ -80,4 +89,55 @@ fun File.imageToMediaType(): MediaType {
 fun String.normalizeString(): String {
     val trim = this.trim()
     return trim.replace("\\s+".toRegex(), " ") // Remove redundant spaces
+}
+
+fun Fragment.showDialogEnterPhonePayLink(
+    onClickOK: ((phone: String) -> Unit)? = null,
+): Dialog {
+    return Dialog(requireContext(), R.style.ThemeDialog).apply {
+
+        setCancelable(false)
+        window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        setCanceledOnTouchOutside(false)
+        setCancelable(false)
+        val binding =
+            DialogEnterPhonePayLinkBinding.inflate(LayoutInflater.from(requireContext()))
+        setContentView(binding.root)
+        var isSuccess = false
+        binding.edtPhone.onTextChange {
+            isSuccess = if (it.toString().trim().isEmpty()){
+                binding.tvError.visible()
+                false
+            }else{
+                val pattern = Pattern.compile("(0[3|5|7|8|9])+([0-9]{8})\\b")
+                val matcher = pattern.matcher(it.toString().trim())
+                if (matcher.matches()) {
+                    binding.tvError.gone()
+                    true
+                } else {
+                    binding.tvError.visible()
+                    false
+                }
+            }
+        }
+
+        binding.btnOk.setOnClickListener {
+            if(isSuccess){
+                onClickOK?.invoke(binding.edtPhone.text.toString().trim())
+                binding.root.hideKeyboard()
+                dismiss()
+            }else{
+                toastMessage(requireContext().getString(com.vht.sdkcore.R.string.string_phone_error))
+            }
+
+        }
+
+        binding.btnCancel.setOnClickListener {
+            binding.root.hideKeyboard()
+            dismiss()
+        }
+
+        show()
+
+    }
 }

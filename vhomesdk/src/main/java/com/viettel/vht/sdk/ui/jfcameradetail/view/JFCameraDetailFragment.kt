@@ -72,6 +72,7 @@ import com.viettel.vht.sdk.utils.Config.EventKey.EVENT_EDIT_PRESET
 import com.viettel.vht.sdk.utils.Config.EventKey.EVENT_MULTIPLE_PRESET
 import com.viettel.vht.sdk.utils.Config.EventKey.EVENT_UPDATE_PRESET
 import com.viettel.vht.sdk.utils.DebugConfig
+import com.viettel.vht.sdk.utils.ImageUtils
 import com.viettel.vht.sdk.utils.NetworkChangeReceiver
 import com.viettel.vht.sdk.utils.NetworkManager
 import com.viettel.vht.sdk.utils.custom.BottomSheetQualityFragment
@@ -2330,7 +2331,7 @@ class JFCameraDetailFragment : BaseFragment<FragmentJfcameraDetailBinding, JFCam
                     dialog.setOnClickListener(object :
                         ConfirmSaveMediaDialog.OnConfirmSaveMediaListener {
                         override fun onSaveToLibrary() {
-                            Utils.saveVideoToGalleryJFCamera(
+                            ImageUtils.saveVideoToGalleryJFCamera(
                                 requireContext(),
                                 path,
                                 devId ?: ""
@@ -2349,36 +2350,7 @@ class JFCameraDetailFragment : BaseFragment<FragmentJfcameraDetailBinding, JFCam
         }
     }
 
-    fun stopRecordWhenSwipe() {
-        if (stopRecordMedia) {
-            val time = SystemClock.elapsedRealtime() - binding.recordTimer.base
-            if (time < 5000L) {
-                return
-            }
-            stopRecordMedia = false
-            binding.recordTimer.visibility = View.GONE
-            viewModel.mediaManager.stopRecord()
-            setUIRecording()
-            val folder = File(requireContext().filesDir, "${Constants.PHOTO_FOLDER}/${devId}")
-            val listFile = folder.listFiles()
-            val fileVideo = listFile?.last()
-            val pathRename = fileVideo?.path
-            pathRename?.let { path ->
-                val file = File(path)
-                file.let { file ->
-                    val sizeFile = file.length() / 1024
-                    if (sizeFile > 0) {
-                        Utils.saveVideoToGalleryJFCamera(
-                            requireContext(),
-                            path,
-                            devId
-                        )
-                        context?.toast(getString(com.vht.sdkcore.R.string.string_recording_success))
-                    }
-                }
-            }
-        }
-    }
+
 
     private fun requestStream(needRetry: Boolean = true) {
         binding.fragmentCameraStreamPgLoading.visible()

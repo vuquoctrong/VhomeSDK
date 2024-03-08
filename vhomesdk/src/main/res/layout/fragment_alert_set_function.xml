@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/layoutRoot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F5F5F5">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitle"
+            style="@style/text_bold_14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/dimen_16"
+            android:text="Hướng của hàng rào an ninh"
+            tools:ignore="HardcodedText" />
+
+        <!--        <LinearLayout-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:orientation="vertical">-->
+        <!--            <LinearLayout-->
+        <!--                android:id="@+id/alert_area_setting"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:background="@android:color/white"-->
+        <!--                android:orientation="horizontal"-->
+        <!--                android:visibility="gone"-->
+        <!--                tools:visibility="visible">-->
+
+        <!--                <Button-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:layout_gravity="center"-->
+        <!--                    android:layout_weight="1"-->
+        <!--                    android:background="@android:color/white"-->
+        <!--                    android:gravity="center"-->
+        <!--                    android:text="Shape of warning area"-->
+        <!--                    android:textAllCaps="false"-->
+        <!--                    android:textColor="@color/smart_analyze_pressed_text_color" />-->
+
+        <!--                <Button-->
+        <!--                    android:id="@+id/boundary_alert_direction"-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:layout_gravity="center"-->
+        <!--                    android:layout_weight="1"-->
+        <!--                    android:background="@android:color/white"-->
+        <!--                    android:gravity="center"-->
+        <!--                    android:text="Alert Direction"-->
+        <!--                    android:textAllCaps="false"-->
+        <!--                    android:textColor="@color/smart_analyze_pressed_text_color"-->
+        <!--                    android:visibility="gone"-->
+        <!--                    tools:visibility="visible" />-->
+        <!--            </LinearLayout>-->
+
+        <!--            <Button-->
+        <!--                android:id="@+id/alert_line_trigger_direction"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:background="@android:color/white"-->
+        <!--                android:gravity="center"-->
+        <!--                android:text="Direction of tripwire"-->
+        <!--                android:textAllCaps="false"-->
+        <!--                android:textColor="@color/smart_analyze_pressed_text_color"-->
+        <!--                android:visibility="gone" />-->
+
+        <!--            <Button-->
+        <!--                android:id="@+id/goods_application_scenarios"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:background="@android:color/white"-->
+        <!--                android:gravity="center"-->
+        <!--                android:text="Shape of warning area"-->
+        <!--                android:textColor="@color/smart_analyze_pressed_text_color"-->
+        <!--                android:visibility="gone" />-->
+        <!--        </LinearLayout>-->
+
+        <LinearLayout
+            android:id="@+id/alert_set_function_tips_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/alert_set_function_smart_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/dimen_20"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <!--            <ImageView-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_gravity="center"-->
+            <!--                android:layout_marginStart="9dp"-->
+            <!--                android:layout_marginEnd="4.5dp"-->
+            <!--                android:src="@drawable/icon_alert_set_function_tips" />-->
+
+            <TextView
+                android:id="@+id/alert_set_function_tips"
+                style="@style/text_12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/dimen_8"
+                android:text="Bạn sẽ nhận được thông báo khi có người đi qua đường hàng rào an ninh theo hướng mũi tên."
+                android:textAlignment="center"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+
+        <com.viettel.vht.sdk.ui.jfcameradetail.smart_feature.view.SmartAnalyzeFunctionView
+            android:id="@+id/alert_set_function_smart_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#F5F7F9"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingVertical="@dimen/dimen_10">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/smart_analyze_revoke"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:src="@drawable/ic_undo_text" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/smart_analyze_revert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_50"
+                android:clickable="false"
+                android:src="@drawable/ic_default_text" />
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

@@ -3,6 +3,7 @@ package com.viettel.vht.sdk.network.jf
 import com.google.gson.GsonBuilder
 import com.vht.sdkcore.utils.Constants
 import com.viettel.vht.sdk.BuildConfig
+import com.viettel.vht.sdk.utils.Config
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -11,7 +12,6 @@ import java.util.concurrent.TimeUnit
 
 
 object RetrofitHelperJF {
-    private const val baseUrl = BuildConfig.BASE_URL_CAMERA_JF
 
     fun getInstance(): Retrofit {
         val loggingInterceptor = HttpLoggingInterceptor()
@@ -29,7 +29,7 @@ object RetrofitHelperJF {
             .setLenient()
             .create()
 
-        return Retrofit.Builder().baseUrl(baseUrl)
+        return Retrofit.Builder().baseUrl(Config.sdkBASE_URL_CAMERA_JF)
             .addConverterFactory(GsonConverterFactory.create(gson))
             .client(client)
             // we need to add converter factory to

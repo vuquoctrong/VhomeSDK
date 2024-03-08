@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F5F5F5">
+
+        <com.viettel.vht.sdk.utils.custom.AppToolbar
+            android:id="@+id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/dimen_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:src_left="@drawable/ic_app_back"
+            app:string_title="Nhập mã xác minh" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitle"
+            style="@style/text_14"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_20"
+            android:layout_marginTop="@dimen/dimen_40"
+            android:gravity="center"
+            android:text="Vui lòng nhập mã OTP được gửi đến số 096****789."
+            android:textColor="#4E4E4E"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolBar"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtOTP"
+            style="@style/text_14"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_20"
+            android:layout_marginTop="@dimen/dimen_30"
+            android:background="@drawable/bg_setting_camera"
+            android:inputType="number"
+            android:maxLength="6"
+            android:paddingVertical="@dimen/dimen_15"
+            android:paddingStart="@dimen/dimen_20"
+            android:paddingEnd="@dimen/dimen_50"
+            android:textColor="@color/black_sdk"
+            android:textColorHint="#8E8E8E"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+            tools:text="123456" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivClearOTP"
+            android:layout_width="@dimen/dimen_20"
+            android:layout_height="@dimen/dimen_20"
+            android:layout_marginEnd="@dimen/dimen_20"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_close"
+            android:tint="@color/color_4e4e4e"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/edtOTP"
+            app:layout_constraintEnd_toEndOf="@id/edtOTP"
+            app:layout_constraintTop_toTopOf="@id/edtOTP"
+            tools:visibility="visible" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvErrorOTP"
+            style="@style/text_10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_20"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:text="Mã xác minh không chính xác. Vui lòng thử lại!"
+            android:textColor="#EF1E4A"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edtOTP"
+            tools:ignore="HardcodedText"
+            tools:visibility="visible" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNumberRetry"
+            style="@style/text_bold_10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_20"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:textColor="#EF1E4A"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edtOTP"
+            tools:text="Thử lại: 4"
+            tools:visibility="visible" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDescription"
+            style="@style/text_16"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_20"
+            android:layout_marginTop="@dimen/dimen_55"
+            android:gravity="center"
+            android:text="Mã OTP sẽ hết hạn trong"
+            android:textColor="@color/black_sdk"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edtOTP"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTime"
+            style="@style/text_bold_16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_20"
+            android:layout_marginTop="@dimen/dimen_8"
+            android:gravity="center"
+            android:padding="@dimen/dimen_10"
+            android:textColor="@color/black_sdk"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDescription"
+            tools:text="1:59" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnRetry"
+            style="@style/text_bold_16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_20"
+            android:layout_marginTop="@dimen/dimen_8"
+            android:background="@color/transparent_sdk"
+            android:gravity="center"
+            android:padding="@dimen/dimen_10"
+            android:text="Gửi lại mã OTP"
+            android:textAllCaps="false"
+            android:textColor="#EC0D3A"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDescription"
+            tools:ignore="HardcodedText" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="tvTime,btnRetry" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnVerifyOTP"
+            style="@style/text_bold_16"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:background="@drawable/bg_button_setting_disable"
+            android:enabled="false"
+            android:gravity="center"
+            android:text="XÁC NHẬN"
+            android:textColor="@color/white_sdk"
+            app:layout_constraintDimensionRatio="120:40"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/barrier"
+            app:layout_constraintWidth_percent="0.3"
+            tools:ignore="HardcodedText" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

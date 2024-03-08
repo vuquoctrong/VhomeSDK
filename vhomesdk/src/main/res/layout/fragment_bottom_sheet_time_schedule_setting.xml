@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bgr_bottom_sheet">
+
+        <androidx.appcompat.widget.AppCompatCheckedTextView
+            android:id="@+id/tvTitleTimeStart"
+            style="@style/text_bold_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:gravity="center"
+            android:text="Từ"
+            android:textColor="@color/color_time_schedule_camera_jf"
+            app:layout_constraintEnd_toEndOf="@id/viewLineTimeStart"
+            app:layout_constraintStart_toStartOf="@id/viewLineTimeStart"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatCheckedTextView
+            android:id="@+id/tvTitleTimeEnd"
+            style="@style/text_bold_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:checked="false"
+            android:gravity="center"
+            android:text="Đến"
+            android:textColor="@color/color_time_schedule_camera_jf"
+            app:layout_constraintEnd_toEndOf="@id/viewLineTimeEnd"
+            app:layout_constraintStart_toStartOf="@id/viewLineTimeEnd"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText" />
+
+        <View
+            android:id="@+id/viewLineTimeStart"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimen_3"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:layout_marginEnd="@dimen/dimen_5"
+            android:background="@color/color_EC0D3A"
+            app:layout_constraintEnd_toStartOf="@id/viewLineTimeEnd"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitleTimeStart"
+            app:layout_constraintWidth_percent="0.25" />
+
+        <View
+            android:id="@+id/viewLineTimeEnd"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimen_3"
+            android:layout_marginStart="@dimen/dimen_5"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:background="@color/color_EC0D3A"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/viewLineTimeStart"
+            app:layout_constraintTop_toBottomOf="@id/tvTitleTimeEnd"
+            app:layout_constraintWidth_percent="0.25" />
+
+        <androidx.appcompat.widget.AppCompatCheckedTextView
+            android:id="@+id/tvValueTimeStart"
+            style="@style/text_bold_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_6"
+            android:gravity="center"
+            android:text="00:00"
+            android:textColor="@color/color_time_schedule_camera_jf"
+            app:layout_constraintEnd_toEndOf="@id/viewLineTimeStart"
+            app:layout_constraintStart_toStartOf="@id/viewLineTimeStart"
+            app:layout_constraintTop_toBottomOf="@id/viewLineTimeStart"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatCheckedTextView
+            android:id="@+id/tvValueTimeEnd"
+            style="@style/text_bold_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_6"
+            android:gravity="center"
+            android:text="24:00"
+            android:textColor="@color/color_time_schedule_camera_jf"
+            app:layout_constraintEnd_toEndOf="@id/viewLineTimeEnd"
+            app:layout_constraintStart_toStartOf="@id/viewLineTimeEnd"
+            app:layout_constraintTop_toBottomOf="@id/viewLineTimeEnd"
+            tools:ignore="HardcodedText" />
+
+        <View
+            android:id="@+id/viewTimeStart"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/tvValueTimeStart"
+            app:layout_constraintEnd_toEndOf="@id/viewLineTimeStart"
+            app:layout_constraintStart_toStartOf="@id/viewLineTimeStart"
+            app:layout_constraintTop_toTopOf="@id/tvTitleTimeStart" />
+
+        <View
+            android:id="@+id/viewTimeEnd"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/tvValueTimeEnd"
+            app:layout_constraintEnd_toEndOf="@id/viewLineTimeEnd"
+            app:layout_constraintStart_toStartOf="@id/viewLineTimeEnd"
+            app:layout_constraintTop_toTopOf="@id/tvTitleTimeEnd" />
+
+        <com.vht.sdkcore.utils.custom.WheelPicker
+            android:id="@+id/wheelPickerHour"
+            android:layout_width="@dimen/dimen_60"
+            android:layout_height="@dimen/dimen_200"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:layout_marginEnd="@dimen/dimen_2"
+            app:align="CENTER"
+            app:fadingEdgeEnabled="false"
+            app:layout_constraintEnd_toStartOf="@id/wheelPickerMinute"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewTimeStart"
+            app:max="23"
+            app:min="0"
+            app:timeTextSize="20sp"
+            app:wheelItemCount="5"
+            app:wrapSelectorWheel="true" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/text_bold_20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_6"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text=":"
+            android:textColor="#6E6E6E"
+            app:layout_constraintBottom_toBottomOf="@id/wheelPickerMinute"
+            app:layout_constraintEnd_toEndOf="@id/wheelPickerMinute"
+            app:layout_constraintStart_toStartOf="@id/wheelPickerHour"
+            app:layout_constraintTop_toTopOf="@id/wheelPickerHour"
+            tools:ignore="HardcodedText" />
+
+        <com.vht.sdkcore.utils.custom.WheelPicker
+            android:id="@+id/wheelPickerMinute"
+            android:layout_width="@dimen/dimen_60"
+            android:layout_height="@dimen/dimen_200"
+            android:layout_marginStart="@dimen/dimen_2"
+            android:layout_marginTop="@dimen/dimen_20"
+            app:align="CENTER"
+            app:fadingEdgeEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/wheelPickerHour"
+            app:layout_constraintTop_toBottomOf="@id/viewTimeStart"
+            app:max="59"
+            app:min="0"
+            app:timeTextSize="20sp"
+            app:wheelItemCount="5"
+            app:wrapSelectorWheel="true" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btCancel"
+            style="@style/text_bold_16"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:layout_marginBottom="@dimen/dimen_20"
+            android:background="@drawable/bg_button_setting_cancel"
+            android:gravity="center"
+            android:text="HUỶ"
+            android:textAllCaps="true"
+            android:textColor="#EC0D3A"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="120:40"
+            app:layout_constraintEnd_toStartOf="@id/btSubmit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/wheelPickerHour"
+            app:layout_constraintWidth_percent="0.3"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btSubmit"
+            style="@style/text_bold_16"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:layout_marginBottom="@dimen/dimen_20"
+            android:background="@drawable/bg_button_setting_submit"
+            android:gravity="center"
+            android:text="XONG"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="120:40"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btCancel"
+            app:layout_constraintTop_toBottomOf="@id/wheelPickerHour"
+            app:layout_constraintWidth_percent="0.3"
+            tools:ignore="HardcodedText" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

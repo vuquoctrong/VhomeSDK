@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.jfcameradetail.cloud.JFCloudRegisterFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F5F5F5">
+
+        <com.viettel.vht.sdk.utils.custom.AppToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/dimen_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:src_left="@drawable/ic_app_back"
+            app:string_title="Đăng ký lưu trữ cloud" />
+
+        <View
+            android:id="@+id/viewContent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/margin_app_toolbar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="@id/viewContent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/rlRegister"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/rlStoragePackage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rlTypeSave"
+                        android:layout_marginHorizontal="@dimen/dimen_16"
+                        android:layout_marginTop="@dimen/dimen_20"
+                        android:background="@drawable/bg_add_camera"
+                        android:paddingHorizontal="@dimen/dimen_20"
+                        android:paddingVertical="@dimen/dimen_15">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/text_light_bold_14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="@string/the_hosting_package"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvTimeStorage"
+                            style="@style/text_14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/dimen_8"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="7 ngày" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlTypeSave"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rlDevice"
+                        android:layout_marginHorizontal="@dimen/dimen_20"
+                        android:layout_marginTop="@dimen/dimen_20"
+                        android:background="@drawable/bg_add_camera"
+                        android:paddingHorizontal="@dimen/dimen_20"
+                        android:paddingVertical="@dimen/dimen_15"
+                        android:visibility="gone">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/text_light_bold_14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/storage_type" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvTypeSave"
+                            style="@style/text_14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:text="@string/event" />
+
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rlStoragePackage"
+                        android:layout_marginHorizontal="@dimen/dimen_16"
+                        android:layout_marginTop="@dimen/dimen_20"
+                        android:layout_marginBottom="@dimen/dimen_4"
+                        android:background="@drawable/bg_add_camera"
+                        android:orientation="vertical"
+                        android:paddingVertical="@dimen/dimen_15">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/dimen_15">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/text_light_bold_14"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Đóng trước cước" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/text_14"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:text="@string/string_title_price" />
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dimen_1"
+                            android:layout_marginHorizontal="@dimen/dimen_10"
+                            android:layout_marginTop="@dimen/dimen_10"
+                            android:background="@color/color_CECECE" />
+
+                        <RelativeLayout
+                            android:id="@+id/layout_info"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingHorizontal="@dimen/dimen_8"
+                            android:paddingVertical="@dimen/dimen_16">
+
+                            <androidx.appcompat.widget.AppCompatCheckBox
+                                android:id="@+id/cb_select"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/dimen_16"
+                                android:button="@drawable/bg_radio_oval_select"
+                                android:checked="true"
+                                android:clickable="false"
+                                android:enabled="false"
+                                android:minWidth="0dp"
+                                android:minHeight="0dp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvTime"
+                                style="@style/text_light_bold_14"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toEndOf="@id/cb_select"
+                                tools:text="60 ngày" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvPriceFree"
+                                style="@style/text_14"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:text=" - 0đ" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvPrice"
+                                style="@style/text_14"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toLeftOf="@+id/tvPriceFree"
+                                android:textColor="#AEAEAE"
+                                tools:text="40.000đ" />
+
+                        </RelativeLayout>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clPaymentMethods"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/dimen_16"
+                        android:layout_marginTop="@dimen/dimen_16"
+                        android:background="@drawable/bg_setting_camera"
+                        android:padding="@dimen/dimen_10"
+                        android:visibility="visible"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvTitlePay"
+                            style="@style/text_bold_14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimen_5"
+                            android:layout_marginTop="@dimen/dimen_10"
+                            android:text="@string/string_title_pay_method"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <View
+                            android:id="@+id/view1"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dimen_1"
+                            android:layout_marginTop="@dimen/dimen_5"
+                            android:background="#CECECE"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tvTitlePay" />
+
+                        <RadioGroup
+                            android:id="@+id/rbGroupPay"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/dimen_10"
+                            android:visibility="visible"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/view1">
+
+                            <RadioButton
+                                android:id="@+id/rbPayLink"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dimen_40"
+                                android:button="@null"
+                                style="@style/text_14"
+                                android:drawableLeft="@drawable/bg_radio_oval_select"
+                                android:drawablePadding="@dimen/dimen_5"
+                                android:text="@string/string_pay_link" />
+
+                            <RadioButton
+                                android:id="@+id/rbPayGate"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dimen_40"
+                                android:button="@null"
+                                style="@style/text_14"
+                                android:drawableLeft="@drawable/bg_radio_oval_select"
+                                android:drawablePadding="@dimen/dimen_5"
+                                android:text="@string/string_bank_viettel_pay_gate"
+                                android:visibility="gone" />
+
+                            <RadioButton
+                                android:id="@+id/rbPayParent"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dimen_40"
+                                android:button="@null"
+                                style="@style/text_14"
+                                android:drawableLeft="@drawable/bg_radio_oval_select"
+                                android:drawablePadding="@dimen/dimen_5"
+                                android:text="@string/string_parent_account_pay"
+                                android:visibility="gone" />
+                        </RadioGroup>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clReferralCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/dimen_16"
+                        android:layout_marginTop="@dimen/dimen_16"
+                        android:background="@drawable/bg_setting_camera"
+                        android:padding="@dimen/dimen_7"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvTitleReferCode"
+                            style="@style/text_light_bold_14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/dimen_5"
+                            android:text="@string/string_title_dialog_refer_code_cloud"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvReferCode"
+                            style="@style/text_bold_14"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dimen_40"
+                            android:layout_marginEnd="@dimen/dimen_5"
+                            android:background="@null"
+                            android:gravity="center|end"
+                            android:hint="@string/string_hint_refer_code"
+                            android:maxLength="50"
+                            android:minLines="1"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/imvShowQRCode"
+                            app:layout_constraintStart_toEndOf="@+id/tvTitleReferCode"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/imvShowQRCode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/dimen_10"
+                            android:src="@drawable/ic_back_right"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/rlDevice"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="@dimen/dimen_16"
+                        android:layout_marginTop="@dimen/dimen_16"
+                        android:background="@drawable/bg_add_camera"
+                        android:paddingHorizontal="@dimen/dimen_16"
+                        android:paddingVertical="@dimen/dimen_15">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvTitleDevice"
+                            style="@style/text_light_bold_14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/device_registration"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/cbAllDevice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingStart="@dimen/dimen_5"
+                            android:paddingTop="@dimen/dimen_5"
+                            android:paddingBottom="@dimen/dimen_5"
+                            android:src="@drawable/ic_disable_square"
+                            app:layout_constraintBottom_toBottomOf="@+id/tvTitleDevice"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/tvTitleDevice" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/text_14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/dimen_5"
+                            android:text="@string/string_all"
+                            app:layout_constraintBottom_toBottomOf="@+id/cbAllDevice"
+                            app:layout_constraintEnd_toStartOf="@+id/cbAllDevice"
+                            app:layout_constraintTop_toTopOf="@+id/cbAllDevice" />
+
+                        <View
+                            android:id="@+id/view3"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dimen_1"
+                            android:layout_marginTop="@dimen/dimen_10"
+                            android:background="@color/color_CECECE"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tvTitleDevice" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rcvListDevice"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/view3"
+                            tools:itemCount="3"
+                            tools:listitem="@layout/item_camera_register_free" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </ScrollView>
+
+
+            <RelativeLayout
+                android:id="@+id/rlRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="#F5F5F5"
+                android:elevation="@dimen/dimen_10"
+                android:gravity="center|end"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/dimen_20"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/llNote"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/dimen_16">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/cbExtend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/dimen_5"
+                        android:paddingEnd="@dimen/dimen_5"
+                        android:paddingBottom="@dimen/dimen_5"
+                        android:src="@drawable/ic_disable_square"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvExtend"
+                        style="@style/text_12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/string_accept_extend"
+                        app:layout_constraintBottom_toBottomOf="@+id/cbExtend"
+                        app:layout_constraintStart_toEndOf="@+id/cbExtend"
+                        app:layout_constraintTop_toTopOf="@+id/cbExtend" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvTermsOfUse"
+                        style="@style/text_12"
+                        android:layout_width="@dimen/dimen_0"
+                        android:layout_height="wrap_content"
+                        android:text="@string/string_terms_of_use"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvExtend"
+                        app:layout_constraintStart_toEndOf="@+id/tvExtend"
+                        app:layout_constraintTop_toTopOf="@+id/tvExtend" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/line"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_1"
+                    android:layout_below="@id/llNote"
+                    android:background="@color/color_CECECE" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="@dimen/dimen_0"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/btnPayment"
+                    android:layout_alignBottom="@id/btnPayment"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginEnd="@dimen/dimen_20"
+                    android:layout_toStartOf="@id/btnPayment"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/view2"
+                        style="@style/text_14"
+                        android:layout_width="@dimen/dimen_0"
+                        android:layout_height="wrap_content"
+                        android:text="@string/total_payment"
+                       app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginEnd="@dimen/dimen_15"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvPriceRegister"
+                        style="@style/text_normal_20"
+                        android:layout_width="@dimen/dimen_0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dimen_5"
+                        android:textColor="#6F6F6F"
+                        app:layout_constraintEnd_toStartOf="@+id/tvMoney"
+                        app:layout_constraintTop_toBottomOf="@+id/view2"
+                        tools:text="40.00đ" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvMoney"
+                        style="@style/text_normal_20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0đ"
+                        android:textColor="@color/color_ef1e4a"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvPriceRegister"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tvPriceRegister" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/btnPayment"
+                    style="@style/CustomButtonRed"
+                    android:layout_width="@dimen/dimen_160"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/llNote"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:layout_marginEnd="@dimen/dimen_20"
+                    android:elevation="@dimen/dimen_4"
+                    android:paddingHorizontal="4dp"
+                    android:text="@string/register"
+                    android:textSize="@dimen/text_size_16"
+                    android:visibility="visible"
+                    app:textAllCaps="false" />
+
+
+            </RelativeLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

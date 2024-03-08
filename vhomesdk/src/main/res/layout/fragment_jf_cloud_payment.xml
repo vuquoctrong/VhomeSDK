@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.jfcameradetail.cloud.JFCloudPaymentFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.viettel.vht.sdk.utils.custom.AppToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/dimen_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:src_left="@drawable/ic_app_back"
+            app:string_title="Đăng ký Cloud trả trước" />
+
+        <View
+            android:id="@+id/viewContent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/margin_app_toolbar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:paddingVertical="@dimen/dimen_20"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="@id/viewContent">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llPayInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_20"
+                android:layout_marginTop="@dimen/dimen_4"
+                android:animateLayoutChanges="true"
+                android:background="@drawable/bg_add_camera"
+                android:elevation="@dimen/dimen_4"
+                android:orientation="vertical"
+                android:paddingVertical="@dimen/dimen_20">
+
+                <RelativeLayout
+                    android:id="@+id/rlHeaderPayInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_15">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/text_light_bold_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/billing_information" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgExpand"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dimen_16"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/ic_arrow_up" />
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_1"
+                    android:layout_marginHorizontal="@dimen/dimen_10"
+                    android:layout_marginVertical="@dimen/dimen_8"
+                    android:background="@color/color_CECECE" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/llBodyPayInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_15"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/text_light_bold_14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="@string/supplier" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvSupplier"
+                            style="@style/text_14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:text="VTHING" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_20">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/text_light_bold_14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="@string/code_orders" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvCodeOrders"
+                            style="@style/text_14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            tools:text="16828-23318-1000-85JYB" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_20">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/text_light_bold_14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="@string/amount_of_money" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvMoney"
+                            style="@style/text_14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            tools:text="100.000đ" />
+
+                    </RelativeLayout>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/llPayInfo"
+                android:layout_marginHorizontal="@dimen/dimen_20"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:background="@drawable/bg_add_camera"
+                android:elevation="@dimen/dimen_4"
+                android:orientation="vertical"
+                android:paddingVertical="@dimen/dimen_20">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/text_light_bold_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_15"
+                    android:text="Thông tin thanh toán" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_1"
+                    android:layout_marginHorizontal="@dimen/dimen_10"
+                    android:layout_marginVertical="@dimen/dimen_8"
+                    android:background="@color/color_CECECE" />
+
+                <RelativeLayout
+                    android:id="@+id/rlViettelPay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_15"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:id="@+id/cbViettelPay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:button="@drawable/bg_radio_select"
+                        android:checked="true"
+                        android:enabled="false" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/text_light_bold_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dimen_15"
+                        android:layout_toEndOf="@id/cbViettelPay"
+                        android:text="@string/viettel_pay_text" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/img_viettel_pay" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlAtm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_15"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:id="@+id/cbAtm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:button="@drawable/bg_radio_select"
+                        android:checked="false"
+                        android:enabled="false" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/text_light_bold_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dimen_15"
+                        android:layout_toEndOf="@id/cbAtm"
+                        android:text="ATM Nội địa" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/ic_atm" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlInternationalCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_15"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:id="@+id/cbInternationalCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:button="@drawable/bg_radio_select"
+                        android:checked="false"
+                        android:enabled="false" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/text_light_bold_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dimen_15"
+                        android:layout_toEndOf="@id/cbInternationalCard"
+                        android:text="Thẻ quốc tế" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/img_visa" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimen_10"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/img_master_card" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimen_10"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/img_jcb" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                </RelativeLayout>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginHorizontal="@dimen/dimen_20"
+                android:layout_marginBottom="@dimen/dimen_40"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/btnCancel"
+                    style="@style/ButtonWhiteBorder"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dimen_40"
+                    android:layout_weight="1"
+                    android:text="@string/btn_cancel"
+                    android:textSize="@dimen/text_size_14" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/btnPayment"
+                    style="@style/CustomButtonRed"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_40"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="@dimen/dimen_4"
+                    android:text="Thanh toán"
+                    android:visibility="visible" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

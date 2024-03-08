@@ -9,7 +9,6 @@ import android.os.Build
 import android.os.Environment
 import android.provider.MediaStore
 import android.text.TextUtils
-import com.vht.sdkcore.BuildConfig
 import com.vht.sdkcore.utils.Constants.PHOTO_FOLDER
 import timber.log.Timber
 import java.io.*
@@ -193,7 +192,7 @@ class Utils {
             return fileSave.path
         }
 
-        fun saveVideoToGallery(context: Context, path: String) {
+        fun saveVideoToGallery(context: Context, path: String,appName: String? = "Vhome") {
             val fileName = File(path).name
             val dateAdded = System.currentTimeMillis()
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
@@ -203,7 +202,7 @@ class Utils {
                 values.put(MediaStore.Video.Media.DATE_TAKEN, dateAdded)
                 values.put(
                     MediaStore.Video.Media.RELATIVE_PATH,
-                    "DCIM/${BuildConfig.APP_NAME}"
+                    "DCIM/${appName}"
                 )
                 values.put(MediaStore.Video.Media.IS_PENDING, true)
                 values.put(MediaStore.Video.Media.DISPLAY_NAME, fileName)
@@ -223,7 +222,7 @@ class Utils {
                 val directory =
                     File(
                         Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM),
-                        BuildConfig.APP_NAME
+                        appName
                     )
                 if (!directory.exists()) {
                     directory.mkdirs()
@@ -504,7 +503,7 @@ class Utils {
             return listPath
         }
 
-        fun saveImageToGallery(context: Context, path: String) {
+        fun saveImageToGallery(context: Context, path: String,appName: String) {
             val fileName = File(path).name
 //            val dateAdded = fileName.substringAfterLast("_").substringBefore(".").toLong() / 1000
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
@@ -514,7 +513,7 @@ class Utils {
 //                values.put(MediaStore.Images.Media.DATE_TAKEN, dateAdded)
                 values.put(
                     MediaStore.Images.Media.RELATIVE_PATH,
-                    "DCIM/${BuildConfig.APP_NAME}"
+                    "DCIM/${appName}"
                 )
                 values.put(MediaStore.Images.Media.IS_PENDING, true)
                 values.put(MediaStore.Images.Media.DISPLAY_NAME, fileName)
@@ -534,7 +533,7 @@ class Utils {
                 val directory =
                     File(
                         Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM)
-                            .toString(), BuildConfig.APP_NAME
+                            .toString(), appName
                     )
                 if (!directory.exists()) {
                     directory.mkdirs()
@@ -551,102 +550,8 @@ class Utils {
             }
         }
 
-        fun saveImageToGalleryJFCamera(context: Context, path: String, devId: String) {
-            val fileName =
-                File(path).name.toString().removeRange(14, File(path).name.toString().length)
-            val fileNameRename = "VHome_${devId}_$fileName.jpg"
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-                val values = ContentValues()
-                values.put(MediaStore.Images.Media.MIME_TYPE, "image/jpg")
-                values.put(MediaStore.Images.Media.DATE_ADDED, System.currentTimeMillis() / 1000)
-                values.put(MediaStore.Images.Media.DATE_TAKEN, System.currentTimeMillis() / 1000)
-                values.put(
-                    MediaStore.Images.Media.RELATIVE_PATH,
-                    "DCIM/${BuildConfig.APP_NAME}"
-                )
-                values.put(MediaStore.Images.Media.IS_PENDING, true)
-                values.put(MediaStore.Images.Media.DISPLAY_NAME, fileNameRename)
 
-                val uri: Uri? =
-                    context.contentResolver.insert(
-                        MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
-                        values
-                    )
-                if (uri != null) {
-                    context.contentResolver.openOutputStream(uri)
-                        ?.write(File(path).inputStream().readBytes())
-                    values.put(MediaStore.Images.Media.IS_PENDING, false)
-                    context.contentResolver.update(uri, values, null, null)
-                } else {
-                    throw Exception()
-                }
-            } else {
-                val directory =
-                    File(
-                        Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM)
-                            .toString(), BuildConfig.APP_NAME
-                    )
-                if (!directory.exists()) {
-                    directory.mkdirs()
-                }
-                val file = File(directory, fileNameRename)
-                file.outputStream().write(File(path).readBytes())
-                val values = ContentValues()
-                values.put(MediaStore.Images.Media.DATA, file.absolutePath)
-                // .DATA is deprecated in API 29
-                context.contentResolver.insert(
-                    MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
-                    values
-                )
-            }
-        }
 
-        fun saveVideoToGalleryJFCamera(context: Context, path: String, devId: String) {
-            val fileName = "VHome_${devId}_${File(path).name}"
-            val dateAdded = System.currentTimeMillis()
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-                val values = ContentValues()
-                values.put(MediaStore.Video.Media.MIME_TYPE, "video/mp4")
-                values.put(MediaStore.Video.Media.DATE_ADDED, dateAdded)
-                values.put(MediaStore.Video.Media.DATE_TAKEN, dateAdded)
-                values.put(
-                    MediaStore.Video.Media.RELATIVE_PATH,
-                    "DCIM/${BuildConfig.APP_NAME}"
-                )
-                values.put(MediaStore.Video.Media.IS_PENDING, true)
-                values.put(MediaStore.Video.Media.DISPLAY_NAME, fileName)
-
-                val uri: Uri? =
-                    context.contentResolver.insert(
-                        MediaStore.Video.Media.EXTERNAL_CONTENT_URI,
-                        values
-                    )
-                if (uri != null) {
-                    context.contentResolver.openOutputStream(uri)
-                        ?.write(File(path).inputStream().readBytes())
-                    values.put(MediaStore.Video.Media.IS_PENDING, false)
-                    context.contentResolver.update(uri, values, null, null)
-                }
-            } else {
-                val directory =
-                    File(
-                        Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM),
-                        BuildConfig.APP_NAME
-                    )
-                if (!directory.exists()) {
-                    directory.mkdirs()
-                }
-                val file = File(directory, fileName)
-                file.outputStream().write(File(path).readBytes())
-                val values = ContentValues()
-                values.put(MediaStore.Video.Media.DATA, file.absolutePath)
-                // .DATA is deprecated in API 29
-                context.contentResolver.insert(
-                    MediaStore.Video.Media.EXTERNAL_CONTENT_URI,
-                    values
-                )
-            }
-        }
 
         fun getImagePathInInternalStorage(context: Context, serialNumber: String): String {
             val folder = File(context.filesDir, "${Constants.PHOTO_FOLDER}/${serialNumber}")

@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.lifecycleScope
 import com.vht.sdkcore.base.BaseFragment
 import com.vht.sdkcore.network.Status
 import com.vht.sdkcore.pref.AppPreferences.Companion.PREF_ORG_ID
@@ -14,7 +15,10 @@ import com.viettel.vht.sdk.databinding.FragmentSdkhomeSplashBinding
 import com.viettel.vht.sdk.jfmanager.JFCameraManager
 import com.viettel.vht.sdk.navigation.AppNavigation
 import com.viettel.vht.sdk.utils.Config
+import com.viettel.vht.sdk.utils.DebugConfig
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import org.json.JSONObject
 import timber.log.Timber
 import javax.inject.Inject
@@ -67,18 +71,22 @@ class SDKVHomeLoadingFragment :
         viewModel.loginResponse.observe(viewLifecycleOwner) { result ->
             when (result.status) {
                 Status.LOADING -> {
-                    showHideLoading(true)
+                  //  showHideLoading(true)
                 }
 
                 Status.SUCCESS -> {
-                    showHideLoading(false)
-                    result.data?.orgId?.let { rxPreferences.put(PREF_ORG_ID, it) }
-                    configCameraJF()
-                    openFunctionSDK()
+                    //showHideLoading(false)
+                    lifecycleScope.launch(Dispatchers.Main){
+                        DebugConfig.logd(message = "Login success")
+                        result.data?.orgId?.let { rxPreferences.put(PREF_ORG_ID, it) }
+                        configCameraJF()
+                        openFunctionSDK()
+                    }
+
                 }
 
                 Status.ERROR -> {
-                    showHideLoading(false)
+                  //  showHideLoading(false)
                 }
             }
         }
@@ -86,19 +94,15 @@ class SDKVHomeLoadingFragment :
     }
 
     private fun login() {
-        val token = rxPreferences.getFirebaseToken()
-        val jsonObject = JSONObject().apply {
-            put(Define.BUNDLE_KEY.PARAM_IDENTIFIER, "0986784498")
-            put(Define.BUNDLE_KEY.PARAM_PASSWORD, "12345678aA@")
-            put(Define.BUNDLE_KEY.PARAM_CAPTCHA, "")
-            put("cname", "viettelhome_dev")
-            put(
-                "pushRegisterJson",
-                "[{\"channel\":14,\"channelRegisterJson\":\"{\\\"token\\\":\\\"$token\\\"}\"}]"
-            )
-        }
+//        val jsonObject = JSONObject().apply {
+//            put(Define.BUNDLE_KEY.PARAM_IDENTIFIER, "0986784498")
+//            put(Define.BUNDLE_KEY.PARAM_PASSWORD, "12345678aA@")
+//        }
+//
+//        viewModel.login(jsonObject.toString())
 
-        viewModel.login(jsonObject.toString())
+        configCameraJF()
+        openFunctionSDK()
     }
 
     private fun configCameraJF() {
@@ -135,9 +139,11 @@ class SDKVHomeLoadingFragment :
     private fun openFunctionSDK(){
         when((requireActivity().intent.getStringExtra(Config.SDK_DATA_FUNCTION_VHOME))){
             Config.SDK_FUNCTION_OPEN_ADD_CAMERA_JF ->{
+                DebugConfig.logd(message = "openFunctionSDK SDK_FUNCTION_OPEN_ADD_CAMERA_JF")
                 appNavigation.openAddCameraJF()
             }
             Config.SDK_FUNCTION_OPEN_DETAIL_CAMERA_JF ->{
+                DebugConfig.logd(message = "openFunctionSDK SDK_FUNCTION_OPEN_DETAIL_CAMERA_JF")
                 val bundle = Bundle()
                 val idCamera = "68cadfb7-2f64-47be-90c5-5cbd84d5e1af"
                 val serialCamera = "7ceeaf9b3e9b6000"

@@ -1,0 +1,98 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.viettel.vht.sdk.utils.custom.AppToolbar
+            android:id="@+id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/dimen_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:src_left="@drawable/ic_app_back"
+            app:string_title="@string/string_title_toolbar_spread" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imvFrame"
+            android:layout_width="@dimen/dimen_250"
+            android:layout_height="@dimen/dimen_240"
+            android:src="@drawable/ic_spread_camera"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolBar" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvContentPhoneNumber"
+            style="@style/text_bold_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16"
+            android:layout_marginTop="@dimen/margin_16"
+            android:text="@string/string_content_number_spread_camera"
+            android:textColor="@color/black_sdk"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imvFrame" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvContentTitleTwo"
+            style="@style/text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:text="@string/can_only_be_entered_once"
+            android:textColor="#4E4E4E"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvContentPhoneNumber" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtPhoneNumber"
+            style="@style/text_12"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edit_box_height"
+            android:layout_marginStart="@dimen/screen_padding"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/screen_padding"
+            android:background="@drawable/bg_white_border_20"
+            android:drawablePadding="@dimen/margin_8"
+            android:drawableTint="#B4B4B4"
+            android:gravity="center_vertical"
+            android:hint="@string/input_phone_number"
+            android:inputType="number"
+            android:maxLength="10"
+            android:paddingHorizontal="@dimen/margin_16"
+            android:textColor="@color/black_sdk"
+            app:layout_constraintTop_toBottomOf="@+id/tvContentTitleTwo" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvError"
+            style="@style/text_14"
+            android:textColor="@color/color_F8214B"
+            app:layout_constraintStart_toStartOf="@+id/edtPhoneNumber"
+            app:layout_constraintTop_toBottomOf="@+id/edtPhoneNumber"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btnContinue"
+            style="@style/CustomButtonRed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:enabled="false"
+            android:text="@string/text_confirm"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvError" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -16,7 +16,182 @@
         <action
             android:id="@+id/action_SDKVHomeLoadingFragment_to_jfcamera_detail_graph"
             app:destination="@id/jfcamera_detail_graph" />
+        <action
+            android:id="@+id/action_SDKVHomeLoadingFragment_to_updateFirmwareCameraJFFragment"
+            app:destination="@id/updateFirmwareCameraJFFragment" />
     </fragment>
     <include app:graph="@navigation/add_camera_jftech_graph" />
     <include app:graph="@navigation/jfcamera_detail_graph" />
+
+    <fragment
+        android:id="@+id/updateFirmwareCameraJFFragment"
+        android:name="com.viettel.vht.sdk.ui.jfcameradetail.update_firmware.UpdateFirmwareCameraJFFragment"
+        android:label="UpdateFirmwareCameraJFFragment" />
+
+
+    <fragment
+        android:id="@+id/spreadCameraFragment"
+        android:name="com.viettel.vht.sdk.ui.jfcameradetail.spread_camera.SpreadCameraFragment"
+        android:label="SpreadCameraFragment"
+        tools:layout="@layout/fragment_spread_camera" />
+
+    <action
+        android:id="@+id/global_action_spreadCameraFragment"
+        app:destination="@id/spreadCameraFragment"
+        app:enterAnim="@anim/slide_in_left"
+        app:exitAnim="@anim/slide_out_right"
+        app:popEnterAnim="@anim/slide_in_right"
+        app:popExitAnim="@anim/slide_out_left" />
+
+    <action
+        android:id="@+id/action_to_verificationCodeCameraJFFragment"
+        app:destination="@id/verificationCodeCameraJFFragment" />
+
+    <fragment
+        android:id="@+id/verificationCodeCameraJFFragment"
+        android:name="com.viettel.vht.sdk.ui.jfcameradetail.forgot_password.VerificationCodeCameraJFFragment"
+        android:label="VerificationCodeCameraJFFragment">
+        <action
+            android:id="@+id/action_verificationCodeCameraJFFragment_to_resetPasswordCameraJFFragment"
+            app:destination="@id/resetPasswordCameraJFFragment"
+            app:popUpTo="@id/verificationCodeCameraJFFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/resetPasswordCameraJFFragment"
+        android:name="com.viettel.vht.sdk.ui.jfcameradetail.forgot_password.ResetPasswordCameraJFFragment"
+        android:label="ResetPasswordCameraJFFragment" />
+
+
+
+    <fragment
+        android:id="@+id/RegisterPayLinkWebViewFragment"
+        android:name="com.viettel.vht.sdk.ui.jfcameradetail.cloud.promotion.RegisterCloudPromotionFragment"
+        android:label="RegisterPayLinkWebViewFragment" />
+
+    <action
+        android:id="@+id/action_global_RegisterPayLinkWebViewFragment"
+        app:destination="@id/RegisterPayLinkWebViewFragment"
+        app:enterAnim="@anim/slide_in_left"
+        app:exitAnim="@anim/slide_out_right"
+        app:popEnterAnim="@anim/slide_in_right"
+        app:popExitAnim="@anim/slide_out_left" />
+
+
+    <action
+        android:id="@+id/action_to_viettelPayWebviewFragment"
+        app:destination="@id/viettelPayWebviewFragment" />
+
+    <fragment
+        android:id="@+id/viettelPayWebviewFragment"
+        android:name="com.viettel.vht.sdk.ui.vtpay.ViettelPayWebviewFragment"
+        android:label="ViettelPayWebviewFragment" />
+
+    <fragment
+        android:id="@+id/PayLinkConfigOTPFragment"
+        android:name="com.viettel.vht.sdk.ui.jfcameradetail.cloud.PayLinkConfigOTPFragment"
+        android:label="PayLinkConfigOTPFragment" />
+    <action
+        android:id="@+id/action_global_PayLinkConfigOTPFragment"
+        app:destination="@id/PayLinkConfigOTPFragment"
+        app:enterAnim="@anim/slide_in_left"
+        app:exitAnim="@anim/slide_out_right"
+        app:popEnterAnim="@anim/slide_in_right"
+        app:popExitAnim="@anim/slide_out_left" />
+
+    <fragment
+        android:id="@+id/HistoryBuyCloudStorageFragment"
+        android:name="com.viettel.vht.sdk.ui.jfcameradetail.cloud.HistoryBuyCloudStorageFragment"
+        android:label="HistoryBuyCloudStorageFragment" />
+
+    <action
+        android:id="@+id/action_global_HistoryBuyCloudStorageFragment"
+        app:destination="@id/HistoryBuyCloudStorageFragment"
+        app:enterAnim="@anim/slide_in_left"
+        app:exitAnim="@anim/slide_out_right"
+        app:popEnterAnim="@anim/slide_in_right"
+        app:popExitAnim="@anim/slide_out_left" />
+
+
+    <fragment
+        android:id="@+id/ConfigOTPOnOffPayLinkFragment"
+        android:name="com.viettel.vht.sdk.ui.vtpay.ConfigOTPOnOffPayLinkFragment"
+        android:label="ConfigOTPOnOffPayLinkFragment" />
+
+    <action
+        android:id="@+id/action_global_ConfigOTPOnOffPayLinkFragment"
+        app:destination="@id/ConfigOTPOnOffPayLinkFragment"
+        app:enterAnim="@anim/slide_in_left"
+        app:exitAnim="@anim/slide_out_right"
+        app:popEnterAnim="@anim/slide_in_right"
+        app:popExitAnim="@anim/slide_out_left" />
+
+    <action
+        android:id="@+id/action_setting_to_JFCloudStorageFragment"
+        app:destination="@id/JFCloudStorageFragment" />
+
+    <fragment
+        android:id="@+id/JFCloudStorageFragment"
+        android:name="com.viettel.vht.sdk.ui.jfcameradetail.cloud.JFCloudStorageFragment"
+        android:label="JFCloudStorageFragment">
+        <action
+            android:id="@+id/action_JFCloudStorageFragment_to_JFCloudRegisterFragment"
+            app:destination="@id/JFCloudRegisterFragment" />
+
+        <action
+            android:id="@+id/action_JFCloudStorageFragment_to_JFCloudPostpaidFragment"
+            app:destination="@id/JFCloudPostpaidFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/DetailBuyCloudStorageFragment"
+        android:name="com.viettel.vht.sdk.ui.jfcameradetail.cloud.DetailBuyCloudStorageFragment"
+        android:label="DetailBuyCloudStorageFragment" />
+
+    <action
+        android:id="@+id/action_global_DetailBuyCloudStorageFragment"
+        app:destination="@id/DetailBuyCloudStorageFragment"
+        app:enterAnim="@anim/slide_in_left"
+        app:exitAnim="@anim/slide_out_right"
+        app:popEnterAnim="@anim/slide_in_right"
+        app:popExitAnim="@anim/slide_out_left" />
+
+
+
+    <action
+        android:id="@+id/action_to_JFCloudRegisterFragment"
+        app:destination="@id/JFCloudRegisterFragment"
+        app:enterAnim="@anim/slide_in_left"
+        app:exitAnim="@anim/slide_out_right"
+        app:popEnterAnim="@anim/slide_in_right"
+        app:popExitAnim="@anim/slide_out_left" />
+
+    <fragment
+        android:id="@+id/RegisterCloudPromotionFragment"
+        android:name="com.viettel.vht.sdk.ui.jfcameradetail.cloud.promotion.RegisterCloudPromotionFragment"
+        android:label="RegisterCloudPromotionFragment" />
+
+    <action
+        android:id="@+id/action_global_RegisterCloudPromotionFragment"
+        app:destination="@id/RegisterCloudPromotionFragment"
+        app:enterAnim="@anim/slide_in_left"
+        app:exitAnim="@anim/slide_out_right"
+        app:popEnterAnim="@anim/slide_in_right"
+        app:popExitAnim="@anim/slide_out_left" />
+
+    <fragment
+        android:id="@+id/CloudPromotionConfigOTPFragment"
+        android:name="com.viettel.vht.sdk.ui.jfcameradetail.cloud.promotion.CloudPromotionConfigOTPFragment"
+        android:label="CloudPromotionConfigOTPFragment" />
+
+    <action
+        android:id="@+id/action_global_CloudPromotionConfigOTPFragment"
+        app:destination="@id/CloudPromotionConfigOTPFragment"
+        app:enterAnim="@anim/slide_in_left"
+        app:exitAnim="@anim/slide_out_right"
+        app:popEnterAnim="@anim/slide_in_right"
+        app:popExitAnim="@anim/slide_out_left" />
+
 </navigation>

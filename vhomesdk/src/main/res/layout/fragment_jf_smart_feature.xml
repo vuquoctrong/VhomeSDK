@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_white">
+
+        <com.viettel.vht.sdk.utils.custom.AppToolbar
+            android:id="@+id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/dimen_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:src_left="@drawable/ic_app_back"
+            app:string_right="@string/save_text"
+            app:string_title="@string/string_setting_notificaiton_setting_alarm" />
+
+        <View
+            android:id="@+id/viewContent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/margin_app_toolbar"
+            android:background="@color/color_white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:paddingBottom="@dimen/dimen_16"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="@id/viewContent">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dimen_10"
+                android:background="@color/color_white"
+                android:clipToPadding="false"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/groupInDoor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_16"
+                    android:layout_marginTop="@dimen/dimen_16"
+                    android:background="@drawable/bg_setting_camera"
+                    android:elevation="@dimen/margin_4"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/dimen_10"
+                    android:visibility="visible">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clSettingDetect"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="@dimen/dimen_16"
+                        android:visibility="visible">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvSettingDetect"
+                            style="@style/text_bold_14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/dimen_10"
+                            android:text="@string/string_motion_detect"
+                            app:layout_constraintBottom_toBottomOf="@+id/swOnOffDetect"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/swOnOffDetect" />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/swOnOffDetect"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dimen_30"
+                            android:textOff="Off"
+                            android:textOn="On"
+                            android:thumb="@drawable/thumb_selector"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:track="@drawable/track_selector" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clWarning"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingStart="@dimen/dimen_26"
+                            android:paddingEnd="@dimen/dimen_16"
+                            android:paddingBottom="@dimen/margin_16"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/clSensitivityMotion"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dimen_10"
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    style="@style/text_14"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Độ nhạy chuyển động" />
+
+                                <RadioGroup
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <androidx.appcompat.widget.AppCompatRadioButton
+                                        android:id="@+id/rbLow"
+                                        android:layout_width="@dimen/dimen_20"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:button="@drawable/bg_radio_select"
+                                        android:gravity="center"
+                                        android:text="@string/string_low"
+                                        android:textColor="@color/black_sdk"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        tools:ignore="RtlSymmetry" />
+
+                                    <androidx.appcompat.widget.AppCompatRadioButton
+                                        android:id="@+id/rbMedium"
+                                        android:layout_width="@dimen/dimen_20"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1.5"
+                                        android:button="@drawable/bg_radio_select"
+                                        android:gravity="center"
+                                        android:text="@string/string_medium"
+                                        android:textColor="@color/black_sdk"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        tools:ignore="RtlSymmetry" />
+
+                                    <androidx.appcompat.widget.AppCompatRadioButton
+                                        android:id="@+id/rbHigh"
+                                        android:layout_width="@dimen/dimen_20"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:button="@drawable/bg_radio_select"
+                                        android:gravity="center"
+                                        android:text="@string/string_high"
+                                        android:textColor="@color/black_sdk"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        tools:ignore="RtlSymmetry" />
+
+                                </RadioGroup>
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <View
+                            android:id="@+id/viewDisable"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dimen_0"
+                            android:background="@drawable/bgr_radius_12"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/dimen_20">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clSettingVolume"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/dimen_16"
+                        android:layout_marginTop="@dimen/dimen_16"
+                        android:background="@drawable/bg_setting_camera"
+                        android:elevation="@dimen/margin_4"
+                        android:padding="@dimen/dimen_16">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvSettingVolume"
+                            style="@style/text_bold_14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/string_setting_volume"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvStatusSettingVolume"
+                            style="@style/text_14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableRight="@drawable/ic_back_left"
+                            android:gravity="center_vertical"
+                            android:text="Im lặng"
+                            app:layout_constraintBottom_toBottomOf="@+id/tvSettingVolume"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/tvSettingVolume" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clSettingZone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/dimen_16"
+                        android:layout_marginTop="@dimen/dimen_16"
+                        android:layout_marginBottom="@dimen/dimen_16"
+                        android:background="@drawable/bg_setting_camera"
+                        android:elevation="@dimen/margin_4"
+                        android:padding="@dimen/dimen_16">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvSettingZone"
+                            style="@style/text_bold_14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/string_security_zone"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvTypeSettingZone"
+                            style="@style/text_14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableRight="@drawable/ic_back_left"
+                            android:gravity="center_vertical"
+                            android:text="@string/string_default_zone_ipc"
+                            app:layout_constraintBottom_toBottomOf="@+id/tvSettingZone"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/tvSettingZone" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvSetupZone"
+                            style="@style/text_bold_14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_16"
+                            android:padding="8dp"
+                            android:text="@string/string_setting_security_zone"
+                            android:textColor="@color/color_ef1e4a"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvSettingZone" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

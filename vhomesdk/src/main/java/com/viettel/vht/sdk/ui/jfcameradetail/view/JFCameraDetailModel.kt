@@ -36,6 +36,7 @@ import com.viettel.vht.sdk.network.repository.CloudRepository
 import com.viettel.vht.sdk.network.repository.HomeRepository
 import com.viettel.vht.sdk.utils.Config
 import com.viettel.vht.sdk.utils.DebugConfig
+import com.viettel.vht.sdk.utils.ImageUtils
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import org.greenrobot.eventbus.EventBus
@@ -203,13 +204,13 @@ class JFCameraDetailModel @Inject constructor(
 
     fun saveImageToGallery(path: String, devId: String) {
         io.launch {
-            Utils.saveImageToGalleryJFCamera(application.applicationContext, path, devId)
+            ImageUtils.saveImageToGalleryJFCamera(application.applicationContext, path, devId)
         }
     }
 
     fun saveVideoToGallery(path: String, devId: String) {
         io.launch {
-            Utils.saveVideoToGalleryJFCamera(application.applicationContext, path, devId)
+            ImageUtils.saveVideoToGalleryJFCamera(application.applicationContext, path, devId)
         }
     }
 

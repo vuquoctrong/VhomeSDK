@@ -8,6 +8,8 @@ import com.vht.sdkcore.utils.executeWithRetry
 import com.viettel.vht.main.model.ptz_jf.UpdateListPTZRequest
 import com.viettel.vht.sdk.jfmanager.JFApiManager
 import com.viettel.vht.sdk.model.DeviceResponse
+import com.viettel.vht.sdk.model.camera_cloud.RegisterPayLinkRequest
+import com.viettel.vht.sdk.model.camera_cloud.RequestRegisterPromotionFree
 import com.viettel.vht.sdk.model.home.GetAppLogUpLoadLinkResponse
 import com.viettel.vht.sdk.model.home.RequestGetAppLogUpLoadLink
 import com.viettel.vht.sdk.model.home.RequestUpLoadAppLog
@@ -198,6 +200,101 @@ class HomeRepository @Inject constructor(
 
         }
     }.flowOn(Dispatchers.IO)
+
+    fun getInformationCloudRelatives(serial: String, phone: String) = flow {
+        try {
+            val request = JSONObject().apply {
+                put("serial", serial)
+                put("phone", phone)
+            }.toString().toRequestBody()
+            emit(com.vht.sdkcore.network.Result.Loading())
+            val response = smartHomeAPI.getInformationCloudRelatives(request)
+            emit(com.vht.sdkcore.network.Result.Success(response))
+        } catch (e: Exception) {
+            emit(com.vht.sdkcore.network.Result.Error(e.message.toString()))
+
+        }
+    }.flowOn(Dispatchers.IO)
+
+
+    fun setListCameraPricingPaymentCloud(requestBody: RequestRegisterPromotionFree) = flow {
+
+        try {
+            emit(com.vht.sdkcore.network.Result.Loading())
+            val response = smartHomeAPI.setPricingPaymentCloud(requestBody)
+            emit(com.vht.sdkcore.network.Result.Success(response))
+
+        } catch (e: Exception) {
+            emit(com.vht.sdkcore.network.Result.Error(e.message.toString()))
+
+        }
+    }.flowOn(Dispatchers.IO)
+
+
+    fun getListPaymentGatewayLink() = flow {
+        try {
+            emit(com.vht.sdkcore.network.Result.Loading())
+            val response = smartHomeAPI.getListPaymentGatewayLink()
+            if (response.code == 200) {
+                emit(com.vht.sdkcore.network.Result.Success(response))
+            } else {
+                emit(com.vht.sdkcore.network.Result.Error(response.msg.toString()))
+            }
+
+        } catch (e: Exception) {
+            emit(com.vht.sdkcore.network.Result.Error(e.message.toString()))
+
+        }
+    }.flowOn(Dispatchers.IO)
+
+    fun registerPaymentGatewayLink(request: RegisterPayLinkRequest) = flow {
+        try {
+            emit(com.vht.sdkcore.network.Result.Loading())
+            val response = smartHomeAPI.registerPaymentGatewayLink(request)
+            emit(com.vht.sdkcore.network.Result.Success(response))
+
+        } catch (e: Exception) {
+            emit(com.vht.sdkcore.network.Result.Error(e.message.toString()))
+
+        }
+    }.flowOn(Dispatchers.IO)
+
+    fun getDataCheckCloudReferCloud(code: String) = flow {
+        try {
+            emit(com.vht.sdkcore.network.Result.Loading())
+            val response = smartHomeAPI.getDataCheckCloudReferCloud(code)
+            emit(com.vht.sdkcore.network.Result.Success(response))
+        } catch (e: Exception) {
+            emit(com.vht.sdkcore.network.Result.Error( e.message?:"".toString()))
+        }
+    }.flowOn(Dispatchers.IO)
+    fun getInformationAccountByUseId(useId: String) = flow {
+        try {
+            emit(com.vht.sdkcore.network.Result.Loading())
+            val response = smartHomeAPI.getInformationAccountByUseId(useId)
+            emit(com.vht.sdkcore.network.Result.Success(response))
+        } catch (e: Exception) {
+            emit(com.vht.sdkcore.network.Result.Error(e.toString()))
+            e.printStackTrace()
+        }
+    }.flowOn(Dispatchers.IO)
+
+    fun setDeviceSpread(idDevice: String, phone: String) = flow {
+        try {
+            val request = JSONObject().apply {
+                put("device_id", idDevice)
+                put("phone", phone)
+            }.toString().toRequestBody()
+            emit(com.vht.sdkcore.network.Result.Loading())
+            val response = smartHomeAPI.setDeviceSpread(request)
+            emit(com.vht.sdkcore.network.Result.Success(response))
+        } catch (e: Exception) {
+            emit(com.vht.sdkcore.network.Result.Error(e.message.toString()))
+
+        }
+    }.flowOn(Dispatchers.IO)
+
+
 
 }
 

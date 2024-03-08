@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingDefaultResource">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_white_corner_28_white"
+        android:orientation="vertical"
+        android:padding="@dimen/dimen_16">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/text_bold_14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/string_enter_refer_code" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:background="#CECECE" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/text_bold_14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_30"
+            android:text="@string/string_title_dialog_refer_code_cloud" />
+
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:layout_width="match_parent"
+           android:layout_marginTop="@dimen/dimen_10"
+           android:layout_height="wrap_content">
+           <androidx.appcompat.widget.AppCompatEditText
+               android:id="@+id/edtPhone"
+               style="@style/text_14"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:maxLength="50"
+               android:paddingEnd="@dimen/dimen_40"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               android:hint="@string/string_hint_refer_code_dialog"
+               android:textColor="@color/black"
+               android:background="@drawable/bg_setting_camera_editext"
+               android:padding="@dimen/dimen_12" />
+
+           <androidx.appcompat.widget.AppCompatImageView
+               android:id="@+id/imvClearText"
+               android:layout_width="@dimen/dimen_40"
+               android:layout_height="@dimen/dimen_40"
+               android:padding="@dimen/dimen_14"
+               android:src="@drawable/ic_close_edittext"
+               android:visibility="gone"
+               app:layout_constraintBottom_toBottomOf="@+id/edtPhone"
+               app:layout_constraintEnd_toEndOf="@+id/edtPhone"
+               app:layout_constraintTop_toTopOf="@+id/edtPhone" />
+       </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvError"
+            style="@style/text_12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:text="@string/string_number_refer_code_error"
+            android:textColor="#F8214B" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_20"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnCancel"
+                style="@style/CustomButtonRed_stroke_cancel"
+                android:layout_width="@dimen/dimen_0"
+                android:padding="@dimen/dimen_8"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/btn_cancel"
+                android:textAllCaps="true" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnOk"
+                style="@style/CustomButtonRed"
+                android:padding="@dimen/dimen_8"
+                android:layout_width="@dimen/dimen_0"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_16"
+                android:layout_weight="1"
+                android:text="@string/save_accept"
+                android:textAllCaps="true" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>

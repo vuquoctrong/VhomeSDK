@@ -8,7 +8,7 @@ import com.manager.account.XMAccountManager
 import com.manager.db.XMDevInfo
 import com.vht.sdkcore.R
 import com.vht.sdkcore.utils.Define
-import com.viettel.vht.sdk.CloudRegistered
+import com.viettel.vht.sdk.model.camera_cloud.CloudRegistered
 import com.viettel.vht.sdk.model.home.AttributeResponse
 import com.viettel.vht.sdk.utils.AttributeDataManager
 import org.json.JSONObject

@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F5F5F5">
+
+        <com.viettel.vht.sdk.utils.custom.AppToolbar
+            android:id="@+id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:src_left="@drawable/ic_app_back"
+            app:src_right_color="#EC0D3A"
+            app:string_right="Lưu"
+            app:string_title="@string/string_add_schedule" />
+
+        <View
+            android:id="@+id/viewContent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/margin_app_toolbar"
+            android:background="@color/color_f0f0f0"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:clipToPadding="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="@id/viewContent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitleDayOfWeek"
+                style="@style/text_bold_14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dimen_16"
+                android:text="Lặp lại"
+                android:textColor="@color/black_sdk"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSelectedCount"
+                style="@style/text_bold_14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dimen_16"
+                android:text="Mỗi ngày"
+                android:textColor="@color/black_sdk"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/contentDayOfWeek"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_16"
+                android:background="@drawable/bg_setting_camera_jf"
+                android:paddingVertical="@dimen/dimen_10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTitleDayOfWeek">
+
+                <androidx.appcompat.widget.AppCompatCheckedTextView
+                    android:id="@+id/cbT2"
+                    style="@style/text_bold_14"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/bg_day_of_week_camera_jf"
+                    android:gravity="center"
+                    android:text="T2"
+                    android:textAlignment="center"
+                    android:textColor="@color/color_day_of_week_camera_jf"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toStartOf="@id/cbT3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.1"
+                    tools:ignore="HardcodedText" />
+
+                <androidx.appcompat.widget.AppCompatCheckedTextView
+                    android:id="@+id/cbT3"
+                    style="@style/text_bold_14"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/bg_day_of_week_camera_jf"
+                    android:gravity="center"
+                    android:text="T3"
+                    android:textAlignment="center"
+                    android:textColor="@color/color_day_of_week_camera_jf"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toStartOf="@id/cbT4"
+                    app:layout_constraintStart_toEndOf="@id/cbT2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.1"
+                    tools:ignore="HardcodedText" />
+
+                <androidx.appcompat.widget.AppCompatCheckedTextView
+                    android:id="@+id/cbT4"
+                    style="@style/text_bold_14"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/bg_day_of_week_camera_jf"
+                    android:gravity="center"
+                    android:text="T4"
+                    android:textAlignment="center"
+                    android:textColor="@color/color_day_of_week_camera_jf"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toStartOf="@id/cbT5"
+                    app:layout_constraintStart_toEndOf="@id/cbT3"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.1"
+                    tools:ignore="HardcodedText" />
+
+                <androidx.appcompat.widget.AppCompatCheckedTextView
+                    android:id="@+id/cbT5"
+                    style="@style/text_bold_14"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/bg_day_of_week_camera_jf"
+                    android:gravity="center"
+                    android:text="T5"
+                    android:textAlignment="center"
+                    android:textColor="@color/color_day_of_week_camera_jf"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toStartOf="@id/cbT6"
+                    app:layout_constraintStart_toEndOf="@id/cbT4"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.1"
+                    tools:ignore="HardcodedText" />
+
+                <androidx.appcompat.widget.AppCompatCheckedTextView
+                    android:id="@+id/cbT6"
+                    style="@style/text_bold_14"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/bg_day_of_week_camera_jf"
+                    android:gravity="center"
+                    android:text="T6"
+                    android:textAlignment="center"
+                    android:textColor="@color/color_day_of_week_camera_jf"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toStartOf="@id/cbT7"
+                    app:layout_constraintStart_toEndOf="@id/cbT5"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.1"
+                    tools:ignore="HardcodedText" />
+
+                <androidx.appcompat.widget.AppCompatCheckedTextView
+                    android:id="@+id/cbT7"
+                    style="@style/text_bold_14"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/bg_day_of_week_camera_jf"
+                    android:gravity="center"
+                    android:text="T7"
+                    android:textAlignment="center"
+                    android:textColor="@color/color_day_of_week_camera_jf"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toStartOf="@id/cbCN"
+                    app:layout_constraintStart_toEndOf="@id/cbT6"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.1"
+                    tools:ignore="HardcodedText" />
+
+                <androidx.appcompat.widget.AppCompatCheckedTextView
+                    android:id="@+id/cbCN"
+                    style="@style/text_bold_14"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/bg_day_of_week_camera_jf"
+                    android:gravity="center"
+                    android:text="CN"
+                    android:textAlignment="center"
+                    android:textColor="@color/color_day_of_week_camera_jf"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/cbT7"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.1"
+                    tools:ignore="HardcodedText" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitleTime"
+                style="@style/text_bold_14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_16"
+                android:padding="@dimen/dimen_10"
+                android:text="Thời gian"
+                android:textColor="@color/black_sdk"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/contentDayOfWeek"
+                tools:ignore="HardcodedText" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/contentTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_16"
+                android:background="@drawable/bg_setting_camera_jf"
+                android:paddingHorizontal="@dimen/dimen_16"
+                android:paddingVertical="@dimen/dimen_10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTitleTime">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTime"
+                    style="@style/text_bold_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00:00 - 06:00"
+                    android:textColor="@color/black_sdk"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="HardcodedText" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivLeft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dimen_10"
+                    android:rotation="180"
+                    android:src="@drawable/ic_app_back"
+                    android:tint="@color/black_sdk"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
