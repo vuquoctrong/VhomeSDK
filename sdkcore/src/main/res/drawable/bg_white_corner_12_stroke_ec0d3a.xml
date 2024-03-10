@@ -7,7 +7,7 @@
         android:topLeftRadius="@dimen/dimen_12"
         android:topRightRadius="@dimen/dimen_12" />
 
-    <solid android:color="@color/white" />
+    <solid android:color="@color/white_sdk" />
 
     <stroke
         android:width="@dimen/dimen_1"

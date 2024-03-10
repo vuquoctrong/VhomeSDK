@@ -98,7 +98,7 @@
             android:gravity="center"
             android:padding="@dimen/margin_2"
             android:text="1"
-            android:textColor="@color/white"
+            android:textColor="@color/white_sdk"
             android:textSize="@dimen/app_font_size_small"
             android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"

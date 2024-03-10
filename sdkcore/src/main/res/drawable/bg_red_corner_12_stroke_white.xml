@@ -13,6 +13,6 @@
 
     <stroke
         android:width="@dimen/dimen_1"
-        android:color="@color/white" />
+        android:color="@color/white_sdk" />
 
 </shape>

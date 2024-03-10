@@ -6,7 +6,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/bgr_card_radius8"
+        android:background="@drawable/bg_white_radius_20"
         android:paddingHorizontal="@dimen/margin_16"
         android:paddingVertical="@dimen/margin_16"
         tools:ignore="MissingDefaultResource">

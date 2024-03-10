@@ -6,7 +6,7 @@
         android:width="@dimen/dimen_1"
         android:color="#F8214B" />
 
-    <solid android:color="@color/white" />
+    <solid android:color="@color/white_sdk" />
 
     <corners android:radius="@dimen/dimen_8" />
 

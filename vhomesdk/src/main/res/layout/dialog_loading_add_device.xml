@@ -12,7 +12,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_marginHorizontal="@dimen/dimen_80"
-            app:cardBackgroundColor="@color/white"
+            app:cardBackgroundColor="@color/white_sdk"
             app:cardCornerRadius="@dimen/dimen_20">
 
             <androidx.constraintlayout.widget.ConstraintLayout

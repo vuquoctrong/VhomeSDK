@@ -42,7 +42,7 @@
                 android:background="@drawable/bg_button_gray"
                 android:gravity="center"
                 android:text="@string/dialog_btn_cancel"
-                android:textColor="@color/white" />
+                android:textColor="@color/white_sdk" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn_save"
@@ -53,7 +53,7 @@
                 android:background="@drawable/bg_button_red"
                 android:gravity="center"
                 android:text="@string/dialog_btn_save"
-                android:textColor="@color/white" />
+                android:textColor="@color/white_sdk" />
 
         </LinearLayout>
     </RelativeLayout>

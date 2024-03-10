@@ -55,6 +55,12 @@ object Config {
 
 
     }
+    object SDKParamIntent{
+        const val PARAM_ID_CAMERA="PARAM_ID_CAMERA"
+        const val PARAM_SERIAL_CAMERA="PARAM_SERIAL_CAMERA"
+        const val PARAM_NAME_CAMERA="PARAM_NAME_CAMERA"
+        const val PARAM_MODEL_CAMERA="PARAM_MODEL_CAMERA"
+    }
 
     const val SDK_DATA_FUNCTION_VHOME="SDK_DATA_FUNCTION_VHOME"
     const val SDK_FUNCTION_OPEN_ADD_CAMERA_JF="SDK_FUNCTION_OPEN_ADD_CAMERA_JF"

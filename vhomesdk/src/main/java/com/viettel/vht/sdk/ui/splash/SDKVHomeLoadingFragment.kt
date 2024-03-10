@@ -145,9 +145,10 @@ class SDKVHomeLoadingFragment :
             Config.SDK_FUNCTION_OPEN_DETAIL_CAMERA_JF ->{
                 DebugConfig.logd(message = "openFunctionSDK SDK_FUNCTION_OPEN_DETAIL_CAMERA_JF")
                 val bundle = Bundle()
-                val idCamera = "68cadfb7-2f64-47be-90c5-5cbd84d5e1af"
-                val serialCamera = "7ceeaf9b3e9b6000"
-                val nameCamera = "7ceeaf9b3e9b6000"
+                val idCamera = requireActivity().intent.getStringExtra(Config.SDKParamIntent.PARAM_ID_CAMERA)
+                val serialCamera = requireActivity().intent.getStringExtra(Config.SDKParamIntent.PARAM_SERIAL_CAMERA)
+                val nameCamera =  requireActivity().intent.getStringExtra(Config.SDKParamIntent.PARAM_NAME_CAMERA)
+                val modelCamera =  requireActivity().intent.getStringExtra(Config.SDKParamIntent.PARAM_MODEL_CAMERA)
                 bundle.putString(
                     Define.BUNDLE_KEY.PARAM_DEVICE_SERIAL,
                     serialCamera
@@ -155,8 +156,7 @@ class SDKVHomeLoadingFragment :
                 bundle.putString(Define.BUNDLE_KEY.PARAM_DEVICE_ID, idCamera)
                 bundle.putString(Define.BUNDLE_KEY.PARAM_ID, idCamera)
                 bundle.putString(Define.BUNDLE_KEY.PARAM_NAME, nameCamera)
-
-                bundle.putString(Define.BUNDLE_KEY.PARAM_MODEL_CAMERA, "HC23")
+                bundle.putString(Define.BUNDLE_KEY.PARAM_MODEL_CAMERA, modelCamera)
 
                 bundle.putString(
                     Define.BUNDLE_KEY.PARAM_STATUS_SHARE, ""

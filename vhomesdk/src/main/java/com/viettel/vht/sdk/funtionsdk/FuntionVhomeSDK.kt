@@ -46,7 +46,7 @@ interface VHomeSDKManager {
     /**
      *  Mở màn hình LiveView camera JF
      */
-    fun openDetailCameraJF(context: Context,listener: VHomeDetailCameraJFSDKListener?)
+    fun openDetailCameraJF(context: Context,idCamera: String,serialCamera: String,nameCamera: String,modelCamera: String,listener: VHomeDetailCameraJFSDKListener?)
 
     /**
      *  Hiển thị logcat trong sdk VHome
@@ -154,6 +154,10 @@ class VHomeSDKManagerImpl constructor(
                         rxPreferences.setUserPhoneNumber(it.phone ?: Constants.EMPTY)
                         rxPreferences.setOrgIDAccount(it.orgId ?: Constants.EMPTY)
                         rxPreferences.setUserName(it.name ?: Constants.EMPTY)
+                        it.thirdPartyInfo?.let { dataInfor ->
+                            rxPreferences.setTokenJFTech(dataInfor.jfAuth)
+                            rxPreferences.setUserJF(dataInfor.jfUser)
+                        }
 
                     }
                     listener?.onSuccess(rxPreferences.getUserToken() ?: "")
@@ -178,11 +182,15 @@ class VHomeSDKManagerImpl constructor(
     }
 
 
-    override fun openDetailCameraJF(context: Context,listener: VHomeDetailCameraJFSDKListener?) {
+    override fun openDetailCameraJF(context: Context,idCamera: String,serialCamera: String,nameCamera: String,modelCamera: String,listener: VHomeDetailCameraJFSDKListener?) {
         coroutineScope.launch(Dispatchers.Main){
             vHomeDetailCameraJFSDKListener = listener
             val intent = Intent(context, SDKVHomeMainActivity::class.java)
             intent.putExtra(Config.SDK_DATA_FUNCTION_VHOME, Config.SDK_FUNCTION_OPEN_DETAIL_CAMERA_JF)
+            intent.putExtra(Config.SDKParamIntent.PARAM_ID_CAMERA,idCamera)
+            intent.putExtra(Config.SDKParamIntent.PARAM_SERIAL_CAMERA,serialCamera)
+            intent.putExtra(Config.SDKParamIntent.PARAM_NAME_CAMERA,nameCamera)
+            intent.putExtra(Config.SDKParamIntent.PARAM_MODEL_CAMERA,modelCamera)
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
             context.startActivity(intent)
         }
