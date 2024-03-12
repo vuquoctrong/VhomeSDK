@@ -3,7 +3,7 @@
     <!--    setting-->
     <color name="color_title_login">#DC1515</color>
     <color name="color_blue">#4973F1</color>
-
+    <color name="color_line_divide">#9CC8C7CC</color>
     <color name="color_gray_C4C4C4">#C4C4C4</color>
     <color name="color_charcoal_grey">#323336</color>
     <color name="color_pale_grey">#f3f5f9</color>

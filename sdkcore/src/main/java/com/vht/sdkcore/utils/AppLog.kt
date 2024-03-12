@@ -698,6 +698,12 @@ object AppLog {
             EMPTY,
             EMPTY
         ),
+        TRACKING_SELECT_DATE_CLOUD(
+            ScreenID.PLAY_BACK_CLOUD,
+            ActionID.TRACKING_SELECT_DATE_CLOUD,
+            EMPTY,
+            EMPTY
+        )
     }
 
     enum class LogRegisterAccount(
@@ -1277,6 +1283,7 @@ object AppLog {
         const val SDCARD_SELECT_CALENDAR = "SDCARD_SELECT_CALENDAR"
         const val CLOUD_SELECT_CALENDAR = "CLOUD_SELECT_CALENDAR"
         const val CLOUD_SEEK_TIME = "CLOUD_SEEK_TIME"
+        const val TRACKING_SELECT_DATE_CLOUD = "TRACKING_SELECT_DATE_CLOUD"
 
         // PLAYBACK_SDCARD
         const val PLAYBACK_SDCARD = "PLAYBACK_SDCARD"

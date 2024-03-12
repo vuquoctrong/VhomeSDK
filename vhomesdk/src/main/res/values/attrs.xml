@@ -72,5 +72,36 @@
         <attr name="state_active" format="boolean"/>
     </declare-styleable>
 
+    <declare-styleable name="TimeLineView">
+        <attr name="textColor" format="color" />
+        <attr name="textSize" format="dimension" />
+        <attr name="lineColor" format="color" />
+        <attr name="lineSpaceWidth" format="dimension" />
+        <attr name="lineWidth" format="dimension" />
+        <attr name="eventHeight" format="dimension" />
+        <attr name="lineMaxHeight" format="dimension" />
+        <attr name="lineMidHeight" format="dimension" />
+        <attr name="lineMinHeight" format="dimension" />
+        <attr name="textMarginTop" format="dimension" />
+        <attr name="lineMarginTop" format="dimension" />
+        <attr name="alphaEnable" format="boolean" />
+        <attr name="minValue" format="float"/>
+        <attr name="maxValue" format="float"/>
+        <attr name="selectorValue" format="float"/>
+        <attr name="perValue" format="float"/>
+    </declare-styleable>
+    <declare-styleable name="LayoutTimeLineVideo">
+        <attr name="show_thumb" format="boolean"/>
+    </declare-styleable>
 
+    <declare-styleable name="MyTabSwitch">
+        <attr name="tab1_title" format="string"/>
+        <attr name="tab2_title" format="string"/>
+        <attr name="tab1_check" format="boolean"/>
+        <attr name="tab_checked_background" format="reference|color"/>
+        <attr name="tab_unchecked_background" format="reference|color"/>
+        <attr name="text_checked_color" format="reference"/>
+        <attr name="text_unchecked_color" format="reference"/>
+        <attr name="check_tab1" format="boolean"/>
+    </declare-styleable>
 </resources>

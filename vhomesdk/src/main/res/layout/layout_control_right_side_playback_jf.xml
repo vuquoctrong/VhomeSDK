@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ll_control_right_side"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:paddingTop="@dimen/dimen_30"
+            android:paddingEnd="@dimen/dimen_8">
+
+            <ImageButton
+                android:id="@+id/btnRecordVideo"
+                android:layout_width="@dimen/dimen_42"
+                android:layout_height="@dimen/dimen_42"
+                android:layout_marginTop="@dimen/dimen_11"
+                android:background="@drawable/bg_control_live_view"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_un_recording"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/white" />
+
+            <ImageButton
+                android:id="@+id/btnCaptureImage"
+                android:layout_width="@dimen/dimen_42"
+                android:layout_height="@dimen/dimen_42"
+                android:layout_marginTop="@dimen/dimen_25"
+                android:background="@drawable/bg_control_live_view"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_take_picuture_snap_shot"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnRecordVideo" />
+
+            <ImageButton
+                android:id="@+id/btnVolumeControl"
+                android:layout_width="@dimen/dimen_42"
+                android:layout_height="@dimen/dimen_42"
+                android:layout_marginEnd="@dimen/dimen_12"
+                android:background="@drawable/bg_control_live_view"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_volume_on"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/btnZoomControl" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnRate"
+                android:layout_width="@dimen/dimen_42"
+                android:layout_height="@dimen/dimen_42"
+                android:layout_marginEnd="@dimen/dimen_12"
+                android:background="@drawable/bg_control_live_view"
+                android:gravity="center"
+                android:textColor="#fff"
+                android:textSize="@dimen/text_size_14"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/btnVolumeControl"
+                tools:text="0.25x"
+                tools:visibility="visible" />
+
+            <include
+                android:id="@+id/layoutRate"
+                layout="@layout/layout_change_playback_rate_jf"
+                android:layout_width="@dimen/dimen_120"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_5"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/btnRate"
+                app:layout_constraintEnd_toEndOf="@+id/btnRate"
+                app:layout_constraintStart_toStartOf="@id/btnRate"
+                tools:visibility="visible" />
+
+            <ImageButton
+                android:id="@+id/btnZoomControl"
+                android:layout_width="@dimen/dimen_42"
+                android:layout_height="@dimen/dimen_42"
+                android:background="@drawable/bg_control_live_view"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_live_view_exit_full_screen_jf"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+</layout>

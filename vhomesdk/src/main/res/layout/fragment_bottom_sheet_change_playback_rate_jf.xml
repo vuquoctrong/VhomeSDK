@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bgr_bottom_sheet"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="50dp"
+            android:layout_height="4dp"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_16"
+            app:cardBackgroundColor="#DCDCDC"
+            app:cardElevation="0dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitle"
+            style="@style/text_bold_14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_16"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:gravity="center"
+            android:text="Tốc độ phát video"
+            tools:ignore="HardcodedText" />
+
+        <View
+            android:id="@+id/viewDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_16"
+            android:background="#CECECE" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_20"
+            android:background="@drawable/bg_alert_dialog_custom"
+            android:paddingHorizontal="@dimen/dimen_15">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/rate_025x"
+                android:layout_width="@dimen/dimen_24"
+                android:layout_height="@dimen/dimen_24"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:background="@drawable/bg_control_live_view"
+                android:gravity="center"
+                android:text="0.25x"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_8"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_025x"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/dimen_5"
+                android:gravity="center_vertical"
+                android:text="0.25x"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_14"
+                app:layout_constraintBottom_toBottomOf="@id/rate_025x"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/rate_025x"
+                app:layout_constraintTop_toTopOf="@id/rate_025x"
+                tools:ignore="HardcodedText" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/checkboxRate025x"
+                android:layout_width="@dimen/dimen_15"
+                android:layout_height="@dimen/dimen_15"
+                android:src="@drawable/ic_radio_selected"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/text_025x"
+                app:layout_constraintEnd_toEndOf="@id/text_025x"
+                app:layout_constraintTop_toTopOf="@id/text_025x"
+                tools:visibility="visible" />
+
+            <View
+                android:id="@+id/btn025X"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dimen_45"
+                app:layout_constraintBottom_toBottomOf="@+id/rate_025x"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/rate_025x"
+                tools:visibility="gone" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/rate_05x"
+                android:layout_width="@dimen/dimen_24"
+                android:layout_height="@dimen/dimen_24"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:background="@drawable/bg_control_live_view"
+                android:gravity="center"
+                android:text="0.5x"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_9"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rate_025x"
+                tools:ignore="HardcodedText" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_05x"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/dimen_5"
+                android:gravity="center_vertical"
+                android:text="0.5x"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_14"
+                app:layout_constraintBottom_toBottomOf="@id/rate_05x"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/rate_05x"
+                app:layout_constraintTop_toTopOf="@id/rate_05x"
+                tools:ignore="HardcodedText" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/checkboxRate05x"
+                android:layout_width="@dimen/dimen_15"
+                android:layout_height="@dimen/dimen_15"
+                android:src="@drawable/ic_radio_selected"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/text_05x"
+                app:layout_constraintEnd_toEndOf="@+id/text_05x"
+                app:layout_constraintTop_toTopOf="@+id/text_05x"
+                tools:visibility="visible" />
+
+            <View
+                android:id="@+id/btn05X"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dimen_45"
+                app:layout_constraintBottom_toBottomOf="@+id/rate_05x"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/rate_05x"
+                tools:visibility="gone" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/rate_1x"
+                android:layout_width="@dimen/dimen_24"
+                android:layout_height="@dimen/dimen_24"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:background="@drawable/bg_control_live_view"
+                android:gravity="center"
+                android:text="1x"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_10"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rate_05x"
+                tools:ignore="HardcodedText" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_1x"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/dimen_5"
+                android:gravity="center_vertical"
+                android:text="1x"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_14"
+                app:layout_constraintBottom_toBottomOf="@id/rate_1x"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/rate_1x"
+                app:layout_constraintTop_toTopOf="@id/rate_1x"
+                tools:ignore="HardcodedText" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/checkboxRate1x"
+                android:layout_width="@dimen/dimen_15"
+                android:layout_height="@dimen/dimen_15"
+                android:src="@drawable/ic_radio_selected"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/text_1x"
+                app:layout_constraintEnd_toEndOf="@+id/text_1x"
+                app:layout_constraintTop_toTopOf="@+id/text_1x"
+                tools:visibility="visible" />
+
+            <View
+                android:id="@+id/btn1X"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dimen_45"
+                app:layout_constraintBottom_toBottomOf="@+id/rate_1x"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/rate_1x"
+                tools:visibility="gone" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/rate_2x"
+                android:layout_width="@dimen/dimen_24"
+                android:layout_height="@dimen/dimen_24"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:background="@drawable/bg_control_live_view"
+                android:gravity="center"
+                android:text="2x"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_11"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rate_1x"
+                tools:ignore="HardcodedText" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_2x"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/dimen_5"
+                android:gravity="center_vertical"
+                android:text="2x"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_14"
+                app:layout_constraintBottom_toBottomOf="@id/rate_2x"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/rate_2x"
+                app:layout_constraintTop_toTopOf="@id/rate_2x"
+                tools:ignore="HardcodedText" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/checkboxRate2x"
+                android:layout_width="@dimen/dimen_15"
+                android:layout_height="@dimen/dimen_15"
+                android:src="@drawable/ic_radio_selected"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/text_2x"
+                app:layout_constraintEnd_toEndOf="@+id/text_2x"
+                app:layout_constraintTop_toTopOf="@+id/text_2x"
+                tools:visibility="visible" />
+
+            <View
+                android:id="@+id/btn2X"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dimen_45"
+                app:layout_constraintBottom_toBottomOf="@+id/rate_2x"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/rate_2x"
+                tools:visibility="gone" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/rate_4x"
+                android:layout_width="@dimen/dimen_24"
+                android:layout_height="@dimen/dimen_24"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:layout_marginBottom="@dimen/dimen_20"
+                android:background="@drawable/bg_control_live_view"
+                android:gravity="center"
+                android:text="4x"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_12"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rate_2x"
+                tools:ignore="HardcodedText" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_4x"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/dimen_5"
+                android:gravity="center_vertical"
+                android:text="4x"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_14"
+                app:layout_constraintBottom_toBottomOf="@id/rate_4x"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/rate_4x"
+                app:layout_constraintTop_toTopOf="@id/rate_4x"
+                tools:ignore="HardcodedText" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/checkboxRate4x"
+                android:layout_width="@dimen/dimen_15"
+                android:layout_height="@dimen/dimen_15"
+                android:src="@drawable/ic_radio_selected"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/text_4x"
+                app:layout_constraintEnd_toEndOf="@+id/text_4x"
+                app:layout_constraintTop_toTopOf="@+id/text_4x"
+                tools:visibility="visible" />
+
+            <View
+                android:id="@+id/btn4X"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dimen_45"
+                app:layout_constraintBottom_toBottomOf="@+id/rate_4x"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/rate_4x"
+                tools:visibility="gone" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</layout>

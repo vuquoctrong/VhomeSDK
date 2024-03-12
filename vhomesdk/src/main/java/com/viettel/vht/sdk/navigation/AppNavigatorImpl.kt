@@ -221,4 +221,9 @@ class AppNavigatorImpl @Inject constructor() : BaseNavigatorImpl(), AppNavigatio
     override fun openGlobalManageCloudPromotionOTP(bundle: Bundle?) {
         openScreen(R.id.action_global_CloudPromotionConfigOTPFragment, bundle)
     }
+
+    override fun openQuickPlaybackJFFragment(bundle: Bundle?) {
+        openScreen(R.id.action_to_QuickPlaybackJFFragment, bundle)
+    }
+
 }

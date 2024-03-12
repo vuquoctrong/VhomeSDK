@@ -71,6 +71,7 @@ object Constants {
     const val LOG_TCP_HEADER = "APP_TCP"
     const val LOG_DEFAULT = ""
     const val LOG_HTTP_HEADER = "APP_HTTP"
+    const val LOG_APP_REP = "APP_REP"
     const val LOG_APP_AGENT = "ANDROID"
     const val LOG_ACTION_START = "START"
     const val LOG_ACTION_END = "END"

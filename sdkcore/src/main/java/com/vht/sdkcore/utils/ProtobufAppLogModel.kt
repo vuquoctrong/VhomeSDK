@@ -57,3 +57,24 @@ data class ActionAppLogModel(
     var loadTime: String = "",
     var type: String = ""
 )
+
+data class REPAppLogModel(
+    var logMode: String = Constants.LOG_APP_REP,
+    var timeStamp: String = System.currentTimeMillis().toString(),
+    var clientIp: String = Utils.getIpv4Address().toString(),
+    var userId: String = Constants.LOG_DEFAULT,
+    var phoneNumber: String = Constants.LOG_DEFAULT,
+    var appAgent: String = Constants.LOG_APP_AGENT,
+    var appVersion: String = Constants.LOG_DEFAULT,
+    var screenId: String = Constants.LOG_DEFAULT,
+    var actionId: String = Constants.LOG_DEFAULT,
+    var deviceId: String = Constants.LOG_DEFAULT,
+    var serverDomainIP: String = Constants.LOG_DEFAULT,
+    var paymentName: String = Constants.LOG_DEFAULT,
+    var dateStart: String = Constants.LOG_DEFAULT,
+    var dateEnd: String = Constants.LOG_DEFAULT,
+    var paymentNumber: String = Constants.LOG_DEFAULT,
+    var dateSelect: String = Constants.LOG_DEFAULT,
+    var report: String = Constants.LOG_DEFAULT,
+)
+

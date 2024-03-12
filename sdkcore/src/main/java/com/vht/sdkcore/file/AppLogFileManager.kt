@@ -12,7 +12,9 @@ import com.vht.sdkcore.utils.ActionAppLogModel
 import com.vht.sdkcore.utils.Constants
 import com.vht.sdkcore.utils.HTTPAppLogModel
 import com.vht.sdkcore.utils.ProtobufAppLogModel
+import com.vht.sdkcore.utils.REPAppLogModel
 import dagger.hilt.android.qualifiers.ApplicationContext
+import timber.log.Timber
 import java.io.File
 import java.io.FileOutputStream
 import java.io.FileWriter
@@ -229,6 +231,36 @@ class AppLogFileManager @Inject constructor(
     companion object {
         private val FIVE_MINUTES = 1000 * 60 * 5
         private const val TAG = "FileManager"
+    }
+
+    fun saveREPAppLogFile(
+        repAppLogModel: REPAppLogModel
+    ) {
+        threadPool.execute {
+            try {
+                if (mFile.exists()) {
+                    // Open a file output stream in "append" mode
+                    val fos = FileOutputStream(mFile, true)
+
+                    // Create a writer to write to the file
+                    val writer = OutputStreamWriter(fos)
+
+                    writer.write(
+                        "${repAppLogModel.logMode}|${repAppLogModel.timeStamp}|${publicIP.value ?: ""}|${rxPreferences.getUserId()}|${rxPreferences.getUserPhoneNumber()}" +
+                                "|${repAppLogModel.appAgent}|${packageInfo?.versionName}|${repAppLogModel.screenId}|${repAppLogModel.actionId}|${repAppLogModel.deviceId}|${repAppLogModel.serverDomainIP}" +
+                                "|${repAppLogModel.paymentName}|${repAppLogModel.dateStart}|${repAppLogModel.dateEnd}|${repAppLogModel.paymentNumber}|${repAppLogModel.dateSelect}|||REPORT||| \n"
+                    )
+                    // Flush and close the writer and output stream
+                    writer.flush()
+                    writer.close()
+                    fos.close()
+                } else {
+                    Timber.tag(TAG).e("saveREPAppLogFile: !mFile.exists()")
+                }
+            } catch (e: Exception) {
+                Timber.tag(TAG).e("saveREPAppLogFile: Error ${e.message}")
+            }
+        }
     }
 
 }

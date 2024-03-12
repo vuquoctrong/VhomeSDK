@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bgr_bottom_sheet"
+        android:padding="@dimen/margin_16">
+
+        <com.applandeo.materialcalendarview.CalendarView
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/calendar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:headerColor="@color/color_white"
+            app:headerLabelColor="@color/color_pinky_red"
+            app:selectionColor="@color/colorAppPrimary"
+            app:highlightedDaysLabelsColor="#FC8F78"
+            app:todayLabelColor="@color/black"
+            app:typeDataCalendar="one_day_picker"
+            app:eventsEnabled="true"
+            app:anotherMonthsDaysLabelsColor="@color/black"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvVideo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/dimen_1"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/item_playback_cloud_camera"
+            tools:visibility="visible" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imv_event"
+            android:layout_width="@dimen/dimen_100"
+            android:layout_height="@dimen/dimen_48"
+            android:background="@color/color_bgr_oval_setting"
+            android:scaleType="centerCrop"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_border_color="@color/color_transparent"
+            app:riv_border_width="@dimen/dimen_2"
+            app:riv_corner_radius="@dimen/margin_4" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imv_type"
+            android:layout_width="@dimen/size_icon_mode"
+            android:layout_height="@dimen/size_icon_mode"
+            android:layout_marginStart="@dimen/margin_8"
+            app:layout_constraintStart_toEndOf="@id/imv_event"
+            app:layout_constraintTop_toTopOf="@id/imv_event" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_4"
+            style="@style/text_14"
+            android:textSize="@dimen/app_font_size_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rcvVideo" />
+
+        <com.viettel.vht.sdk.utils.custom.TimeLineView
+            android:id="@+id/timeline"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_timeline"
+            android:layout_marginTop="@dimen/margin_16"
+            android:background="@color/color_bgr_oval_setting"
+            app:alphaEnable="false"
+            app:eventHeight="@dimen/height_event"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_time"
+            app:lineColor="@color/color_line_timeline"
+            app:lineMarginTop="@dimen/margin_12"
+            app:lineMaxHeight="@dimen/height_per_line"
+            app:lineMidHeight="@dimen/height_per_line"
+            app:lineMinHeight="@dimen/height_per_line"
+            app:lineSpaceWidth="@dimen/space_line"
+            app:lineWidth="@dimen/line_width"
+            app:textColor="@color/black"
+            app:textMarginTop="@dimen/margin_8"
+            app:textSize="@dimen/text_size" />
+
+        <SeekBar
+            android:id="@+id/seekbar"
+            android:layout_width="@dimen/dimen_80"
+            android:layout_height="@dimen/dimen_40"
+            android:max="100"
+            android:orientation="vertical"
+            android:progressDrawable="@drawable/inset_progress_seekbar_timeline"
+            android:rotation="270"
+            android:splitTrack="false"
+            android:thumb="@drawable/thumb_seekbar_timeline"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/timeline"
+            app:layout_constraintHorizontal_bias="1.05"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/timeline" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_72"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_arrow_timeline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/timeline" />
+
+        <View
+            android:id="@+id/viewDisable"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:clickable="true"
+            android:elevation="20dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

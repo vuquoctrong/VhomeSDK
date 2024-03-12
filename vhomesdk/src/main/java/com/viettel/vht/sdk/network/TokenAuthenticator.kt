@@ -22,20 +22,12 @@ class TokenAuthenticator @Inject constructor(
     private val networkEvent: NetworkEvent
 ) : Authenticator {
 
-    var isLoadingRefreshToken = true
+    private var isLoadingRefreshToken = true
 
     override fun authenticate(route: Route?, response: Response): Request? {
         if(isLoadingRefreshToken){
             isLoadingRefreshToken = false
-            var count = 5
-            var tokenSuccess = false
-            while (count-- > 0) {
-                if (refreshToken()) {
-                    tokenSuccess = true
-                    break
-                }
-            }
-            if (!tokenSuccess) {
+            if (!refreshToken()) {
                 networkEvent.publish(NetworkState.UNAUTHORIZED)
             }
             isLoadingRefreshToken = true

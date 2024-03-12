@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:background="@color/white"
+            android:id="@+id/container_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.viettel.vht.sdk.utils.custom.AppToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:src_left="@drawable/ic_app_back"
+                app:show_elevation="false"
+                app:string_title="Camera" />
+
+            <com.viettel.vht.sdk.utils.custom.MyTabSwitch
+                android:id="@+id/tabSwitch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_38"
+                android:layout_marginHorizontal="@dimen/margin_84"
+                android:background="@drawable/bgr_switch_tab"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/toolbar"
+                android:elevation="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/toolbar"
+                app:tab1_title="@string/tab_memory_stick"
+                app:tab2_title="@string/tab_cloud"
+                app:tab_checked_background="@drawable/background_color_button"
+                app:tab_unchecked_background="@drawable/bgr_switch_tab"
+                app:text_checked_color="@color/color_white"
+                app:text_unchecked_color="@color/color_4E4E4E" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <FrameLayout
+            android:id="@+id/container_quick_history"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+</layout>

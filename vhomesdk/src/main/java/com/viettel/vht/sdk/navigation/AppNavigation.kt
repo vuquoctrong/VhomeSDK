@@ -89,4 +89,6 @@ interface AppNavigation : BaseNavigator {
 
     fun openGlobalManageCloudPromotionOTP(bundle: Bundle? = null)
 
+    fun openQuickPlaybackJFFragment(bundle: Bundle? = null)
+
 }

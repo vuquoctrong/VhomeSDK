@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:paddingStart="@dimen/dimen_32"
+        android:paddingEnd="@dimen/dimen_15"
+        android:paddingBottom="@dimen/dimen_10">
+
+        <ImageButton
+            android:id="@+id/btnZoomControl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_control_live_view"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_live_view_full_screen"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btnVolumeControl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_10"
+            android:background="@drawable/bg_control_live_view"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_volume_on"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnZoomControl" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btnRate"
+            android:layout_width="@dimen/dimen_34"
+            android:layout_height="@dimen/dimen_34"
+            android:layout_marginEnd="@dimen/dimen_10"
+            android:background="@drawable/bg_control_live_view"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_size_12"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnVolumeControl"
+            tools:text="0.25x"
+            tools:visibility="visible" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

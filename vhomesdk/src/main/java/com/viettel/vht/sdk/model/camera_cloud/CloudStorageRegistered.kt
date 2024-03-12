@@ -46,6 +46,11 @@ data class CloudStorageRegistered(
     fun isPostpaid():Boolean{
         return  paymentMethod == "BCCS"
     }
+
+    fun getNumberFromCloudVi(): String {
+        return infoService?.en?.split(" ")?.getOrNull(2) ?: "0"
+    }
+
     fun isGiftRelatives():Boolean{
         return userId != userUse
     }
@@ -55,6 +60,12 @@ data class CloudStorageRegistered(
     fun isGiftReceive(userIdAccount: String?):Boolean{
         return  isGiftRelatives() && userIdAccount == userUse
     }
+}
+
+enum class CloudStatus(val cloudStatus: Int) {
+    EXPIRED(0),
+    IN_USE(1),
+    IN_ACTIVE(2)
 }
 @Parcelize
 data class Descriptions(

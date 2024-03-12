@@ -78,13 +78,7 @@ class NetworkInterceptor @Inject constructor(
                 when (errorResponse.code) {
                     10001 -> {
                         if (!rxPreferences.getCameraAccessToken().isNullOrBlank()) {
-                            var count = 5
-                            var result = false
-                            while (count-- > 0) {
-                                result = refreshToken()
-                                if (result) break
-                            }
-                            if (result) {
+                            if (refreshToken()) {
                                 return chain.proceed(request)
                             } else {
                                 networkEvent.publish(NetworkState.UNAUTHORIZED)

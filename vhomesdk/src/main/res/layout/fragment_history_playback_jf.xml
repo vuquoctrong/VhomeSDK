@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_common"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:id="@+id/cameraLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_260"
+                android:background="@color/black"
+                app:layout_constraintDimensionRatio="16:9"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <FrameLayout
+                    android:id="@+id/layoutPlayWnd"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:focusable="true" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_260"
+                    android:background="@android:color/transparent" />
+
+                <ProgressBar
+                    android:id="@+id/fragment_camera_stream_pg_loading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:indeterminate="true"
+                    android:indeterminateDrawable="@drawable/my_progress_indeterminate"
+                    android:progressTint="@android:color/white"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvShowStatusConnect"
+                    style="@style/text_light_bold_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="@dimen/margin_32"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="@string/string_play_stream_fail"
+                    android:textColor="@color/color_white"
+                    android:visibility="gone" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvMessage"
+                    style="@style/text_light_bold_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="@dimen/margin_32"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="@string/expired_event_selected_time"
+                    android:textColor="@color/color_white"
+                    android:visibility="gone" />
+
+                <ProgressBar
+                    android:id="@+id/loading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:indeterminate="true"
+                    android:indeterminateDrawable="@drawable/my_progress_indeterminate"
+                    android:progressTint="@android:color/white"
+                    android:visibility="invisible" />
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/iv_retry_streaming"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_marginBottom="@dimen/margin_16"
+                    android:background="@drawable/background_event_type_circle"
+                    android:src="@drawable/ic_baseline_replay_24"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:riv_corner_radius="16dp" />
+
+                <ImageView
+                    android:id="@+id/iv_thumb_pause"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:visibility="gone" />
+
+                <Chronometer
+                    android:id="@+id/recordTimer"
+                    style="@style/text_light_bold_12"
+                    android:layout_gravity="start|top"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_detail_time"
+                    android:drawableStart="@drawable/ic_record_dot_red"
+                    android:drawablePadding="7dp"
+                    android:paddingStart="8dp"
+                    android:paddingTop="4dp"
+                    android:paddingEnd="8dp"
+                    android:paddingBottom="4dp"
+                    android:textColor="@color/silver_43"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/btnPlayControl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_camera_pause"
+                    android:visibility="gone" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvCameraName"
+                    style="@style/text_bold_16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_50"
+                    android:layout_marginTop="@dimen/dimen_35"
+                    android:background="@drawable/bg_name_camera_in_full_screen"
+                    android:drawableLeft="@drawable/ic_app_back"
+                    android:drawablePadding="@dimen/dimen_12"
+                    android:paddingHorizontal="@dimen/dimen_10"
+                    android:paddingVertical="@dimen/dimen_6"
+                    android:textColor="@color/white"
+                    android:visibility="gone"
+                    app:drawableTint="@color/white"
+                    tools:text="Camera"
+                    tools:visibility="visible" />
+
+                <include
+                    android:id="@+id/layoutControl"
+                    layout="@layout/layout_control_inside_if" />
+
+                <include
+                    android:id="@+id/layoutVideoEncrypted"
+                    layout="@layout/layout_video_encrypted"
+                    android:visibility="gone" />
+
+                <include
+                    android:id="@+id/layout_fail"
+                    layout="@layout/layout_play_fail"
+                    android:visibility="gone" />
+
+                <include
+                    android:id="@+id/layout_sleep"
+                    layout="@layout/layout_sleep_video"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <include
+                android:id="@+id/layout_toolbar_fullscreen"
+                layout="@layout/layout_toolbar_fullscreen"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <include
+                android:id="@+id/layoutBtnControl"
+                layout="@layout/layout_control" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/containerDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutBtnControl">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvMore"
+                    style="@style/text_light_bold_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:drawableLeft="@drawable/ic_see_more"
+                    android:gravity="center"
+                    android:text="@string/see_more"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/viewBgDateChooser"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/viewBgDateChooser"
+                    app:layout_constraintTop_toTopOf="@id/viewBgDateChooser" />
+
+                <View
+                    android:id="@+id/viewBgDateChooser"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dimen_40"
+                    android:background="@drawable/bgr_date"
+                    app:layout_constraintDimensionRatio="180:32"
+                    app:layout_constraintEnd_toStartOf="@id/tvMore"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivPreviousDay"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:padding="@dimen/dimen_5"
+                    android:rotation="180"
+                    android:src="@drawable/ic_next"
+                    app:layout_constraintBottom_toBottomOf="@id/viewBgDateChooser"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintStart_toStartOf="@id/viewBgDateChooser"
+                    app:layout_constraintTop_toTopOf="@id/viewBgDateChooser" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivNextDay"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:padding="@dimen/dimen_5"
+                    android:src="@drawable/ic_next"
+                    app:layout_constraintBottom_toBottomOf="@id/viewBgDateChooser"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="@id/viewBgDateChooser"
+                    app:layout_constraintTop_toTopOf="@id/viewBgDateChooser" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewDate"
+                    style="@style/text_light_bold_14"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    app:layout_constraintBottom_toBottomOf="@id/viewBgDateChooser"
+                    app:layout_constraintEnd_toStartOf="@id/ivNextDay"
+                    app:layout_constraintStart_toEndOf="@id/ivPreviousDay"
+                    app:layout_constraintTop_toTopOf="@id/viewBgDateChooser"
+                    tools:text="27-08-2021" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivHelp"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="@dimen/dimen_4"
+                    android:padding="@dimen/dimen_5"
+                    android:src="@drawable/ic_information"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@id/viewBgDateChooser"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintStart_toEndOf="@id/viewBgDateChooser"
+                    app:layout_constraintTop_toTopOf="@id/viewBgDateChooser" />
+
+                <com.viettel.vht.sdk.utils.custom.CloudExpired
+                    android:id="@+id/layoutExpries"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textViewDate" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <include
+                android:id="@+id/layout_right_side_playback"
+                layout="@layout/layout_control_right_side_playback_jf"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@id/layoutTimeLine"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="visible" />
+
+            <com.viettel.vht.sdk.utils.custom.LayoutTimeLineVideo
+                android:id="@+id/layoutTimeLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@id/containerDate"
+                app:show_thumb="true" />
+
+            <LinearLayout
+                android:id="@+id/containerEmpty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/containerDate">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imvEmpty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_hosting_server_cloud" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTitleEmpty"
+                    style="@style/text_bold_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_4"
+                    android:text="@string/empty_cloud" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDescriptionEmpty"
+                    style="@style/text_bold_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_8"
+                    android:text="@string/setting_cloud"
+                    android:textColor="@color/color_D40808" />
+            </LinearLayout>
+
+            <include
+                android:id="@+id/quick_access_layout"
+                layout="@layout/camera_quick_access_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</layout>

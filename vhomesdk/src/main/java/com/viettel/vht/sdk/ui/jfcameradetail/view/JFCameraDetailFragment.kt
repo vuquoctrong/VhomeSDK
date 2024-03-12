@@ -816,8 +816,7 @@ class JFCameraDetailFragment : BaseFragment<FragmentJfcameraDetailBinding, JFCam
                     val timeStart =
                         SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(it.startTime).time
                     bundle.putLong(Define.BUNDLE_KEY.PARAM_START_TIME, timeStart)
-                    //todo open playback JF
-                    //appNavigation.openQuickPlaybackJFFragment(bundle)
+                    appNavigation.openQuickPlaybackJFFragment(bundle)
                 } catch (e: Exception) {
                     DebugConfig.log(TAG, "Error checkIsSupportCloud: $e")
                 }
@@ -924,10 +923,9 @@ class JFCameraDetailFragment : BaseFragment<FragmentJfcameraDetailBinding, JFCam
 
                 Status.SUCCESS -> {
                     showHideLoading(false)
-                    //todo mowr verification code camera JF
-//                    appNavigation.openVerificationCodeCameraJF(
-//                        bundleOf(Define.BUNDLE_KEY.PARAM_MODEL_CAMERA to retrievePasswordViewModel.devId)
-//                    )
+                    appNavigation.openVerificationCodeCameraJF(
+                        bundleOf(Define.BUNDLE_KEY.PARAM_MODEL_CAMERA to retrievePasswordViewModel.devId)
+                    )
                 }
 
                 Status.ERROR -> {
@@ -1009,12 +1007,12 @@ class JFCameraDetailFragment : BaseFragment<FragmentJfcameraDetailBinding, JFCam
             .setTextPositiveButtonWithString(getString(com.vht.sdkcore.R.string.update))
             .setOnPositivePressed { dialog ->
                 dialog.dismiss()
-                //todo open update FW
-//                appNavigation.openUpdateFirmwareJFCameraFromLiveView(
-//                    bundleOf(
-//                        Define.BUNDLE_KEY.PARAM_DEVICE_SERIAL to viewModel.devId,
-//                        Define.BUNDLE_KEY.PARAM_IS_UPDATE_FIRMWARE_IMMEDIATELY to true
-//                    )
+                appNavigation.openUpdateFirmwareJFCamera(
+                    bundleOf(
+                        Define.BUNDLE_KEY.PARAM_DEVICE_SERIAL to viewModel.devId,
+                        Define.BUNDLE_KEY.PARAM_IS_UPDATE_FIRMWARE_IMMEDIATELY to true
+                    )
+                )
 //                )
             }
             .setTextNegativeButtonWithString(getString(com.vht.sdkcore.R.string.later))
@@ -1194,9 +1192,7 @@ class JFCameraDetailFragment : BaseFragment<FragmentJfcameraDetailBinding, JFCam
                 putString(Define.BUNDLE_KEY.PARAM_DEVICE_SERIAL, devId)
                 putString(Define.BUNDLE_KEY.PARAM_DEVICE_TYPE, Define.TYPE_DEVICE.CAMERA_JF)
             }
-
-            //todo open cloud camera
-           // appNavigation.openCloudStorageCamera(bundle)
+            appNavigation.openCloudStorageCamera(bundle)
         }
 
         handlePanControl()
@@ -1505,8 +1501,7 @@ class JFCameraDetailFragment : BaseFragment<FragmentJfcameraDetailBinding, JFCam
                 bundle.putBoolean(Define.BUNDLE_KEY.PARAM_VALUE, isRegisted)
                 bundle.putString(Define.BUNDLE_KEY.PARAM_NAME, devName)
                 bundle.putBoolean(Define.BUNDLE_KEY.PARAM_IS_SHARE_CAMERA_JF, isShareCamera)
-                //todo open playback
-               // appNavigation.openQuickPlaybackJFFragment(bundle)
+                appNavigation.openQuickPlaybackJFFragment(bundle)
             }
         }
 

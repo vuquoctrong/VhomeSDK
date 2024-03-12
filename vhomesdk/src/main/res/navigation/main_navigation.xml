@@ -194,4 +194,21 @@
         app:popEnterAnim="@anim/slide_in_right"
         app:popExitAnim="@anim/slide_out_left" />
 
+    <fragment
+        android:id="@+id/QuickPlaybackJFFragment"
+        android:name="com.viettel.vht.sdk.ui.quickhistory.QuickPlaybackJFFragment"
+        android:label="QuickPlaybackJFFragment">
+    </fragment>
+
+    <action
+        android:id="@+id/action_to_QuickPlaybackJFFragment"
+        app:destination="@id/QuickPlaybackJFFragment"
+        app:popUpTo="@id/QuickPlaybackJFFragment"
+        app:popUpToInclusive="true"
+        app:enterAnim="@anim/slide_in_left"
+        app:exitAnim="@anim/slide_out_right"
+        app:popEnterAnim="@anim/slide_in_right"
+        app:popExitAnim="@anim/slide_out_left" />
+
+
 </navigation>
