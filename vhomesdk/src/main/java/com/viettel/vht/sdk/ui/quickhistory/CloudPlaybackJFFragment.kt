@@ -55,6 +55,7 @@ import com.viettel.vht.sdk.databinding.FragmentHistoryPlaybackJfBinding
 import com.viettel.vht.sdk.model.camera_cloud.CloudStorageRegistered
 import com.viettel.vht.sdk.navigation.AppNavigation
 import com.viettel.vht.sdk.ui.jfcameradetail.view.dialog.ConfirmSaveMediaDialog
+import com.viettel.vht.sdk.ui.listvideocloud.CLOUD_TYPE
 import com.viettel.vht.sdk.utils.DebugConfig
 import com.viettel.vht.sdk.utils.ImageUtils
 import com.viettel.vht.sdk.utils.NetworkChangeReceiver
@@ -353,7 +354,7 @@ class CloudPlaybackJFFragment :
             if (checkStopRecord()) return@setOnClickListener
             bundleOf().apply {
                 putString(Define.BUNDLE_KEY.PARAM_DEVICE_ID, devId)
-              //  putInt(Define.BUNDLE_KEY.PARAM_TYPE, CLOUD_TYPE)
+                putInt(Define.BUNDLE_KEY.PARAM_TYPE, CLOUD_TYPE)
                 putString(
                     Define.BUNDLE_KEY.PARAM_ID,
                     arguments?.getString(Define.BUNDLE_KEY.PARAM_ID) ?: ""
@@ -365,7 +366,7 @@ class CloudPlaybackJFFragment :
                 putBoolean(Define.BUNDLE_KEY.PARAM_IS_SHARE_CAMERA_JF, isShareCameraJF)
                 //todo open list video cloud
                 putString(Define.BUNDLE_KEY.PARAM_NAME, devName)
-              //  appNavigation.openListVideoCloudFragment(this)
+                appNavigation.openListVideoCloudFragment(this)
             }
         }
         binding.layoutTimeLine.getViewDisable().setOnClickListener {
@@ -996,7 +997,7 @@ class CloudPlaybackJFFragment :
         p0: PlayerAttribute<*>?,
         p1: Boolean,
         time: String?,
-        p3: String?
+        p3: Long
     ) {
         if (!StringUtils.isStringNULL(time)) {
             lifecycleScope.launchWhenStarted {

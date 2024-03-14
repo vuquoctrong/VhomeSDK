@@ -46,6 +46,7 @@ import com.viettel.vht.sdk.databinding.FragmentHistoryPlaybackJfBinding
 import com.viettel.vht.sdk.jfmanager.JFCameraManager
 import com.viettel.vht.sdk.navigation.AppNavigation
 import com.viettel.vht.sdk.ui.jfcameradetail.view.dialog.ConfirmSaveMediaDialog
+import com.viettel.vht.sdk.ui.listvideocloud.CLOUD_TYPE
 import com.viettel.vht.sdk.utils.DebugConfig
 import com.viettel.vht.sdk.utils.ImageUtils
 import com.viettel.vht.sdk.utils.NetworkChangeReceiver
@@ -344,9 +345,9 @@ class CardPlaybackJFFragment :
                 putString(Define.BUNDLE_KEY.PARAM_DEVICE_ID, devId)
                 putString(Define.BUNDLE_KEY.PARAM_NAME,devName)
                 putString(Define.BUNDLE_KEY.PARAM_ID,arguments?.getString(Define.BUNDLE_KEY.PARAM_ID)?:"")
-               // putInt(Define.BUNDLE_KEY.PARAM_TYPE, CLOUD_TYPE)
+                putInt(Define.BUNDLE_KEY.PARAM_TYPE, CLOUD_TYPE)
             }
-          //  appNavigation.openListVideoCloudFragment(bundle)
+            appNavigation.openListVideoCloudFragment(bundle)
         }
         binding.layoutTimeLine.getViewDisable().setOnClickListener {
             checkStopRecord()
@@ -949,7 +950,7 @@ class CardPlaybackJFFragment :
         p0: PlayerAttribute<*>?,
         p1: Boolean,
         time: String?,
-        p3: String?
+        p3: Long
     ) {
         if(context == null) return
         if (!StringUtils.isStringNULL(time)) {

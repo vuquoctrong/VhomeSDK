@@ -64,8 +64,8 @@ import com.viettel.vht.sdk.ui.jfcameradetail.forgot_password.RetrievePasswordCam
 import com.viettel.vht.sdk.ui.jfcameradetail.update_firmware.UpdateFirmwareCameraJFViewModel
 import com.viettel.vht.sdk.ui.jfcameradetail.view.dialog.BottomSheetPresetFragment
 import com.viettel.vht.sdk.ui.jfcameradetail.view.dialog.ConfirmSaveMediaDialog
+import com.viettel.vht.sdk.ui.listvideocloud.CLOUD_TYPE
 import com.viettel.vht.sdk.utils.AppEnum
-import com.viettel.vht.sdk.utils.AppEnum.CLOUD_TYPE
 import com.viettel.vht.sdk.utils.Config
 import com.viettel.vht.sdk.utils.Config.EventKey.EVENT_DELETE_PRESET
 import com.viettel.vht.sdk.utils.Config.EventKey.EVENT_EDIT_PRESET
@@ -327,7 +327,7 @@ class JFCameraDetailFragment : BaseFragment<FragmentJfcameraDetailBinding, JFCam
                 p0: PlayerAttribute<*>?,
                 p1: Boolean,
                 p2: String?,
-                p3: String?,
+                p3: Long,
             ) {
 
             }
@@ -749,7 +749,7 @@ class JFCameraDetailFragment : BaseFragment<FragmentJfcameraDetailBinding, JFCam
                         showHideLoading(false)
                     }
                 } catch (e: Exception) {
-                    Log.d(TAG, "deletePresets: delete fail with e = ${e.message}")
+                    DebugConfig.logd(TAG, "deletePresets: delete fail with e = ${e.message}")
                 }
             }
         }
@@ -1170,7 +1170,7 @@ class JFCameraDetailFragment : BaseFragment<FragmentJfcameraDetailBinding, JFCam
                 putString(Define.BUNDLE_KEY.PARAM_NAME, devName)
             }
             //todo open liveview cloud
-           // appNavigation.openListVideoCloudFragment(bundle)
+            appNavigation.openListVideoCloudFragment(bundle)
         }
 
         if (isShareCamera) {
@@ -3260,7 +3260,7 @@ class JFCameraDetailFragment : BaseFragment<FragmentJfcameraDetailBinding, JFCam
                 attribute: PlayerAttribute<*>?,
                 isShowTime: Boolean,
                 time: String,
-                rate: String,
+                rate: Long,
             ) {
                 if (context == null) return
                 val rateString = UtilsJava.formatBitrate(rate.toLong())

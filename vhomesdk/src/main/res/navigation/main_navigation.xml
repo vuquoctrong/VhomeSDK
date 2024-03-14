@@ -12,13 +12,25 @@
         tools:layout="@layout/fragment_sdkhome_splash">
         <action
             android:id="@+id/action_SDKVHomeLoadingFragment_to_add_camera_jftech_graph"
-            app:destination="@id/add_camera_jftech_graph" />
+            app:destination="@id/add_camera_jftech_graph"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
         <action
             android:id="@+id/action_SDKVHomeLoadingFragment_to_jfcamera_detail_graph"
-            app:destination="@id/jfcamera_detail_graph" />
+            app:destination="@id/jfcamera_detail_graph"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
         <action
             android:id="@+id/action_SDKVHomeLoadingFragment_to_updateFirmwareCameraJFFragment"
-            app:destination="@id/updateFirmwareCameraJFFragment" />
+            app:destination="@id/updateFirmwareCameraJFFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
     </fragment>
     <include app:graph="@navigation/add_camera_jftech_graph" />
     <include app:graph="@navigation/jfcamera_detail_graph" />
@@ -45,7 +57,11 @@
 
     <action
         android:id="@+id/action_to_verificationCodeCameraJFFragment"
-        app:destination="@id/verificationCodeCameraJFFragment" />
+        app:destination="@id/verificationCodeCameraJFFragment"
+        app:enterAnim="@anim/slide_in_left"
+        app:exitAnim="@anim/slide_out_right"
+        app:popEnterAnim="@anim/slide_in_right"
+        app:popExitAnim="@anim/slide_out_left" />
 
     <fragment
         android:id="@+id/verificationCodeCameraJFFragment"
@@ -54,6 +70,10 @@
         <action
             android:id="@+id/action_verificationCodeCameraJFFragment_to_resetPasswordCameraJFFragment"
             app:destination="@id/resetPasswordCameraJFFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
             app:popUpTo="@id/verificationCodeCameraJFFragment"
             app:popUpToInclusive="true" />
     </fragment>
@@ -62,7 +82,6 @@
         android:id="@+id/resetPasswordCameraJFFragment"
         android:name="com.viettel.vht.sdk.ui.jfcameradetail.forgot_password.ResetPasswordCameraJFFragment"
         android:label="ResetPasswordCameraJFFragment" />
-
 
 
     <fragment
@@ -81,7 +100,11 @@
 
     <action
         android:id="@+id/action_to_viettelPayWebviewFragment"
-        app:destination="@id/viettelPayWebviewFragment" />
+        app:destination="@id/viettelPayWebviewFragment"
+        app:enterAnim="@anim/slide_in_left"
+        app:exitAnim="@anim/slide_out_right"
+        app:popEnterAnim="@anim/slide_in_right"
+        app:popExitAnim="@anim/slide_out_left" />
 
     <fragment
         android:id="@+id/viettelPayWebviewFragment"
@@ -129,7 +152,11 @@
 
     <action
         android:id="@+id/action_setting_to_JFCloudStorageFragment"
-        app:destination="@id/JFCloudStorageFragment" />
+        app:destination="@id/JFCloudStorageFragment"
+        app:enterAnim="@anim/slide_in_left"
+        app:exitAnim="@anim/slide_out_right"
+        app:popEnterAnim="@anim/slide_in_right"
+        app:popExitAnim="@anim/slide_out_left" />
 
     <fragment
         android:id="@+id/JFCloudStorageFragment"
@@ -137,11 +164,19 @@
         android:label="JFCloudStorageFragment">
         <action
             android:id="@+id/action_JFCloudStorageFragment_to_JFCloudRegisterFragment"
-            app:destination="@id/JFCloudRegisterFragment" />
+            app:destination="@id/JFCloudRegisterFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
 
         <action
             android:id="@+id/action_JFCloudStorageFragment_to_JFCloudPostpaidFragment"
-            app:destination="@id/JFCloudPostpaidFragment" />
+            app:destination="@id/JFCloudPostpaidFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
 
     </fragment>
 
@@ -157,7 +192,6 @@
         app:exitAnim="@anim/slide_out_right"
         app:popEnterAnim="@anim/slide_in_right"
         app:popExitAnim="@anim/slide_out_left" />
-
 
 
     <action
@@ -197,18 +231,29 @@
     <fragment
         android:id="@+id/QuickPlaybackJFFragment"
         android:name="com.viettel.vht.sdk.ui.quickhistory.QuickPlaybackJFFragment"
-        android:label="QuickPlaybackJFFragment">
-    </fragment>
+        android:label="QuickPlaybackJFFragment"></fragment>
 
     <action
         android:id="@+id/action_to_QuickPlaybackJFFragment"
         app:destination="@id/QuickPlaybackJFFragment"
+        app:enterAnim="@anim/slide_in_left"
+        app:exitAnim="@anim/slide_out_right"
+        app:popEnterAnim="@anim/slide_in_right"
+        app:popExitAnim="@anim/slide_out_left"
         app:popUpTo="@id/QuickPlaybackJFFragment"
-        app:popUpToInclusive="true"
+        app:popUpToInclusive="true" />
+    <fragment
+        android:id="@+id/ListVideoCloudFragment"
+        android:name="com.viettel.vht.sdk.ui.listvideocloud.ListVideoCloudFragment"
+        android:label="ListVideoCloudFragment" />
+
+
+    <action
+        android:id="@+id/action_to_ListVideoCloudFragment"
+        app:destination="@id/ListVideoCloudFragment"
         app:enterAnim="@anim/slide_in_left"
         app:exitAnim="@anim/slide_out_right"
         app:popEnterAnim="@anim/slide_in_right"
         app:popExitAnim="@anim/slide_out_left" />
-
 
 </navigation>

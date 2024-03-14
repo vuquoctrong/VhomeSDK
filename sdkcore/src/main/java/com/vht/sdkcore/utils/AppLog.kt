@@ -1237,6 +1237,7 @@ object AppLog {
         const val LAMP_DETAIL = "LAMP_DETAIL"
         const val SWITCH_DETAIL = "SWITCH_DETAIL"
         const val LOCK_DETAIL = "LOCK_DETAIL"
+        const val CLOUD_LIST = "CLOUD_LIST"
     }
 
     object ActionID {

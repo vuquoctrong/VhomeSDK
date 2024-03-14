@@ -91,4 +91,6 @@ interface AppNavigation : BaseNavigator {
 
     fun openQuickPlaybackJFFragment(bundle: Bundle? = null)
 
+    fun openListVideoCloudFragment(bundle: Bundle? = null)
+
 }

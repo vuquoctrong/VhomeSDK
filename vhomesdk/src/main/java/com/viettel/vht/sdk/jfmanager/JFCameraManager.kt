@@ -557,7 +557,7 @@ object JFCameraManager {
 
     fun setPasswordCamera(devId: String, password: String) {
         val username = FunSDK.DevGetLocalUserName(devId)
-        DeviceManager.getInstance()?.setLocalDevPwd(devId, username, password)
+        DeviceManager.getInstance()?.setLocalDevUserPwd(devId, username, password)
 //        val devInfo = DevDataCenter.getInstance()?.getDevInfo(devId)
 //        if (devInfo != null) {
 //            FunSDK.DevSetLocalPwd(

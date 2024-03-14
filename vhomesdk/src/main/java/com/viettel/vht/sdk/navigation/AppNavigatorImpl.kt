@@ -226,4 +226,9 @@ class AppNavigatorImpl @Inject constructor() : BaseNavigatorImpl(), AppNavigatio
         openScreen(R.id.action_to_QuickPlaybackJFFragment, bundle)
     }
 
+    override fun openListVideoCloudFragment(bundle: Bundle?) {
+        openScreen(R.id.action_to_ListVideoCloudFragment, bundle)
+    }
+
+
 }
