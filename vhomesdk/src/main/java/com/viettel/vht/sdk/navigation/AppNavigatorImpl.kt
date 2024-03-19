@@ -230,5 +230,12 @@ class AppNavigatorImpl @Inject constructor() : BaseNavigatorImpl(), AppNavigatio
         openScreen(R.id.action_to_ListVideoCloudFragment, bundle)
     }
 
+    override fun openDetailGalleryFragment(bundle: Bundle?) {
+        openScreen(R.id.action_to_DetailGalleryFragment, bundle)
+    }
+
+    override fun openGalleryFragment(bundle: Bundle?) {
+        openScreen(R.id.action_to_GalleryImageFragment, bundle)
+    }
 
 }

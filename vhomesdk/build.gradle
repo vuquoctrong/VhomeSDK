@@ -125,6 +125,9 @@ dependencies {
 
     implementation 'io.github.ShawnLin013:number-picker:2.4.13'
 
+    // VLC Android
+    implementation 'org.videolan.android:libvlc-all:3.3.0-eap05'
+
     implementation project(path: ':uilibrary')
     embed project(path: ':libxmfunsdk', configuration: 'default')
     embed project(path: ':sdkcore', configuration: 'default')

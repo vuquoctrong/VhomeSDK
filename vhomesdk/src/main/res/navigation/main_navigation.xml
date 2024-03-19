@@ -256,4 +256,24 @@
         app:popEnterAnim="@anim/slide_in_right"
         app:popExitAnim="@anim/slide_out_left" />
 
+    <action
+        android:id="@+id/action_to_DetailGalleryFragment"
+        app:destination="@id/GalleryDetailFragment"
+        app:enterAnim="@anim/slide_in_left"
+        app:exitAnim="@anim/slide_out_right"
+        app:popEnterAnim="@anim/slide_in_right"
+        app:popExitAnim="@anim/slide_out_left"/>
+
+    <fragment android:id="@+id/GalleryDetailFragment"
+        android:name="com.viettel.vht.sdk.ui.gallery.GalleryImageFragment"/>
+
+
+    <action
+        android:id="@+id/action_to_GalleryImageFragment"
+        app:destination="@id/GalleryImageFragment" />
+
+    <fragment
+        android:id="@+id/GalleryImageFragment"
+        android:name="com.viettel.vht.sdk.ui.gallery.GalleryImageFragment"
+        android:label="GalleryImageFragment" />
 </navigation>

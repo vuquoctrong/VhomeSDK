@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <com.viettel.vht.sdk.utils.custom.AppToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:src_left="@drawable/ic_app_back"
+            app:string_title="@string/gallery_image" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_guide"
+                style="@style/text_light_bold_14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:text="@string/hold_to_delete_gallery"
+                android:textColor="#4E4E4E"
+                android:textSize="@dimen/text_size_12"
+                app:layout_constraintBottom_toBottomOf="@id/tv_delete"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_delete" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnUncheck"
+                style="@style/text_light_bold_12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:paddingHorizontal="@dimen/margin_10"
+                android:paddingVertical="@dimen/margin_8"
+                android:text="@string/text_cancel"
+                android:textColor="@color/colorAccent"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/tv_delete"
+                app:layout_constraintEnd_toStartOf="@id/tv_delete"
+                app:layout_constraintTop_toTopOf="@id/tv_delete"
+                tools:visibility="visible" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDeleteAll"
+                style="@style/text_light_bold_12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:paddingHorizontal="@dimen/margin_10"
+                android:paddingVertical="@dimen/margin_8"
+                android:text="@string/select_all"
+                android:textColor="@color/colorAccent"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/btnUncheck"
+                app:layout_constraintEnd_toStartOf="@id/btnUncheck"
+                app:layout_constraintTop_toTopOf="@id/btnUncheck"
+                tools:visibility="visible" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/tv_delete"
+                style="@style/text_light_bold_14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:background="@drawable/shape_oval_white"
+                android:backgroundTint="#F5F7F9"
+                android:padding="@dimen/margin_4"
+                android:src="@drawable/ic_delete_event"
+                android:tint="@color/colorAccent"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="visible" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvGallery"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="@dimen/dimen_8"
+            android:background="@color/white"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/dimen_16"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"
+            tools:listitem="@layout/item_gallery" />
+
+    </LinearLayout>
+
+</layout>

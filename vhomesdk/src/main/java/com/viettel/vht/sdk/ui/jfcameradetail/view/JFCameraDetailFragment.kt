@@ -2980,7 +2980,7 @@ class JFCameraDetailFragment : BaseFragment<FragmentJfcameraDetailBinding, JFCam
             TAB_ID.FEATURE_GALLERY -> {
                 if (checkStopRecord()) return
                 //todo mowr gallery
-               // appNavigation.openGalleryFragment()
+                appNavigation.openGalleryFragment()
             }
 
             TAB_ID.FEATURE_SHARE -> {

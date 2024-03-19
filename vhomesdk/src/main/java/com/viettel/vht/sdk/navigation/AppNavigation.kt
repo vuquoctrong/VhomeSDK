@@ -93,4 +93,9 @@ interface AppNavigation : BaseNavigator {
 
     fun openListVideoCloudFragment(bundle: Bundle? = null)
 
+
+    fun openDetailGalleryFragment(bundle: Bundle? = null)
+
+    fun openGalleryFragment(bundle: Bundle? = null)
+
 }
