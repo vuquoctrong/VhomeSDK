@@ -1,144 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:background="@android:color/white"
-    android:orientation="vertical">
-
-    <!-- date toolbar -->
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/calendarHeader"
-        android:layout_width="match_parent"
+<layout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@android:color/white">
+        android:background="@android:color/white"
+        android:orientation="vertical">
 
-        <ImageButton
-            android:id="@+id/previousButton"
-            style="@style/Widget.AppCompat.Button.Borderless.Colored"
-            android:layout_width="85dp"
-            android:layout_height="0dp"
-            android:src="@drawable/ic_back_right"
-            android:rotation="180"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageButton
-            android:id="@+id/forwardButton"
-            style="@style/Widget.AppCompat.Button.Borderless.Colored"
-            android:layout_width="85dp"
-            android:layout_height="0dp"
-            android:src="@drawable/ic_back_right"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/currentDateLabel"
-            android:layout_width="0dp"
-            android:layout_height="56dp"
-            android:gravity="center"
-            android:textColor="@android:color/white"
-            style="@style/text_bold_16"
-            app:layout_constraintLeft_toRightOf="@id/previousButton"
-            app:layout_constraintRight_toLeftOf="@id/forwardButton"
-            app:layout_constraintTop_toTopOf="parent" />
-        <View
-            android:id="@+id/view_line"
+        <!-- date toolbar -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/calendarHeader"
             android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="#E1E1E1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" />
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <!-- eventDays header -->
-    <LinearLayout
-        android:id="@+id/abbreviationsBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minHeight="40dp"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/mondayLabel"
-            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            style="@style/text_bold_14"
-            android:gravity="center_horizontal"
-            android:text="@string/string_material_calendar_monday" />
+            android:background="@android:color/white">
 
-        <TextView
-            android:id="@+id/tuesdayLabel"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center_horizontal"
-            android:text="@string/string_material_calendar_tuesday"
-            style="@style/text_bold_14" />
+            <ImageButton
+                android:id="@+id/previousButton"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="85dp"
+                android:layout_height="0dp"
+                android:src="@drawable/ic_back_right"
+                android:rotation="180"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/wednesdayLabel"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center_horizontal"
-            android:text="@string/string_material_calendar_wednesday"
-            style="@style/text_bold_14" />
+            <ImageButton
+                android:id="@+id/forwardButton"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="85dp"
+                android:layout_height="0dp"
+                android:src="@drawable/ic_back_right"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/thursdayLabel"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center_horizontal"
-            android:text="@string/string_material_calendar_thursday"
-            style="@style/text_bold_14"
-            />
+            <TextView
+                android:id="@+id/currentDateLabel"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                style="@style/text_bold_16"
+                app:layout_constraintLeft_toRightOf="@id/previousButton"
+                app:layout_constraintRight_toLeftOf="@id/forwardButton"
+                app:layout_constraintTop_toTopOf="parent" />
+            <View
+                android:id="@+id/view_line"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#E1E1E1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
 
-        <TextView
-            android:id="@+id/fridayLabel"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center_horizontal"
-            android:text="@string/string_material_calendar_friday"
-            style="@style/text_bold_14" />
 
-        <TextView
-            android:id="@+id/saturdayLabel"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center_horizontal"
-            android:text="@string/string_material_calendar_saturday"
-            style="@style/text_bold_14" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <TextView
-            android:id="@+id/sundayLabel"
-            android:layout_width="0dp"
+        <!-- eventDays header -->
+        <LinearLayout
+            android:id="@+id/abbreviationsBar"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            style="@style/text_bold_14"
-            android:gravity="center_horizontal"
-            android:text="@string/string_material_calendar_sunday" />
+            android:minHeight="40dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/mondayLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                style="@style/text_bold_14"
+                android:gravity="center_horizontal"
+                android:text="@string/string_material_calendar_monday" />
+
+            <TextView
+                android:id="@+id/tuesdayLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="@string/string_material_calendar_tuesday"
+                style="@style/text_bold_14" />
+
+            <TextView
+                android:id="@+id/wednesdayLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="@string/string_material_calendar_wednesday"
+                style="@style/text_bold_14" />
+
+            <TextView
+                android:id="@+id/thursdayLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="@string/string_material_calendar_thursday"
+                style="@style/text_bold_14"
+                />
+
+            <TextView
+                android:id="@+id/fridayLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="@string/string_material_calendar_friday"
+                style="@style/text_bold_14" />
+
+            <TextView
+                android:id="@+id/saturdayLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="@string/string_material_calendar_saturday"
+                style="@style/text_bold_14" />
+
+            <TextView
+                android:id="@+id/sundayLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                style="@style/text_bold_14"
+                android:gravity="center_horizontal"
+                android:text="@string/string_material_calendar_sunday" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.applandeo.materialcalendarview.extensions.CalendarViewPager
+                android:id="@+id/calendarViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </ScrollView>
+
     </LinearLayout>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <com.applandeo.materialcalendarview.extensions.CalendarViewPager
-            android:id="@+id/calendarViewPager"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-    </ScrollView>
-
-</LinearLayout>
+</layout>

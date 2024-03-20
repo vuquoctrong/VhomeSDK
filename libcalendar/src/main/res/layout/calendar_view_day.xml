@@ -1,31 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
+<layout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/dayLabel"
-        android:layout_width="@dimen/day_label_size_events_enabled"
-        android:layout_height="@dimen/day_label_size_events_enabled"
-        android:layout_marginTop="4dp"
-        android:gravity="center"
-        android:layout_gravity="center_horizontal"
-        style="@style/text_14" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/dayLabel"
+            android:layout_width="@dimen/day_label_size_events_enabled"
+            android:layout_height="@dimen/day_label_size_events_enabled"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            style="@style/text_14" />
 
-    <ImageView
-        android:id="@+id/dayIcon"
-        android:layout_width="30dp"
-        android:layout_height="20dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="2dp"
-        android:scaleType="centerInside" />
+        <ImageView
+            android:id="@+id/dayIcon"
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="2dp"
+            android:scaleType="centerInside" />
 
-<!--    <View-->
-<!--        android:id="@+id/divider"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="0.5dp"-->
-<!--        android:background="@color/nextMonthDayColor" />-->
+        <!--    <View-->
+        <!--        android:id="@+id/divider"-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="0.5dp"-->
+        <!--        android:background="@color/nextMonthDayColor" />-->
 
-</LinearLayout>
+    </LinearLayout>
+</layout>
+
 

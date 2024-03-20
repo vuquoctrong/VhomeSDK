@@ -56,6 +56,7 @@ class CalendarView @JvmOverloads constructor(
     private var currentPage: Int = 0
 
     init {
+        binding = CalendarViewBinding.inflate(LayoutInflater.from(context), this, true)
         initControl(CalendarProperties(context)) {
             setAttributes(attrs)
         }
@@ -72,7 +73,6 @@ class CalendarView @JvmOverloads constructor(
 
     private fun initControl(calendarProperties: CalendarProperties, onUiCreate: () -> Unit) {
         this.calendarProperties = calendarProperties
-        binding = CalendarViewBinding.inflate(LayoutInflater.from(context), this, false)
         initUiElements()
         onUiCreate()
         initCalendar()
