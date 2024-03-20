@@ -3,6 +3,8 @@ package com.vht.sdkcore.pref
 import android.content.Context
 import android.content.SharedPreferences
 import android.util.Log
+import androidx.security.crypto.EncryptedSharedPreferences
+import androidx.security.crypto.MasterKeys
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.vht.sdkcore.camera.DefinitionJF
@@ -19,6 +21,16 @@ import javax.inject.Singleton
 class AppPreferences @Inject constructor(
     @ApplicationContext context: Context
 ) : RxPreferences {
+  private  fun getSharePreferences(context: Context): SharedPreferences {
+            return EncryptedSharedPreferences.create(
+                Constants.PREF_FILE_NAME,
+                MasterKeys.getOrCreate(MasterKeys.AES256_GCM_SPEC),
+                context,
+                EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV,
+                EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM
+            )
+
+    }
 
     companion object {
         const val PARAM_BEARER = "Bearer "
@@ -97,10 +109,7 @@ class AppPreferences @Inject constructor(
     }
 
 
-    private val mPrefs: SharedPreferences = context.getSharedPreferences(
-        Constants.PREF_FILE_NAME,
-        Context.MODE_PRIVATE
-    )
+    private val mPrefs: SharedPreferences = getSharePreferences(context)
 
     override fun put(key: String, value: String) {
         val editor: SharedPreferences.Editor = mPrefs.edit()
