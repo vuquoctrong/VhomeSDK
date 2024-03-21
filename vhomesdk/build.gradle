@@ -33,6 +33,18 @@ android {
             buildConfigField "String", "JF_APP_MOVECARD", "\"4\""
             resValue("string", "string_jf_app_movecard", "4")
 
+            buildConfigField "String", "SDK_VHOME_APP_KEY", "\"nlaDOC8uS6Xn7L0JIcPD\""
+            resValue("string", "string_SDK_VHOME_APP_KEY", "nlaDOC8uS6Xn7L0JIcPD")
+
+            buildConfigField "String", "SDK_VHOME_APP_SECKEY", "\"yKeMoImiHp9DUXxoGpERza31xSyCWunW\""
+            resValue("string", "string_SDK_VHOME_APP_SECKEY", "yKeMoImiHp9DUXxoGpERza31xSyCWunW")
+
+            buildConfigField "String", "SDK_VHOME_BASE_URL", "\"https://stg-iotapi.viettel.io\""
+            resValue("string", "string_SDK_VHOME_BASE_URL", "https://stg-iotapi.viettel.io")
+
+            buildConfigField "String", "SDK_VHOME_APP_NAME", "\"VhomeSDK\""
+            resValue("string", "string_SDK_VHOME_APP_NAME", "VhomeSDK")
+
 
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
 
@@ -52,6 +64,19 @@ android {
 
             buildConfigField "String", "JF_APP_MOVECARD", "\"4\""
             resValue("string", "string_jf_app_movecard", "4")
+
+            buildConfigField "String", "SDK_VHOME_APP_KEY", "\"nlaDOC8uS6Xn7L0JIcPD\""
+            resValue("string", "string_SDK_VHOME_APP_KEY", "nlaDOC8uS6Xn7L0JIcPD")
+
+            buildConfigField "String", "SDK_VHOME_APP_SECKEY", "\"yKeMoImiHp9DUXxoGpERza31xSyCWunW\""
+            resValue("string", "string_SDK_VHOME_APP_SECKEY", "yKeMoImiHp9DUXxoGpERza31xSyCWunW")
+
+            buildConfigField "String", "SDK_VHOME_BASE_URL", "\"https://stg-iotapi.viettel.io\""
+            resValue("string", "string_SDK_VHOME_BASE_URL", "https://stg-iotapi.viettel.io")
+
+            buildConfigField "String", "SDK_VHOME_APP_NAME", "\"VhomeSDK\""
+            resValue("string", "string_SDK_VHOME_APP_NAME", "VhomeSDK")
+
 
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }

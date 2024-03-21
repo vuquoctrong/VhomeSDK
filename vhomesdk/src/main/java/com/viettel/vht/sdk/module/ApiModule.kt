@@ -5,6 +5,7 @@ import android.content.Context
 import android.text.TextUtils
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
+import com.utils.MacroUtils
 import com.vht.sdkcore.file.AppLogFileManager
 import com.viettel.vht.sdk.network.ApiInterface
 import com.viettel.vht.sdk.network.AuthApiInterface
@@ -50,11 +51,12 @@ class ApiModule {
     @Singleton
     fun provideApiInterface(
         gson: Gson,
+        @ApplicationContext context: Context,
         @DispatchServerHttpClient client: OkHttpClient
     )
             : ApiInterface {
         val retrofit = Retrofit.Builder()
-            .baseUrl(Config.sdkBASE_URL)
+            .baseUrl(MacroUtils.getValue(context,"SDK_VHOME_BASE_URL"))
             .client(client)
             .addConverterFactory(GsonConverterFactory.create(gson))
             .build()
@@ -120,10 +122,11 @@ class ApiModule {
     @Singleton
     fun provideAuthApiInterface(
         gson: Gson,
+        @ApplicationContext context: Context,
         @AuthServerHttpClient client: OkHttpClient
     ): AuthApiInterface {
         val retrofit = Retrofit.Builder()
-            .baseUrl(Config.sdkBASE_URL)
+            .baseUrl(MacroUtils.getValue(context,"SDK_VHOME_BASE_URL"))
             .client(client)
             .addConverterFactory(NullOnEmptyConverterFactory())
             .addConverterFactory(GsonConverterFactory.create(gson))
@@ -156,8 +159,8 @@ class ApiModule {
                     chain.request()
                         .newBuilder()
                         .header("Content-Type", "application/json")
-                        .addHeader("AppKey", Config.sdkAPP_KEY)
-                        .addHeader("AppSecret", Config.sdkAPP_SECRET)
+                        .addHeader("AppKey", MacroUtils.getValue(context,"SDK_VHOME_APP_KEY"))
+                        .addHeader("AppSecret", MacroUtils.getValue(context,"SDK_VHOME_APP_SECKEY"))
                         .addHeader("traceparent", traceparent)
                         .build()
 

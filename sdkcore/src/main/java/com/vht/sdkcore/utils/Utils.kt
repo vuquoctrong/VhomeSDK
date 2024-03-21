@@ -192,7 +192,7 @@ class Utils {
             return fileSave.path
         }
 
-        fun saveVideoToGallery(context: Context, path: String,appName: String? = "Vhome") {
+        fun saveVideoToGallery(context: Context, path: String) {
             val fileName = File(path).name
             val dateAdded = System.currentTimeMillis()
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
@@ -202,7 +202,7 @@ class Utils {
                 values.put(MediaStore.Video.Media.DATE_TAKEN, dateAdded)
                 values.put(
                     MediaStore.Video.Media.RELATIVE_PATH,
-                    "DCIM/${appName}"
+                    "DCIM/${MacroUtils.getValue(context,"SDK_VHOME_APP_NAME")}"
                 )
                 values.put(MediaStore.Video.Media.IS_PENDING, true)
                 values.put(MediaStore.Video.Media.DISPLAY_NAME, fileName)
@@ -222,7 +222,7 @@ class Utils {
                 val directory =
                     File(
                         Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM),
-                        appName
+                        MacroUtils.getValue(context,"SDK_VHOME_APP_NAME")
                     )
                 if (!directory.exists()) {
                     directory.mkdirs()

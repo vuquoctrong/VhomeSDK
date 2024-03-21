@@ -1,10 +1,12 @@
 package com.viettel.vht.sdk.ui.listvideocloud
 
+import android.content.Context
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import androidx.paging.Config
 import com.lib.sdk.struct.H264_DVR_FILE_DATA
 import com.manager.device.media.playback.RecordManager
+import com.utils.MacroUtils
 import com.vht.sdkcore.base.BaseViewModel
 import com.vht.sdkcore.file.AppLogFileManager
 import com.vht.sdkcore.utils.AppLog
@@ -18,6 +20,7 @@ import com.viettel.vht.sdk.network.repository.CloudRepository
 import com.viettel.vht.sdk.utils.Config
 
 import dagger.hilt.android.lifecycle.HiltViewModel
+import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -28,7 +31,8 @@ import javax.inject.Inject
 @HiltViewModel
 class ListVideoCloudViewModel @Inject constructor(
     private val cloudRepository: CloudRepository,
-    private val appLogFileManager: AppLogFileManager
+    private val appLogFileManager: AppLogFileManager,
+    @ApplicationContext context: Context,
 ) : BaseViewModel() {
 
     val date = MutableLiveData(System.currentTimeMillis())
@@ -36,6 +40,10 @@ class ListVideoCloudViewModel @Inject constructor(
     val listEventLiveData = MutableLiveData(mutableListOf<GroupVideo>())
     private var currentCloudPackage: CloudStorageRegistered? = null
     private var deviceId: String? = null
+    private var baseURL =""
+    init {
+        baseURL = MacroUtils.getValue(context,"SDK_VHOME_BASE_URL")
+    }
 
 
     // Camera JF
@@ -155,7 +163,7 @@ class ListVideoCloudViewModel @Inject constructor(
                 paymentNumber = paymentNumber,
                 dateSelect = dateSelect,
                 report = report,
-                serverDomainIP = Config.sdkBASE_URL
+                serverDomainIP = baseURL
             )
         )
     }

@@ -54,11 +54,6 @@ interface VHomeSDKManager {
     fun setLogcat(boolean: Boolean)
 
     /**
-     *   cài đặt Base URL cho sdk VHome
-     */
-    fun setUrlSDK(sdkAppName: String?,sdkAppKey: String?,sdkAppSecret: String?, sdkBaseUrl: String?, sdkBaseURlCameraJF: String?)
-
-    /**
      *  lấy đường dẫn hình ảnh camera khi vào xem liveView ( đường dẫn được lưu trong local app)
      */
     fun getPathImageScreenshotCameraJF(serialCamera: String): String
@@ -200,30 +195,6 @@ class VHomeSDKManagerImpl constructor(
         DebugConfig.SHOW_DEBUG_LOG = boolean
         if(DebugConfig.SHOW_DEBUG_LOG){
             Timber.plant(Timber.DebugTree())
-        }
-    }
-
-    override fun setUrlSDK(
-        sdkAppName: String?,
-        sdkAppKey: String?,
-        sdkAppSecret: String?,
-        sdkBaseUrl: String?,
-        sdkBaseURlCameraJF: String?
-    ) {
-        sdkAppName?.let {
-            Config.sdkAppName
-        }
-        sdkAppKey?.let {
-            Config.sdkAPP_KEY = it
-        }
-        sdkAppSecret?.let {
-            Config.sdkAPP_SECRET = it
-        }
-        sdkBaseUrl?.let {
-            Config.sdkBASE_URL = it
-        }
-        sdkBaseURlCameraJF?.let {
-            Config.sdkBASE_URL_CAMERA_JF = it
         }
     }
 

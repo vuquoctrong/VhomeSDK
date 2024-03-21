@@ -14,6 +14,7 @@ import android.net.Uri
 import android.os.Build
 import android.os.Environment
 import android.provider.MediaStore
+import com.utils.MacroUtils
 import java.io.ByteArrayOutputStream
 import java.io.File
 import java.nio.ByteBuffer
@@ -195,10 +196,10 @@ object ImageUtils {
         return bitmap
     }
 
-    fun saveImageToGalleryJFCamera(context: Context, path: String, devId: String, appName: String? = Config.sdkAppName) {
+    fun saveImageToGalleryJFCamera(context: Context, path: String, devId: String) {
         val fileName =
             File(path).name.toString().removeRange(14, File(path).name.toString().length)
-        val fileNameRename = "VHome_${devId}_$fileName.jpg"
+        val fileNameRename = "${MacroUtils.getValue(context,"SDK_VHOME_APP_NAME")}_${devId}_$fileName.jpg"
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
             val values = ContentValues()
             values.put(MediaStore.Images.Media.MIME_TYPE, "image/jpg")
@@ -206,7 +207,7 @@ object ImageUtils {
             values.put(MediaStore.Images.Media.DATE_TAKEN, System.currentTimeMillis() / 1000)
             values.put(
                 MediaStore.Images.Media.RELATIVE_PATH,
-                "DCIM/${appName}"
+                "DCIM/${MacroUtils.getValue(context,"SDK_VHOME_APP_NAME")}"
             )
             values.put(MediaStore.Images.Media.IS_PENDING, true)
             values.put(MediaStore.Images.Media.DISPLAY_NAME, fileNameRename)
@@ -228,7 +229,7 @@ object ImageUtils {
             val directory =
                 File(
                     Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM)
-                        .toString(), appName
+                        .toString(), MacroUtils.getValue(context,"SDK_VHOME_APP_NAME")
                 )
             if (!directory.exists()) {
                 directory.mkdirs()
@@ -245,8 +246,8 @@ object ImageUtils {
         }
     }
 
-    fun saveVideoToGalleryJFCamera(context: Context, path: String, devId: String,appName: String? ="Vhome") {
-        val fileName = "VHome_${devId}_${File(path).name}"
+    fun saveVideoToGalleryJFCamera(context: Context, path: String, devId: String) {
+        val fileName = "${MacroUtils.getValue(context,"SDK_VHOME_APP_NAME")}_${devId}_${File(path).name}"
         val dateAdded = System.currentTimeMillis()
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
             val values = ContentValues()
@@ -255,7 +256,7 @@ object ImageUtils {
             values.put(MediaStore.Video.Media.DATE_TAKEN, dateAdded)
             values.put(
                 MediaStore.Video.Media.RELATIVE_PATH,
-                "DCIM/${appName}"
+                "DCIM/${MacroUtils.getValue(context,"SDK_VHOME_APP_NAME")}"
             )
             values.put(MediaStore.Video.Media.IS_PENDING, true)
             values.put(MediaStore.Video.Media.DISPLAY_NAME, fileName)
@@ -275,7 +276,7 @@ object ImageUtils {
             val directory =
                 File(
                     Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM),
-                    appName
+                    MacroUtils.getValue(context,"SDK_VHOME_APP_NAME")
                 )
             if (!directory.exists()) {
                 directory.mkdirs()

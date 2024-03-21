@@ -2,6 +2,7 @@ package com.viettel.vht.sdk.ui.quickhistory
 
 import android.annotation.SuppressLint
 import android.app.Application
+import android.content.Context
 import android.content.pm.PackageInfo
 import android.content.pm.PackageManager
 import android.os.Build
@@ -11,6 +12,7 @@ import androidx.lifecycle.viewModelScope
 import com.lib.FunSDK
 import com.lib.sdk.struct.H264_DVR_FILE_DATA
 import com.manager.device.media.playback.RecordManager
+import com.utils.MacroUtils
 import com.utils.TimeUtils
 import com.vht.sdkcore.base.BaseViewModel
 import com.vht.sdkcore.file.AppLogFileManager
@@ -27,6 +29,7 @@ import com.viettel.vht.sdk.utils.Config
 import com.viettel.vht.sdk.utils.DebugConfig
 import com.viettel.vht.sdk.utils.ImageUtils
 import dagger.hilt.android.lifecycle.HiltViewModel
+import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -39,6 +42,7 @@ import javax.inject.Inject
 @HiltViewModel
 class HistoryDetailLiveViewModel @Inject constructor(
     private val application: Application,
+    @ApplicationContext context: Context,
     private val appLogFileManager: AppLogFileManager,
     private val cloudRepository: CloudRepository
 ) : BaseViewModel() {
@@ -47,9 +51,10 @@ class HistoryDetailLiveViewModel @Inject constructor(
     private var currentCloudPackage: CloudStorageRegistered? = null
     private var deviceId: String? = null
     private var isTheFirstTime: Boolean = true
+    private var baseURl = ""
 
     init {
-
+        baseURl = MacroUtils.getValue(context,"SDK_VHOME_BASE_URL")
         packageInfo = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             application.applicationContext.packageManager.getPackageInfo(
                 application.applicationContext.packageName,
@@ -272,7 +277,7 @@ class HistoryDetailLiveViewModel @Inject constructor(
                 paymentNumber = paymentNumber,
                 dateSelect = dateSelect,
                 report = report,
-                serverDomainIP = Config.sdkBASE_URL
+                serverDomainIP = baseURl
             )
         )
     }

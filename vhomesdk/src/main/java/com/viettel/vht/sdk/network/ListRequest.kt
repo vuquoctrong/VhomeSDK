@@ -2,11 +2,10 @@ package com.viettel.vht.sdk.network
 
 import android.app.Application
 import android.content.Context
+import com.utils.MacroUtils
 import com.vht.sdkcore.file.AppLogFileManager
 import com.vht.sdkcore.utils.Constants
 import com.vht.sdkcore.utils.HTTPAppLogModel
-import com.viettel.vht.sdk.BuildConfig
-import com.viettel.vht.sdk.utils.Config
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -72,9 +71,9 @@ class ListRequest @Inject constructor(
                         timeStamp = currentTime,
                         actionId = actionId,
                         deviceId = serialCamera,
-                        serverDomainIP = Config.sdkBASE_URL,
+                        serverDomainIP = MacroUtils.getValue(context,"SDK_VHOME_BASE_URL"),
                         httpMethod = request.method,
-                        httpURL = request.url.toString().replace(Config.sdkBASE_URL, ""),
+                        httpURL = request.url.toString().replace(MacroUtils.getValue(context,"SDK_VHOME_BASE_URL"), ""),
                         httpVersion = Constants.LOG_DEFAULT,
                         httpResponseCode = Constants.NetworkRequestCode.REQUEST_CODE_200.toString(),
                         traceParent = traceParent
@@ -107,10 +106,10 @@ class ListRequest @Inject constructor(
                             screenId = currentNetworkRequest?.screenID ?: Constants.LOG_DEFAULT,
                             actionId = currentNetworkRequest?.actionID ?: Constants.LOG_DEFAULT,
                             deviceId = currentNetworkRequest?.serialCamera ?: Constants.LOG_DEFAULT,
-                            serverDomainIP = Config.sdkBASE_URL,
+                            serverDomainIP = MacroUtils.getValue(context,"SDK_VHOME_BASE_URL"),
                             httpMethod = currentNetworkRequest?.httpMethod ?: Constants.EMPTY,
                             httpURL = currentNetworkRequest?.httpURL?.replace(
-                                Config.sdkBASE_URL,
+                                MacroUtils.getValue(context,"SDK_VHOME_BASE_URL"),
                                 Constants.EMPTY
                             ) ?: Constants.EMPTY,
                             httpVersion = Constants.LOG_DEFAULT,

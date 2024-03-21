@@ -1,6 +1,7 @@
 package com.viettel.vht.sdk.network.repository
 
 
+import android.content.Context
 import android.util.Log
 import com.utils.SignatureUtil
 import com.utils.TimeMillisUtil
@@ -17,6 +18,7 @@ import com.viettel.vht.sdk.model.home.UpLoadAppLogResponse
 import com.viettel.vht.sdk.network.ApiInterface
 import com.viettel.vht.sdk.network.jf.JFApiCallInterface
 import com.viettel.vht.sdk.network.jf.RetrofitHelperJF
+import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
@@ -32,6 +34,7 @@ import javax.inject.Inject
 
 class HomeRepository @Inject constructor(
     private val smartHomeAPI: ApiInterface,
+    @ApplicationContext context: Context,
     ) {
 
     fun getAppLogAppLoadLInk(request: RequestGetAppLogUpLoadLink): Flow<com.vht.sdkcore.network.Result<GetAppLogUpLoadLinkResponse>> =
