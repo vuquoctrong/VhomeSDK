@@ -16,7 +16,7 @@ import com.viettel.vht.sdk.network.TokenAuthenticator
 import com.vht.sdkcore.pref.RxPreferences
 import com.vht.sdkcore.utils.Constants
 import com.viettel.vht.sdk.BuildConfig
-import com.viettel.vht.sdk.utils.Config
+import com.viettel.vht.sdk.network.RefreshTokenInterface
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -109,6 +109,58 @@ class ApiModule {
             addInterceptor(networkInterceptor)
             authenticator(tokenAuthenticator)
             //    addInterceptor(timingInterceptor)
+            callTimeout(Constants.DEFAULT_CALL_TIMEOUT.toLong(), TimeUnit.SECONDS)
+            connectTimeout(Constants.DEFAULT_TIMEOUT.toLong(), TimeUnit.SECONDS)
+            readTimeout(Constants.DEFAULT_TIMEOUT.toLong(), TimeUnit.SECONDS)
+            writeTimeout(Constants.DEFAULT_TIMEOUT.toLong(), TimeUnit.SECONDS)
+            build()
+        }
+    }
+
+    @Provides
+    @Singleton
+    fun provideRefreshTokenApiInterface(
+        gson: Gson,
+        @ApplicationContext context: Context,
+        @DispatchRefreshTokenServerHttpClient client: OkHttpClient
+    )
+            : RefreshTokenInterface {
+        val retrofit = Retrofit.Builder()
+            .baseUrl(MacroUtils.getValue(context,"SDK_VHOME_BASE_URL"))
+            .client(client)
+            .addConverterFactory(GsonConverterFactory.create(gson))
+            .build()
+        return retrofit.create(RefreshTokenInterface::class.java)
+    }
+
+    @Qualifier
+    @Retention(AnnotationRetention.RUNTIME)
+    annotation class DispatchRefreshTokenServerHttpClient
+
+    @DispatchRefreshTokenServerHttpClient
+    @Provides
+    @Singleton
+    fun provideDispatchRefreshTokenServerHttpClient(
+        cache: Cache?, rxPreferences: RxPreferences,
+        networkInterceptor: NetworkInterceptor,
+    ): OkHttpClient {
+        val loggingInterceptor = HttpLoggingInterceptor()
+        loggingInterceptor.level = HttpLoggingInterceptor.Level.BODY
+        return OkHttpClient.Builder().run {
+            cache(cache)
+            addInterceptor(Interceptor { chain: Interceptor.Chain ->
+
+                val request = chain.request()
+                    .newBuilder()
+                    .addHeader("RefreshToken", rxPreferences.getRefreshToken())
+                    .build()
+
+                chain.proceed(request)
+            })
+            if (BuildConfig.DEBUG) {
+                addInterceptor(loggingInterceptor)
+            }
+            addInterceptor(networkInterceptor)
             callTimeout(Constants.DEFAULT_CALL_TIMEOUT.toLong(), TimeUnit.SECONDS)
             connectTimeout(Constants.DEFAULT_TIMEOUT.toLong(), TimeUnit.SECONDS)
             readTimeout(Constants.DEFAULT_TIMEOUT.toLong(), TimeUnit.SECONDS)

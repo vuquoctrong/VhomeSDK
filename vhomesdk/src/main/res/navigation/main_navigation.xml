@@ -265,7 +265,7 @@
         app:popExitAnim="@anim/slide_out_left"/>
 
     <fragment android:id="@+id/GalleryDetailFragment"
-        android:name="com.viettel.vht.sdk.ui.gallery.GalleryImageFragment"/>
+        android:name="com.viettel.vht.sdk.ui.gallery.GalleryDetailFragment"/>
 
 
     <action

@@ -7,6 +7,7 @@ import com.viettel.vht.sdk.funtionsdk.VHomeSDKManagerImpl
 import com.viettel.vht.sdk.network.ApiInterface
 import com.viettel.vht.sdk.network.AuthApiInterface
 import com.viettel.vht.sdk.network.NetworkEvent
+import com.viettel.vht.sdk.network.RefreshTokenInterface
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -26,6 +27,7 @@ class FunctionSDKVHomeModule {
         rxPreferences: RxPreferences,
         authApiInterface: AuthApiInterface,
         apiInterface: ApiInterface,
+        apiRefreshTokenInterface: RefreshTokenInterface,
         networkEvent: NetworkEvent
-    ): VHomeSDKManager = VHomeSDKManagerImpl(context, coroutineScope,rxPreferences,authApiInterface,apiInterface,networkEvent)
+    ): VHomeSDKManager = VHomeSDKManagerImpl(context, coroutineScope,rxPreferences,authApiInterface,apiInterface,apiRefreshTokenInterface,networkEvent)
 }

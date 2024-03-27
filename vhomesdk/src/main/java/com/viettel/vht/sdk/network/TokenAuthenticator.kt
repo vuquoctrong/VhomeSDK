@@ -4,15 +4,12 @@ import android.content.Context
 import com.google.gson.Gson
 import com.utils.MacroUtils
 import com.vht.sdkcore.pref.RxPreferences
-
-import com.viettel.vht.sdk.model.login.LoginResponse
-
+import com.viettel.vht.sdk.model.login.RefreshTokenResponse
 import dagger.hilt.android.qualifiers.ApplicationContext
 import okhttp3.Authenticator
 import okhttp3.Request
 import okhttp3.Response
 import okhttp3.Route
-import timber.log.Timber
 import java.io.BufferedReader
 import java.io.InputStreamReader
 import java.net.HttpURLConnection
@@ -42,7 +39,7 @@ class TokenAuthenticator @Inject constructor(
     }
 
     private fun refreshToken(context: Context): Boolean {
-        val refreshUrl = URL("${MacroUtils.getValue(context,"SDK_VHOME_BASE_URL")}/api/vhome/refresh")
+        val refreshUrl = URL("${MacroUtils.getValue(context,"SDK_VHOME_BASE_URL")}/api/vhome/refresh/partner")
         val urlConnection = refreshUrl.openConnection() as HttpURLConnection
         urlConnection.apply {
             doInput = true
@@ -59,27 +56,27 @@ class TokenAuthenticator @Inject constructor(
                 response.append(inputLine)
             }
             input.close()
-            val refreshTokenResult: LoginResponse?
+            val refreshTokenResult: RefreshTokenResponse?
             try {
-                refreshTokenResult = gson.fromJson(response.toString(), LoginResponse::class.java)
+                refreshTokenResult = gson.fromJson(response.toString(), RefreshTokenResponse::class.java)
             } catch (e: Exception) {
-                e.printStackTrace()
                 return false
             }
 
-            if (refreshTokenResult?.code == 2019) {
+            if (refreshTokenResult?.code != -1) {
                 return false
             }
-            if (refreshTokenResult != null) {
-                Timber.tag("okhttp.OkHttpClient").e("refresh token success --- ${refreshTokenResult.token}")
-                rxPreferences.setUserToken(refreshTokenResult.token)
-                rxPreferences.setCameraAccessToken(refreshTokenResult.ezToken)
-                rxPreferences.setRefreshToken(refreshTokenResult.refreshToken)
+            refreshTokenResult?.let {
+                rxPreferences.setUserToken(it.token)
+                rxPreferences.setTokenJFTech(it.jfAuth)
+                rxPreferences.setUserJF(it.jfUser)
+                rxPreferences.setUserPhoneNumber(it.phone)
+                rxPreferences.setUserId(it.userId)
+                rxPreferences.setOrgIDAccount(it.orgId)
             }
             return true
-        } else {
+        } else
             return false
-        }
     }
 
 }

@@ -27,7 +27,7 @@ data class LoginResponse(
     @SerializedName("name")
     val name: String? = null,
     @SerializedName("accept_eula")
-    val acceptEula: Boolean? =  false,
+    val acceptEula: Boolean? = false,
     @SerializedName("third-party-info")
     val thirdPartyInfo: ThirdPartyInfo? = null
 ) : Serializable
@@ -39,4 +39,23 @@ data class ThirdPartyInfo(
     val jfAuth: String = "",
     @SerializedName("jf-user")
     val jfUser: String = ""
+)
+
+data class RefreshTokenResponse(
+    @SerializedName("token")
+    val token: String = "",
+    @SerializedName("jf-user")
+    val jfUser: String = "",
+    @SerializedName("jf-auth")
+    val jfAuth: String = "",
+    @SerializedName("phone")
+    val phone: String = "",
+    @SerializedName("code")
+    val code: Int = -1,
+    @SerializedName("message")
+    val message: String = "",
+    @SerializedName("org_id")
+    val orgId: String = "",
+    @SerializedName("user_id")
+    val userId: String = ""
 )

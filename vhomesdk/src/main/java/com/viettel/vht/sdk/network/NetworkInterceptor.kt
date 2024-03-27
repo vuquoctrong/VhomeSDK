@@ -7,10 +7,8 @@ import com.vht.sdkcore.file.AppLogFileManager
 import com.vht.sdkcore.network.NetworkException
 import com.vht.sdkcore.pref.RxPreferences
 import com.vht.sdkcore.utils.isNetworkAvailable
-import com.viettel.vht.sdk.BuildConfig
-import com.viettel.vht.sdk.model.login.LoginResponse
 import com.viettel.vht.sdk.model.ApiException
-import com.viettel.vht.sdk.utils.Config
+import com.viettel.vht.sdk.model.login.RefreshTokenResponse
 import dagger.hilt.android.qualifiers.ApplicationContext
 import okhttp3.Interceptor
 import okhttp3.Response
@@ -59,6 +57,19 @@ class NetworkInterceptor @Inject constructor(
                             networkEvent.publish(NetworkState.GENERIC(errorResponse))
                         }
                     }
+                    // khi gặp lỗi 401 thì lấy lại token
+                    401 ->{
+                        if (!rxPreferences.getRefreshToken().isNullOrBlank()) {
+                            if (refreshToken()) {
+                                return chain.proceed(request)
+                            } else {
+                                networkEvent.publish(NetworkState.UNAUTHORIZED)
+                            }
+                        }
+                    }
+                    2019,2012 ->{
+                        networkEvent.publish(NetworkState.UNAUTHORIZED)
+                    }
                     else -> {
                         when (errorResponse.code) {
                             2003 -> {}
@@ -77,17 +88,7 @@ class NetworkInterceptor @Inject constructor(
                     }
                 }
 
-                when (errorResponse.code) {
-                    10001 -> {
-                        if (!rxPreferences.getCameraAccessToken().isNullOrBlank()) {
-                            if (refreshToken()) {
-                                return chain.proceed(request)
-                            } else {
-                                networkEvent.publish(NetworkState.UNAUTHORIZED)
-                            }
-                        }
-                    }
-                }
+
                 return response
             } catch (e: ConnectException) {
             } catch (e: Exception) {
@@ -100,7 +101,7 @@ class NetworkInterceptor @Inject constructor(
     }
 
     private fun refreshToken(): Boolean {
-        val refreshUrl = URL("${MacroUtils.getValue(context,"SDK_VHOME_BASE_URL")}/api/vhome/refresh")
+        val refreshUrl = URL("${MacroUtils.getValue(context,"SDK_VHOME_BASE_URL")}/api/vhome/refresh/partner")
         val urlConnection = refreshUrl.openConnection() as HttpURLConnection
         urlConnection.apply {
             doInput = true
@@ -117,21 +118,23 @@ class NetworkInterceptor @Inject constructor(
                 response.append(inputLine)
             }
             input.close()
-            val refreshTokenResult: LoginResponse?
+            val refreshTokenResult: RefreshTokenResponse?
             try {
-                refreshTokenResult = gson.fromJson(response.toString(), LoginResponse::class.java)
+                refreshTokenResult = gson.fromJson(response.toString(), RefreshTokenResponse::class.java)
             } catch (e: Exception) {
                 return false
             }
 
-            if (refreshTokenResult?.code == 2019) {
+            if (refreshTokenResult?.code != -1) {
                 return false
             }
-
-            if (refreshTokenResult != null) {
-                rxPreferences.setUserToken(refreshTokenResult.token)
-                rxPreferences.setCameraAccessToken(refreshTokenResult.ezToken)
-                rxPreferences.setRefreshToken(refreshTokenResult.refreshToken)
+            refreshTokenResult?.let {
+                rxPreferences.setUserToken(it.token)
+                rxPreferences.setTokenJFTech(it.jfAuth)
+                rxPreferences.setUserJF(it.jfUser)
+                rxPreferences.setUserPhoneNumber(it.phone)
+                rxPreferences.setUserId(it.userId)
+                rxPreferences.setOrgIDAccount(it.orgId)
             }
             return true
         } else

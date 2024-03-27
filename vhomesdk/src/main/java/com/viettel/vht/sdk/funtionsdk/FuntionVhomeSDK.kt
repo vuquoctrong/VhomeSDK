@@ -13,6 +13,7 @@ import com.viettel.vht.sdk.network.ApiInterface
 import com.viettel.vht.sdk.network.AuthApiInterface
 import com.viettel.vht.sdk.network.NetworkEvent
 import com.viettel.vht.sdk.network.NetworkState
+import com.viettel.vht.sdk.network.RefreshTokenInterface
 import com.viettel.vht.sdk.ui.main.SDKVHomeMainActivity
 import com.viettel.vht.sdk.utils.Config
 import com.viettel.vht.sdk.utils.DebugConfig
@@ -63,6 +64,8 @@ interface VHomeSDKManager {
      */
     fun getBitmapImageScreenshotCameraJF(serialCamera: String): Bitmap?
 
+    fun setRefreshTokenSDKVHome(token: String, listener: VHomeSDKRefreshTokenListener)
+
 }
 
 interface VHomeSDKAddCameraJFListener {
@@ -81,6 +84,12 @@ interface VHomeSDKLoginListener {
     fun onFailed(var1: Int)
 }
 
+interface VHomeSDKRefreshTokenListener{
+    fun onSuccess(token: String)
+
+    fun onFailed(var1: Int)
+}
+
 @Singleton
 class VHomeSDKManagerImpl constructor(
     private val context: Context,
@@ -88,6 +97,7 @@ class VHomeSDKManagerImpl constructor(
     private val rxPreferences: RxPreferences,
     private val authApiInterface: AuthApiInterface,
     private val apiInterface: ApiInterface,
+    private val apiRefreshTokenInterface: RefreshTokenInterface,
     private val networkEvent: NetworkEvent,
 
     ) : VHomeSDKManager {
@@ -158,11 +168,46 @@ class VHomeSDKManagerImpl constructor(
                     listener?.onSuccess(rxPreferences.getUserToken() ?: "")
                 }
             } catch (e: Exception) {
-                listener?.onFailed(errorCode ?: 0)
+                withContext(Dispatchers.Main) {
+                    listener?.onFailed(errorCode ?: 0)
+                }
                 e.printStackTrace()
             }
         }
 
+    }
+
+    override fun setRefreshTokenSDKVHome(token: String, listener: VHomeSDKRefreshTokenListener) {
+        coroutineScope.launch(Dispatchers.IO) {
+            try {
+                rxPreferences.setRefreshToken(token)
+                DebugConfig.logd(message = "setRefreshTokenSDKVHome:start")
+                val response = apiRefreshTokenInterface.refreshToken(
+                )
+                DebugConfig.logd(message = "setRefreshTokenSDKVHome: $response")
+                withContext(Dispatchers.Main) {
+                   if(response.code == -1){
+                       response.let {
+                           rxPreferences.setUserToken(it.token, it.token)
+                           rxPreferences.setUserId(it.userId)
+                           rxPreferences.setUserPhoneNumber(it.phone ?: Constants.EMPTY)
+                           rxPreferences.setOrgIDAccount(it.orgId ?: Constants.EMPTY)
+                           rxPreferences.setTokenJFTech(it.jfAuth)
+                           rxPreferences.setUserJF(it.jfUser)
+
+                       }
+                       listener?.onSuccess(rxPreferences.getUserToken() ?: "")
+                   }else{
+                       listener?.onFailed(errorCode ?: 0)
+                   }
+                }
+            } catch (e: Exception) {
+                withContext(Dispatchers.Main) {
+                    listener?.onFailed(errorCode ?: 0)
+                }
+                e.printStackTrace()
+            }
+        }
     }
 
     override fun openAddCameraJF(context: Context, listener: VHomeSDKAddCameraJFListener?) {
